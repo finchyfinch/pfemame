@@ -1,0 +1,17 @@
+pfeMAME Licence
+
+Copyright © 2014-2026 Gareth Finch. All rights reserved, except as allowed below.
+
+pfeMAME is free of charge. You may use, copy, share and change it without paying anything, as long as you keep to these conditions:
+
+1. No commercial use. You may not sell pfeMAME or any changed version of it, charge for it, include it in anything that is sold or rented, or use it to make money in any other way (for example, on a pay-to-play arcade machine or as part of a paid service). Personal use, and use where nobody is charged, is allowed.
+2. Share your source code. If you share a changed version of pfeMAME, you must make its complete source code available free of charge, under this same licence.
+3. Keep this notice. Every copy you share, changed or not, must include this copyright notice, these conditions and the disclaimer below.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Other software: this licence covers pfeMAME's own code and files only. The ready-to-run versions of pfeMAME include other open-source software that keeps its own licence; see the third_party_licenses folder that comes with them.
+
+Trademarks: MAME is a registered trademark of Gregory Ember. pfeMAME is not made, supported or endorsed by the MAME team. PAC-MAN and its characters are trademarks of Bandai Namco Entertainment Inc.
+
+Translations: this licence is also provided in other languages for convenience. If a translation differs from the English version, the English version applies.

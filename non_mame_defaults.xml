@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Default entries for non_mame emulators.
+This allows you to select the default settings to make life a bit easier with setting up
+
+Each emulator engine is an <emulator> element containing:
+
+<emulatorName>       A logical reference name for the emulator engine
+<validExtensions>    List of valid ROM file extensions separated by a space
+<includeExtension>   True / False to include the ROM file extension in the command line
+<includePath>        True / False to include the path to the ROMs folder in the command line
+<defaultPath>        True if we define the ROMs folder as 'Default'.  None if we allow a specific ROM folder.
+<extraCommands>      Extra commands separated by a space to use in the command line
+
+-->
+
+<Emulators>
+    <fileVersion>1.1</fileVersion>
+    <emulator>
+        <emulatorName>SEGA M2 Emulator</emulatorName>
+        <validExtensions>zip 7z</validExtensions>
+        <includeExtension>False</includeExtension>
+        <includePath>False</includePath>
+        <defaultPath>Default</defaultPath>
+        <extraCommands>None</extraCommands>
+    </emulator>
+
+    <emulator>
+        <emulatorName>SEGA Supermodel 3</emulatorName>
+        <validExtensions>zip 7z</validExtensions>
+        <includeExtension>True</includeExtension>
+        <includePath>True</includePath>
+        <defaultPath>Default</defaultPath>
+        <extraCommands>None</extraCommands>
+    </emulator>
+
+    <emulator>
+        <emulatorName>Visual Pinball</emulatorName>
+        <validExtensions>vpt</validExtensions>
+        <includeExtension>True</includeExtension>
+        <includePath>True</includePath>
+        <defaultPath>None</defaultPath>
+        <extraCommands>-minimized -exit -play</extraCommands>
+    </emulator>
+
+    <emulator>
+        <emulatorName>Visual Pinball X</emulatorName>
+        <validExtensions>vpx</validExtensions>
+        <includeExtension>True</includeExtension>
+        <includePath>True</includePath>
+        <defaultPath>None</defaultPath>
+        <extraCommands>-minimized -exit -play</extraCommands>
+    </emulator>
+
+    <emulator>
+        <emulatorName>Atari Jaguar</emulatorName>
+        <validExtensions>j64</validExtensions>
+        <includeExtension>True</includeExtension>
+        <includePath>True</includePath>
+        <defaultPath>None</defaultPath>
+        <extraCommands>None</extraCommands>
+    </emulator>
+
+    <!-- Rustrum ZX (ZX Spectrum 16K-+3 and ZX81).  - -frontend starts it fullscreen, quits on Esc, and quits when
+         Start+Select is held on the gamepad for a second, so it can be left from Tile View with a joystick. -->
+    <emulator>
+        <emulatorName>Rustrum ZX (ZX Spectrum / ZX81)</emulatorName>
+        <validExtensions>tzx tap z80 sna szx dsk mgt mdr p p81</validExtensions>
+        <includeExtension>True</includeExtension>
+        <includePath>True</includePath>
+        <defaultPath>None</defaultPath>
+        <extraCommands>--frontend</extraCommands>
+    </emulator>
+</Emulators>

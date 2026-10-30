@@ -1,0 +1,5144 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PFEMAME\n"
+"POT-Creation-Date: 2026-10-23 14:04\n"
+"PO-Revision-Date: 2026-10-23 14:04\n"
+"Last-Translator: GFINCH <pfemame@gmail.com>\n"
+"Language-Team: N/A\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: create_language_files.py\n"
+
+#: aboutbox.py:432
+msgid "Visit Website"
+msgstr "ウェブサイトにアクセス"
+
+#: aboutbox.py:185
+msgid "About pfeMAME"
+msgstr "pfeMAMEについて"
+
+#: aboutbox.py:259 aboutbox.py:487
+msgid "License"
+msgstr "ライセンス"
+
+#: aboutbox.py:264 alternate_emulators.py:602 alternate_emulators.py:1641
+#: rominfo.py:277 xmlinfo.py:151 xmlinfo.py:369
+msgid "OK"
+msgstr "わかりました"
+
+#: aboutbox.py:425
+msgid "pfeMAME is a front end for the MAME emulation system"
+msgstr "pfeMAME は MAME エミュレーション システムのフロントエンドです"
+
+#: aboutbox.py:303
+msgid "License file not found."
+msgstr "ライセンスファイルが見つかりません。"
+
+#: aboutbox.py:487
+msgid "Back"
+msgstr "戻る"
+
+#: alternate_emulators.py:51
+msgid "No emulators - use CREATE NEW EMULATOR ENTRY"
+msgstr "エミュレータはありません - CREATE NEW EMULATOR ENTRY を使用してください"
+
+#: alternate_emulators.py:585
+msgid ""
+"This allows you to create a new alternate emulator (i.e. something other "
+"than MAME).  Once you have created it, you will need to review the settings "
+"below and then assign the ROMs that relate to this alternate emulation "
+"system."
+msgstr ""
+"これにより、新しい代替エミュレータ (つまり、MAME 以外のもの) を作成できます。  作成したら、以下の設定を確認して、この代替エミュレーション "
+"システムに関連する ROM を割り当てる必要があります。"
+
+#: alternate_emulators.py:134 alternate_emulators.py:1299
+msgid "Alternate Emulators"
+msgstr "代替エミュレータ"
+
+#: alternate_emulators.py:343
+msgid "Use Default ROM Folder"
+msgstr "デフォルトのROMフォルダを使用"
+
+#: alternate_emulators.py:426
+msgid "ADD NEW ROM ENTRY"
+msgstr "新しいROMエントリを追加"
+
+#: alternate_emulators.py:432
+msgid "AUTO SCAN ROM FOLDER"
+msgstr "オートスキャンROMフォルダー"
+
+#: alternate_emulators.py:444
+msgid "Search ROMs"
+msgstr "ROMの検索"
+
+#: alternate_emulators.py:450
+msgid "FILL ROM NAMES"
+msgstr "ROM名を記入してください"
+
+#: alternate_emulators.py:512
+msgid "SET DEFAULTS"
+msgstr "デフォルトの設定"
+
+#: alternate_emulators.py:521
+msgid "UPDATE XML FILE"
+msgstr "XMLファイルの更新"
+
+#: alternate_emulators.py:531
+msgid "TEST ROM"
+msgstr "テストROM"
+
+#: alternate_emulators.py:540
+msgid "RENAME THIS ENGINE"
+msgstr "このエンジンの名前を変更します"
+
+#: alternate_emulators.py:549
+msgid "DUPLICATE THIS ENGINE"
+msgstr "このエンジンを複製します"
+
+#: alternate_emulators.py:558
+msgid "DELETE THIS ENGINE"
+msgstr "このエンジンを削除"
+
+#: alternate_emulators.py:590
+msgid "CREATE NEW EMULATOR ENTRY"
+msgstr "新しいエミュレータエントリの作成"
+
+#: alternate_emulators.py:620
+msgid "This is the full path to the alternate emulator executable file"
+msgstr "これは、代替エミュレータの実行可能ファイルへのフルパスです。"
+
+#: alternate_emulators.py:621
+msgid ""
+"If the emulator has ROMs located in a folder that is not the 'Default' MAME "
+"ROM folder, then you need to define that folder here.  If the ROM can be run"
+" by MAME natively then you don't need to set this.  AUTO SCAN ROM FOLDER "
+"only works with a folder of the emulator's own, not 'Default'."
+msgstr ""
+"エミュレータの ROM が「デフォルト」の MAME ROM フォルダではないフォルダにある場合は、ここでそのフォルダを定義する必要があります。  "
+"ROM が MAME でネイティブに実行できる場合は、これを設定する必要はありません。  AUTO SCAN ROM FOLDER "
+"は、「デフォルト」ではなく、エミュレータ独自のフォルダーでのみ機能します。"
+
+#: alternate_emulators.py:626
+msgid ""
+"You must list all valid file extensions that can be run by this emulator.  "
+"Do not include any dots.  If multiple extensions then separate by a space."
+msgstr ""
+"このエミュレータで実行できる有効なファイル拡張子をすべてリストする必要があります。  ドットは含めないでください。  "
+"複数の拡張子がある場合は、スペースで区切ります。"
+
+#: alternate_emulators.py:629
+msgid ""
+"The category that ROMs in this emulator's own ROM folder are listed under in"
+" the ROM list (not used when the ROM folder is 'Default')."
+msgstr ""
+"このエミュレータ独自の ROM フォルダ内の ROM が ROM リストにリストされるカテゴリ (ROM "
+"フォルダが「デフォルト」の場合は使用されません)。"
+
+#: alternate_emulators.py:631
+msgid ""
+"List any commands to be passed to the emulator in the same format that you "
+"would use from the command line.  Separate multiple commands with a space.  "
+"The ROM is added after them, unless you put {rom} where it should go (e.g. "
+"-play {rom} -exit)."
+msgstr ""
+"エミュレータに渡すコマンドを、コマンド ラインから使用するのと同じ形式でリストします。  複数のコマンドはスペースで区切ります。  {rom} "
+"を配置すべき場所に配置しない限り (例: -play {rom} -exit)、ROM はそれらの後に追加されます。"
+
+#: alternate_emulators.py:635
+msgid "Select this to enable / disable this emulator"
+msgstr "これを選択して、このエミュレータを有効または無効にします"
+
+#: alternate_emulators.py:636
+msgid ""
+"If the folder path needs to be given at the command line for the emulator "
+"then check this box.  This will generally depend upon whether or not the "
+"ROMs folder for this emulator is already defined in it's own INI file."
+msgstr ""
+"エミュレータのコマンド ラインでフォルダ パスを指定する必要がある場合は、このボックスをオンにします。  これは通常、このエミュレータの ROM "
+"フォルダが独自の INI ファイルですでに定義されているかどうかによって決まります。"
+
+#: alternate_emulators.py:640
+msgid ""
+"Check this box if the emulator needs the file extension to be given with the"
+" ROM name"
+msgstr "エミュレータで ROM 名にファイル拡張子を付ける必要がある場合は、このボックスをチェックします。"
+
+#: alternate_emulators.py:788
+msgid "Delete Emulator"
+msgstr "エミュレータの削除"
+
+#: alternate_emulators.py:855
+msgid "Please enter the name for the new emulation engine"
+msgstr "新しいエミュレーション エンジンの名前を入力してください"
+
+#: alternate_emulators.py:856
+msgid "New Emulator Name"
+msgstr "新しいエミュレータ名"
+
+#: alternate_emulators.py:931
+msgid "Rename Emulator"
+msgstr "エミュレータの名前を変更する"
+
+#: alternate_emulators.py:951
+msgid "Duplicate Emulator"
+msgstr "エミュレータの複製"
+
+#: alternate_emulators.py:1036
+msgid "Alternate Emulators *"
+msgstr "代替エミュレータ *"
+
+#: alternate_emulators.py:1098
+msgid "Auto Scan ROM Folder"
+msgstr "自動スキャンROMフォルダー"
+
+#: alternate_emulators.py:1176 alternate_emulators.py:1163
+msgid "Fill ROM Names"
+msgstr "ROM名を入力"
+
+#: alternate_emulators.py:1218
+msgid "Possible Problems"
+msgstr "考えられる問題"
+
+#: alternate_emulators.py:1292
+msgid "XML File has been updated"
+msgstr "XMLファイルが更新されました"
+
+#: alternate_emulators.py:1293
+msgid "File Updated"
+msgstr "ファイルが更新されました"
+
+#: alternate_emulators.py:1335
+msgid "Edit ROM Entry..."
+msgstr "ROM エントリを編集..."
+
+#: alternate_emulators.py:1385
+msgid "Delete Entry"
+msgstr "エントリの削除"
+
+#: alternate_emulators.py:285
+msgid "ROM Entries"
+msgstr "ROM エントリ"
+
+#: alternate_emulators.py:286
+msgid "Basic Configuration"
+msgstr "基本構成"
+
+#: alternate_emulators.py:287
+msgid "ROM Folder Configuration"
+msgstr "ROMフォルダ構成"
+
+#: alternate_emulators.py:288
+msgid "Command Line Options"
+msgstr "コマンドラインオプション"
+
+#: alternate_emulators.py:289
+msgid "Actions"
+msgstr "アクション"
+
+#: alternate_emulators.py:320
+msgid "Select Emulator Executable File"
+msgstr "エミュレータ実行可能ファイルの選択"
+
+#: alternate_emulators.py:333
+msgid "Select ROMs Folder for this Emulator"
+msgstr "このエミュレータの ROM フォルダを選択してください"
+
+#: alternate_emulators.py:347
+msgid "Enabled"
+msgstr "有効"
+
+#: alternate_emulators.py:349
+msgid "Include file extension in command line"
+msgstr "コマンドラインにファイル拡張子を含める"
+
+#: alternate_emulators.py:351
+msgid "Include folder path in command line"
+msgstr "コマンドラインにフォルダーパスを含める"
+
+#: alternate_emulators.py:352
+msgid "Description:"
+msgstr "説明："
+
+#: alternate_emulators.py:353
+msgid "Path To Emulator:"
+msgstr "エミュレータへのパス:"
+
+#: alternate_emulators.py:354
+msgid "Extra Commands:"
+msgstr "追加のコマンド:"
+
+#: alternate_emulators.py:355
+msgid "ROM Folder:"
+msgstr "ROMフォルダー:"
+
+#: alternate_emulators.py:356
+msgid "Valid Extensions:"
+msgstr "有効な拡張子:"
+
+#: alternate_emulators.py:367
+msgid ""
+"Unable to find the non_mame_emulators.xml file.  This should be in the same "
+"folder as the pfeMAME files.  You can create a new version from here by "
+"adding at least one alternate emulation engine entry."
+msgstr ""
+"non_mame_emulators.xml ファイルが見つかりません。  これは、pfeMAME ファイルと同じフォルダーにある必要があります。  "
+"少なくとも 1 つの代替エミュレーション エンジン エントリを追加することで、ここから新しいバージョンを作成できます。"
+
+#: alternate_emulators.py:370 alternate_emulators.py:382
+#: alternate_emulators.py:717 alternate_emulators.py:741
+#: alternate_emulators.py:841 alternate_emulators.py:909
+#: alternate_emulators.py:1257 alternate_emulators.py:1517
+#: alternate_emulators.py:708 alternate_emulators.py:918
+#: alternate_emulators.py:1250 alternate_emulators.py:1286 checkall.py:596
+#: filepaths.py:489 filepaths.py:1357 filepaths.py:1393 filepaths.py:411
+#: filepaths.py:1207 filepaths.py:1373 pfemame.py:2889 pfemame.py:5143
+#: pfemame.py:2541 pfemame.py:3984 pfemame.py:5080 pfemame.py:5122
+#: pfemame.py:5161 pfemame.py:5310 pfemame.py:2377 pfemame.py:2389
+#: pfemame.py:3031 pfemame.py:5069 pfemame.py:5096 pfemame.py:5278
+#: pfemame.py:5331 rominfo.py:227 rominfo.py:363 scrolledwindow.py:88
+#: xmlinfo.py:321 xmlinfo.py:417
+msgid "ERROR"
+msgstr "エラー"
+
+#: alternate_emulators.py:379
+msgid ""
+"There is an error in the non_mame_emulators.xml file.  Please check the file"
+" manually or delete the file to allow it to be rebuilt safely.  You can also"
+" restore it from a backup if you have one."
+msgstr ""
+"non_mame_emulators.xmlファイルに誤りがあります。  "
+"ファイルを手動で確認するか、ファイルを削除して安全に再構築できるようにしてください。  "
+"バックアップがある場合は、バックアップから復元することもできます。"
+
+#: alternate_emulators.py:434
+msgid ""
+"Add the ROM files in the ROM folder that have one of the valid extensions.  "
+"Existing entries and their names are kept.  Not available when the ROM "
+"folder is 'Default', as that would add every MAME ROM to this emulator."
+msgstr ""
+"有効な拡張子のいずれかを持つ ROM ファイルを ROM フォルダーに追加します。  既存のエントリとその名前は保持されます。  ROM "
+"フォルダーが「デフォルト」の場合は、すべての MAME ROM がこのエミュレーターに追加されるため、使用できません。"
+
+#: alternate_emulators.py:445
+msgid "Only show the ROMs whose name or file name contains this text"
+msgstr "名前またはファイル名にこのテキストが含まれる ROM のみを表示します"
+
+#: alternate_emulators.py:452
+msgid ""
+"Give the unnamed (___) ROMs the names MAME uses for them.  Names you have "
+"entered are kept."
+msgstr "名前のない (___) ROM に、MAME が使用する名前を付けます。  入力した名前は保存されます。"
+
+#: alternate_emulators.py:514
+msgid "Set the typical default values for this emulator engine."
+msgstr "このエミュレータ エンジンの一般的なデフォルト値を設定します。"
+
+#: alternate_emulators.py:523
+msgid ""
+"Update the XML file with any changes you have made.  You need to do this "
+"manually as the changes are not automatically stored."
+msgstr "加えた変更を反映して XML ファイルを更新します。  変更は自動的には保存されないため、これを手動で行う必要があります。"
+
+#: alternate_emulators.py:533
+msgid "Test the selected ROM to see if your configuration is correct"
+msgstr "選択した ROM をテストして、構成が正しいかどうかを確認します"
+
+#: alternate_emulators.py:542
+msgid ""
+"Change the name of this alternate engine, keeping its settings and ROMs"
+msgstr "設定と ROM を維持したまま、この代替エンジンの名前を変更します。"
+
+#: alternate_emulators.py:551
+msgid ""
+"Make a copy of this alternate engine, with its settings and ROMs.  The copy "
+"starts disabled."
+msgstr "この代替エンジンとその設定および ROM のコピーを作成します。  コピーは無効になって開始されます。"
+
+#: alternate_emulators.py:560
+msgid "Delete this alternate engine entry and all associated data"
+msgstr "この代替エンジン エントリと関連するすべてのデータを削除します"
+
+#: alternate_emulators.py:678
+msgid ""
+"Click a column heading to sort by it.  Ctrl or Shift click to select several"
+" ROMs, then press Delete to delete them."
+msgstr ""
+"列見出しをクリックして並べ替えます。  Ctrl または Shift キーを押しながらクリックして複数の ROM を選択し、Delete "
+"キーを押して削除します。"
+
+#: alternate_emulators.py:681 rom_grid.py:121
+msgid "ROM Name"
+msgstr "ROM名"
+
+#: alternate_emulators.py:682
+msgid "ROM File Name (No Extn)"
+msgstr "ROMファイル名(拡張子なし)"
+
+#: alternate_emulators.py:716
+msgid "No emulators found in defaults file."
+msgstr "デフォルトファイルにエミュレータが見つかりません。"
+
+#: alternate_emulators.py:740
+msgid "Selected emulator not found in defaults file."
+msgstr "選択したエミュレータがデフォルト ファイルに見つかりません。"
+
+#: alternate_emulators.py:839
+msgid ""
+"ERROR:  The categories.dat file does not exist.  Please ensure you have "
+"refreshed the database and selected some categories."
+msgstr "エラー: category.dat ファイルが存在しません。  データベースを更新し、いくつかのカテゴリを選択したことを確認してください。"
+
+#: alternate_emulators.py:908
+msgid "Please enter a new valid name."
+msgstr "新しい有効な名前を入力してください。"
+
+#: alternate_emulators.py:1069
+msgid ""
+"I couldn't find any matches for the extension(s) you have listed. Please "
+"check your extensions are correct and the folder path is right."
+msgstr "リストされた拡張子に一致するものが見つかりませんでした。拡張子が正しいか、フォルダーのパスが正しいかを確認してください。"
+
+#: alternate_emulators.py:1071
+msgid "ERROR FINDING FILES"
+msgstr "ファイル検索エラー"
+
+#: alternate_emulators.py:1084
+msgid "ROM Files Not Found"
+msgstr "ROMファイルが見つかりません"
+
+#: alternate_emulators.py:1161
+msgid ""
+"The MAME machine list could not be found.  Please build the ROM database "
+"first, then try again."
+msgstr "MAMEマシンリストが見つかりませんでした。  まず ROM データベースを構築してから、再試行してください。"
+
+#: alternate_emulators.py:1173
+msgid "ROM names filled in: {}"
+msgstr "記入されたROM名: {}"
+
+#: alternate_emulators.py:1217
+msgid "Would you like to save anyway?"
+msgstr "とにかく保存しますか?"
+
+#: alternate_emulators.py:1229
+msgid "Emulator Path"
+msgstr "エミュレータのパス"
+
+#: alternate_emulators.py:1230
+msgid "Emulator Description"
+msgstr "エミュレータの説明"
+
+#: alternate_emulators.py:1231
+msgid "Valid Extensions"
+msgstr "有効な拡張子"
+
+#: alternate_emulators.py:1256
+msgid "Please remove any dots from the Valid Extensions"
+msgstr "有効な内線番号からドットを削除してください。"
+
+#: alternate_emulators.py:1337
+msgid "Delete ROM Entry"
+msgstr "ROMエントリの削除"
+
+#: alternate_emulators.py:1376
+msgid ""
+"Sorry but you cannot delete the last row. There must always be at least one "
+"row."
+msgstr "申し訳ありませんが、最後の行は削除できません。常に少なくとも 1 行が存在する必要があります。"
+
+#: alternate_emulators.py:1378
+msgid "Cannot Delete Entry"
+msgstr "エントリを削除できません"
+
+#: alternate_emulators.py:1383
+msgid "Are you sure you want to delete this entry?"
+msgstr "このエントリを削除してもよろしいですか?"
+
+#: alternate_emulators.py:1478
+msgid ""
+"You have made some changes that have not been saved to the XML file.  Would "
+"you like to save these changes before exiting?"
+msgstr "XML ファイルに保存されていない変更をいくつか加えました。  終了する前にこれらの変更を保存しますか?"
+
+#: alternate_emulators.py:1480 alternate_emulators.py:1534
+msgid "UNSAVED CHANGES"
+msgstr "未保存の変更"
+
+#: alternate_emulators.py:1516
+msgid "Please select a ROM to run from the list"
+msgstr "リストから実行するROMを選択してください"
+
+#: alternate_emulators.py:1523
+msgid ""
+"This emulator is not enabled, so the ROM would run in MAME instead.  Tick "
+"Enabled and save your changes to test it with this emulator."
+msgstr ""
+"このエミュレータは有効になっていないため、ROM は代わりに MAME で実行されます。  "
+"「有効」にチェックを入れて変更を保存し、このエミュレータでテストします。"
+
+#: alternate_emulators.py:1525
+msgid "Emulator Not Enabled"
+msgstr "エミュレータが有効になっていません"
+
+#: alternate_emulators.py:1532
+msgid ""
+"TEST ROM uses the settings saved in the XML file.  Would you like to save "
+"your changes first?"
+msgstr "TEST ROM は XML ファイルに保存された設定を使用します。  まず変更を保存しますか?"
+
+#: alternate_emulators.py:1575
+msgid "Default Settings Selection"
+msgstr "デフォルト設定の選択"
+
+#: alternate_emulators.py:1619 pfemame.py:1144
+msgid "ROM Info"
+msgstr "ROM情報"
+
+#: alternate_emulators.py:255
+msgid "{} (disabled)"
+msgstr "{} (無効)"
+
+#: alternate_emulators.py:707
+msgid "Unable to read non_mame_defaults.xml file."
+msgstr "non_mame_defaults.xml ファイルを読み取れません。"
+
+#: alternate_emulators.py:787
+msgid "Are you sure you want to delete {}?"
+msgstr "{} を削除してもよろしいですか?"
+
+#: alternate_emulators.py:930
+msgid "Please enter the new name for {}"
+msgstr "{} の新しい名前を入力してください"
+
+#: alternate_emulators.py:950
+msgid "Please enter the name for the copy of {}"
+msgstr "{} のコピーの名前を入力してください"
+
+#: alternate_emulators.py:990
+msgid "Number of alternate emulator engines in file: {}"
+msgstr "ファイル内の代替エミュレータ エンジンの数: {}"
+
+#: alternate_emulators.py:1096
+msgid ""
+"ROM entries added: {added}\n"
+"ROM entries removed: {removed}"
+msgstr ""
+"追加された ROM エントリ: {added}\n"
+"ROM エントリが削除されました: {removed}"
+
+#: alternate_emulators.py:1285
+msgid ""
+"Unable to write the new non_mame_emulators.xml file.  Check file / folder "
+"permissions."
+msgstr ""
+"新しい non_mame_emulators.xml ファイルを書き込むことができません。  ファイル/フォルダーのアクセス許可を確認してください。"
+
+#: alternate_emulators.py:951
+msgid "{} (copy)"
+msgstr "{}（コピー）"
+
+#: alternate_emulators.py:1082
+msgid ""
+"{} ROM entries have no matching file in the ROM folder.  Would you like to "
+"remove them?"
+msgstr "{} ROM エントリには、ROM フォルダ内に一致するファイルがありません。  それらを削除しますか?"
+
+#: alternate_emulators.py:1175
+msgid "ROMs still without a name (not MAME machines): {}"
+msgstr "まだ名前のないROM (MAMEマシンではない): {}"
+
+#: alternate_emulators.py:1214
+msgid "... and {} more."
+msgstr "...さらに {} も含まれます。"
+
+#: alternate_emulators.py:1338
+msgid "Delete {} ROM Entries"
+msgstr "{} ROM エントリの削除"
+
+#: alternate_emulators.py:1384
+msgid "Are you sure you want to delete these {} entries?"
+msgstr "これらの {} エントリを削除してもよろしいですか?"
+
+#: alternate_emulators.py:1632
+msgid "ROM Name:"
+msgstr "ROM名:"
+
+#: alternate_emulators.py:1634
+msgid "ROM File Name:"
+msgstr "ROMファイル名："
+
+#: alternate_emulators.py:89
+msgid "{}: no emulator program has been set."
+msgstr "{}：エミュレータプログラムが設定されていません。"
+
+#: alternate_emulators.py:96
+msgid ""
+"{}: no ROM folder has been set (use 'Default' for the MAME ROM folder)."
+msgstr "{}: ROM フォルダーが設定されていません (MAME ROM フォルダーには「デフォルト」を使用します)。"
+
+#: alternate_emulators.py:107
+msgid "{emulator}: {file_name} is listed more than once."
+msgstr "{emulator}: {file_name} が複数回リストされています。"
+
+#: alternate_emulators.py:917
+msgid "The emulator name {} already exists"
+msgstr "エミュレータ名 {} はすでに存在します"
+
+#: alternate_emulators.py:1216
+msgid "Please check the following:"
+msgstr "以下の点をご確認ください。"
+
+#: alternate_emulators.py:1249
+msgid "You must have an entry for {}"
+msgstr "{} のエントリが必要です"
+
+#: alternate_emulators.py:91
+msgid "{emulator}: the emulator program {path} was not found."
+msgstr "{emulator}: エミュレータ プログラム {path} が見つかりませんでした。"
+
+#: alternate_emulators.py:99
+msgid "{emulator}: the ROM folder {folder} was not found."
+msgstr "{emulator}: ROM フォルダー {folder} が見つかりませんでした。"
+
+#: alternate_emulators.py:115
+msgid ""
+"{file_name} is listed under both {first} and {second}.  Only {first} will be"
+" used."
+msgstr "{file_name} は、{first} と {second} の両方の下にリストされます。  {first} のみが使用されます。"
+
+#: busy_window.py:78
+msgid "Please Wait..."
+msgstr "お待ちください..."
+
+#: busy_window.py:126
+msgid "Cancelling..."
+msgstr "キャンセルしています..."
+
+#: busy_window.py:89 image_picker_dialog.py:173 pfemame.py:1035
+#: rom_picker_dialog.py:92 rom_source_dialog.py:63 rom_source_dialog.py:153
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: checkall.py:152
+msgid ""
+"The check was stopped before it finished, so not all of your ROMs were "
+"checked."
+msgstr "チェックが完了前に停止されたため、すべてのROMはチェックされていません。"
+
+#: checkall.py:194 checkall.py:178
+msgid "No ROM sets match this filter."
+msgstr "このフィルターに一致するROMセットはありません。"
+
+#: checkall.py:319 checkall.py:546 checkall.py:604 pfemame_ribbon_bar.py:623
+msgid "Check All ROMs"
+msgstr "すべてのROMをチェックする"
+
+#: checkall.py:399
+msgid "SAVE RESULTS"
+msgstr "結果を保存"
+
+#: checkall.py:401
+msgid "COPY"
+msgstr "コピー"
+
+#: checkall.py:403
+msgid "RE-CHECK BAD"
+msgstr "不良を再チェック"
+
+#: checkall.py:405
+msgid "RUN CHECK"
+msgstr "チェック実行"
+
+#: checkall.py:406 fix_artwork_file.py:460
+msgid "STOP"
+msgstr "停止"
+
+#: checkall.py:407 fix_artwork_file.py:461
+msgid "EXIT"
+msgstr "終了"
+
+#: checkall.py:515 fix_artwork_file.py:675
+msgid "Output path"
+msgstr "出力パス"
+
+#: checkall.py:72
+msgid ""
+"romset {} was not found (it is missing from your ROM folders or unknown to "
+"this version of MAME)"
+msgstr "ROMセット {} が見つかりません（ROMフォルダーにないか、このバージョンのMAMEでは不明です）"
+
+#: checkall.py:147
+msgid ""
+"ROM sets checked: {total}   Good: {good}   Bad: {bad}   Best available: "
+"{best}   Not found: {not_found}"
+msgstr ""
+"チェックしたROMセット: {total}   良好: {good}   不良: {bad}   入手可能な最良: {best}   見つからない: "
+"{not_found}"
+
+#: checkall.py:150
+msgid "The check took {} seconds."
+msgstr "チェックには {} 秒かかりました。"
+
+#: checkall.py:191 checkall.py:174
+msgid "MAME reported:"
+msgstr "MAMEからの報告:"
+
+#: checkall.py:375
+msgid "This could take 5 minutes or more depending upon a number of factors"
+msgstr "さまざまな要因によっては、これに 5 分以上かかる場合があります"
+
+#: checkall.py:380 views.py:40
+msgid "All"
+msgstr "全て"
+
+#: checkall.py:381
+msgid "Is Good"
+msgstr "良いです"
+
+#: checkall.py:382
+msgid "Is Bad"
+msgstr "悪いです"
+
+#: checkall.py:383
+msgid "Is Best Available"
+msgstr "最も入手可能なもの"
+
+#: checkall.py:384
+msgid "Not Found"
+msgstr "見つからない"
+
+#: checkall.py:400
+msgid "Save the results shown to a text file"
+msgstr "表示中の結果をテキストファイルに保存します"
+
+#: checkall.py:402
+msgid "Copy the results shown to the clipboard"
+msgstr "表示中の結果をクリップボードにコピーします"
+
+#: checkall.py:404
+msgid "Check only the bad and not found ROM sets again"
+msgstr "不良と見つからないROMセットだけを再チェックします"
+
+#: checkall.py:546
+msgid "Results copied to the clipboard"
+msgstr "結果をクリップボードにコピーしました"
+
+#: checkall.py:602
+msgid ""
+"There are no ROMs to check.  Your ROM list is empty or none of its ROMs are "
+"present in your ROM folders."
+msgstr "チェックするROMがありません。ROMリストが空か、リストのROMがROMフォルダーにありません。"
+
+#: checkall.py:610
+msgid "Started checking all ROMs"
+msgstr "全ROMチェック開始"
+
+#: checkall.py:654
+msgid "Completed checking all ROMs"
+msgstr "全ROMチェック完了"
+
+#: checkall.py:528 fix_artwork_file.py:685
+msgid "Results written to file"
+msgstr "結果がファイルに書き込まれる"
+
+#: checkall.py:529 fix_artwork_file.py:685
+msgid "File Written"
+msgstr "書き込まれたファイル"
+
+#: checkall.py:635
+msgid "Checked {done} of {total} ROM sets"
+msgstr "{done} / {total} ROMセットをチェックしました"
+
+#: checkall.py:532 fix_artwork_file.py:687
+msgid "Unable to save file to location.  Check permissions."
+msgstr "ファイルを場所に保存できません。  権限を確認してください。"
+
+#: checkall.py:533 fix_artwork_file.py:687
+msgid "File Write Error"
+msgstr "ファイル書き込みエラー"
+
+#: checkall.py:594
+msgid ""
+"The path {} for your ROMs folder doesnt exist.  Please check file paths "
+"settings."
+msgstr "ROM フォルダーのパス {} が存在しません。  ファイルパスの設定を確認してください。"
+
+#: checkall.py:207
+msgid "ERROR opening mylist.db file: {}"
+msgstr "mylist.db ファイルを開くときにエラーが発生しました: {}"
+
+#: checkall.py:286 rominfo.py:199
+msgid "Error running MAME: {}"
+msgstr "MAMEの実行エラー: {}"
+
+#: filepaths.py:432
+msgid ""
+"Instructions\n"
+"-------------------------------\n"
+"You need to set up valid file paths for the files listed on this page.  Critical ones are the MAME executable, catver.ini, and history.xml.  Most of the others are recommended but not critical.\n"
+"\n"
+"The application has attempted to find the mame.ini file in its most likely location - please check this is correct.  You cant just put it anywhere as MAME needs to find it in very specific locations.  Please read the manual for more information on this.\n"
+"\n"
+"Any file paths found in mame.ini have been automatically populated. These may not be correct for a first run, so please review them.\n"
+"\n"
+"Setting paths:\n"
+"  - Double-click any row to browse for a file or folder, or drag one onto the row from your file manager.\n"
+"  - Right-click any row for more options: add an extra path (for entries that support multiple locations), delete one of them, move one up or down (MAME searches them in order), clear a path back to empty, or open its folder.\n"
+"  - A row shown in red has a problem (missing, or required but not set).  Hover the mouse over it to see why.\n"
+"\n"
+"You can also select the AUTO FIND option at the bottom of the window.  It will ask you to select the root MAME folder where your ROMs etc are located, after which it will try to determine all folder locations and set them automatically."
+msgstr ""
+"指示\n"
+"-------------------------------\n"
+"このページにリストされているファイルに対して有効なファイル パスを設定する必要があります。  重要なものは、MAME 実行可能ファイル、catver.ini、およびhistory.xmlです。  他のほとんどは推奨されますが、重要ではありません。\n"
+"\n"
+"アプリケーションは、最も可能性の高い場所で mame.ini ファイルを見つけようとしました - これが正しいことを確認してください。  MAME は非常に特定の場所でそれを見つける必要があるため、どこにでも置くことはできません。  詳細についてはマニュアルをお読みください。\n"
+"\n"
+"mame.ini で見つかったファイル パスはすべて自動的に設定されます。これらは最初の実行では正しくない可能性があるため、確認してください。\n"
+"\n"
+"パスの設定:\n"
+"  - 任意の行をダブルクリックしてファイルまたはフォルダーを参照するか、ファイル マネージャーからファイルまたはフォルダーをその行にドラッグします。\n"
+"  - 任意の行を右クリックしてその他のオプションを表示します。追加のパスを追加する (複数の場所をサポートするエントリの場合)、それらの 1 つを削除する、1 つを上下に移動する (MAME は順番にそれらを検索します)、パスをクリアして空に戻す、またはそのフォルダーを開きます。\n"
+"  - 赤で表示された行には問題があります (欠落している、または必須であるが設定されていない)。  マウスをその上に置くと、その理由が表示されます。\n"
+"\n"
+"ウィンドウの下部にある [自動検索] オプションを選択することもできます。  ROMなどが置かれているルートMAMEフォルダーを選択するよう求められ、その後すべてのフォルダーの場所を特定して自動的に設定しようとします。"
+
+#: filepaths.py:132
+msgid "double click to set"
+msgstr "ダブルクリックして設定します"
+
+#: filepaths.py:210
+msgid "Edit File Paths"
+msgstr "ファイルパスの編集"
+
+#: filepaths.py:494
+msgid ""
+"FILEPATHS ERROR: Not getting the right output from MAME.  Check that the "
+"path is defined correctly"
+msgstr "ファイルパス エラー: MAME から正しい出力が得られません。  パスが正しく定義されていることを確認してください"
+
+#: filepaths.py:646
+msgid "MAME version:  checking..."
+msgstr "MAME バージョン: 確認中..."
+
+#: filepaths.py:885
+msgid "Clear path"
+msgstr "クリアパス"
+
+#: filepaths.py:1034
+msgid "Drop one file or folder at a time."
+msgstr "一度に 1 つのファイルまたはフォルダーをドロップします。"
+
+#: filepaths.py:1074
+msgid "Different mame.ini"
+msgstr "異なるmame.ini"
+
+#: filepaths.py:1104
+msgid ""
+"Are you sure you want to automatically look for all file & folder paths?  "
+"This will use the mame -createconfig command which will overwrite any "
+"existing mame.ini settings."
+msgstr ""
+"すべてのファイルとフォルダーのパスを自動的に検索してもよろしいですか?  これには、既存の mame.ini 設定を上書きする mame "
+"-createconfig コマンドが使用されます。"
+
+#: filepaths.py:1107
+msgid "Auto Find file & folder paths"
+msgstr "ファイルとフォルダーのパスを自動検索"
+
+#: filepaths.py:1233 filepaths.py:1232
+msgid "Auto Find complete"
+msgstr "自動検索が完了しました"
+
+#: filepaths.py:1294
+msgid "Check the paths, then APPLY to save them or REVERT to undo."
+msgstr "パスを確認し、APPLY で保存するか、REVERT で元に戻します。"
+
+#: filepaths.py:1400
+msgid "Done"
+msgstr "終わり"
+
+#: filepaths.py:1404
+msgid "Are you sure you want to clear all file & folder paths?"
+msgstr "すべてのファイルとフォルダーのパスをクリアしてもよろしいですか?"
+
+#: filepaths.py:1405
+msgid "Clear all file paths"
+msgstr "すべてのファイルパスをクリアする"
+
+#: filepaths.py:333
+msgid "APPLY"
+msgstr "適用する"
+
+#: filepaths.py:333
+msgid "Apply the file path changes"
+msgstr "ファイルパスの変更を適用する"
+
+#: filepaths.py:334
+msgid "REVERT"
+msgstr "元に戻す"
+
+#: filepaths.py:334
+msgid ""
+"Discard any unsaved changes and reload the file paths from the INI files."
+msgstr "未保存の変更を破棄し、INI ファイルからファイル パスを再ロードします。"
+
+#: filepaths.py:336
+msgid "CLEAR ALL"
+msgstr "すべてクリア"
+
+#: filepaths.py:336
+msgid "Clear all file & folder path input fields."
+msgstr "ファイルとフォルダーのパス入力フィールドをすべてクリアします。"
+
+#: filepaths.py:337
+msgid "AUTO FIND"
+msgstr "自動検索"
+
+#: filepaths.py:337
+msgid "Search for all file & folder paths automatically."
+msgstr "すべてのファイルとフォルダーのパスを自動的に検索します。"
+
+#: filepaths.py:338
+msgid "MAKE INI"
+msgstr "INIを作成する"
+
+#: filepaths.py:338
+msgid ""
+"Create the mame.ini file using the MAME executable - in the folder of the "
+"MAME INI File row if it is set, otherwise in the MAME folder on Windows and "
+"macOS, or in ~/.mame on Linux."
+msgstr ""
+"MAME 実行可能ファイルを使用して mame.ini ファイルを作成します。設定されている場合は MAME INI "
+"ファイル行のフォルダーに、そうでない場合は Windows および macOS の MAME フォルダー、Linux の場合は ~/.mame "
+"に作成します。"
+
+#: filepaths.py:525
+msgid ""
+"The path to the mame.ini file is empty, so nothing has been saved.  Set the "
+"MAME INI File row (or use AUTO FIND or MAKE INI) and then apply again."
+msgstr ""
+"mame.ini ファイルへのパスが空であるため、何も保存されていません。  MAME INI ファイル行を設定して (または AUTO FIND "
+"または MAKE INI を使用して)、再度適用します。"
+
+#: filepaths.py:527 filepaths.py:549
+msgid "ERROR writing to mame.ini file"
+msgstr "mame.ini ファイルへの書き込みエラー"
+
+#: filepaths.py:548
+msgid ""
+"Unable to write to the mame.ini file. The file is most likely read-only."
+msgstr "mame.ini ファイルに書き込めません。ファイルは読み取り専用である可能性が高くなります。"
+
+#: filepaths.py:554
+msgid "Unable to write to the ui.ini file. The file is most likely read-only."
+msgstr "ui.ini ファイルに書き込めません。ファイルは読み取り専用である可能性が高くなります。"
+
+#: filepaths.py:555 filepaths.py:540
+msgid "ERROR writing to ui.ini file"
+msgstr "ui.ini ファイルへの書き込みエラー"
+
+#: filepaths.py:560
+msgid ""
+"Unable to write to the pfemame.ini file. The file is most likely read-only."
+msgstr "pfemame.ini ファイルに書き込めません。ファイルは読み取り専用である可能性が高くなります。"
+
+#: filepaths.py:561
+msgid "ERROR writing to pfemame.ini file"
+msgstr "pfemame.ini ファイルへの書き込みエラー"
+
+#: filepaths.py:592
+msgid "File paths saved.  Restart pfeMAME now so all the changes take effect?"
+msgstr "ファイルパスが保存されました。  今すぐ pfeMAME を再起動して、すべての変更を有効にしますか?"
+
+#: filepaths.py:593 pfemame.py:1744
+msgid "Restart Required"
+msgstr "再起動が必要です"
+
+#: filepaths.py:607
+msgid "Are you sure you want to discard all unsaved file path changes?"
+msgstr "未保存のファイル パスの変更をすべて破棄してもよろしいですか?"
+
+#: filepaths.py:608
+msgid "Revert file paths"
+msgstr "ファイルパスを元に戻す"
+
+#: filepaths.py:614
+msgid "File paths reloaded"
+msgstr "ファイルパスがリロードされました"
+
+#: filepaths.py:673
+msgid "Required - pfeMAME needs this to be set."
+msgstr "必須 - pfeMAME にはこれを設定する必要があります。"
+
+#: filepaths.py:783
+msgid "MAME INI File:"
+msgstr "MAME INI ファイル:"
+
+#: filepaths.py:784
+msgid "MAME Executable:"
+msgstr "MAME 実行可能ファイル:"
+
+#: filepaths.py:785
+msgid "History file:"
+msgstr "履歴ファイル:"
+
+#: filepaths.py:786
+msgid "MAME info file:"
+msgstr "MAME情報ファイル:"
+
+#: filepaths.py:787
+msgid "catver.ini file:"
+msgstr "catver.ini ファイル:"
+
+#: filepaths.py:788
+msgid "Roms folder:"
+msgstr "Roms フォルダー:"
+
+#: filepaths.py:789
+msgid "Video folder:"
+msgstr "ビデオフォルダー:"
+
+#: filepaths.py:790
+msgid "Samples folder:"
+msgstr "サンプルフォルダー:"
+
+#: filepaths.py:791
+msgid "Softwarelist HASH folder:"
+msgstr "ソフトウェアリストの HASH フォルダー:"
+
+#: filepaths.py:792
+msgid "Plugins folder:"
+msgstr "プラグインフォルダー:"
+
+#: filepaths.py:793
+msgid "Artwork folder:"
+msgstr "アートワークフォルダー:"
+
+#: filepaths.py:794
+msgid "Icon folder:"
+msgstr "アイコンフォルダー:"
+
+#: filepaths.py:795
+msgid "Snap folder:"
+msgstr "スナップフォルダー:"
+
+#: filepaths.py:796
+msgid "PCBs folder:"
+msgstr "PCB フォルダー:"
+
+#: filepaths.py:797
+msgid "Cabinets folder:"
+msgstr "キャビネットフォルダー:"
+
+#: filepaths.py:798
+msgid "Control Panels folder:"
+msgstr "コントロール パネル フォルダー:"
+
+#: filepaths.py:799
+msgid "Flyers folder:"
+msgstr "チラシフォルダー:"
+
+#: filepaths.py:800
+msgid "Titles folder:"
+msgstr "タイトルフォルダー:"
+
+#: filepaths.py:801
+msgid "Ends folder:"
+msgstr "フォルダーの終了:"
+
+#: filepaths.py:802
+msgid "Marquees folder:"
+msgstr "マーキーフォルダー:"
+
+#: filepaths.py:803
+msgid "Bosses folder:"
+msgstr "ボスフォルダー:"
+
+#: filepaths.py:804
+msgid "Controller folder:"
+msgstr "コントローラーフォルダー:"
+
+#: filepaths.py:805
+msgid "INI folder:"
+msgstr "INI フォルダー:"
+
+#: filepaths.py:806
+msgid "Config folder:"
+msgstr "設定フォルダー:"
+
+#: filepaths.py:807
+msgid "Mapping folder:"
+msgstr "マッピングフォルダー:"
+
+#: filepaths.py:808
+msgid "NVRAM folder:"
+msgstr "NVRAM フォルダー:"
+
+#: filepaths.py:809
+msgid "Difference folder:"
+msgstr "差分フォルダ:"
+
+#: filepaths.py:810
+msgid "Cheat File folder:"
+msgstr "チートファイルフォルダ："
+
+#: filepaths.py:811
+msgid "Inputs folder:"
+msgstr "入力フォルダー:"
+
+#: filepaths.py:812
+msgid "States folder:"
+msgstr "状態フォルダー:"
+
+#: filepaths.py:882
+msgid "Add extra path for this entry"
+msgstr "このエントリに追加のパスを追加します"
+
+#: filepaths.py:884
+msgid "Delete this path"
+msgstr "このパスを削除します"
+
+#: filepaths.py:895
+msgid "Open folder"
+msgstr "フォルダーを開く"
+
+#: filepaths.py:913
+msgid "Are you sure you want to DELETE this row?"
+msgstr "この行を削除してもよろしいですか?"
+
+#: filepaths.py:914
+msgid "Delete selected row"
+msgstr "選択した行を削除"
+
+#: filepaths.py:920
+msgid "Are you sure you want to clear this row (set to empty)?"
+msgstr "この行をクリア (空に設定) してもよろしいですか?"
+
+#: filepaths.py:921
+msgid "Clear selected row"
+msgstr "選択した行をクリア"
+
+#: filepaths.py:1117
+msgid ""
+"Select the MAME folder where your various files & folders are located, e.g. "
+"ROMs, SNAPs, etc"
+msgstr "さまざまなファイルとフォルダーが配置されている MAME フォルダーを選択します。 ROM、SNAPなど"
+
+#: filepaths.py:1130
+msgid "Auto Find: searching for MAME paths..."
+msgstr "自動検索: MAME パスを検索しています..."
+
+#: filepaths.py:1291
+msgid "Changed:"
+msgstr "変更:"
+
+#: filepaths.py:1293
+msgid "Not found (left as they were):"
+msgstr "見つからない（そのまま）："
+
+#: filepaths.py:1357
+msgid "The path to the MAME executable is invalid."
+msgstr "MAME 実行可能ファイルへのパスが無効です。"
+
+#: filepaths.py:1400
+msgid "Completed creating mame.ini"
+msgstr "mame.iniの作成が完了しました"
+
+#: filepaths.py:1418
+msgid "All files"
+msgstr "すべてのファイル"
+
+#: filepaths.py:1425
+msgid "Choose a file"
+msgstr "ファイルを選択してください"
+
+#: filepaths.py:1433
+msgid "Choose a directory"
+msgstr "ディレクトリを選択してください"
+
+#: filepaths.py:139 rominfo.py:167 tileview.py:804 xmlinfo.py:220
+msgid "Name"
+msgstr "名前"
+
+#: filepaths.py:139
+msgid "Path"
+msgstr "パス"
+
+#: filepaths.py:486
+msgid ""
+"Not getting the right output from MAME or cannot find the MAME executable.  "
+"Check that the path is defined correctly.  If the OS is Linux, try running "
+"\"mame\" from the command line."
+msgstr ""
+"MAME から適切な出力が得られないか、MAME 実行可能ファイルが見つかりません。  パスが正しく定義されていることを確認してください。  "
+"OSがLinuxの場合は、コマンドラインから「mame」を実行してみてください。"
+
+#: filepaths.py:536
+msgid ""
+"None of the INI folders exist, so there is nowhere to save the PCBs, "
+"Cabinets, Control Panels, Flyers, Titles, Ends, Marquees and Bosses folders "
+"(MAME keeps them in ui.ini).  Nothing has been saved.  Set the INI folder "
+"row and then apply again."
+msgstr ""
+"INI フォルダーはどれも存在しないため、PCB、キャビネット、コントロール パネル、フライヤーズ、タイトル、エンド、マーキー、ボス "
+"フォルダーを保存する場所がありません (MAME はこれらのフォルダーを ui.ini に保持します)。  何も保存されていません。  "
+"INIフォルダ行を設定して再度適用してください。"
+
+#: filepaths.py:581
+msgid "File paths saved"
+msgstr "保存されたファイルパス"
+
+#: filepaths.py:661
+msgid "MAME version:  no MAME executable set"
+msgstr "MAME バージョン: MAME 実行可能ファイル セットなし"
+
+#: filepaths.py:679
+msgid "Folder not found:  {}"
+msgstr "フォルダーが見つかりません: {}"
+
+#: filepaths.py:890
+msgid "Move up (searched earlier)"
+msgstr "上に移動 (前に検索)"
+
+#: filepaths.py:892
+msgid "Move down (searched later)"
+msgstr "下に移動（後で検索）"
+
+#: filepaths.py:1072
+msgid ""
+"Load the folder paths from this mame.ini?\n"
+"\n"
+"{}\n"
+"\n"
+"(No keeps the folder paths shown now, and they will be saved into it when you APPLY.)"
+msgstr ""
+"この mame.ini からフォルダー パスを読み込みますか?\n"
+"\n"
+"{}\n"
+"\n"
+"(「いいえ」を選択すると、現在表示されているフォルダー パスが維持され、適用時にフォルダー パスが保存されます。)"
+
+#: filepaths.py:1143
+msgid "Looking in {}"
+msgstr "{}を調べる"
+
+#: filepaths.py:1179
+msgid "Auto Find cancelled - nothing has been changed"
+msgstr "自動検索がキャンセルされました - 何も変更されていません"
+
+#: filepaths.py:1201
+msgid "Unable to find the MAME executable so setting to default"
+msgstr "MAME 実行可能ファイルが見つからないため、デフォルトに設定"
+
+#: filepaths.py:1203
+msgid ""
+"Unable to auto-find the MAME executable.  Either I am looking in the wrong "
+"place, or you dont have MAME installed yet.  Setting it to the default "
+"'mame' which may work.  If not, you will need to find it manually"
+msgstr ""
+"MAME 実行可能ファイルを自動検索できません。  探している場所が間違っているか、MAME がまだインストールされていないかのどちらかです。  "
+"デフォルトの「mame」に設定すると機能する可能性があります。  そうでない場合は、手動で見つける必要があります"
+
+#: filepaths.py:1288
+msgid "Found {found} of {total} paths ({changed} changed)."
+msgstr "{total} パスの {found} が見つかりました ({changed} は変更されました)。"
+
+#: filepaths.py:1386
+msgid "MAME reported an error (exit code {})."
+msgstr "MAME がエラーを報告しました (終了コード {})。"
+
+#: filepaths.py:1392
+msgid "Check the MAME executable path and that the folder is not read-only."
+msgstr "MAME 実行可能パスとフォルダーが読み取り専用ではないことを確認してください。"
+
+#: filepaths.py:411
+msgid "Something went wrong:"
+msgstr "何か問題が発生しました:"
+
+#: filepaths.py:602
+msgid "File paths saved - restart pfeMAME for all the changes to take effect"
+msgstr "ファイルパスが保存されました - すべての変更を有効にするために pfeMAME を再起動します"
+
+#: filepaths.py:659
+msgid "MAME version:  {}"
+msgstr "MAMEのバージョン：{}"
+
+#: filepaths.py:678
+msgid "File not found:  {}"
+msgstr "ファイルが見つかりません: {}"
+
+#: filepaths.py:1036
+msgid "{} needs a file, not a folder."
+msgstr "{} にはフォルダーではなくファイルが必要です。"
+
+#: filepaths.py:1161 filepaths.py:1276
+msgid "Checking {}"
+msgstr "{}の確認"
+
+#: filepaths.py:1373
+msgid "Unable to create the folder for mame.ini:"
+msgstr "mame.ini のフォルダーを作成できません:"
+
+#: filepaths.py:1388
+msgid "MAME ran, but no mame.ini was written to {}."
+msgstr "MAME は実行されましたが、mame.ini が {} に書き込まれませんでした。"
+
+#: filepaths.py:663
+msgid "MAME version:  not working ({})"
+msgstr "MAME バージョン: 動作しません ({})"
+
+#: filepaths.py:1038
+msgid "{} needs a folder, not a file."
+msgstr "{} にはファイルではなくフォルダーが必要です。"
+
+#: filepaths.py:1063
+msgid "Unable to open {}"
+msgstr "{}を開けません"
+
+#: filepaths.py:1338 rominfo.py:197
+msgid "MAME did not finish within {} seconds."
+msgstr "MAME は {} 秒以内に終了しませんでした。"
+
+#: filepaths.py:1341
+msgid "MAME could not be run:  {}"
+msgstr "MAME を実行できませんでした: {}"
+
+#: filepaths.py:1391
+msgid "Unable to create the mame.ini file."
+msgstr "mame.ini ファイルを作成できません。"
+
+#: fix_artwork_file.py:308 fix_artwork_file.py:333 fix_artwork_file.py:347
+msgid "SUMMARY"
+msgstr "概要"
+
+#: fix_artwork_file.py:340
+msgid "Stopped before all the artwork sets were updated."
+msgstr "すべてのアートワークセットを更新する前に停止しました。"
+
+#: fix_artwork_file.py:351
+msgid "Stopped before all the files were restored."
+msgstr "すべてのファイルを復元する前に停止しました。"
+
+#: fix_artwork_file.py:407 fix_artwork_file.py:567 fix_artwork_file.py:643
+msgid "Artwork Layout Fixer"
+msgstr "アートワークレイアウト修正"
+
+#: fix_artwork_file.py:429
+msgid ""
+"Finds artwork whose layout files use old tags (backdrop, overlay, bezel, "
+"cpanel and marquee) that newer MAME versions no longer support, and updates "
+"them.  Artwork folders:"
+msgstr ""
+"新しいMAMEでサポートされなくなった古いタグ（backdrop、overlay、bezel、cpanel、marquee）をレイアウトファイルで使用しているアートワークを検出して更新します。"
+"  アートワークフォルダ:"
+
+#: fix_artwork_file.py:450
+msgid "ANALYSE"
+msgstr "分析"
+
+#: fix_artwork_file.py:452
+msgid "FIX"
+msgstr "修正"
+
+#: fix_artwork_file.py:455
+msgid "RESTORE BACKUP"
+msgstr "バックアップを復元"
+
+#: fix_artwork_file.py:458
+msgid "SAVE LOG"
+msgstr "ログを保存"
+
+#: fix_artwork_file.py:594
+msgid "Checking the artwork..."
+msgstr "アートワークを確認しています..."
+
+#: fix_artwork_file.py:636
+msgid "Updating the artwork..."
+msgstr "アートワークを更新しています..."
+
+#: fix_artwork_file.py:670
+msgid "Restoring the artwork..."
+msgstr "アートワークを復元しています..."
+
+#: fix_artwork_file.py:309
+msgid "Artwork sets checked: {total} (zip files: {zips}, folders: {folders})"
+msgstr "確認したアートワークセット: {total}（zipファイル: {zips}、フォルダ: {folders}）"
+
+#: fix_artwork_file.py:311
+msgid "Layout (.lay) files checked: {}"
+msgstr "確認したレイアウト(.lay)ファイル: {}"
+
+#: fix_artwork_file.py:312
+msgid "Artwork sets that need updating: {}"
+msgstr "更新が必要なアートワークセット: {}"
+
+#: fix_artwork_file.py:328
+msgid "Your artwork is up to date - nothing needs changing."
+msgstr "アートワークは最新です。変更は必要ありません。"
+
+#: fix_artwork_file.py:334
+msgid "Artwork sets updated: {}"
+msgstr "更新したアートワークセット: {}"
+
+#: fix_artwork_file.py:335
+msgid "Old tags replaced: {total} ({detail})"
+msgstr "置き換えた古いタグ: {total}（{detail}）"
+
+#: fix_artwork_file.py:347
+msgid "Files restored from backup: {}"
+msgstr "バックアップから復元したファイル: {}"
+
+#: fix_artwork_file.py:451
+msgid "Check the artwork again (changes nothing)"
+msgstr "アートワークを再確認します（何も変更しません）"
+
+#: fix_artwork_file.py:453
+msgid ""
+"Update the artwork that uses old tags.  The original files are backed up "
+"first"
+msgstr "古いタグを使用しているアートワークを更新します。  元のファイルは先にバックアップされます"
+
+#: fix_artwork_file.py:459
+msgid "Save the messages shown to a text file"
+msgstr "表示されているメッセージをテキストファイルに保存します"
+
+#: fix_artwork_file.py:643
+msgid "There are no backed up artwork files to restore."
+msgstr "復元できるバックアップ済みのアートワークファイルはありません。"
+
+#: fix_artwork_file.py:667
+msgid "Press ANALYSE to check the artwork again."
+msgstr "アートワークを再確認するには「分析」を押してください。"
+
+#: fix_artwork_file.py:294
+msgid "{name}: could not be read - {error}"
+msgstr "{name}: 読み込めませんでした - {error}"
+
+#: fix_artwork_file.py:314
+msgid "Old tags to replace: {total} ({detail})"
+msgstr "置き換える古いタグ: {total}（{detail}）"
+
+#: fix_artwork_file.py:317
+msgid "Artwork sets that could not be read: {}"
+msgstr "読み込めなかったアートワークセット: {}"
+
+#: fix_artwork_file.py:319
+msgid ".7z artwork skipped (only .zip files and folders can be updated): {}"
+msgstr "スキップした.7zアートワーク（更新できるのは.zipファイルとフォルダのみ）: {}"
+
+#: fix_artwork_file.py:322
+msgid "Artwork folder not found: {}"
+msgstr "アートワークフォルダが見つかりません: {}"
+
+#: fix_artwork_file.py:325
+msgid ""
+"Press FIX to update them.  The original files are copied to the {} folder "
+"first."
+msgstr "更新するには「修正」を押してください。  元のファイルは先に {} フォルダにコピーされます。"
+
+#: fix_artwork_file.py:338
+msgid "Artwork sets that failed (left unchanged): {}"
+msgstr "失敗したアートワークセット（変更なし）: {}"
+
+#: fix_artwork_file.py:342
+msgid "The original files are in: {}"
+msgstr "元のファイルの場所: {}"
+
+#: fix_artwork_file.py:349
+msgid "Files that could not be restored: {}"
+msgstr "復元できなかったファイル: {}"
+
+#: fix_artwork_file.py:526
+msgid "{done} of {total}"
+msgstr "{done} / {total}"
+
+#: fix_artwork_file.py:434
+msgid "(none set in mame.ini)"
+msgstr "（mame.iniに設定されていません）"
+
+#: fix_artwork_file.py:456
+msgid "Put back the original artwork files from the {} folders"
+msgstr "{} フォルダから元のアートワークファイルを戻します"
+
+#: fix_artwork_file.py:581
+msgid "Stopped."
+msgstr "停止しました。"
+
+#: fix_artwork_file.py:609
+msgid ""
+"Update {count} artwork sets?\n"
+"\n"
+"The original files are copied to the {folder} folder inside each artwork folder first, so they can be restored."
+msgstr ""
+"{count} 個のアートワークセットを更新しますか？\n"
+"\n"
+"元のファイルは復元できるように、先に各アートワークフォルダ内の {folder} フォルダにコピーされます。"
+
+#: fix_artwork_file.py:647
+msgid ""
+"Restore {count} files from the {folder} folders?\n"
+"\n"
+"This replaces the current versions of those files with the originals."
+msgstr ""
+"{folder} フォルダから {count} 個のファイルを復元しますか？\n"
+"\n"
+"これらのファイルの現在のバージョンは元のファイルで置き換えられます。"
+
+#: fix_artwork_file.py:387
+msgid "ERROR: {}"
+msgstr "エラー: {}"
+
+#: fix_artwork_file.py:588
+msgid "{}: skipped - .7z artwork cannot be updated"
+msgstr "{}: スキップ - .7zアートワークは更新できません"
+
+#: fix_artwork_file.py:624
+msgid "{}: updated"
+msgstr "{}: 更新しました"
+
+#: fix_artwork_file.py:659
+msgid "{}: restored"
+msgstr "{}: 復元しました"
+
+#: fix_artwork_file.py:630
+msgid "{name}: FAILED, left unchanged - {error}"
+msgstr "{name}: 失敗（変更なし） - {error}"
+
+#: fix_artwork_file.py:662
+msgid "{name}: FAILED - {error}"
+msgstr "{name}: 失敗 - {error}"
+
+#: fullscreenplay.py:108
+msgid "Running Fullscreen video player"
+msgstr "全画面ビデオプレーヤーを実行中"
+
+#: fullscreenplay.py:111
+msgid "ffmpeg not available"
+msgstr "ffmpegは利用できません"
+
+#: fullscreenplay.py:128 fullscreenplay.py:131
+msgid "No video files found that can be played or folder error: {}"
+msgstr "再生できる動画ファイルが見つからないか、フォルダー エラー: {}"
+
+#: fullscreenplay.py:198
+msgid ""
+"None of the videos in {} could be played - closing the full screen video "
+"player"
+msgstr "{} 内の動画はどれも再生できませんでした - 全画面ビデオプレーヤーを閉じます"
+
+#: fullscreenplay.py:225
+msgid "Playing video {}\n"
+msgstr "ビデオを再生中 {}\n"
+
+#: fullscreenplay.py:258
+msgid "Metadata error: {}"
+msgstr "メタデータ エラー: {}"
+
+#: functions.py:136
+msgid "Categories file loaded successfully"
+msgstr "カテゴリファイルが正常にロードされました"
+
+#: functions.py:824
+msgid "Reading history.xml file."
+msgstr "History.xml ファイルを読み取ります。"
+
+#: functions.py:857
+msgid "No History file defined"
+msgstr "履歴ファイルが定義されていません"
+
+#: functions.py:141
+msgid ""
+"Unable to locate categories.dat file.  Select some ROM categories by "
+"checking the box for the category."
+msgstr "category.dat ファイルが見つかりません。  カテゴリのボックスをチェックして、いくつかの ROM カテゴリを選択します。"
+
+#: functions.py:827
+msgid "Reading mameinfo.dat file."
+msgstr "mameinfo.datファイルを読み込んでいます。"
+
+#: functions.py:1249
+msgid "Total ROMs: "
+msgstr "総ROM数:"
+
+#: functions.py:1254
+msgid "Exists: "
+msgstr "存在します:"
+
+#: functions.py:1259
+msgid "In Current View: "
+msgstr "現在のビュー:"
+
+#: functions.py:877
+msgid ""
+"No information in the History file for System: {rom} with system program "
+"{program}"
+msgstr "システムの履歴ファイルに情報がありません: {rom} (システム プログラム {program})"
+
+#: functions.py:887
+msgid "No information in the History file for {}"
+msgstr "{} の履歴ファイルに情報がありません"
+
+#: functions.py:1333
+msgid "Skipped {} as it does not exist\n"
+msgstr "{} が存在しないためスキップしました\n"
+
+#: functions.py:834
+msgid "Unable to read the {file_type} file at \"{path}\": {error}"
+msgstr "「{path}」で {file_type} ファイルを読み取れません: {error}"
+
+#: functions.py:863
+msgid ""
+"No information in the {file_type} file for System: {rom} with system program"
+" {program}"
+msgstr "システムの {file_type} ファイルに情報がありません: {rom}、システム プログラム {program}"
+
+#: functions.py:870
+msgid "No history text found between $mame and $end tags for ROM: {}"
+msgstr "ROM の $mame タグと $end タグの間に履歴テキストが見つかりません: {}"
+
+#: functions.py:1021
+msgid "No joystick available for navigation"
+msgstr "ナビゲーションに使用できるジョイスティックがありません"
+
+#: functions.py:993
+msgid "Using {} for navigation"
+msgstr "ナビゲーションに {} を使用する"
+
+#: global_defaults.py:50
+msgid "English"
+msgstr "英語"
+
+#: global_defaults.py:51
+msgid "German"
+msgstr "ドイツ語"
+
+#: global_defaults.py:52
+msgid "Spanish"
+msgstr "スペイン語"
+
+#: global_defaults.py:53
+msgid "French"
+msgstr "フランス語"
+
+#: global_defaults.py:54
+msgid "Japanese"
+msgstr "日本語"
+
+#: global_defaults.py:55
+msgid "Chinese"
+msgstr "中国語"
+
+#: global_defaults.py:56
+msgid "Russian"
+msgstr "ロシア語"
+
+#: image_picker_dialog.py:75 software_browser.py:87
+msgid "Loading..."
+msgstr "読み込み中..."
+
+#: image_picker_dialog.py:97
+msgid "No preview"
+msgstr "プレビューなし"
+
+#: image_picker_dialog.py:171
+msgid "Use This Image"
+msgstr "この画像を使用してください"
+
+#: image_picker_dialog.py:139
+msgid ""
+"Click an image to select it, then choose \"Use This Image\". Double-click to"
+" use it straight away."
+msgstr "画像をクリックして選択し、「この画像を使用」を選択します。ダブルクリックしてすぐに使用できます。"
+
+#: languagepicker.py:116
+msgid "Select Language"
+msgstr "言語の選択"
+
+#: languagepicker.py:193
+msgid "pfeMAME will use the new language after it has been restarted."
+msgstr "pfeMAME は再起動後に新しい言語を使用します。"
+
+#: online_rom_search.py:297
+msgid "Searching archive.org for {}.zip"
+msgstr "archive.org で {}.zip を検索しています"
+
+#: online_rom_search.py:454
+msgid "Logging in to archive.org"
+msgstr "archive.org にログインしています"
+
+#: online_rom_search.py:557
+msgid "Connecting to retroroms.net"
+msgstr "retroroms.net に接続しています"
+
+#: online_rom_search.py:561
+msgid "Logging in to retroroms.net and looking for {rom}.zip in {folder}"
+msgstr "retroroms.net にログインし、{folder} で {rom}.zip を探しています"
+
+#: online_rom_search.py:630
+msgid "Searching the web (DuckDuckGo) for {}"
+msgstr "ウェブ (DuckDuckGo) で {} を検索しています"
+
+#: online_rom_search.py:396
+msgid "Checking {source} item {number} of {count} ({found} found so far)"
+msgstr "{source} の項目 {number}/{count} を確認しています (これまでに {found} 件)"
+
+#: online_rom_search.py:457
+msgid "archive.org login failed"
+msgstr "archive.org へのログインに失敗しました"
+
+#: PanelDebug.py:30
+msgid "Write MAME log messages to file"
+msgstr "MAME ログ メッセージをファイルに書き込む"
+
+#: PanelDebug.py:32
+msgid "Display debug messages"
+msgstr "デバッグメッセージを表示する"
+
+#: PanelDebug.py:36
+msgid "Write MAME messages to the log file"
+msgstr "MAME メッセージをログ ファイルに書き込む"
+
+#: PanelDebug.py:37
+msgid "Displays MAME diagnostics messages.  Can be useful for debugging."
+msgstr "MAME 診断メッセージを表示します。  デバッグに役立ちます。"
+
+#: PanelInput.py:35
+msgid "Use Mouse"
+msgstr "マウスを使用する"
+
+#: PanelInput.py:37
+msgid "Use Joystick"
+msgstr "ジョイスティックを使用する"
+
+#: PanelInput.py:39
+msgid "Use Lightgun (Don't use with Use Mouse)"
+msgstr "ライトガンを使用します（マウスを使用しないでください）"
+
+#: PanelInput.py:41
+msgid "Offscreen Reload"
+msgstr "オフスクリーンリロード"
+
+#: PanelInput.py:45
+msgid ""
+"Enables the mouse for ROMs that can use it - typically lightgun ROMs that "
+"just use the mouse."
+msgstr "マウスを使用できる ROM (通常はマウスのみを使用する lightgun ROM) でマウスを有効にします。"
+
+#: PanelInput.py:47
+msgid "Enables the joystick for ROMs that can use it"
+msgstr "ジョイスティックを使用できるROMのジョイスティックを有効にします"
+
+#: PanelInput.py:48
+msgid ""
+"Enables the lightgun controller if present.  Most lightgun ROMs just use the"
+" mouse.  If you have to enable this, disable the Use Mouse."
+msgstr ""
+"ライトガンコントローラーが存在する場合、それを有効にします。  ほとんどのライトガン ROM はマウスのみを使用します。  "
+"これを有効にする必要がある場合は、「マウスの使用」を無効にします。"
+
+#: PanelInput.py:51
+msgid "Reload when pointer is out of bounds by simulating offscreen"
+msgstr "オフスクリーンをシミュレートすることにより、ポインタが範囲外にあるときにリロードします"
+
+#: PanelMisc.py:36
+msgid "Enable Cheats"
+msgstr "チートを有効にする"
+
+#: PanelMisc.py:38
+msgid "Skip ROM Info on startup"
+msgstr "起動時にROM情報をスキップ"
+
+#: PanelMisc.py:42
+msgid ""
+"This enables ROMs cheats.  The cheat file must exist and MAME must know "
+"where it is."
+msgstr "これによりROMのチートが可能になります。  チート ファイルが存在し、MAME がそのファイルの場所を知っている必要があります。"
+
+#: PanelMisc.py:44
+msgid "Skips the ROM information screen when MAME launches."
+msgstr "MAME起動時のROM情報画面をスキップします。"
+
+#: PanelOSD.py:33
+msgid "OSD UI Key"
+msgstr "OSD UIキー"
+
+#: PanelOSD.py:36
+msgid "Select the key used to toggle the OSD UI mode for systems"
+msgstr "システムの OSD UI モードを切り替えるために使用するキーを選択します"
+
+#: PanelPerformance.py:29
+msgid "Auto Frame skip"
+msgstr "オートフレームスキップ"
+
+#: PanelPerformance.py:33
+msgid ""
+"Automatically skip frames to improve ROM speed.  Can be useful for slow "
+"ROMs."
+msgstr "フレームを自動的にスキップして ROM 速度を向上させます。  ROM が遅い場合に役立ちます。"
+
+#: PanelPfeMame.py:58
+msgid "Startup"
+msgstr "スタートアップ"
+
+#: PanelPfeMame.py:77
+msgid "Main View and ROMs List"
+msgstr "メインビューとROMリスト"
+
+#: PanelPfeMame.py:96 pfemame_ribbon_bar.py:595
+msgid "Tile View"
+msgstr "タイルビュー"
+
+#: PanelPfeMame.py:107
+msgid "Playing ROMs and Videos"
+msgstr "ROM とビデオの再生"
+
+#: PanelPfeMame.py:130
+msgid "Joystick"
+msgstr "ジョイスティック"
+
+#: PanelPfeMame.py:149
+msgid "List Colors"
+msgstr "リストの色"
+
+#: PanelPfeMame.py:156
+msgid "UI Elements"
+msgstr "UI要素"
+
+#: PanelPfeMame.py:163
+msgid "Special UI"
+msgstr "特別なUI"
+
+#: PanelPfeMame.py:254
+msgid "Set the size of the ROM image tiles in 'Tile View'."
+msgstr "「Tile View」でROMイメージタイルのサイズを設定します。"
+
+#: PanelPfeMame.py:257
+msgid ""
+"This sets the default view that the ROMs list will show when the application"
+" starts up."
+msgstr "これにより、アプリケーションの起動時に ROM リストに表示されるデフォルトのビューが設定されます。"
+
+#: PanelPfeMame.py:260
+msgid ""
+"This sets the number of days after which a prompt is produced at startup to "
+"refresh the ROMs cache."
+msgstr "これは、起動時に ROM キャッシュを更新するためのプロンプトが表示されるまでの日数を設定します。"
+
+#: PanelPfeMame.py:263
+msgid ""
+"Number of minutes of inactivity before the screensaver is activated.  Set to"
+" Zero to disable."
+msgstr "スクリーンセーバーがアクティブになるまでの非アクティブな時間 (分単位)。  無効にするには、ゼロに設定します。"
+
+#: PanelPfeMame.py:267
+msgid ""
+"This sets the scaling size for the ROM icons (if any exist and they are "
+"enabled).  16 pixels is the default."
+msgstr "これにより、ROM アイコンのスケーリング サイズが設定されます (存在し、有効になっている場合)。  16 ピクセルがデフォルトです。"
+
+#: PanelPfeMame.py:273
+msgid "The joystick or gamepad used to navigate the Main View and Tile View."
+msgstr "メイン ビューとタイル ビューを移動するために使用されるジョイスティックまたはゲームパッド。"
+
+#: PanelPfeMame.py:276
+msgid "* - Requires restart  ** - Requires database refresh"
+msgstr "* - 再起動が必要です ** - データベースの更新が必要です"
+
+#: PanelPfeMame.py:290
+msgid ""
+"Choose the language pfeMAME uses.  pfeMAME must be restarted for the change "
+"to take effect."
+msgstr "pfeMAME が使用する言語を選択します。  変更を有効にするには、pfeMAME を再起動する必要があります。"
+
+#: PanelPfeMame.py:293
+msgid "Language (*)"
+msgstr "言語(*)"
+
+#: PanelPfeMame.py:337
+msgid "Number of days to check ROM cache"
+msgstr "ROMキャッシュをチェックする日数"
+
+#: PanelPfeMame.py:338
+msgid "Minutes for Screensaver"
+msgstr "スクリーンセーバーの時間 (分)"
+
+#: PanelPfeMame.py:339
+msgid "Default ROM list view at startup"
+msgstr "起動時のデフォルトのROMリストビュー"
+
+#: PanelPfeMame.py:340
+msgid "Icons Size for ROMs list (*)"
+msgstr "ROM リストのアイコン サイズ (*)"
+
+#: PanelPfeMame.py:341
+msgid "Tile Size in Tile View"
+msgstr "タイルビューのタイルサイズ"
+
+#: PanelPfeMame.py:342
+msgid "Joystick Selected For Navigation (*)"
+msgstr "ナビゲーション用にジョイスティックが選択されました (*)"
+
+#: PanelPfeMame.py:532
+msgid "Are you sure you want to reset all colors?"
+msgstr "すべての色をリセットしてもよろしいですか?"
+
+#: PanelPfeMame.py:532
+msgid "Reset all colors to default"
+msgstr "すべての色をデフォルトにリセット"
+
+#: PanelPfeMame.py:537
+msgid "Are you sure you want to change all colors to the Dark Theme?"
+msgstr "すべての色をダークテーマに変更してもよろしいですか?"
+
+#: PanelPfeMame.py:538
+msgid "Select Dark Theme"
+msgstr "ダークテーマを選択"
+
+#: PanelPfeMame.py:693
+msgid "DEFAULT ALL COLORS"
+msgstr "デフォルトのすべての色"
+
+#: PanelPfeMame.py:694
+msgid "Set all color values to their application default."
+msgstr "すべての色の値をアプリケーションのデフォルトに設定します。"
+
+#: PanelPfeMame.py:701
+msgid "SELECT DARK THEME"
+msgstr "ダークテーマを選択"
+
+#: PanelPfeMame.py:702
+msgid "Set the application colors to Dark Theme."
+msgstr "アプリケーションの色をダークテーマに設定します。"
+
+#: PanelPfeMame.py:59
+msgid "Check software version on startup"
+msgstr "起動時にソフトウェアのバージョンを確認する"
+
+#: PanelPfeMame.py:60
+msgid ""
+"Check for updates to the application software version online on startup "
+"automatically."
+msgstr "起動時にアプリケーション ソフトウェアのバージョンの更新をオンラインで自動的に確認します。"
+
+#: PanelPfeMame.py:61
+msgid "Check Catver.ini file version on startup"
+msgstr "起動時に Catver.ini ファイルのバージョンを確認する"
+
+#: PanelPfeMame.py:62
+msgid ""
+"Check the version of the Catver.ini file on startup and compare to the MAME "
+"version.  If not matched then warn the user that the versions are not "
+"matched"
+msgstr ""
+"起動時に Catver.ini ファイルのバージョンを確認し、MAME のバージョンと比較します。  "
+"一致しない場合は、バージョンが一致しないことをユーザーに警告します"
+
+#: PanelPfeMame.py:64
+msgid "Check ROMs database age on startup"
+msgstr "起動時にROMデータベースの古さを確認する"
+
+#: PanelPfeMame.py:65
+msgid "Check the age of the ROMs database when the application is started."
+msgstr "アプリケーションの起動時に ROM データベースの古さを確認します。"
+
+#: PanelPfeMame.py:66
+msgid "Auto Select the last ROM selected and last view (*)"
+msgstr "自動選択 最後に選択した ROM と最後のビュー (*)"
+
+#: PanelPfeMame.py:67
+msgid ""
+"Automatically select the View and last ROM selected when pfeMAME was "
+"previously shut down.  This overrides the control above."
+msgstr ""
+"ビューと、pfeMAME が以前にシャットダウンされたときに選択された最後の ROM を自動的に選択します。  "
+"これは上記のコントロールをオーバーライドします。"
+
+#: PanelPfeMame.py:69
+msgid "Set Tile View as Default (after startup)"
+msgstr "タイル ビューをデフォルトとして設定 (起動後)"
+
+#: PanelPfeMame.py:70
+msgid ""
+"Select this if you want the 'Tile' view to run automatically after the "
+"pfeMAME application has launched."
+msgstr "pfeMAME アプリケーションの起動後に「タイル」ビューを自動的に実行する場合は、これを選択します。"
+
+#: PanelPfeMame.py:72
+msgid "Set main window full-screen on startup"
+msgstr "起動時にメイン ウィンドウを全画面表示に設定する"
+
+#: PanelPfeMame.py:73
+msgid "Sets the main view window to full-screen after startup."
+msgstr "起動後にメイン ビュー ウィンドウを全画面表示に設定します。"
+
+#: PanelPfeMame.py:74
+msgid "Recall column widths on startup"
+msgstr "起動時に列幅を呼び出す"
+
+#: PanelPfeMame.py:75
+msgid ""
+"Recalls the ROM list column widths based on what they were when the "
+"application was closed."
+msgstr "アプリケーションを閉じたときの幅に基づいて、ROM リストの列幅を呼び出します。"
+
+#: PanelPfeMame.py:78
+msgid "Highlight ROMs with missing files (*)"
+msgstr "ファイルが欠落している ROM をハイライト表示する (*)"
+
+#: PanelPfeMame.py:79
+msgid ""
+"Select this if you want ROMs that don't have a corresponding rom file in the"
+" defined path to be highlighted."
+msgstr "定義されたパス内に対応する rom ファイルがない ROM を強調表示したい場合は、これを選択します。"
+
+#: PanelPfeMame.py:81
+msgid "Show an icon of the ROM in the ROMs list (can slow down startup) (*)"
+msgstr "ROM リストに ROM のアイコンを表示します (起動が遅くなる可能性があります) (*)"
+
+#: PanelPfeMame.py:82
+msgid ""
+"When selected, the ROM list view will show a small icon next to the ROM "
+"name.  This can slow down the start up time if the icons are larger than "
+"16x16 pixels"
+msgstr ""
+"選択すると、ROM リスト ビューの ROM 名の横に小さなアイコンが表示されます。  アイコンが 16x16 "
+"ピクセルより大きい場合、起動時間が遅くなる可能性があります。"
+
+#: PanelPfeMame.py:84
+msgid "Click to set Favorite + Rating (*)"
+msgstr "クリックしてお気に入り + 評価を設定します (*)"
+
+#: PanelPfeMame.py:85
+msgid ""
+"Allows double clicking on the Favorite and Rating columns to invoke their "
+"selection for the selected ROM."
+msgstr "[お気に入り] 列と [評価] 列をダブルクリックして、選択した ROM の選択を呼び出すことができます。"
+
+#: PanelPfeMame.py:87
+msgid "Flash errors in messages window"
+msgstr "メッセージウィンドウのフラッシュエラー"
+
+#: PanelPfeMame.py:88
+msgid "Flash the messages window if errors are detected."
+msgstr "エラーが検出された場合は、メッセージ ウィンドウをフラッシュします。"
+
+#: PanelPfeMame.py:89
+msgid "Systems / Software Lists support (*)(**)"
+msgstr "システム/ソフトウェア リストのサポート(*)(**)"
+
+#: PanelPfeMame.py:90
+msgid ""
+"Provide support for Systems (e.g. ZX Spectrum) by searching for their "
+"programs and including them in the ROMs list when a refresh is performed "
+"(Requires a database refresh)."
+msgstr ""
+"システム (ZX Spectrum など) のプログラムを検索し、更新の実行時に ROM リストに含めることで、システム (データベースの更新が必要) "
+"のサポートを提供します。"
+
+#: PanelPfeMame.py:92
+msgid "Suppress Short Names"
+msgstr "短い名前を抑制する"
+
+#: PanelPfeMame.py:93
+msgid ""
+"Override the detection of short names in ROMs XML files.  For systems this "
+"will prevent cheats from being available but is necessary if the rom file "
+"doesn't match the detail in the XML file"
+msgstr ""
+"ROM XML ファイル内の短縮名の検出をオーバーライドします。  システムの場合、これによりチートが利用できなくなりますが、ROM ファイルが XML"
+" ファイルの詳細と一致しない場合に必要です。"
+
+#: PanelPfeMame.py:97
+msgid "Dim Tile View Tiles not selected"
+msgstr "ディムタイルビュータイルが選択されていません"
+
+#: PanelPfeMame.py:98
+msgid ""
+"Dim ROM image tiles in 'Tile View' so that the selected ROM stands out."
+msgstr "「Tile View」で ROM イメージのタイルを暗くして、選択した ROM を目立たせるようにします。"
+
+#: PanelPfeMame.py:99
+msgid "Jump to a letter in Tile View with the A-Z keys"
+msgstr "A ～ Z キーを使用してタイル ビューの文字にジャンプします"
+
+#: PanelPfeMame.py:100
+msgid ""
+"In Tile View, pressing a letter key jumps to the next ROM starting with that"
+" letter.  Leave this off if your control panel sends letter keys for its "
+"buttons."
+msgstr ""
+"タイル ビューで文字キーを押すと、その文字で始まる次の ROM にジャンプします。  コントロール "
+"パネルがボタンの文字キーを送信する場合は、これをオフのままにしておきます。"
+
+#: PanelPfeMame.py:102
+msgid "Mouse support in Tile View"
+msgstr "タイルビューでのマウスのサポート"
+
+#: PanelPfeMame.py:103
+msgid ""
+"Use the mouse in Tile View: click to select, double-click to play, the wheel"
+" to move and right-click for the menu.  The pointer shows while the mouse "
+"moves.  Leave this off if your cabinet has a trackball or spinner set up as "
+"a mouse."
+msgstr ""
+"タイル ビューでマウスを使用します。クリックして選択し、ダブルクリックして再生し、ホイールを移動して、右クリックしてメニューを表示します。  "
+"マウスの移動中はポインタが表示されます。  "
+"キャビネットにトラックボールまたはスピナーがマウスとして設定されている場合は、これをオフのままにしてください。"
+
+#: PanelPfeMame.py:108
+msgid "Play all ROMs in Full Screen"
+msgstr "すべての ROM をフルスクリーンで再生する"
+
+#: PanelPfeMame.py:109
+msgid ""
+"Forces all ROMs to be played in Full Screen regardless of the ROM specific "
+"preference setting."
+msgstr "ROM 固有の環境設定に関係なく、すべての ROM を強制的に全画面で再生します。"
+
+#: PanelPfeMame.py:110
+msgid "Play all ROMs in a Window"
+msgstr "ウィンドウ内ですべての ROM を再生する"
+
+#: PanelPfeMame.py:111
+msgid ""
+"Forces all ROMs to be played in a window regardless of the ROM specific "
+"preference setting (Except for Tile View that is always in Full Screen.)"
+msgstr "ROM 固有の環境設定に関係なく、すべての ROM を強制的にウィンドウで再生します (常に全画面表示になるタイル ビューを除く)。"
+
+#: PanelPfeMame.py:113
+msgid "Disable Artwork for all ROMs"
+msgstr "すべてのROMのアートワークを無効にする"
+
+#: PanelPfeMame.py:114
+msgid ""
+"This disables the showing of artwork around the ROM playing area on the "
+"screen for all ROMs"
+msgstr "これにより、すべての ROM について、画面上の ROM 再生領域の周囲のアートワークの表示が無効になります。"
+
+#: PanelPfeMame.py:115
+msgid "Auto load the ROM video if available (*)"
+msgstr "利用可能な場合は ROM ビデオを自動ロードします (*)"
+
+#: PanelPfeMame.py:116
+msgid ""
+"Auto Load the ROM video if one exists for the selected ROM.  Video loads and"
+" plays after 5 seconds in the main view unless another ROM is selected.  In "
+"Tile View this turns the tile preview videos on or off (the screensaver is "
+"not affected)."
+msgstr ""
+"選択した ROM に ROM ビデオが存在する場合は、ROM ビデオを自動ロードします。  別の ROM が選択されていない限り、ビデオはメイン "
+"ビューで 5 秒後にロードされ、再生されます。  タイル ビューでは、これによりタイル プレビュー ビデオがオンまたはオフになります "
+"(スクリーンセーバーは影響を受けません)。"
+
+#: PanelPfeMame.py:119
+msgid "Disable all video playback (*)"
+msgstr "すべてのビデオ再生を無効にする (*)"
+
+#: PanelPfeMame.py:120
+msgid "Disable all video playback in the Main and Tile Views."
+msgstr "メイン ビューとタイル ビューでのすべてのビデオ再生を無効にします。"
+
+#: PanelPfeMame.py:121
+msgid "Use software video rendering (*)"
+msgstr "ソフトウェアビデオレンダリングを使用する(*)"
+
+#: PanelPfeMame.py:122
+msgid ""
+"Draw videos without OpenGL.  Try this if videos show as a black or "
+"flickering box, which can happen with some Linux / Wayland graphics drivers."
+"  It uses more CPU than OpenGL.  pfeMAME also switches to software rendering"
+" by itself if OpenGL fails to start."
+msgstr ""
+"OpenGL を使用せずにビデオを描画します。  ビデオが黒いボックスまたはちらつきボックスとして表示される場合は、これを試してください。これは、一部の"
+" Linux / Wayland グラフィック ドライバーで発生する可能性があります。  OpenGL よりも多くの CPU を使用します。  "
+"pfeMAME は、OpenGL の起動に失敗した場合にも、ソフトウェア レンダリングに自動的に切り替えます。"
+
+#: PanelPfeMame.py:125
+msgid "Hide the screensaver video title after a few seconds"
+msgstr "数秒後にスクリーンセーバーの動画タイトルを隠す"
+
+#: PanelPfeMame.py:126
+msgid ""
+"In the full screen video player (the screensaver), show the video title for "
+"a few seconds when each video starts and then hide it so it does not cover "
+"the video.  When this is off the title stays on screen."
+msgstr ""
+"全画面ビデオプレーヤー（スクリーンセーバー）で、各動画の開始時に動画タイトルを数秒間表示し、その後は動画を隠さないように非表示にします。  "
+"オフにするとタイトルは表示されたままになります。"
+
+#: PanelPfeMame.py:131
+msgid "Enable joystick navigation for Main View (*)"
+msgstr "メインビューのジョイスティックナビゲーションを有効にする(*)"
+
+#: PanelPfeMame.py:132
+msgid ""
+"Allow the joystick or gamepad selected above to provide navigation in the "
+"Main View window."
+msgstr "上で選択したジョイスティックまたはゲームパッドがメイン ビュー ウィンドウでナビゲーションを提供できるようにします。"
+
+#: PanelPfeMame.py:134
+msgid "Enable joystick navigation for Tile View (*)"
+msgstr "タイル ビューのジョイスティック ナビゲーションを有効にする(*)"
+
+#: PanelPfeMame.py:135
+msgid ""
+"Allow the joystick or gamepad selected above to provide navigation in the "
+"Tile View window."
+msgstr "上で選択したジョイスティックまたはゲームパッドがタイル ビュー ウィンドウでナビゲーションを提供できるようにします。"
+
+#: PanelPfeMame.py:150
+msgid "Alternate Row Color 1:"
+msgstr "代替行の色 1:"
+
+#: PanelPfeMame.py:151
+msgid "Alternate Row Color 2:"
+msgstr "代替行の色 2:"
+
+#: PanelPfeMame.py:152
+msgid "Selected Row Color:"
+msgstr "選択した行の色:"
+
+#: PanelPfeMame.py:153
+msgid "Selected Row BG Color:"
+msgstr "選択した行の背景色:"
+
+#: PanelPfeMame.py:154
+msgid "Missing ROM Color:"
+msgstr "ROM の色がありません:"
+
+#: PanelPfeMame.py:157
+msgid "Text Color:"
+msgstr "テキストの色:"
+
+#: PanelPfeMame.py:158
+msgid "Text Background Color:"
+msgstr "テキストの背景色:"
+
+#: PanelPfeMame.py:159
+msgid "Window Background Color:"
+msgstr "ウィンドウの背景色:"
+
+#: PanelPfeMame.py:160
+msgid "Control Bar Color:"
+msgstr "コントロールバーの色:"
+
+#: PanelPfeMame.py:161
+msgid "Button Background Color:"
+msgstr "ボタンの背景色:"
+
+#: PanelPfeMame.py:164
+msgid "Ribbon Bar Color:"
+msgstr "リボンバーの色:"
+
+#: PanelPfeMame.py:165
+msgid "Ribbon Bar Highlight Color:"
+msgstr "リボン バーのハイライト色:"
+
+#: PanelPfeMame.py:166
+msgid "Scrollbar Slider Color:"
+msgstr "スクロールバーのスライダーの色:"
+
+#: PanelPfeMame.py:167
+msgid "Scrollbar Track Color:"
+msgstr "スクロールバーのトラックの色:"
+
+#: PanelPfeMame.py:670
+msgid "Click here to change the color"
+msgstr "色を変更するにはここをクリックしてください"
+
+#: PanelSlots.py:113
+msgid "Slots Configuration"
+msgstr "スロット構成"
+
+#: PanelSlots.py:177
+msgid "Manual Configuration:"
+msgstr "手動設定:"
+
+#: PanelSlots.py:265
+msgid "Slots Configuration: Slots From INI File"
+msgstr "スロット構成: INI ファイルからのスロット"
+
+#: PanelSlots.py:411
+msgid "Slots Configuration: Slots Empty"
+msgstr "スロット構成: スロットが空です"
+
+#: PanelSlots.py:465
+msgid "Load Slot Preset"
+msgstr "スロットプリセットを読み込む"
+
+#: PanelSlots.py:476 PanelSlots.py:477
+msgid "Delete Slot Preset"
+msgstr "スロットプリセットを削除"
+
+#: PanelSlots.py:547
+msgid "Remove the device from this slot"
+msgstr "このスロットからデバイスを外す"
+
+#: PanelSlots.py:586
+msgid "Slot Name"
+msgstr "スロット名"
+
+#: PanelSlots.py:586
+msgid "Device Name"
+msgstr "デバイス名"
+
+#: PanelSlots.py:587
+msgid "Slot Option Name"
+msgstr "スロットオプション名"
+
+#: PanelSlots.py:587
+msgid "Slot Parent"
+msgstr "スロットの親"
+
+#: PanelSlots.py:137
+msgid "Clear All Selections"
+msgstr "すべての選択をクリア"
+
+#: PanelSlots.py:139
+msgid ""
+"This removes the device from every slot.  Note that MAME uses its own "
+"default for any slot that is left empty here."
+msgstr "すべてのスロットからデバイスを外します。  注意：ここで空のままにしたスロットには、MAME 自身のデフォルトが使われます。"
+
+#: PanelSlots.py:147
+msgid "Load MAME Defaults"
+msgstr "MAMEのデフォルトをロードする"
+
+#: PanelSlots.py:149
+msgid ""
+"This sets the slot controls, including the sub-slots of each default device,"
+" to their MAME DEFAULT values found in the systems XML data."
+msgstr "各デフォルトデバイスのサブスロットを含め、スロット設定をシステムの XML データにある MAME のデフォルト値に設定します。"
+
+#: PanelSlots.py:260 PanelSlots.py:422
+msgid "Slots Configuration: Slots Set To Default from XML"
+msgstr "スロット構成: XML からスロットをデフォルトに設定"
+
+#: PanelSlots.py:447
+msgid "Choose a slot preset:"
+msgstr "スロットプリセットを選択："
+
+#: PanelSlots.py:451
+msgid "Name for this slot setup:"
+msgstr "このスロット構成の名前："
+
+#: PanelSlots.py:451 PanelSlots.py:458
+msgid "Save Slot Preset"
+msgstr "スロットプリセットを保存"
+
+#: PanelSlots.py:157
+msgid "Save Preset..."
+msgstr "プリセットを保存..."
+
+#: PanelSlots.py:158
+msgid ""
+"Save the current slot setup under a name, so you can switch back to it "
+"later."
+msgstr "現在のスロット構成に名前を付けて保存し、後で切り替えられるようにします。"
+
+#: PanelSlots.py:159
+msgid "Load Preset..."
+msgstr "プリセットを読み込む..."
+
+#: PanelSlots.py:159
+msgid "Replace the current slot setup with a saved one."
+msgstr "現在のスロット構成を保存済みのものに置き換えます。"
+
+#: PanelSlots.py:160
+msgid "Delete Preset..."
+msgstr "プリセットを削除..."
+
+#: PanelSlots.py:160
+msgid "Delete a saved slot setup."
+msgstr "保存済みのスロット構成を削除します。"
+
+#: PanelSlots.py:161
+msgid "Copy MAME Command Line"
+msgstr "MAME コマンドラインをコピー"
+
+#: PanelSlots.py:162
+msgid ""
+"Copy the slot and BIOS options as MAME command-line arguments (e.g. for "
+"sharing)."
+msgstr "スロットと BIOS のオプションを MAME のコマンドライン引数としてコピーします（共有用など）。"
+
+#: PanelSlots.py:472
+msgid "Slots Configuration: Preset \"{}\""
+msgstr "スロット構成：プリセット「{}」"
+
+#: PanelSlots.py:444
+msgid "There are no saved slot presets for {} yet."
+msgstr "{} の保存済みスロットプリセットはまだありません。"
+
+#: PanelSlots.py:462
+msgid "Slot preset \"{}\" saved"
+msgstr "スロットプリセット「{}」を保存しました"
+
+#: PanelSlots.py:458
+msgid "Replace the existing preset \"{}\"?"
+msgstr "既存のプリセット「{}」を置き換えますか？"
+
+#: PanelSlots.py:477
+msgid "Delete the preset \"{}\"?"
+msgstr "プリセット「{}」を削除しますか？"
+
+#: PanelSlots.py:486
+msgid "Copied: {}"
+msgstr "コピーしました：{}"
+
+#: PanelSlots.py:486
+msgid "(no slot options)"
+msgstr "（スロットオプションなし）"
+
+#: PanelSound.py:48
+msgid "Sample Rate"
+msgstr "サンプルレート"
+
+#: PanelSound.py:52
+msgid "Volume"
+msgstr "音量"
+
+#: PanelSound.py:58
+msgid "Sound SubSystem"
+msgstr "サウンドサブシステム"
+
+#: PanelSound.py:62
+msgid "Audio Latency"
+msgstr "オーディオ遅延"
+
+#: PanelSound.py:64
+msgid "Use Sample Files"
+msgstr "サンプルファイルを使用する"
+
+#: PanelSound.py:68
+msgid ""
+"Sets the audio sample rate. Smaller values (e.g. 11025) cause lower audio "
+"quality but faster emulation speed."
+msgstr ""
+"オーディオのサンプルレートを設定します。値が小さいと (例: 11025)、オーディオ品質は低下しますが、エミュレーション速度は速くなります。"
+
+#: PanelSound.py:70
+msgid ""
+"Sets the startup volume. It can later be changed with the user interface "
+"(see Keys section). The volume is an attenuation in dB: e.g., \"-12\" will "
+"start with -12dB attenuation.  Allowable values are from 0 to -30."
+msgstr ""
+"起動時の音量を設定します。これは、後でユーザー インターフェイスを使用して変更できます (「キー」セクションを参照)。ボリュームは dB "
+"単位の減衰です。たとえば、「-12」は -12dB の減衰で始まります。  許容値は 0 ～ -30 です。"
+
+#: PanelSound.py:74
+msgid ""
+"Specifies which sound subsystem to use. Selecting none disables sound output"
+" altogether (sound hardware is still emulated).  On Windows and Linux, "
+"portaudio is likely to give the lowest possible latency, while Mac users "
+"will find coreaudio provides the best results."
+msgstr ""
+"使用するサウンド サブシステムを指定します。なしを選択すると、サウンド出力が完全に無効になります (サウンド "
+"ハードウェアは引き続きエミュレートされます)。  Windows と Linux では、portaudio "
+"を使用すると遅延が最小限に抑えられる可能性が高く、Mac ユーザーは coreaudio が最良の結果を提供することがわかります。"
+
+#: PanelSound.py:78
+msgid ""
+"The exact behavior depends on the selected audio output module. Smaller "
+"values provide less audio delay while requiring better system performance. "
+"Higher values increase audio delay but may help avoid buffer under-runs and "
+"audio interruptions.  Allowable values are 1 to 5."
+msgstr ""
+"正確な動作は、選択したオーディオ出力モジュールによって異なります。値を小さくすると、オーディオ遅延が少なくなりますが、必要なシステム "
+"パフォーマンスは向上します。値を大きくするとオーディオ遅延が増加しますが、バッファーのアンダーランやオーディオの中断を回避できる場合があります。  "
+"許容値は 1 ～ 5 です。"
+
+#: PanelSound.py:83
+msgid "Use samples if available."
+msgstr "サンプルがあればそれを使用します。"
+
+#: PanelVideo.py:49
+msgid "Enable Window Mode"
+msgstr "ウィンドウモードを有効にする"
+
+#: PanelVideo.py:52
+msgid "Crop displayed artwork"
+msgstr "表示されたアートワークをトリミングする"
+
+#: PanelVideo.py:55
+msgid "Disable the display of artwork"
+msgstr "アートワークの表示を無効にする"
+
+#: PanelVideo.py:61
+msgid "Video System for Drawing"
+msgstr "描画用ビデオシステム"
+
+#: PanelVideo.py:66
+msgid "BGFX Backend"
+msgstr "BGFX バックエンド"
+
+#: PanelVideo.py:71
+msgid "BGFX Screen Chains"
+msgstr "BGFX スクリーン チェーン"
+
+#: PanelVideo.py:76
+msgid "BGFX Shadow Mask"
+msgstr "BGFX シャドウ マスク"
+
+#: PanelVideo.py:79
+msgid ""
+"Select this to run the ROM in windowed mode, otherwise it will run "
+"fullscreen."
+msgstr "ROM をウィンドウ モードで実行するにはこれを選択します。それ以外の場合は全画面で実行します。"
+
+#: PanelVideo.py:81
+msgid ""
+"Enable cropping of artwork to the system screen area only. This means that "
+"vertically oriented systems running full screen can display their artwork to"
+" the left and right sides of the screen."
+msgstr ""
+"システム画面領域のみへのアートワークのトリミングを有効にします。これは、全画面で実行されている垂直方向のシステムでは、アートワークを画面の左側と右側に表示できることを意味します。"
+
+#: PanelVideo.py:85
+msgid ""
+"This will disable the displaying of ROM artwork defined by the artwork path."
+"  It is not a MAME option but is handled by pfeMAME."
+msgstr ""
+"これにより、アートワーク パスで定義された ROM アートワークの表示が無効になります。  これは MAME オプションではありませんが、pfeMAME"
+" によって処理されます。"
+
+#: PanelVideo.py:88
+msgid ""
+"Select the video system that is used for rendering the ROM.  In Linux: "
+"OpenGL can speed things up but may have compatibility issues.  OpenGL16 may "
+"be even faster.  In Windows:  recommend d3d for Direct3D performance.  Use "
+"soft for software rendering if you are having issues."
+msgstr ""
+"ROM のレンダリングに使用されるビデオ システムを選択します。  Linux の場合: OpenGL "
+"は速度を向上させますが、互換性の問題が発生する可能性があります。  OpenGL16 はさらに高速になる可能性があります。  Windows の場合: "
+"Direct3D パフォーマンスには d3d を推奨します。  問題がある場合は、ソフトウェア レンダリング用のソフトを使用してください。"
+
+#: PanelVideo.py:92
+msgid "Selects a rendering backend for BGFX to use."
+msgstr "BGFX が使用するレンダリング バックエンドを選択します。"
+
+#: PanelVideo.py:93
+msgid "This dictates how to handle BGFX rendering on a per-display basis."
+msgstr "これは、ディスプレイごとに BGFX レンダリングを処理する方法を決定します。"
+
+#: PanelVideo.py:95
+msgid "This specifies the shadow mask effect PNG file."
+msgstr "シャドウマスク効果のPNGファイルを指定します。"
+
+#: pfemame.py:953 pfemame.py:713 pfemame.py:731 pfemame.py:978 pfemame.py:1619
+msgid "Unknown"
+msgstr "未知"
+
+#: pfemame.py:1258
+msgid "pfeMAME was restarted automatically"
+msgstr "pfeMAME は自動的に再起動されました"
+
+#: pfemame.py:2943
+msgid ""
+"\n"
+"It Looks like this is the first time you have run pfeMAME\n"
+"as the INI file data is missing.  Your first step is to \n"
+"set up the necessary file paths to MAME files and supporting\n"
+"folders.\n"
+"\n"
+"Please open EDIT > File Paths and set the MAME \n"
+"executable file path and ROMS folder as a minimum.  \n"
+"NOTE:  You can use the Auto Find option in the file paths \n"
+"window to make this a lot easier in most cases.\n"
+"\n"
+"After this you need to select some ROM categories (the right of the screen).\n"
+"Then restart the application and refresh the ROMs database using\n"
+"VIEW > Refresh ROMs Database.\n"
+"        "
+msgstr ""
+"「\n"
+"」pfeMAME を実行するのは今回が初めてのようです\n"
+"INI ファイルのデータが欠落しているためです。最初のステップは \n"
+"MAME ファイルとサポートへの必要なファイル パスを設定します\n"
+"フォルダ。\n"
+"「\n"
+"」編集 > ファイル パスを開いて MAME を設定してください \n"
+"少なくとも実行可能ファイルのパスと ROMS フォルダ。\n"
+"注: ファイル パスで自動検索オプションを使用できます\n"
+"ウィンドウを使用すると、ほとんどの場合、これがはるかに簡単になります。\n"
+"「\n"
+"」この後、いくつかの ROM カテゴリ (画面の右側) を選択する必要があります。\n"
+"その後、アプリケーションを再起動し、次を使用して ROM データベースを更新します\n"
+"「表示 > ROM データベースを更新します。\n"
+"」        "
+
+#: pfemame.py:2959
+msgid "MAME file path or ROMS folder not found"
+msgstr "MAMEファイルパスまたはROMSフォルダーが見つかりません"
+
+#: pfemame.py:3173
+msgid "Confirm Remove From Favorites"
+msgstr "お気に入りから削除することを確認する"
+
+#: pfemame.py:462
+msgid "Application Started"
+msgstr "アプリケーションが開始されました"
+
+#: pfemame.py:640
+msgid "View:"
+msgstr "表示:"
+
+#: pfemame.py:709
+msgid "MAME Version: "
+msgstr "MAMEのバージョン:"
+
+#: pfemame.py:727
+msgid "Database Age: "
+msgstr "データベースの年齢:"
+
+#: pfemame.py:779
+msgid "ROMs List"
+msgstr "ROMリスト"
+
+#: pfemame.py:783
+msgid "File Paths"
+msgstr "ファイルパス"
+
+#: pfemame.py:792
+msgid "pfeMAME Preferences"
+msgstr "pfeMAMEの設定"
+
+#: pfemame.py:847
+msgid "Messages:"
+msgstr "メッセージ:"
+
+#: pfemame.py:966
+msgid "Deployment build is frozen (cx_freeze)"
+msgstr "デプロイメントビルドがフリーズされる (cx_freeze)"
+
+#: pfemame.py:968
+msgid "Deployment build is source (i.e. not frozen)"
+msgstr "デプロイメントビルドはソースです (つまり、フリーズされていません)"
+
+#: pfemame.py:970
+msgid "Retrieved MAME & pfeMAME version"
+msgstr "取得したMAMEとpfeMAMEのバージョン"
+
+#: pfemame.py:1037
+msgid "Stop rebuilding the ROMs database"
+msgstr "ROM データベースの再構築を中止します"
+
+#: pfemame.py:1052
+msgid "ROM Categories:"
+msgstr "ROM カテゴリ:"
+
+#: pfemame.py:1145
+msgid "MAME Info"
+msgstr "MAME 情報"
+
+#: pfemame.py:1688 pfemame.py:2927 pfemame.py:3520 pfemame.py:3811
+#: pfemame.py:3853 pfemame.py:5853 pfemame.py:3942 pfemame.py:2129
+#: pfemame.py:2186 pfemame.py:3550 pfemame.py:3561 pfemame.py:3573
+#: pfemame.py:3871 pfemame.py:4283
+msgid "Ready"
+msgstr "準備ができて"
+
+#: pfemame.py:1855
+msgid ""
+"Reset the pfeMAME INI file to its default settings?  WARNING:  This resets "
+"any changes you have made!"
+msgstr "pfeMAME INI ファイルをデフォルト設定にリセットしますか?  警告: これにより、行った変更はすべてリセットされます。"
+
+#: pfemame.py:1857
+msgid "Reset pfeMAME INI file"
+msgstr "pfeMAME INIファイルをリセットする"
+
+#: pfemame.py:1861
+msgid ""
+"Please restart pfeMAME for the new default INI file settings to be used."
+msgstr "新しいデフォルトの INI ファイル設定を使用するには、pfeMAME を再起動してください。"
+
+#: pfemame.py:1862
+msgid "Restart pfeMAME"
+msgstr "pfeMAMEを再起動します"
+
+#: pfemame.py:1874
+msgid ""
+"IMPORTANT NOTIFICATION:  Please check this window for the ERROR message.  "
+"Double-click to cancel alert."
+msgstr "重要な通知: このウィンドウでエラー メッセージを確認してください。  ダブルクリックしてアラートをキャンセルします。"
+
+#: pfemame.py:1897
+msgid "Reading INI file settings"
+msgstr "INI ファイル設定の読み取り"
+
+#: pfemame.py:2147
+msgid "Received data from sourceforge"
+msgstr "SourceForge からデータを受信しました"
+
+#: pfemame.py:2504
+msgid "Clipboard does not contain a supported image format"
+msgstr "クリップボードにはサポートされている画像形式が含まれていません"
+
+#: pfemame.py:2525
+msgid "File saved successfully"
+msgstr "ファイルは正常に保存されました"
+
+#: pfemame.py:2529
+msgid "Unable to access the clipboard image"
+msgstr "クリップボード画像にアクセスできません"
+
+#: pfemame.py:2532 pfemame.py:2506
+msgid "Image Saving Message"
+msgstr "画像保存メッセージ"
+
+#: pfemame.py:2578
+msgid ""
+"The INI Folder path is not valid.  Please select EDIT > File Paths and set a"
+" valid path for this folder."
+msgstr "INI フォルダーのパスが無効です。  [編集] > [ファイル パス] を選択し、このフォルダーの有効なパスを設定してください。"
+
+#: pfemame.py:2580
+msgid "No INI folder path set"
+msgstr "INI フォルダーのパスが設定されていません"
+
+#: pfemame.py:2590
+msgid "Switching to tile view"
+msgstr "タイル表示に切り替える"
+
+#: pfemame.py:2678
+msgid "Building ROM list. Please Wait........."
+msgstr "ROMリストを構築しています。お待ちください........."
+
+#: pfemame.py:2679
+msgid "Started building full ROMs database"
+msgstr "完全な ROM データベースの構築を開始"
+
+#: pfemame.py:2778 pfemame.py:2760 pfemame.py:2776 pfemame.py:2762
+msgid "What's New in MAME"
+msgstr "MAME の新着情報"
+
+#: pfemame.py:2822
+msgid "ROMs database rebuild cancelled"
+msgstr "ROM データベースの再構築はキャンセルされました"
+
+#: pfemame.py:2889
+msgid "Unable to find the MAME executable."
+msgstr "MAME 実行可能ファイルが見つかりません。"
+
+#: pfemame.py:2892
+msgid "Started reading the temporary ROMs database file"
+msgstr "一時 ROM データベース ファイルの読み取りを開始しました"
+
+#: pfemame.py:2911
+msgid ""
+"Looks like your ROMs list is empty. Please check that you have at least one "
+"ROM category selected."
+msgstr "ROM リストが空のようです。少なくとも 1 つの ROM カテゴリが選択されていることを確認してください。"
+
+#: pfemame.py:2912
+msgid "Empty ROMs list"
+msgstr "空のROMリスト"
+
+#: pfemame.py:2926
+msgid "0 days"
+msgstr "0日"
+
+#: pfemame.py:2934
+msgid "File Paths need to be set up"
+msgstr "ファイルパスを設定する必要があります"
+
+#: pfemame.py:2970
+msgid "Writing the temporary ROMs database file"
+msgstr "一時ROMデータベースファイルの書き込み"
+
+#: pfemame.py:2990
+msgid "Reading categories from catver.ini"
+msgstr "catver.ini からカテゴリを読み取る"
+
+#: pfemame.py:3039
+msgid "Completed reading categories from catver.ini"
+msgstr "catver.ini からの完全な読み取りカテゴリ"
+
+#: pfemame.py:3229
+msgid "Confirm Remove From Watchlist"
+msgstr "ウォッチリストから削除することを確認する"
+
+#: pfemame.py:3540
+msgid "Downloading image..."
+msgstr "画像をダウンロード中..."
+
+#: pfemame.py:3581 pfemame.py:5653
+msgid "Image updated"
+msgstr "画像を更新しました"
+
+#: pfemame.py:3686
+msgid "ROM search cancelled"
+msgstr "ROM の検索をキャンセルしました"
+
+#: pfemame.py:3948
+msgid "ROM downloaded"
+msgstr "ROMをダウンロードしました"
+
+#: pfemame.py:4125
+msgid "Important Notification"
+msgstr "重要なお知らせ"
+
+#: pfemame.py:5142
+msgid ""
+"Please select a valid ROMs folder and path to the MAME executable from the "
+"File Paths window."
+msgstr "[ファイル パス] ウィンドウから有効な ROM フォルダーと MAME 実行可能ファイルへのパスを選択してください。"
+
+#: pfemame.py:5447
+msgid ""
+"You have not set a Mapping folder under File Paths.  This is not a standard "
+"MAME folder.  You need to create a folder (Suggest within your MAME folder) "
+"called Mapping, and then in the File Paths window you need to set the Input "
+"Mapping folder to the folder you have created."
+msgstr ""
+"ファイル パスの下にマッピング フォルダーが設定されていません。  これは標準の MAME フォルダーではありません。  Mapping "
+"という名前のフォルダー (MAME フォルダー内に提案) を作成し、[ファイル パス] ウィンドウで、作成したフォルダーに入力マッピング "
+"フォルダーを設定する必要があります。"
+
+#: pfemame.py:5451
+msgid "Mapping Folder Not Defined"
+msgstr "マッピングフォルダーが定義されていません"
+
+#: pfemame.py:5455
+msgid ""
+"You have not set a Config Folder under file paths.  This needs to be defined"
+" so that the default.cfg file can be copied."
+msgstr ""
+"ファイルパスの下に設定フォルダーが設定されていません。  これは、default.cfg ファイルをコピーできるように定義する必要があります。"
+
+#: pfemame.py:5457
+msgid "Config Folder Not Defined"
+msgstr "構成フォルダーが定義されていません"
+
+#: pfemame.py:5461
+msgid ""
+"I am unable to find the default.cfg file within the Config folder set in "
+"File Paths.  Check that the folder exists and that within it there is a "
+"valid default.cfg file.  If the file is not present, maybe you have not run "
+"MAME for the first time so run it and check again if the file exists."
+msgstr ""
+"ファイル パスで設定された Config フォルダー内に、default.cfg ファイルが見つかりません。  "
+"フォルダーが存在し、その中に有効なdefault.cfgファイルがあることを確認してください。  ファイルが存在しない場合は、MAME "
+"を初めて実行していない可能性があるため、MAME を実行して、ファイルが存在するかどうかを再度確認します。"
+
+#: pfemame.py:5465
+msgid "ERROR - cant find default.cfg"
+msgstr "エラー -default.cfg が見つかりません"
+
+#: pfemame.py:5909
+msgid "Replace image from online..."
+msgstr "オンラインから画像を置き換えます..."
+
+#: pfemame.py:305
+msgid "Developer mode enabled\n"
+msgstr ""
+"「開発者モードが有効になりました\n"
+"」"
+
+#: pfemame.py:320
+msgid "Application startup complete in {:.2f} seconds"
+msgstr "アプリケーションの起動は {:.2f} 秒で完了します"
+
+#: pfemame.py:786
+msgid "Default Preferences"
+msgstr "デフォルトの設定"
+
+#: pfemame.py:817 pfemame.py:4811 pfemame.py:3310 pfemame.py:3328
+msgid "No Video Available"
+msgstr "利用可能なビデオがありません"
+
+#: pfemame.py:1057
+msgid "Toggle All"
+msgstr "すべて切り替え"
+
+#: pfemame.py:1187
+msgid "Empty"
+msgstr "空の"
+
+#: pfemame.py:1317
+msgid ""
+"pfeMAME is a cross-platform front-end for the widely popular MAME emulation engine.\n"
+"Please read the manual for a full description of the application and how to use it.\n"
+"Please also rate pfeMAME at the SourceForge page you downloaded it from.\n"
+"For additional requests, you can email pfemame@gmail.com."
+msgstr ""
+"pfeMAME は、広く普及している MAME エミュレーション エンジンのクロスプラットフォーム フロントエンドです。\n"
+"アプリケーションの詳しい説明と使用方法については、マニュアルをお読みください。\n"
+"pfeMAME をダウンロードした SourceForge ページでも pfeMAME を評価してください。\n"
+"「追加のリクエストについては、pfemame@gmail.com まで電子メールを送信してください。」"
+
+#: pfemame.py:1465
+msgid ""
+"Restored the default.cfg file left over from an unfinished game with an "
+"inputs mapping"
+msgstr "入力マッピングを使ったゲームが終了しなかったため残っていた default.cfg ファイルを元に戻しました"
+
+#: pfemame.py:1637
+msgid "None of your favorites were found in the ROM folders."
+msgstr "ROM フォルダーにお気に入りが見つかりませんでした。"
+
+#: pfemame.py:1638 pfemame.py:1699
+msgid "Export Complete"
+msgstr "エクスポートが完了しました"
+
+#: pfemame.py:1691
+msgid "{} favorite file(s) successfully exported."
+msgstr "{} 個のお気に入りファイルが正常にエクスポートされました。"
+
+#: pfemame.py:1697
+msgid "The export was cancelled."
+msgstr "エクスポートはキャンセルされました。"
+
+#: pfemame.py:1708 pfemame.py:4224
+msgid "Unapplied FilePath changes – are you sure you wish to discard changes?"
+msgstr "適用されていない FilePath の変更 – 変更を破棄してもよろしいですか?"
+
+#: pfemame.py:1709 pfemame.py:4225
+msgid "Unapplied Changes"
+msgstr "未適用の変更"
+
+#: pfemame.py:1902
+msgid "New pfeMAME.ini file created as existing one not found"
+msgstr "既存のファイルが見つからないため、新しい pfeMAME.ini ファイルが作成されました"
+
+#: pfemame.py:2079
+msgid "New Version Available"
+msgstr "新しいバージョンが利用可能になりました"
+
+#: pfemame.py:2082
+msgid "Don't check for updates on startup"
+msgstr "起動時にアップデートをチェックしない"
+
+#: pfemame.py:2121
+msgid "Checking for Software Updates"
+msgstr "ソフトウェアのアップデートを確認する"
+
+#: pfemame.py:2124
+msgid "Checking for software update - requesting data from sourceforge"
+msgstr "ソフトウェア更新の確認 - SourceForge からのデータの要求"
+
+#: pfemame.py:2429 rominfo.py:363 xmlinfo.py:417
+msgid "Unable to open the clipboard"
+msgstr "クリップボードを開けません"
+
+#: pfemame.py:2429 pfemame.py:2222
+msgid "Error"
+msgstr "エラー"
+
+#: pfemame.py:2492
+msgid "File Already Exists"
+msgstr "ファイルはすでに存在します"
+
+#: pfemame.py:2540 preferences.py:154
+msgid ""
+"Unable to find the MAME executable path.  Check the file path settings."
+msgstr "MAME 実行可能パスが見つかりません。  ファイルパスの設定を確認してください。"
+
+#: pfemame.py:2623
+msgid "The ROMs database is already being rebuilt - please wait"
+msgstr "ROM データベースはすでに再構築中です。お待ちください"
+
+#: pfemame.py:2725
+msgid "Cancelling the ROMs database rebuild..."
+msgstr "ROM データベースの再構築をキャンセルしています..."
+
+#: pfemame.py:2774
+msgid ""
+"No MAME upgrade has been recorded yet.  The list of new, now-working and "
+"removed machines is made the first time the ROMs database is rebuilt after "
+"MAME is updated."
+msgstr ""
+"MAME のアップデートはまだ記録されていません。  新しいマシン、動作するようになったマシン、削除されたマシンの一覧は、MAME の更新後に ROM "
+"データベースを初めて再構築したときに作成されます。"
+
+#: pfemame.py:2789 software_browser.py:220 software_browser.py:229
+msgid "Software Lists"
+msgstr "ソフトウェアリスト"
+
+#: pfemame.py:2837
+msgid "ERROR WITH MAME XML"
+msgstr "MAME XML のエラー"
+
+#: pfemame.py:2862
+msgid ""
+"Errors detected when building ROMs database.  Check the build_errors.txt "
+"file."
+msgstr "ROM データベースの構築中にエラーが検出されました。  build_errors.txt ファイルを確認してください。"
+
+#: pfemame.py:2869
+msgid ""
+"Errors were detected when building the ROMs database.  Please check the "
+"build_errors.txt file for information."
+msgstr "ROM データベースの構築中にエラーが検出されました。  詳細については、build_errors.txt ファイルを確認してください。"
+
+#: pfemame.py:2871
+msgid "Errors during Database Build"
+msgstr "データベース構築中のエラー"
+
+#: pfemame.py:2900
+msgid "Completed reading the temporary ROMs database file"
+msgstr "一時ROMデータベースファイルの読み込みが完了しました"
+
+#: pfemame.py:3172
+msgid "Are you sure you want to remove {} from favorites?"
+msgstr "{} をお気に入りから削除してもよろしいですか?"
+
+#: pfemame.py:3192
+msgid "ERROR: Unable to find the favorites.dat file in the pfemame folder"
+msgstr "エラー: pfemame フォルダーに favourites.dat ファイルが見つかりません"
+
+#: pfemame.py:3201
+msgid "Romset {} removed from favorites"
+msgstr "Romset {} がお気に入りから削除されました"
+
+#: pfemame.py:3252
+msgid "ERROR: Unable to find the watchlist.dat file in the pfeMAME folder"
+msgstr "エラー: pfeMAME フォルダー内に watchlist.dat ファイルが見つかりません"
+
+#: pfemame.py:3261
+msgid "Romset {} removed from watchlist"
+msgstr "Romset {} がウォッチリストから削除されました"
+
+#: pfemame.py:3449 pfemame.py:5608
+msgid "No image folders are configured"
+msgstr "画像フォルダーが設定されていません"
+
+#: pfemame.py:3454 pfemame.py:3612 pfemame.py:5613
+msgid "Select a ROM first"
+msgstr "最初にROMを選択してください"
+
+#: pfemame.py:3524
+msgid "No suitable images were found online for this ROM."
+msgstr "この ROM に適したイメージがオンラインで見つかりませんでした。"
+
+#: pfemame.py:3525
+msgid "No Images Found"
+msgstr "画像が見つかりません"
+
+#: pfemame.py:3528
+msgid "Select a {0} image for {1}"
+msgstr "{1} の {0} イメージを選択します"
+
+#: pfemame.py:3559 pfemame.py:5633
+msgid "Replace Existing Image"
+msgstr "既存のイメージを置き換える"
+
+#: pfemame.py:3605
+msgid "No ROM folder (rompath) is configured"
+msgstr "ROM フォルダ (rompath) が設定されていません"
+
+#: pfemame.py:3606
+msgid ""
+"No ROM folder is configured in mame.ini (rompath), so the ROM cannot be "
+"saved."
+msgstr "mame.ini(rompath)にROMフォルダが設定されていないため、ROMを保存できません。"
+
+#: pfemame.py:3607
+msgid "No ROM Folder"
+msgstr "ROMフォルダがありません"
+
+#: pfemame.py:3816
+msgid "No downloadable ROM ZIP was found online for this ROM."
+msgstr "この ROM のダウンロード可能な ROM ZIP がオンラインで見つかりませんでした。"
+
+#: pfemame.py:3817
+msgid "No ROM Found"
+msgstr "ROMが見つかりません"
+
+#: pfemame.py:3824
+msgid "Select a ROM ZIP to download for {}"
+msgstr "{} 用にダウンロードする ROM ZIP を選択してください"
+
+#: pfemame.py:3869
+msgid "Replace Existing ROM"
+msgstr "既存のROMを置き換える"
+
+#: pfemame.py:3936
+msgid "ROM download cancelled"
+msgstr "ROM のダウンロードをキャンセルしました"
+
+#: pfemame.py:3944 pfemame.py:3552
+msgid "Download Failed"
+msgstr "ダウンロードに失敗しました"
+
+#: pfemame.py:3983
+msgid ""
+"I am having trouble finding a ROM to play that exists. Do you actually have "
+"any?"
+msgstr "プレイできるROMが存在するのを見つけるのに苦労しています。実際に何か持っていますか？"
+
+#: pfemame.py:4075
+msgid "Tried running a ROM without a file name selected"
+msgstr "ファイル名を選択せず​​にROMを実行してみました"
+
+#: pfemame.py:4442 tileview.py:969
+msgid "ROM set {} added to favorites"
+msgstr "ROM セット {} がお気に入りに追加されました"
+
+#: pfemame.py:4465
+msgid "You cannot add a favourite file to the watchlist"
+msgstr "お気に入りのファイルをウォッチリストに追加することはできません"
+
+#: pfemame.py:4466
+msgid "ERROR - Already Favourite"
+msgstr "エラー - すでにお気に入りです"
+
+#: pfemame.py:4494
+msgid "ROM set {} added to watchlist"
+msgstr "ROM セット {} がウォッチリストに追加されました"
+
+#: pfemame.py:4811 pfemame.py:3317
+msgid "Video Available - Click to Play"
+msgstr "利用可能なビデオ - クリックして再生"
+
+#: pfemame.py:4972
+msgid "WARNING:  The MAME samples folder has not been set in filepaths\n"
+msgstr ""
+"「警告: MAME サンプル フォルダーがファイルパスに設定されていません\n"
+"」"
+
+#: pfemame.py:5024
+msgid "MAME Controls"
+msgstr "MAME コントロール"
+
+#: pfemame.py:5033
+msgid "pfeMAME Log File"
+msgstr "pfeMAME ログ ファイル"
+
+#: pfemame.py:5078
+msgid ""
+"Unable to find the pfeMAME_Manual.pdf file!  Please check that it exists in "
+"the pfeMAME folder."
+msgstr "pfeMAME_Manual.pdf ファイルが見つかりません!  pfeMAMEフォルダ内に存在することを確認してください。"
+
+#: pfemame.py:5108
+msgid ""
+"pfeMAME could not find out which version of MAME you have, so the artwork "
+"files cannot be checked.  Please check the path to the MAME executable in "
+"the File Paths window."
+msgstr ""
+"pfeMAMEはお使いのMAMEのバージョンを判別できなかったため、アートワークファイルを確認できません。  "
+"ファイルパスウィンドウでMAME実行ファイルのパスを確認してください。"
+
+#: pfemame.py:5110
+msgid "Unknown MAME Version"
+msgstr "不明なMAMEバージョン"
+
+#: pfemame.py:5115
+msgid "Incorrect Mame Version"
+msgstr "間違った Mame バージョン"
+
+#: pfemame.py:5121
+msgid ""
+"No artwork folder was found.  Please set the Artwork folder in the File "
+"Paths window."
+msgstr "アートワークフォルダが見つかりませんでした。  ファイルパスウィンドウでアートワークフォルダを設定してください。"
+
+#: pfemame.py:5160
+msgid "Please set a valid Inputs folder under the File Paths"
+msgstr "ファイル パスの下に有効な入力フォルダーを設定してください。"
+
+#: pfemame.py:5281
+msgid "Application preferences and DAT files backed up to {path}"
+msgstr "{path} にバックアップされたアプリケーション設定と DAT ファイル"
+
+#: pfemame.py:5308 pfemame.py:5329
+msgid ""
+"Unable to restore the preferences and DAT files from the selected folder.  "
+"Check this is the correct folder and check folder & file permissions."
+msgstr ""
+"選択したフォルダーから環境設定と DAT ファイルを復元できません。  "
+"これが正しいフォルダーであることを確認し、フォルダーとファイルのアクセス許可を確認してください。"
+
+#: pfemame.py:5317
+msgid "Restore"
+msgstr "復元"
+
+#: pfemame.py:5334
+msgid "Application preferences and DAT files restored from {path}"
+msgstr "{path} から復元されたアプリケーション設定と DAT ファイル"
+
+#: pfemame.py:5481
+msgid "ERROR - cant write map file"
+msgstr "エラー - マップ ファイルを書き込めません"
+
+#: pfemame.py:5497
+msgid ""
+"Unable to reset the INI file as the INI folder has not been correctly "
+"defined\n"
+msgstr ""
+"「INI フォルダが正しく定義されていないため、INI ファイルをリセットできません\n"
+"」"
+
+#: pfemame.py:5754 pfemame_ribbon_bar.py:585
+msgid "Play ROM"
+msgstr "ROMをプレイする"
+
+#: pfemame.py:5754 tileview.py:808
+msgid "Play the selected ROM"
+msgstr "選択したROMを再生します"
+
+#: pfemame.py:5755
+msgid "Play ROM with MAME rather than alternate engine"
+msgstr "代替エンジンではなくMAMEでROMを再生します"
+
+#: pfemame.py:5756
+msgid "Play the selected ROM with MAME"
+msgstr "選択したROMをMAMEで再生します"
+
+#: pfemame.py:5757
+msgid "Play ROM without softlist HASH support"
+msgstr "ソフトリスト HASH サポートなしで ROM を再生"
+
+#: pfemame.py:5758
+msgid ""
+"Play the system program directly without using the softwarelist HASH file"
+msgstr "ソフトウェアリスト HASH ファイルを使用せずにシステム プログラムを直接再生します"
+
+#: pfemame.py:5762
+msgid "ROM information"
+msgstr "ROM情報"
+
+#: pfemame.py:5762
+msgid "Information on the selected ROM"
+msgstr "選択したROMの情報"
+
+#: pfemame.py:5763
+msgid "View media types"
+msgstr "メディアタイプの表示"
+
+#: pfemame.py:5763
+msgid "View supported media types"
+msgstr "サポートされているメディア タイプを表示する"
+
+#: pfemame.py:5765
+msgid "Browse software lists..."
+msgstr "ソフトウェアリストを見る..."
+
+#: pfemame.py:5766
+msgid "Browse all the software MAME knows for this system, and what you have"
+msgstr "このシステム用に MAME が認識しているすべてのソフトウェアと、手元にあるものを表示します"
+
+#: pfemame.py:5767
+msgid "Analyse XML info"
+msgstr "XML情報を分析する"
+
+#: pfemame.py:5767
+msgid "Check XML info for this program"
+msgstr "このプログラムの XML 情報を確認する"
+
+#: pfemame.py:5770 tileview.py:810
+msgid "Add to favorites"
+msgstr "お気に入りに追加"
+
+#: pfemame.py:5770
+msgid "Add ROM to favorites"
+msgstr "ROMをお気に入りに追加"
+
+#: pfemame.py:5771 tileview.py:810
+msgid "Remove from favorites"
+msgstr "お気に入りから削除"
+
+#: pfemame.py:5771
+msgid "Remove ROM from favorites"
+msgstr "ROMをお気に入りから削除"
+
+#: pfemame.py:5772
+msgid "Add to watchlist"
+msgstr "ウォッチリストに追加"
+
+#: pfemame.py:5772
+msgid "Add ROM to watch list"
+msgstr "ROMをウォッチリストに追加"
+
+#: pfemame.py:5773
+msgid "Remove from watchlist"
+msgstr "ウォッチリストから削除"
+
+#: pfemame.py:5773
+msgid "Remove ROM from watch list"
+msgstr "ウォッチリストからROMを削除"
+
+#: pfemame.py:5774
+msgid "Set ROM rating..."
+msgstr "ROMの評価を設定..."
+
+#: pfemame.py:5774
+msgid "Set star rating for this ROM"
+msgstr "この ROM の星評価を設定します"
+
+#: pfemame.py:5777
+msgid "ROM preferences"
+msgstr "ROMの設定"
+
+#: pfemame.py:5777
+msgid "Set MAME preferences for this ROM"
+msgstr "この ROM の MAME 環境設定を設定します"
+
+#: pfemame.py:5779
+msgid "Copy controller mapping to this ROM"
+msgstr "コントローラのマッピングをこのROMにコピーします"
+
+#: pfemame.py:5780
+msgid "Copy default.cfg to this ROM for per-ROM input mapping"
+msgstr "ROM ごとの入力マッピングのために、default.cfg をこの ROM にコピーします。"
+
+#: pfemame.py:5781
+msgid "Reset INI file"
+msgstr "INI ファイルをリセットする"
+
+#: pfemame.py:5781
+msgid "Reset the INI config file for this program"
+msgstr "このプログラムの INI 構成ファイルをリセットします"
+
+#: pfemame.py:5785
+msgid "Verify ROM"
+msgstr "ROMのベリファイ"
+
+#: pfemame.py:5785
+msgid "Verify the integrity of the selected ROM"
+msgstr "選択したROMの整合性を確認します"
+
+#: pfemame.py:5787
+msgid "Search for ROM online..."
+msgstr "オンラインでROMを検索..."
+
+#: pfemame.py:5788
+msgid ""
+"Search online for this ROM's ZIP file and download it to the ROMs folder"
+msgstr "この ROM の ZIP ファイルをオンラインで検索し、ROM フォルダーにダウンロードします。"
+
+#: pfemame.py:1581
+msgid "MAME and catver version mismatch"
+msgstr "MAME と catver のバージョンが一致しない"
+
+#: pfemame.py:1584
+msgid "Don't show this message again"
+msgstr "このメッセージを今後表示しないでください"
+
+#: pfemame.py:1630
+msgid "Choose a path to export the file to"
+msgstr "ファイルをエクスポートするパスを選択してください"
+
+#: pfemame.py:1649
+msgid "Export Favorites"
+msgstr "お気に入りをエクスポート"
+
+#: pfemame.py:1671
+msgid "Exporting favorite {number} of {count}: {name}"
+msgstr "お気に入りをエクスポートしています ({number} / {count}): {name}"
+
+#: pfemame.py:1742
+msgid ""
+"A setting has been changed that will only take effect when pfeMAME is "
+"restarted.  Would you like it to restart now?"
+msgstr "pfeMAME を再起動した場合にのみ有効になる設定が変更されました。  今すぐ再開しますか?"
+
+#: pfemame.py:2109
+msgid "Don't check software on startup"
+msgstr "起動時にソフトウェアをチェックしない"
+
+#: pfemame.py:2125
+msgid "Checking for software update\n"
+msgstr ""
+"「ソフトウェア アップデートをチェックしています\n"
+"」"
+
+#: pfemame.py:2376
+msgid "Please set up a valid Videos folder in Filepaths"
+msgstr "ファイルパスに有効なビデオ フォルダーを設定してください。"
+
+#: pfemame.py:2388
+msgid ""
+"It doesn't look like there are any valid video files in the Video folder"
+msgstr "ビデオフォルダーに有効なビデオファイルがないようです"
+
+#: pfemame.py:2500
+msgid "Trying to save clipboard image as file {}"
+msgstr "クリップボードの画像をファイル {} として保存しています"
+
+#: pfemame.py:2834
+msgid ""
+"ERROR:  Can't read XML cache file and unable to get MAME to create a new "
+"one.  Check that the MAME executable is working correctly and the MAME path "
+"is correct in FilePaths."
+msgstr ""
+"エラー: XML キャッシュ ファイルを読み取れず、MAME に新しいキャッシュ ファイルを作成させることができません。  MAME "
+"実行可能ファイルが正しく動作していること、および FilePaths 内の MAME パスが正しいことを確認してください。"
+
+#: pfemame.py:2878
+msgid "ROMs database refresh completed in {} seconds."
+msgstr "ROM データベースの更新は {} 秒以内に完了しました。"
+
+#: pfemame.py:2897
+msgid "The ROMs database is empty. Forcing full rebuild."
+msgstr "ROM データベースが空です。完全な再構築を行います。"
+
+#: pfemame.py:2975
+msgid "Unable to write the temporary ROMs database file"
+msgstr "一時ROMデータベースファイルに書き込めません"
+
+#: pfemame.py:3024
+msgid ""
+"Parsing error in the catver.ini file. Please revert to a previous version."
+msgstr "catver.ini ファイルの解析エラー。以前のバージョンに戻してください。"
+
+#: pfemame.py:3228
+msgid "Are you sure you want to remove {} from watchlist?"
+msgstr "ウォッチリストから {} を削除してもよろしいですか?"
+
+#: pfemame.py:3310
+msgid "Video Playback Disabled"
+msgstr "ビデオ再生が無効になっています"
+
+#: pfemame.py:3483
+msgid "Searching online for {} images..."
+msgstr "オンラインで {} イメージを検索しています..."
+
+#: pfemame.py:3484
+msgid "Searching online for {0} images for \"{1}\"\n"
+msgstr "「{1}」の {0} イメージをオンラインで検索する\n"
+
+#: pfemame.py:3548
+msgid "Failed to download the selected image\n"
+msgstr "選択した画像のダウンロードに失敗しました\n"
+
+#: pfemame.py:3551
+msgid "The selected image could not be downloaded."
+msgstr "選択した画像をダウンロードできませんでした。"
+
+#: pfemame.py:3575 pfemame.py:5647
+msgid "Save Failed"
+msgstr "保存に失敗しました"
+
+#: pfemame.py:3580 pfemame.py:5652
+msgid "Saved new image to {}\n"
+msgstr "新しい画像を {} に保存しました\n"
+
+#: pfemame.py:3636
+msgid "Searching online for ROM \"{}\"..."
+msgstr "オンラインでROM「{}」を検索しています..."
+
+#: pfemame.py:3637
+msgid "Searching online for ROM \"{0}\" ({1})\n"
+msgstr "ROM「{0}」（{1}）をオンラインで検索\n"
+
+#: pfemame.py:3685
+msgid "Online ROM search for \"{}\" cancelled\n"
+msgstr "ROM「{}」のオンライン検索をキャンセルしました\n"
+
+#: pfemame.py:3743
+msgid "Downloading result {number} of {count} from {source} to check it"
+msgstr "確認のため {source} から結果 {number}/{count} をダウンロードしています"
+
+#: pfemame.py:3769
+msgid "Checking result {number} of {count} with MAME"
+msgstr "MAME で結果 {number}/{count} を確認しています"
+
+#: pfemame.py:3875
+msgid "Saving ROM {}..."
+msgstr "ROM {} を保存しています..."
+
+#: pfemame.py:3887
+msgid "Downloading {file_name} from {source} ({done} of {total})"
+msgstr "{source} から {file_name} をダウンロードしています ({done} / {total})"
+
+#: pfemame.py:3947
+msgid "Downloaded ROM to {}\n"
+msgstr "ROMを{}にダウンロードしました\n"
+
+#: pfemame.py:4079
+msgid "System {rom} started with program {program} selected"
+msgstr "システム {rom} がプログラム {program} を選択して開始されました"
+
+#: pfemame.py:4082
+msgid "Romset {} started"
+msgstr "Romset {} が開始されました"
+
+#: pfemame.py:4235
+msgid "Application Ended after {}"
+msgstr "アプリケーションは {} 後に終了しました"
+
+#: pfemame.py:4308
+msgid "Updating number of runs info for ROM {}"
+msgstr "ROM {} の実行数情報を更新しています"
+
+#: pfemame.py:4328
+msgid "ERROR: Unable to write to runs.dat file"
+msgstr "エラー: runs.dat ファイルに書き込めません"
+
+#: pfemame.py:4384
+msgid "Romset {} rating updated"
+msgstr "ロムセット {} の評価が更新されました"
+
+#: pfemame.py:4409
+msgid "Adding ROM {} to favorites"
+msgstr "ROM {} をお気に入りに追加しています"
+
+#: pfemame.py:4421 tileview.py:971
+msgid "ERROR: Unable to write to favorites.dat file"
+msgstr "エラー: favourites.dat ファイルに書き込めません"
+
+#: pfemame.py:4429
+msgid ""
+"The selected ROM currently exists in the watchlist.  Would you like it "
+"removed?"
+msgstr "選択した ROM は現在ウォッチリストに存在します。  削除していただけますか?"
+
+#: pfemame.py:4431
+msgid "File In Watchlist"
+msgstr "ウォッチリスト内のファイル"
+
+#: pfemame.py:4469
+msgid "Adding ROM {} to watchlist"
+msgstr "ROM {} をウォッチリストに追加しています"
+
+#: pfemame.py:4480
+msgid "WARNING: Unable to read from watchlist.dat file"
+msgstr "警告: watchlist.dat ファイルから読み取ることができません"
+
+#: pfemame.py:4490
+msgid "ERROR: Unable to write to watchlist.dat file"
+msgstr "エラー: watchlist.dat ファイルに書き込めません"
+
+#: pfemame.py:4555
+msgid "Reading ROM {} flags"
+msgstr "ROM {} フラグの読み取り"
+
+#: pfemame.py:4556
+msgid "Reading ROM {} flags.  Please Wait........."
+msgstr "ROM {} フラグを読み取り中。  お待ちください........."
+
+#: pfemame.py:4647
+msgid "Completed reading ROM {} flags"
+msgstr "ROM {} フラグの読み取りが完了しました"
+
+#: pfemame.py:4950
+msgid "Verifying ROM image for {}\n"
+msgstr ""
+"「{} の ROM イメージを検証しています\n"
+"」"
+
+#: pfemame.py:4960
+msgid "Verifying sample files for {}\n"
+msgstr "{} のサンプル ファイルを確認しています\n"
+
+#: pfemame.py:5061
+msgid "pfeMAME Changelog File"
+msgstr "pfeMAME 変更ログ ファイル"
+
+#: pfemame.py:5067
+msgid ""
+"Unable to find the changelog.docx file.  Please check that it exists in the "
+"pfeMAME folder."
+msgstr "Changelog.docx ファイルが見つかりません。  pfeMAMEフォルダ内に存在することを確認してください。"
+
+#: pfemame.py:5244
+msgid "Choose a directory for backup:"
+msgstr "バックアップ用のディレクトリを選択します。"
+
+#: pfemame.py:5248 pfemame.py:5265
+msgid "Backup process canceled"
+msgstr "バックアッププロセスがキャンセルされました"
+
+#: pfemame.py:5248 pfemame.py:5265 pfemame.py:5294 pfemame.py:5320
+msgid "INFORMATION"
+msgstr "情報"
+
+#: pfemame.py:5261
+msgid "Backup ROM Source Logins?"
+msgstr "ROM ソースのログイン情報をバックアップしますか？"
+
+#: pfemame.py:5276
+msgid ""
+"Unable to copy the application files to the selected folder.  Check the "
+"folder permissions."
+msgstr "選択したフォルダーにアプリケーション ファイルをコピーできません。  フォルダーの権限を確認してください。"
+
+#: pfemame.py:5288
+msgid ""
+"Choose the backup to restore application preferences and DAT files from:"
+msgstr "設定と DAT ファイルを復元するバックアップを選択："
+
+#: pfemame.py:5294 pfemame.py:5320
+msgid "Restore process canceled"
+msgstr "復元プロセスがキャンセルされました"
+
+#: pfemame.py:1458
+msgid ""
+"Restored the INI file for {} left over from an unfinished system program run"
+msgstr "終了しなかったシステムプログラムの実行から {} の INI ファイルを復元しました"
+
+#: pfemame.py:1535
+msgid "ROMs Database Cache out of date"
+msgstr "ROM データベース キャッシュが期限切れです"
+
+#: pfemame.py:1538
+msgid "Don’t show this message again"
+msgstr "このメッセージを今後表示しないでください"
+
+#: pfemame.py:1549
+msgid ""
+"Unable to check age of ROMs cache. Please check the Preferences and then "
+"refresh the ROMs cache"
+msgstr "ROM キャッシュの経過時間を確認できません。環境設定を確認して、ROM キャッシュを更新してください。"
+
+#: pfemame.py:1550
+msgid "ROMs Database Cache check error"
+msgstr "ROMデータベースキャッシュチェックエラー"
+
+#: pfemame.py:1572
+msgid ""
+"Your MAME version is {mame_version} while your catver.ini file version is "
+"{catver_version}.  Suggest you find an updated copy of the catver.ini file "
+"if it is older than the MAME version."
+msgstr ""
+"MAME のバージョンは {mame_version} ですが、catver.ini ファイルのバージョンは {catver_version} です。"
+"  catver.ini ファイルが MAME バージョンよりも古い場合は、そのファイルの更新されたコピーを見つけることをお勧めします。"
+
+#: pfemame.py:1693
+msgid "{} file(s) were already in the folder and were left as they were."
+msgstr "{} 個のファイルは既にフォルダーにあったため、そのままにしました。"
+
+#: pfemame.py:1695
+msgid "{} file(s) could not be copied - see the log file."
+msgstr "{} 個のファイルをコピーできませんでした。ログ ファイルを参照してください。"
+
+#: pfemame.py:2077
+msgid ""
+"A newer version of pfeMAME is available.\n"
+"\n"
+"You have version {0}, and version {1} is available.\n"
+"\n"
+"Would you like to download and install it now?"
+msgstr ""
+"pfeMAME の新しいバージョンが利用可能です。\n"
+"「\n"
+"」「バージョン {0} があり、バージョン {1} が利用可能です。\n"
+"」「\n"
+"」「今すぐダウンロードしてインストールしますか?」"
+
+#: pfemame.py:2141
+msgid "Connection timed out - server is taking too long to respond"
+msgstr "接続がタイムアウトしました - サーバーの応答に時間がかかりすぎます"
+
+#: pfemame.py:2144
+msgid "Unable to access network connection or update version file not found"
+msgstr "ネットワーク接続にアクセスできないか、更新バージョン ファイルが見つかりません"
+
+#: pfemame.py:2152
+msgid "Trying to calculate version"
+msgstr "バージョンを計算しようとしています"
+
+#: pfemame.py:2165
+msgid "You already have the latest version"
+msgstr "すでに最新バージョンを持っています"
+
+#: pfemame.py:2490
+msgid ""
+"The file name {}.png already exists in the Snapshots folder.  Would you like"
+" to continue?"
+msgstr "ファイル {}.png は既にスナップショット フォルダーにあります。続行しますか?"
+
+#: pfemame.py:2759
+msgid ""
+"{}\n"
+"\n"
+"Would you like to see the list?"
+msgstr ""
+"{}\n"
+"\n"
+"一覧を表示しますか？"
+
+#: pfemame.py:2788
+msgid "{} is not a system with software lists."
+msgstr "{} はソフトウェアリストのあるシステムではありません。"
+
+#: pfemame.py:2852 pfemame.py:4887
+msgid "ERROR:  "
+msgstr "エラー：  "
+
+#: pfemame.py:2867
+msgid "Unable to write to the build_errors.txt file"
+msgstr "build_errors.txt ファイルに書き込めません"
+
+#: pfemame.py:3026
+msgid ""
+"Unable to read the catver.ini file. Please check file and folder "
+"permissions."
+msgstr "catver.ini ファイルを読み取れません。ファイルとフォルダーのアクセス許可を確認してください。"
+
+#: pfemame.py:3028
+msgid ""
+"Cannot find the catver.ini file. Please check file path settings.  All ROMs "
+"will default to Not Classified."
+msgstr ""
+"catver.ini ファイルが見つかりません。ファイルパスの設定を確認してください。  すべての ROM はデフォルトで「未分類」になります。"
+
+#: pfemame.py:3523
+msgid "No online images were found for \"{}\"\n"
+msgstr "「{}」のオンライン イメージが見つかりませんでした。\n"
+
+#: pfemame.py:3558
+msgid ""
+"An image already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the selected image?"
+msgstr ""
+"イメージは次の場所にすでに存在します:\n"
+"{}\n"
+"\n"
+"選択した画像と置き換えますか?"
+
+#: pfemame.py:3815
+msgid "No online ROM downloads were found for \"{}\"\n"
+msgstr "「{}」のオンライン ROM ダウンロードは見つかりませんでした。\n"
+
+#: pfemame.py:3868
+msgid ""
+"A ROM already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the downloaded ROM?"
+msgstr ""
+"ROM は次の場所にすでに存在します。\n"
+"{}\n"
+"\n"
+"ダウンロードしたROMに置き換えますか？"
+
+#: pfemame.py:3905
+msgid "Downloading {file_name} from {source}"
+msgstr "{source} から {file_name} をダウンロードしています"
+
+#: pfemame.py:3935
+msgid "Download of ROM \"{}\" cancelled\n"
+msgstr "ROM「{}」のダウンロードをキャンセルしました\n"
+
+#: pfemame.py:3940
+msgid "Failed to download ROM \"{}\"\n"
+msgstr "ROM「{}」のダウンロードに失敗しました\n"
+
+#: pfemame.py:3943
+msgid ""
+"The ROM could not be downloaded:\n"
+"{}"
+msgstr ""
+"ROM をダウンロードできませんでした:\n"
+"{}"
+
+#: pfemame.py:4363
+msgid "Romset {rom} rated as {stars} stars"
+msgstr "ロムセット {rom} を {stars} つ星に評価しました"
+
+#: pfemame.py:4594
+msgid "Unsupported data file: {}"
+msgstr "サポートされていないデータ ファイル: {}"
+
+#: pfemame.py:4644
+msgid ""
+"{count} error(s) found in {file} file.  See logfile.log for more "
+"information.\n"
+msgstr "{file} ファイルで {count} エラーが見つかりました。  詳細については、logfile.log を参照してください。\n"
+
+#: pfemame.py:4985
+msgid "Media types associated with ROM {}:\n"
+msgstr "ROM {} に関連付けられたメディア タイプ:\n"
+
+#: pfemame.py:5113
+msgid ""
+"The artwork files can only be updated for MAME {minimum} or newer.  You have"
+" MAME {version}."
+msgstr "アートワークファイルを更新できるのはMAME {minimum} 以降のみです。  お使いのMAMEは {version} です。"
+
+#: pfemame.py:5191
+msgid "Recording playback for the rom using {}"
+msgstr "{} を使用した rom の録音再生"
+
+#: pfemame.py:5192
+msgid "Playing the rom using recorded input from {}"
+msgstr "{} からの記録された入力を使用して rom を再生します"
+
+#: pfemame.py:5314
+msgid ""
+"The following files will be restored, replacing your current ones:\n"
+"\n"
+"{}\n"
+"\n"
+"Your current files are saved to the backups folder first.  pfeMAME will then restart to load the restored settings.\n"
+"\n"
+"Continue?"
+msgstr ""
+"次のファイルを復元し、現在のファイルを置き換えます：\n"
+"\n"
+"{}\n"
+"\n"
+"現在のファイルは先に backups フォルダーに保存されます。  その後 pfeMAME を再起動して、復元した設定を読み込みます。\n"
+"\n"
+"続行しますか？"
+
+#: pfemame.py:5474
+msgid "Configuration file copied across for ROM file {}\n"
+msgstr ""
+"「構成ファイルが ROM ファイル {} にコピーされました\n"
+"」"
+
+#: pfemame.py:5475
+msgid "Configuration file copied to Mapping folder for ROM file {}"
+msgstr "構成ファイルが ROM ファイル {} のマッピング フォルダーにコピーされました"
+
+#: pfemame.py:5477
+msgid ""
+"I am unable to write the {}.map file into the Mapping folder.  Check the "
+"folder permissions and that the folder and files within are not Read Only or"
+" write protected.  Under Linux check that everyone has permissions to write "
+"to the file / folder."
+msgstr ""
+"{}.map ファイルを Mapping フォルダーに書き込むことができません。  "
+"フォルダーのアクセス許可を確認し、フォルダーとフォルダー内のファイルが読み取り専用または書き込み保護されていないことを確認してください。  Linux "
+"では、全員がファイル/フォルダーに書き込む権限を持っていることを確認してください。"
+
+#: pfemame.py:5522
+msgid "INI file for system program \"{}\" removed\n"
+msgstr "システムプログラム「{}」の INI ファイルが削除されました\n"
+
+#: pfemame.py:5524
+msgid "INI file for ROM \"{}\" removed\n"
+msgstr "ROM「{}」の INI ファイルが削除されました\n"
+
+#: pfemame.py:5527
+msgid "No INI file for system program \"{}\" exists so it can’t be removed\n"
+msgstr "システムプログラム「{}」の INI ファイルが存在しないため削除できません\n"
+
+#: pfemame.py:5529
+msgid "No INI file for ROM \"{}\" exists so it can’t be removed\n"
+msgstr "ROM「{}」の INI ファイルが存在しないため削除できません\n"
+
+#: pfemame.py:5620
+msgid "{} is not a valid image file\n"
+msgstr "{} は有効な画像ファイルではありません\n"
+
+#: pfemame.py:5632
+msgid ""
+"An image already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the dropped image?"
+msgstr ""
+"次の場所に画像がすでにあります：\n"
+"{}\n"
+"\n"
+"ドロップした画像で置き換えますか？"
+
+#: pfemame.py:1645
+msgid ""
+"{existing} of the {count} favorite file(s) are already in the folder.  Replace them?\n"
+"\n"
+"Yes replaces them, No only copies the others."
+msgstr ""
+"{existing} 個（全 {count} 個中）のお気に入りファイルは既にフォルダーにあります。置き換えますか?\n"
+"\n"
+"「はい」で置き換え、「いいえ」でその他のみコピーします。"
+
+#: pfemame.py:2156
+msgid "New pfeMAME version exists"
+msgstr "新しい pfeMAME バージョンが存在します"
+
+#: pfemame.py:2222
+msgid ""
+"Failed to launch updater:\n"
+"{}"
+msgstr ""
+"アップデーターを起動できませんでした:\n"
+"{}"
+
+#: pfemame.py:2273
+msgid "Unable to write to the categories.dat file: {}"
+msgstr "categories.dat ファイルに書き込めません: {}"
+
+#: pfemame.py:2573
+msgid "{} Preferences"
+msgstr "{} 設定"
+
+#: pfemame.py:3571 pfemame.py:5644
+msgid "Failed to save the image to {}\n"
+msgstr "{}への画像の保存に失敗しました\n"
+
+#: pfemame.py:3574 pfemame.py:5646
+msgid ""
+"The image could not be saved to:\n"
+"{}"
+msgstr ""
+"画像を次の場所に保存できませんでした:\n"
+"{}"
+
+#: pfemame.py:3754
+msgid ""
+"Downloading result {number} of {count} from {source} ({done} of {total})"
+msgstr "{source} から結果 {number}/{count} をダウンロードしています ({done} / {total})"
+
+#: pfemame.py:4641
+msgid "WARNING: {} file does not exist"
+msgstr "警告: {} ファイルが存在しません"
+
+#: pfemame.py:5094
+msgid ""
+"Sorry, but I was unable to open the pfeMAME manual. Please open it manually:"
+" {}"
+msgstr "申し訳ありませんが、pfeMAME マニュアルを開くことができませんでした。手動で開いてください: {}"
+
+#: pfemame.py:5176
+msgid "Create the file for recording inputs for {}"
+msgstr "{} の入力を記録するためのファイルを作成します"
+
+#: pfemame.py:5177
+msgid "Select the file to play back inputs for {}"
+msgstr "{} の入力を再生するファイルを選択してください"
+
+#: pfemame.py:5258
+msgid ""
+"Include your saved online ROM source logins ({}) in the backup?\n"
+"\n"
+"They are stored obfuscated, not encrypted, so anyone with the backup file and pfeMAME could recover them."
+msgstr ""
+"保存済みのオンライン ROM ソースのログイン情報（{}）をバックアップに含めますか？\n"
+"\n"
+"これらは暗号化ではなく難読化されて保存されているため、バックアップファイルと pfeMAME があれば誰でも復元できます。"
+
+#: pfemame.py:5290
+msgid "pfeMAME backup"
+msgstr "pfeMAME バックアップ"
+
+#: pfemame.py:5291
+msgid "Older backup folder"
+msgstr "旧形式のバックアップフォルダー"
+
+#: pfemame.py:5518
+msgid "Unable to remove the INI file {path}: {error}\n"
+msgstr "INI ファイル {path} を削除できません: {error}\n"
+
+#: pfemame.py:1533
+msgid ""
+"The database cache is {} days old. I suggest you refresh the ROMs database "
+"cache manually."
+msgstr "データベース キャッシュは {} 日前のものです。 ROM データベース キャッシュを手動で更新することをお勧めします。"
+
+#: pfemame.py:3324 pfemame.py:2332
+msgid "Auto loading video in {} seconds"
+msgstr "{} 秒以内にビデオを自動読み込みします"
+
+#: pfemame.py:4375
+msgid "WARNING: Failed to read {}"
+msgstr "警告: {} の読み取りに失敗しました"
+
+#: pfemame.py:4382
+msgid "ERROR: Unable to write to {}"
+msgstr "エラー: {} に書き込めません"
+
+#: pfemame.py:4637
+msgid ""
+"A file name called {rom} in the {file} file does not exist in the MAME ROM "
+"list"
+msgstr "{file} ファイル内の {rom} というファイル名が MAME ROM リストに存在しません"
+
+#: pfemame.py:4885
+msgid "The snapshot image {} could not be loaded.  It may be corrupted."
+msgstr "画像 {} を読み込めませんでした。破損している可能性があります。"
+
+#: pfemame.py:2172
+msgid "You already have the latest version of pfeMAME installed."
+msgstr "最新バージョンの pfeMAME がすでにインストールされています。"
+
+#: pfemame.py:2173
+msgid "Check for software update"
+msgstr "ソフトウェアのアップデートを確認する"
+
+#: pfemame.py:2176
+msgid ""
+"Unable to get version information from Sourceforge.  Request returned: {}. "
+"It should have returned three numbers separated by a dot (e.g. 2.2.2)"
+msgstr ""
+"Sourceforge からバージョン情報を取得できません。  返されたリクエスト: {}。ドットで区切られた 3 つの数値が返されるはずです (例: "
+"2.2.2)"
+
+#: pfemame.py:2182
+msgid ""
+"An error has occurred and I am unable to check the online version. Check the"
+" logfile for more information."
+msgstr "エラーが発生してオンライン版を確認できません。詳細については、ログファイルを確認してください。"
+
+#: pfemame.py:2184
+msgid "Error retrieving version"
+msgstr "バージョンの取得中にエラーが発生しました"
+
+#: pfemame.py:2566
+msgid "ROM Preferences - {}"
+msgstr "ROM 設定 - {}"
+
+#: pfemame.py:3008
+msgid "catver.ini file version: {}"
+msgstr "catver.ini ファイルのバージョン: {}"
+
+#: pfemame_ribbon_bar.py:592
+msgid "Refresh ROMs Database"
+msgstr "ROMデータベースを更新する"
+
+#: pfemame_ribbon_bar.py:598
+msgid "Record User Inputs"
+msgstr "ユーザー入力を記録する"
+
+#: pfemame_ribbon_bar.py:599
+msgid "Playback User Inputs"
+msgstr "ユーザー入力の再生"
+
+#: pfemame_ribbon_bar.py:602
+msgid "Backup All User Settings"
+msgstr "すべてのユーザー設定をバックアップする"
+
+#: pfemame_ribbon_bar.py:603
+msgid "Restore All User Settings"
+msgstr "すべてのユーザー設定を復元する"
+
+#: pfemame_ribbon_bar.py:604
+msgid "Export Favorite ROMs"
+msgstr "お気に入りのROMをエクスポートする"
+
+#: pfemame_ribbon_bar.py:607
+msgid "Quit"
+msgstr "やめる"
+
+#: pfemame_ribbon_bar.py:611
+msgid "Add the selected ROM to Favorite list"
+msgstr "選択したROMをお気に入りリストに追加します"
+
+#: pfemame_ribbon_bar.py:612
+msgid "Set Rating for selected ROM"
+msgstr "選択したROMの定格を設定"
+
+#: pfemame_ribbon_bar.py:613
+msgid "Copy image to clipboard"
+msgstr "画像をクリップボードにコピー"
+
+#: pfemame_ribbon_bar.py:614
+msgid "Find"
+msgstr "探す"
+
+#: pfemame_ribbon_bar.py:615
+msgid "Clear the messages window"
+msgstr "メッセージウィンドウをクリアする"
+
+#: pfemame_ribbon_bar.py:616
+msgid "Copy messages window to clipboard"
+msgstr "メッセージウィンドウをクリップボードにコピー"
+
+#: pfemame_ribbon_bar.py:617
+msgid "Reset the ROMs list column spacing to default"
+msgstr "ROM リストの列間隔をデフォルトにリセットします。"
+
+#: pfemame_ribbon_bar.py:618
+msgid "Setup alternate emulator engines"
+msgstr "代替エミュレータ エンジンをセットアップする"
+
+#: pfemame_ribbon_bar.py:622
+msgid "Verify the selected ROM files"
+msgstr "選択したROMファイルを確認します"
+
+#: pfemame_ribbon_bar.py:624
+msgid "Check the artwork files"
+msgstr "アートワークファイルを確認する"
+
+#: pfemame_ribbon_bar.py:625
+msgid "Reset the ROM specific INI file to its default settings"
+msgstr "ROM 固有の INI ファイルをデフォルト設定にリセットします。"
+
+#: pfemame_ribbon_bar.py:626
+msgid "Browse the software lists of the selected system"
+msgstr "選択したシステムのソフトウェアリストを見る"
+
+#: pfemame_ribbon_bar.py:630
+msgid "Display ROM files information"
+msgstr "ROMファイル情報の表示"
+
+#: pfemame_ribbon_bar.py:631
+msgid "Full screen video player"
+msgstr "全画面ビデオプレーヤー"
+
+#: pfemame_ribbon_bar.py:632
+msgid "View the pfeMAME log file"
+msgstr "pfeMAME ログ ファイルを表示する"
+
+#: pfemame_ribbon_bar.py:633
+msgid "View the selected file media types supported"
+msgstr "選択したファイルのサポートされているメディア タイプを表示します"
+
+#: pfemame_ribbon_bar.py:634
+msgid "What's new in the latest MAME (new, now working and removed machines)"
+msgstr "最新 MAME の新着情報（新しいマシン、動作するようになったマシン、削除されたマシン）"
+
+#: pfemame_ribbon_bar.py:638
+msgid "View MAME controls"
+msgstr "MAME コントロールを表示する"
+
+#: pfemame_ribbon_bar.py:639
+msgid "View the pfeMAME manual"
+msgstr "pfeMAME マニュアルを見る"
+
+#: pfemame_ribbon_bar.py:640
+msgid "Check for pfeMAME updates"
+msgstr "pfeMAMEのアップデートを確認する"
+
+#: pfemame_ribbon_bar.py:641
+msgid "Open the pfeMAME web page"
+msgstr "pfeMAME Webページを開く"
+
+#: pfemame_ribbon_bar.py:642
+msgid "View the pfeMAME changelog"
+msgstr "pfeMAME 変更ログを表示する"
+
+#: pfemame_ribbon_bar.py:643
+msgid "About"
+msgstr "について"
+
+#: play_stats.py:109
+msgid "Played once, {1} in total"
+msgstr "1 回プレイ、合計 {1}"
+
+#: play_stats.py:110
+msgid "Played {0} times, {1} in total"
+msgstr "{0} 回プレイ、合計 {1}"
+
+#: play_stats.py:113
+msgid ", last played {}"
+msgstr "、最終プレイ {}"
+
+#: preferences.py:286
+msgid "Please set a valid value for the "
+msgstr "有効な値を設定してください"
+
+#: preferences.py:429
+msgid "ROM INI file settings updated"
+msgstr "ROM INI ファイル設定が更新されました"
+
+#: preferences.py:300
+msgid "Volume Attenuation Value Error"
+msgstr "音量減衰値エラー"
+
+#: preferences.py:303
+msgid "Volume Latency Value Error"
+msgstr "ボリューム レイテンシ値エラー"
+
+#: preferences.py:156
+msgid ""
+"You need to set a valid INI path.  This is where ROM specific INI files are "
+"stored and used by the MAME executable."
+msgstr ""
+"有効な INI パスを設定する必要があります。  ここには、ROM 固有の INI ファイルが保存され、MAME 実行可能ファイルによって使用されます。"
+
+#: preferences.py:292
+msgid "Cache Check Days Error"
+msgstr "キャッシュチェック日数エラー"
+
+#: preferences.py:295
+msgid "Screensaver Time Value Error"
+msgstr "スクリーンセーバー時間値エラー"
+
+#: preferences.py:299
+msgid "volume attenuation (-30 to 0)"
+msgstr "音量減衰 (-30 ～ 0)"
+
+#: preferences.py:302
+msgid "volume latency (1 to 5)"
+msgstr "ボリュームレイテンシー (1 ～ 5)"
+
+#: preferences.py:374
+msgid "INI file settings updated"
+msgstr "INI ファイル設定が更新されました"
+
+#: preferences.py:375
+msgid "pfeMAME and MAME INI file settings updated"
+msgstr "pfeMAME および MAME INI ファイル設定が更新されました"
+
+#: preferences.py:377
+msgid "ERROR: Unable to write to the mame.ini file"
+msgstr "エラー: mame.ini ファイルに書き込めません"
+
+#: preferences.py:378
+msgid ""
+"ERROR: pfeMAME settings updated but unable to write to the mame.ini file"
+msgstr "エラー: pfeMAME 設定は更新されましたが、mame.ini ファイルに書き込むことができません"
+
+#: preferences.py:390
+msgid "The INI folder has not been set.  Check folder settings."
+msgstr "INIフォルダが設定されていません。  フォルダーの設定を確認してください。"
+
+#: preferences.py:391 preferences.py:368 preferences.py:415
+msgid "Error in writing INI file"
+msgstr "INIファイルの書き込みエラー"
+
+#: preferences.py:396
+msgid "ERROR: Path to INI folder not set"
+msgstr "エラー: INI フォルダーへのパスが設定されていません"
+
+#: preferences.py:291
+msgid "cache check days (1 to 365)"
+msgstr "キャッシュチェック日数 (1 ～ 365)"
+
+#: preferences.py:294
+msgid "screensaver time in minutes (0 to 60)"
+msgstr "スクリーンセーバー時間 (0 ～ 60)"
+
+#: preferences.py:365
+msgid ""
+"Unable to write to the mame.ini file.  Check that the MAME INI File path is "
+"set in File Paths and that the file is not read-only.  The pfeMAME settings "
+"have been saved."
+msgstr ""
+"mame.ini ファイルに書き込めません。  MAME INI ファイルのパスがファイル "
+"パスに設定されていること、およびファイルが読み取り専用でないことを確認してください。  pfeMAMEの設定が保存されました。"
+
+#: preferences.py:413
+msgid ""
+"Unable to write to the ROM specific INI file.  Check that the INI folder is "
+"defined and that you have permission to write to it."
+msgstr ""
+"ROM 固有の INI ファイルに書き込むことができません。  Check that the INI folder is defined and "
+"that you have permission to write to it."
+
+#: preferences.py:421
+msgid ""
+"ERROR: Unable to write to ROM INI file.  Check the folder permissions and "
+"file / folder path settings."
+msgstr "エラー: ROM INI ファイルに書き込めません。  フォルダーのアクセス許可とファイル/フォルダーのパス設定を確認してください。"
+
+#: preferences.py:137
+msgid "Error reading from ROM INI file"
+msgstr "ROM INI ファイルからの読み取りエラー"
+
+#: rominfo.py:318
+msgid "Verifying..."
+msgstr "確認中..."
+
+#: rominfo.py:167 rom_picker_dialog.py:69 xmlinfo.py:220
+msgid "Size"
+msgstr "サイズ"
+
+#: rominfo.py:167 xmlinfo.py:221
+msgid "CRC"
+msgstr "CRC"
+
+#: rominfo.py:167
+msgid "SHA1"
+msgstr "SHA1"
+
+#: rominfo.py:272
+msgid "VERIFY"
+msgstr "確認する"
+
+#: rominfo.py:168
+msgid "Dump"
+msgstr "ダンプ"
+
+#: rominfo.py:169 rom_picker_dialog.py:70 xmlinfo.py:221
+msgid "Status"
+msgstr "状態"
+
+#: rominfo.py:171
+msgid "BAD DUMP"
+msgstr "悪いダンプ"
+
+#: rominfo.py:171
+msgid "NO GOOD DUMP KNOWN"
+msgstr "良いダンプは知られていません"
+
+#: rominfo.py:227 xmlinfo.py:321
+msgid "Unable to find the MAME executable path."
+msgstr "MAME 実行可能パスが見つかりません。"
+
+#: rominfo.py:273
+msgid "Check the ROM files in your ROM folders against what MAME expects"
+msgstr "ROM フォルダー内の ROM ファイルを MAME が期待するものと比較して確認します。"
+
+#: rominfo.py:276 xmlinfo.py:367
+msgid "COPY TO CLIPBOARD"
+msgstr "クリップボードにコピー"
+
+#: rominfo.py:216
+msgid "ROM Information - {}"
+msgstr "ROM 情報 - {}"
+
+#: rominfo.py:261
+msgid "MAME did not return any ROM information for {}."
+msgstr "MAME は {} の ROM 情報を返しませんでした。"
+
+#: rominfo.py:174
+msgid "disk (CHD)"
+msgstr "ディスク（CHD）"
+
+#: rom_database.py:251
+msgid "Reading the MAME machine list"
+msgstr "MAME のマシンリストを読み込み中"
+
+#: rom_database.py:461
+msgid "Scanning system folders"
+msgstr "システムフォルダーを検索中"
+
+#: rom_database.py:523
+msgid "Checking which ROMs exist"
+msgstr "存在する ROM を確認中"
+
+#: rom_database.py:408
+msgid "Checking merged ROM sets for clones"
+msgstr "マージされた ROM セットのクローンを確認中"
+
+#: rom_database.py:487
+msgid "Reading the software lists"
+msgstr "ソフトウェアリストを読み込み中"
+
+#: rom_database.py:501
+msgid "Building the ROM list"
+msgstr "ROM リストを作成中"
+
+#: rom_database.py:109
+msgid "Reading the MAME machine list ({:,} machines)"
+msgstr "MAME のマシンリストを読み込み中（{:,} 台）"
+
+#: rom_grid.py:121
+msgid "File Name"
+msgstr "ファイル名"
+
+#: rom_grid.py:121
+msgid "System File"
+msgstr "システムファイル"
+
+#: rom_grid.py:121 views.py:40
+msgid "Exists"
+msgstr "存在する"
+
+#: rom_grid.py:122
+msgid "Rating"
+msgstr "評価"
+
+#: rom_grid.py:122
+msgid "Runs"
+msgstr "走る"
+
+#: rom_grid.py:122
+msgid "Fav"
+msgstr "お気に入り"
+
+#: rom_grid.py:122
+msgid "Category"
+msgstr "カテゴリ"
+
+#: rom_grid.py:122
+msgid "Short Name"
+msgstr "ショートネーム"
+
+#: rom_grid.py:123
+msgid "Path Media Name"
+msgstr "パスメディア名"
+
+#: rom_grid.py:123 software_browser.py:26
+msgid "Year"
+msgstr "年"
+
+#: rom_grid.py:123
+msgid "Manufacturer"
+msgstr "メーカー"
+
+#: rom_grid.py:404
+msgid "Started building ROM grid."
+msgstr "ROMグリッドの構築を開始しました。"
+
+#: rom_grid.py:453
+msgid "Completed building ROM grid."
+msgstr "ROMグリッドの構築が完了しました。"
+
+#: rom_picker_dialog.py:30
+msgid "Good"
+msgstr "良い"
+
+#: rom_picker_dialog.py:31
+msgid "Bad / incomplete"
+msgstr "悪い/不完全"
+
+#: rom_picker_dialog.py:32
+msgid "Best available"
+msgstr "入手可能な最良のもの"
+
+#: rom_picker_dialog.py:33
+msgid "Could not verify"
+msgstr "確認できませんでした"
+
+#: rom_picker_dialog.py:34 rom_picker_dialog.py:114
+msgid "Not verified"
+msgstr "未検証"
+
+#: rom_picker_dialog.py:65
+msgid "Source"
+msgstr "ソース"
+
+#: rom_picker_dialog.py:66
+msgid "ROM"
+msgstr "ロム"
+
+#: rom_picker_dialog.py:67
+msgid "All matching files"
+msgstr "一致するすべてのファイル"
+
+#: rom_picker_dialog.py:68
+msgid "Partial matching files"
+msgstr "部分的に一致するファイル"
+
+#: rom_picker_dialog.py:71
+msgid "Found in"
+msgstr "で見つかりました"
+
+#: rom_picker_dialog.py:90
+msgid "Download Selected"
+msgstr "選択したものをダウンロード"
+
+#: rom_picker_dialog.py:60
+msgid ""
+"Select a ROM ZIP to download, then choose \"Download Selected\". Double-"
+"click a row to download it straight away."
+msgstr "ダウンロードするROM ZIPを選択し、「選択したものをダウンロード」を選択します。行をダブルクリックすると、すぐにダウンロードできます。"
+
+#: rom_picker_dialog.py:87
+msgid "Verify more"
+msgstr "さらに確認する"
+
+#: rom_source_dialog.py:62
+msgid "Save"
+msgstr "保存"
+
+#: rom_source_dialog.py:89
+msgid "Stored credentials cleared."
+msgstr "保存された資格情報がクリアされました。"
+
+#: rom_source_dialog.py:98
+msgid "Testing..."
+msgstr "テスト中..."
+
+#: rom_source_dialog.py:152
+msgid "Search"
+msgstr "検索"
+
+#: rom_source_dialog.py:43
+msgid "Credentials are stored locally (obfuscated, not strongly encrypted)."
+msgstr "資格情報はローカルに保存されます (難読化され、強力に暗号化されません)。"
+
+#: rom_source_dialog.py:60
+msgid "Test"
+msgstr "テスト"
+
+#: rom_source_dialog.py:61
+msgid "Clear"
+msgstr "クリア"
+
+#: rom_source_dialog.py:95
+msgid "Enter a username and password first."
+msgstr "最初にユーザー名とパスワードを入力します。"
+
+#: rom_source_dialog.py:121
+msgid "Choose ROM download source"
+msgstr "ROMのダウンロードソースを選択してください"
+
+#: rom_source_dialog.py:131
+msgid "Select one or more sources to search for this ROM:"
+msgstr "この ROM を検索するには、1 つ以上のソースを選択してください:"
+
+#: rom_source_dialog.py:204
+msgid "Select at least one source to search."
+msgstr "検索するソースを少なくとも 1 つ選択します。"
+
+#: rom_source_dialog.py:204
+msgid "No Source Selected"
+msgstr "ソースが選択されていません"
+
+#: rom_source_dialog.py:48
+msgid "Username / email:"
+msgstr "ユーザー名 / メールアドレス:"
+
+#: rom_source_dialog.py:51
+msgid "Password:"
+msgstr "パスワード："
+
+#: rom_source_dialog.py:175
+msgid "(no login needed)"
+msgstr "(ログインは必要ありません)"
+
+#: rom_source_dialog.py:178
+msgid "credentials stored"
+msgstr "保存された認証情報"
+
+#: rom_source_dialog.py:181
+msgid "no credentials - add them to use"
+msgstr "資格情報はありません - 使用するには資格情報を追加してください"
+
+#: rom_source_dialog.py:33
+msgid "Credentials for {}"
+msgstr "{} の資格情報"
+
+#: rom_source_dialog.py:141
+msgid "Credentials..."
+msgstr "資格..."
+
+#: rungame.py:415
+msgid "MAME failed its validity checks."
+msgstr "MAME の妥当性チェックに失敗しました。"
+
+#: rungame.py:416
+msgid ""
+"Required files are missing - check that the ROM set (and any CHD or BIOS it "
+"needs) is complete for this version of MAME."
+msgstr ""
+"必要なファイルがありません - ROM セット (および必要な CHD や BIOS) がこのバージョンの MAME 用に揃っているか確認してください。"
+
+#: rungame.py:418
+msgid "MAME stopped with a fatal error - see the messages above."
+msgstr "MAME は致命的なエラーで停止しました - 上のメッセージを参照してください。"
+
+#: rungame.py:419
+msgid "A device (such as a slot device or media image) could not be started."
+msgstr "デバイス (スロットデバイスやメディアイメージなど) を開始できませんでした。"
+
+#: rungame.py:420
+msgid ""
+"This version of MAME does not have this machine - it may have been renamed "
+"or removed."
+msgstr "このバージョンの MAME にはこのマシンがありません - 名前が変更されたか削除された可能性があります。"
+
+#: rungame.py:421
+msgid ""
+"The configuration is not valid - check the ROM's INI file and the options "
+"set for it."
+msgstr "設定が無効です - ROM の INI ファイルと、その ROM に設定したオプションを確認してください。"
+
+#: rungame.py:423
+msgid "MAME ended unexpectedly."
+msgstr "MAME が予期せず終了しました。"
+
+#: rungame.py:903
+msgid "Re-Running system using full path name (not XML short name)"
+msgstr "フルパス名(XMLショートネームではない)を使用したシステムの再実行"
+
+#: rungame.py:424
+msgid "ROM {0} did not run correctly (MAME exit code {1}).  {2}"
+msgstr "ROM {0} は正しく実行されませんでした (MAME 終了コード {1})。  {2}"
+
+#: rungame.py:870
+msgid "Using ROM specific INI file for preferences"
+msgstr "ROM 固有の INI ファイルを環境設定に使用する"
+
+#: rungame.py:872
+msgid "Using default preferences"
+msgstr "デフォルト設定の使用"
+
+#: rungame.py:166
+msgid ""
+"Found inputs mapping file for the ROM.  Copied across and overwriting "
+"default.cfg file."
+msgstr "ROM の入力マッピング ファイルが見つかりました。  default.cfg ファイルをコピーして上書きします。"
+
+#: rungame.py:169
+msgid ""
+"I am unable to overwrite the default.cfg file in the Config folder.  Check "
+"the folder permissions and that the folder and files within are not Read "
+"Only or write protected.  Under Linux check that everyone has permissions to"
+" write to the file / folder."
+msgstr ""
+"Config フォルダー内のdefault.cfg ファイルを上書きできません。  "
+"フォルダーのアクセス許可を確認し、フォルダーとフォルダー内のファイルが読み取り専用または書き込み保護されていないことを確認してください。  Linux "
+"では、全員がファイル/フォルダーに書き込む権限を持っていることを確認してください。"
+
+#: rungame.py:358
+msgid ""
+"ERROR:  There was a problem processing the non_mame_emulators.xml file.  "
+"There is likely an error in this file.  Please check it out."
+msgstr ""
+"エラー: non_mame_emulators.xml ファイルの処理で問題が発生しました。  このファイルにはエラーがある可能性があります。  "
+"ぜひチェックしてみてください。"
+
+#: rungame.py:404
+msgid "signal {}"
+msgstr "シグナル {}"
+
+#: rungame.py:411
+msgid "The {0} emulator ended with an error running ROM {1} (exit code {2})."
+msgstr "エミュレーター {0} は ROM {1} の実行中にエラーで終了しました (終了コード {2})。"
+
+#: rungame.py:601
+msgid "Running system using full path name (not XML short name)"
+msgstr "フルパス名 (XML ショートネームではない) を使用してシステムを実行する"
+
+#: rungame.py:892
+msgid ""
+"ERROR Detected.  You have tried running a system program with an XML file "
+"short name but MAME was unable to locate it where it was expected; "
+"{0}{1}{2}{3}{4}{5}{6} The application will now attempt to run the system "
+"program using the full file path."
+msgstr ""
+"エラーが検出されました。  XML ファイルの短縮名を使用してシステム プログラムを実行しようとしましたが、MAME "
+"はそれを予期した場所に見つけることができませんでした。 {0}{1}{2}{3}{4}{5}{6} "
+"アプリケーションは、完全なファイルパスを使用してシステム プログラムを実行しようとします。"
+
+#: rungame.py:173
+msgid "Permission error: Unable to overwrite the default.cfg file."
+msgstr "権限エラー:default.cfg ファイルを上書きできません。"
+
+#: rungame.py:362
+msgid "XML File Error : non_mame_emulators.xml file may be corrupted"
+msgstr "XML ファイル エラー: non_mame_emulators.xml ファイルが破損している可能性があります"
+
+#: rungame.py:605
+msgid "Running system using XML short name: {}"
+msgstr "XML 短縮名を使用してシステムを実行: {}"
+
+#: rungame.py:579
+msgid ""
+"The file extension '{}' for the program you have tried to run does not exist"
+" in the list of acceptable media types for this system."
+msgstr "実行しようとしたプログラムのファイル拡張子「{}」は、このシステムで使用できるメディア タイプのリストに存在しません。"
+
+#: rungame.py:583
+msgid "Unknown File Extension Type '{}'\n"
+msgstr ""
+"「不明なファイル拡張子タイプ '{}'\n"
+"」"
+
+#: rungame.py:585
+msgid ""
+"Unable to run the program - no file extension match for '{}' in the system "
+"media types"
+msgstr "プログラムを実行できません - システム メディア タイプの「{}」に一致するファイル拡張子がありません"
+
+#: rungame.py:777
+msgid ""
+"Unable to run the program {0}: it has no file extension, so pfeMAME cannot "
+"tell which media type of the {1} system it is."
+msgstr ""
+"プログラム {0} を実行できません: ファイル拡張子がないため、pfeMAME は {1} システムのどのメディアタイプか判断できません。"
+
+#: rungame.py:916
+msgid "Starting ROM {1} in {0}, Options: {2}, Using engine: {3}"
+msgstr "ROM {1} を {0} で開始しています、オプション: {2}、使用エンジン: {3}"
+
+#: rungame.py:641
+msgid "ERROR:  The emulator cannot be found: {}"
+msgstr "エラー:  エミュレーターが見つかりません: {}"
+
+#: rungame.py:644
+msgid ""
+"ERROR:  The emulator could not be started - permission denied: {}.  Check "
+"that it is a program and not a folder, and under Linux / macOS that it is "
+"marked as executable (chmod +x)."
+msgstr ""
+"エラー:  エミュレーターを起動できませんでした - アクセスが拒否されました: {}。  フォルダーではなくプログラムであること、また Linux /"
+" macOS では実行可能 (chmod +x) になっていることを確認してください。"
+
+#: rungame.py:648
+msgid "ERROR:  The emulator could not be started: {0} ({1})"
+msgstr "エラー:  エミュレーターを起動できませんでした: {0} ({1})"
+
+#: rungame.py:751
+msgid "ERROR:  Unable to run ROM {0}: {1}"
+msgstr "エラー:  ROM {0} を実行できません: {1}"
+
+#: rungame.py:764
+msgid ""
+"ERROR:  The extra commands for the {0} emulator could not be read ({1}).  "
+"Check that every \" has a matching \"."
+msgstr ""
+"エラー:  エミュレーター {0} の追加コマンドを読み取れませんでした ({1})。  すべての \" に対応する \" があるか確認してください。"
+
+#: scrolledwindow.py:90
+msgid "ERROR - nothing to display"
+msgstr "エラー - 何も表示されません"
+
+#: scrolledwindow.py:87
+msgid "Unable to find or open the specified file."
+msgstr "指定されたファイルが見つからないか、開くことができません。"
+
+#: search.py:63
+msgid ""
+"Search:  words match the name, ROM, category, year or manufacturer.\n"
+"Fields:  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n"
+"Flags:   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n"
+"Put - in front of a term to exclude it, and \"quotes\" around values with spaces."
+msgstr ""
+"検索：  語句は名前、ROM、カテゴリ、年、メーカーと照合されます。\n"
+"フィールド：  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n"
+"フラグ：   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n"
+"語句の前に - を付けると除外され、空白を含む値は \"引用符\" で囲みます。"
+
+#: software_browser.py:28 tileview.py:705
+msgid "Yes"
+msgstr "はい"
+
+#: software_browser.py:28
+msgid "Partially"
+msgstr "一部"
+
+#: software_browser.py:28 tileview.py:705
+msgid "No"
+msgstr "いいえ"
+
+#: software_browser.py:26
+msgid "Have"
+msgstr "所持"
+
+#: software_browser.py:26
+msgid "Title"
+msgstr "タイトル"
+
+#: software_browser.py:26
+msgid "Publisher"
+msgstr "発売元"
+
+#: software_browser.py:26
+msgid "Supported"
+msgstr "対応"
+
+#: software_browser.py:27
+msgid "Short name"
+msgstr "短縮名"
+
+#: software_browser.py:27
+msgid "List"
+msgstr "リスト"
+
+#: software_browser.py:91
+msgid "Search title, publisher, year"
+msgstr "タイトル・発売元・年を検索"
+
+#: software_browser.py:92
+msgid "Only software I have"
+msgstr "所持しているソフトウェアのみ"
+
+#: software_browser.py:93
+msgid "Reading the software lists from MAME..."
+msgstr "MAME からソフトウェアリストを読み込み中..."
+
+#: software_browser.py:103
+msgid "Show in ROM list"
+msgstr "ROM リストで表示"
+
+#: software_browser.py:104
+msgid "Play"
+msgstr "プレイ"
+
+#: software_browser.py:105
+msgid "Close"
+msgstr "閉じる"
+
+#: software_browser.py:150
+msgid ""
+"MAME has no software lists for this system (or its HASH files are missing)."
+msgstr "MAME にはこのシステムのソフトウェアリストがありません（または HASH ファイルがありません）。"
+
+#: software_browser.py:219
+msgid ""
+"This program is not in the ROM list with the current category selection."
+msgstr "現在のカテゴリ選択では、このプログラムは ROM リストにありません。"
+
+#: software_browser.py:229
+msgid "You don't have this software in your system programs folder."
+msgstr "このソフトウェアはシステムプログラムフォルダーにありません。"
+
+#: software_browser.py:96
+msgid "List:"
+msgstr "リスト："
+
+#: software_browser.py:148
+msgid "No software lists"
+msgstr "ソフトウェアリストなし"
+
+#: software_browser.py:186
+msgid "{:,} shown, {:,} of them you have"
+msgstr "{:,} 件を表示、そのうち所持 {:,} 件"
+
+#: software_browser.py:75
+msgid "Software Lists - {}"
+msgstr "ソフトウェアリスト - {}"
+
+#: software_browser.py:153
+msgid "All lists ({:,})"
+msgstr "すべてのリスト（{:,}）"
+
+#: tileview.py:1917
+msgid ""
+"NAVIGATION:\n"
+"  LEFT = Move left\n"
+"  RIGHT = Move right\n"
+"  UP = Move up\n"
+"  DOWN = Move down\n"
+"  PGUP / PGDN = Move a page\n"
+"  HOME / END = First / last ROM\n"
+"ACTIONS:\n"
+"  L-CTRL(Joy-2) = Change view mode\n"
+"  ALT-1 (Joy-4) = Menu\n"
+"  1 / ENTER (Joy-1) = Start the selected ROM\n"
+"  2 / ESC = Exit Tile View\n"
+"  3 (Joy-3) = Add / remove favorite\n"
+"  4 (Joy-5) = Change the sort order\n"
+"  7 (Joy-6) = Choose a category\n"
+"  5 = Adjust tile brightness\n"
+"  6 = Bring up the Finder"
+msgstr ""
+"ナビゲーション:\n"
+"  LEFT = 左に移動\n"
+"  RIGHT = 右に移動\n"
+"  UP = 上に移動\n"
+"  下 = 下に移動します\n"
+"  PGUP / PGDN = ページを移動します\n"
+"  HOME / END = 最初/最後のROM\n"
+"アクション:\n"
+"  L-CTRL(Joy-2) = 表示モードを変更\n"
+"  ALT-1 (Joy-4) = メニュー\n"
+"  1 / ENTER (Joy-1) = 選択したROMを開始します\n"
+"  2 / ESC = タイルビューを終了\n"
+"  3 (Joy-3) = お気に入りの追加/削除\n"
+"  4 (Joy-5) = 並べ替え順序を変更します\n"
+"  7 (Joy-6) = カテゴリを選択してください\n"
+"  5 = タイルの明るさを調整します\n"
+"  6 = ファインダーを起動します"
+
+#: tileview.py:677 tileview.py:804
+msgid "Recently played"
+msgstr "最近プレイした"
+
+#: tileview.py:678 tileview.py:805
+msgid "Most played"
+msgstr "最もプレイされた"
+
+#: tileview.py:679 tileview.py:805
+msgid "Most runs"
+msgstr "ほとんどの実行"
+
+#: tileview.py:1409
+msgid "Switched back to standard view"
+msgstr "標準ビューに戻りました"
+
+#: tileview.py:1939
+msgid "Selected ROM:"
+msgstr "選択したROM:"
+
+#: tileview.py:1940
+msgid "Number of runs:"
+msgstr "実行数:"
+
+#: tileview.py:1941
+msgid "Favorite:"
+msgstr "お気に入り:"
+
+#: tileview.py:1942
+msgid "Available in this view:"
+msgstr "このビューで使用できるもの:"
+
+#: tileview.py:1943
+msgid "View mode:"
+msgstr "表示モード:"
+
+#: tileview.py:376
+msgid "Choose a category"
+msgstr "カテゴリを選択してください"
+
+#: tileview.py:383
+msgid "Menu"
+msgstr "メニュー"
+
+#: tileview.py:642
+msgid "Video playback disable selected in preferences"
+msgstr "環境設定で選択されたビデオ再生の無効化"
+
+#: tileview.py:645
+msgid "Video autoload is off - no tile preview videos"
+msgstr "ビデオの自動読み込みがオフになっています - タイル プレビュー ビデオはありません"
+
+#: tileview.py:650
+msgid "Trying to set up the video playback device"
+msgstr "ビデオ再生デバイスをセットアップしようとしています"
+
+#: tileview.py:676
+msgid "Favorite ROMs"
+msgstr "お気に入りのROM"
+
+#: tileview.py:676
+msgid "All available ROMs"
+msgstr "利用可能なすべての ROM"
+
+#: tileview.py:814
+msgid "Find a ROM"
+msgstr "ROMを探す"
+
+#: tileview.py:817
+msgid "Exit Tile View"
+msgstr "タイルビューを終了する"
+
+#: tileview.py:1741
+msgid "ROM Finder"
+msgstr "ROMファインダー"
+
+#: tileview.py:1972
+msgid "ROM Information not available"
+msgstr "ROM情報がありません"
+
+#: tileview.py:674
+msgid "Search: \"{}\""
+msgstr "検索:「{}」"
+
+#: tileview.py:811
+msgid "Show all ROMs"
+msgstr "すべてのROMを表示"
+
+#: tileview.py:811
+msgid "Show favorites"
+msgstr "お気に入りを表示"
+
+#: tileview.py:812
+msgid "Sort order: {}"
+msgstr "ソート順: {}"
+
+#: tileview.py:813
+msgid "Category: {}"
+msgstr "カテゴリ: {}"
+
+#: tileview.py:813 tileview.py:931
+msgid "All categories"
+msgstr "すべてのカテゴリー"
+
+#: tileview.py:965
+msgid "ROM set {} removed from favorites"
+msgstr "ROM セット {} がお気に入りから削除されました"
+
+#: tileview.py:1009
+msgid "No ROMs match \"{}\""
+msgstr "「{}」に一致するROMはありません"
+
+#: tileview.py:665
+msgid "No media content player available on this system: {}"
+msgstr "このシステムでは利用可能なメディア コンテンツ プレーヤーがありません: {}"
+
+#: tileview.py:816
+msgid "Tile brightness: {}%"
+msgstr "タイルの明るさ: {}%"
+
+#: tileview.py:932
+msgid "No category"
+msgstr "カテゴリなし"
+
+#: video_class.py:1058
+msgid "Loading video..."
+msgstr "ビデオを読み込んでいます..."
+
+#: video_class.py:1131
+msgid "Failed to load video"
+msgstr "ビデオのロードに失敗しました"
+
+#: video_class.py:1146
+msgid "Playing Video - Click To Stop"
+msgstr "ビデオの再生 - クリックして停止します"
+
+#: video_class.py:927
+msgid "OpenCV video player with audio support initialized"
+msgstr "オーディオサポートが初期化された OpenCV ビデオプレーヤー"
+
+#: video_class.py:1311
+msgid "Video Stopped"
+msgstr "ビデオが停止しました"
+
+#: video_class.py:1113
+msgid "Audio extracted from video"
+msgstr "ビデオから抽出された音声"
+
+#: video_class.py:1115
+msgid "No audio found in video or extraction failed"
+msgstr "ビデオ内に音声が見つからないか、抽出に失敗しました"
+
+#: video_class.py:1129
+msgid "Failed to load video: {}"
+msgstr "ビデオの読み込みに失敗しました: {}"
+
+#: video_class.py:930
+msgid "Failed to initialize OpenCV video player: {}"
+msgstr "OpenCV ビデオ プレーヤーの初期化に失敗しました: {}"
+
+#: video_class.py:1094
+msgid "Error loading media: {}"
+msgstr "メディアの読み込みエラー: {}"
+
+#: views.py:40
+msgid "Favorites"
+msgstr "お気に入り"
+
+#: views.py:40
+msgid "Missing"
+msgstr "ない"
+
+#: views.py:40
+msgid "Watchlist"
+msgstr "ウォッチリスト"
+
+#: views.py:40
+msgid "Recently Played"
+msgstr "最近プレイ"
+
+#: views.py:41
+msgid "Most Played"
+msgstr "よくプレイ"
+
+#: xmlinfo.py:152
+msgid "Wrong size"
+msgstr "サイズが間違っています"
+
+#: xmlinfo.py:153
+msgid "Wrong checksum"
+msgstr "間違ったチェックサム"
+
+#: xmlinfo.py:154
+msgid "Not found"
+msgstr "見つかりません"
+
+#: xmlinfo.py:155
+msgid "Not checked"
+msgstr "未チェック"
+
+#: xmlinfo.py:157
+msgid "(known bad dump)"
+msgstr "(既知の不良ダンプ)"
+
+#: xmlinfo.py:168
+msgid "System:"
+msgstr "システム:"
+
+#: xmlinfo.py:169
+msgid "Program file:"
+msgstr "プログラムファイル:"
+
+#: xmlinfo.py:170
+msgid "Short name:"
+msgstr "略称:"
+
+#: xmlinfo.py:159
+msgid "(no good dump known)"
+msgstr "(適切なダンプが知られていない)"
+
+#: xmlinfo.py:173
+msgid "Software:"
+msgstr "ソフトウェア:"
+
+#: xmlinfo.py:174
+msgid "Year / Publisher:"
+msgstr "発行年/発行者:"
+
+#: xmlinfo.py:175
+msgid "Software list:"
+msgstr "ソフトウェアリスト:"
+
+#: xmlinfo.py:176
+msgid "Found at:"
+msgstr "次の場所にあります:"
+
+#: xmlinfo.py:207 xmlinfo.py:248
+msgid "File size:"
+msgstr "ファイルサイズ:"
+
+#: xmlinfo.py:208 xmlinfo.py:249
+msgid "CRC:"
+msgstr "CRC:"
+
+#: xmlinfo.py:209 xmlinfo.py:250
+msgid "SHA1:"
+msgstr "SHA1:"
+
+#: xmlinfo.py:253 xmlinfo.py:218
+msgid "Files in this software:"
+msgstr "このソフトウェア内のファイル:"
+
+#: xmlinfo.py:325
+msgid "This program does not exist in an XML HASH file."
+msgstr "このプログラムは XML HASH ファイルには存在しません。"
+
+#: xmlinfo.py:326
+msgid "Information"
+msgstr "情報"
+
+#: xmlinfo.py:355
+msgid "Analysing..."
+msgstr "分析中..."
+
+#: xmlinfo.py:161
+msgid "(disk image)"
+msgstr "(ディスクイメージ)"
+
+#: xmlinfo.py:247 xmlinfo.py:203
+msgid "Compared with:"
+msgstr "比較:"
+
+#: xmlinfo.py:248 xmlinfo.py:249 xmlinfo.py:250
+msgid "expected"
+msgstr "予想される"
+
+#: xmlinfo.py:248 xmlinfo.py:249 xmlinfo.py:250
+msgid "actual"
+msgstr "実際の"
+
+#: xmlinfo.py:251 xmlinfo.py:212
+msgid "Result:"
+msgstr "結果:"
+
+#: xmlinfo.py:265
+msgid ""
+"There is no software called {software} in the software lists of {system}."
+msgstr "{system}のソフトウェア一覧には{software}というソフトウェアはありません。"
+
+#: xmlinfo.py:277
+msgid "Unable to find {file_name} in any of these folders: {folders}"
+msgstr "次のフォルダーのいずれにも {file_name} が見つかりません: {folders}"
+
+#: xmlinfo.py:284
+msgid "{} has no files that can be compared (it may be a disk image)."
+msgstr "{} には比較できるファイルがありません (ディスク イメージの可能性があります)。"
+
+#: xmlinfo.py:205
+msgid "Expected"
+msgstr "期待される"
+
+#: xmlinfo.py:206
+msgid "Actual"
+msgstr "実際の"
+
+#: xmlinfo.py:297
+msgid "XML Information - {}"
+msgstr "XML 情報 - {}"
+
+#: xmlinfo.py:394
+msgid "Error: {}"
+msgstr "エラー: {}"
+
+#: xmlinfo.py:227 xmlinfo.py:255
+msgid "(selected)"
+msgstr "(選択済み)"
+
+#: custom_drop_down.py:41
+msgid "Select an option..."
+msgstr "オプションを選択..."
+
+#: tileview.py:770
+msgid "Existing ROMs"
+msgstr "存在するROM"
+
+#: tileview.py:772
+msgid "Watchlist ROMs"
+msgstr "ウォッチリストのROM"
+
+#: tileview.py:815
+msgid "View: {}"
+msgstr "表示: {}"

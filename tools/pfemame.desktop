@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=pfeMAME
+GenericName=MAME Front-End
+Comment=Python front-end for the MAME emulator system
+Exec=pfeMAME
+Icon=pfemame
+Categories=Game;Emulator;
+Terminal=false

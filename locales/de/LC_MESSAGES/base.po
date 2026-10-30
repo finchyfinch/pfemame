@@ -1,0 +1,5528 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PFEMAME\n"
+"POT-Creation-Date: 2026-10-23 14:04\n"
+"PO-Revision-Date: 2026-10-23 14:04\n"
+"Last-Translator: GFINCH <pfemame@gmail.com>\n"
+"Language-Team: N/A\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: create_language_files.py\n"
+
+#: aboutbox.py:432
+msgid "Visit Website"
+msgstr "Besuchen Sie die Website"
+
+#: aboutbox.py:185
+msgid "About pfeMAME"
+msgstr "Über pfeMAME"
+
+#: aboutbox.py:259 aboutbox.py:487
+msgid "License"
+msgstr "Lizenz"
+
+#: aboutbox.py:264 alternate_emulators.py:602 alternate_emulators.py:1641
+#: rominfo.py:277 xmlinfo.py:151 xmlinfo.py:369
+msgid "OK"
+msgstr "OK"
+
+#: aboutbox.py:425
+msgid "pfeMAME is a front end for the MAME emulation system"
+msgstr "pfeMAME ist ein Frontend für das MAME-Emulationssystem"
+
+#: aboutbox.py:303
+msgid "License file not found."
+msgstr "Lizenzdatei nicht gefunden."
+
+#: aboutbox.py:487
+msgid "Back"
+msgstr "Zurück"
+
+#: alternate_emulators.py:51
+msgid "No emulators - use CREATE NEW EMULATOR ENTRY"
+msgstr "Keine Emulatoren – verwenden Sie CREATE NEW EMULATOR ENTRY"
+
+#: alternate_emulators.py:585
+msgid ""
+"This allows you to create a new alternate emulator (i.e. something other "
+"than MAME).  Once you have created it, you will need to review the settings "
+"below and then assign the ROMs that relate to this alternate emulation "
+"system."
+msgstr ""
+"Dadurch können Sie einen neuen alternativen Emulator erstellen (d. h. etwas "
+"anderes als MAME).  Sobald Sie es erstellt haben, müssen Sie die folgenden "
+"Einstellungen überprüfen und dann die ROMs zuweisen, die sich auf dieses "
+"alternative Emulationssystem beziehen."
+
+#: alternate_emulators.py:134 alternate_emulators.py:1299
+msgid "Alternate Emulators"
+msgstr "Alternative Emulatoren"
+
+#: alternate_emulators.py:343
+msgid "Use Default ROM Folder"
+msgstr "Verwenden Sie den Standard-ROM-Ordner"
+
+#: alternate_emulators.py:426
+msgid "ADD NEW ROM ENTRY"
+msgstr "NEUEN ROM-EINTRAG HINZUFÜGEN"
+
+#: alternate_emulators.py:432
+msgid "AUTO SCAN ROM FOLDER"
+msgstr "AUTO SCAN ROM-ORDNER"
+
+#: alternate_emulators.py:444
+msgid "Search ROMs"
+msgstr "ROMs durchsuchen"
+
+#: alternate_emulators.py:450
+msgid "FILL ROM NAMES"
+msgstr "ROM-NAMEN AUSFÜLLEN"
+
+#: alternate_emulators.py:512
+msgid "SET DEFAULTS"
+msgstr "STANDARDWERTE EINSTELLEN"
+
+#: alternate_emulators.py:521
+msgid "UPDATE XML FILE"
+msgstr "XML-DATEI AKTUALISIEREN"
+
+#: alternate_emulators.py:531
+msgid "TEST ROM"
+msgstr "TEST-ROM"
+
+#: alternate_emulators.py:540
+msgid "RENAME THIS ENGINE"
+msgstr "Benennen Sie diesen Motor um"
+
+#: alternate_emulators.py:549
+msgid "DUPLICATE THIS ENGINE"
+msgstr "DUPLIZIEREN SIE DIESEN MOTOR"
+
+#: alternate_emulators.py:558
+msgid "DELETE THIS ENGINE"
+msgstr "DIESEN MOTOR LÖSCHEN"
+
+#: alternate_emulators.py:590
+msgid "CREATE NEW EMULATOR ENTRY"
+msgstr "NEUEN EMULATOR-EINTRAG ERSTELLEN"
+
+#: alternate_emulators.py:620
+msgid "This is the full path to the alternate emulator executable file"
+msgstr ""
+"Dies ist der vollständige Pfad zur ausführbaren Datei des alternativen "
+"Emulators"
+
+#: alternate_emulators.py:621
+msgid ""
+"If the emulator has ROMs located in a folder that is not the 'Default' MAME "
+"ROM folder, then you need to define that folder here.  If the ROM can be run"
+" by MAME natively then you don't need to set this.  AUTO SCAN ROM FOLDER "
+"only works with a folder of the emulator's own, not 'Default'."
+msgstr ""
+"Wenn sich die ROMs des Emulators in einem Ordner befinden, der nicht der "
+"„Standard“-MAME-ROM-Ordner ist, müssen Sie diesen Ordner hier definieren.  "
+"Wenn das ROM nativ von MAME ausgeführt werden kann, müssen Sie dies nicht "
+"festlegen.  AUTO SCAN ROM FOLDER funktioniert nur mit einem eigenen Ordner "
+"des Emulators, nicht mit „Default“."
+
+#: alternate_emulators.py:626
+msgid ""
+"You must list all valid file extensions that can be run by this emulator.  "
+"Do not include any dots.  If multiple extensions then separate by a space."
+msgstr ""
+"Sie müssen alle gültigen Dateierweiterungen auflisten, die von diesem "
+"Emulator ausgeführt werden können.  Fügen Sie keine Punkte ein.  Bei "
+"mehreren Erweiterungen diese durch ein Leerzeichen trennen."
+
+#: alternate_emulators.py:629
+msgid ""
+"The category that ROMs in this emulator's own ROM folder are listed under in"
+" the ROM list (not used when the ROM folder is 'Default')."
+msgstr ""
+"Die Kategorie, unter der ROMs im eigenen ROM-Ordner dieses Emulators in der "
+"ROM-Liste aufgeführt sind (wird nicht verwendet, wenn der ROM-Ordner "
+"„Standard“ ist)."
+
+#: alternate_emulators.py:631
+msgid ""
+"List any commands to be passed to the emulator in the same format that you "
+"would use from the command line.  Separate multiple commands with a space.  "
+"The ROM is added after them, unless you put {rom} where it should go (e.g. "
+"-play {rom} -exit)."
+msgstr ""
+"Listen Sie alle Befehle auf, die an den Emulator in demselben Format "
+"übergeben werden sollen, das Sie über die Befehlszeile verwenden würden.  "
+"Trennen Sie mehrere Befehle durch ein Leerzeichen.  Das ROM wird danach "
+"hinzugefügt, es sei denn, Sie platzieren {rom} dort, wo es hingehört (z. B. "
+"-play {rom} -exit)."
+
+#: alternate_emulators.py:635
+msgid "Select this to enable / disable this emulator"
+msgstr ""
+"Wählen Sie diese Option aus, um diesen Emulator zu aktivieren/deaktivieren"
+
+#: alternate_emulators.py:636
+msgid ""
+"If the folder path needs to be given at the command line for the emulator "
+"then check this box.  This will generally depend upon whether or not the "
+"ROMs folder for this emulator is already defined in it's own INI file."
+msgstr ""
+"Wenn der Ordnerpfad in der Befehlszeile für den Emulator angegeben werden "
+"muss, aktivieren Sie dieses Kontrollkästchen.  Dies hängt im Allgemeinen "
+"davon ab, ob der ROM-Ordner für diesen Emulator bereits in seiner eigenen "
+"INI-Datei definiert ist oder nicht."
+
+#: alternate_emulators.py:640
+msgid ""
+"Check this box if the emulator needs the file extension to be given with the"
+" ROM name"
+msgstr ""
+"Aktivieren Sie dieses Kontrollkästchen, wenn der Emulator benötigt, dass die"
+" Dateierweiterung mit dem ROM-Namen angegeben wird"
+
+#: alternate_emulators.py:788
+msgid "Delete Emulator"
+msgstr "Emulator löschen"
+
+#: alternate_emulators.py:855
+msgid "Please enter the name for the new emulation engine"
+msgstr "Bitte geben Sie den Namen für die neue Emulations-Engine ein"
+
+#: alternate_emulators.py:856
+msgid "New Emulator Name"
+msgstr "Neuer Emulatorname"
+
+#: alternate_emulators.py:931
+msgid "Rename Emulator"
+msgstr "Emulator umbenennen"
+
+#: alternate_emulators.py:951
+msgid "Duplicate Emulator"
+msgstr "Doppelter Emulator"
+
+#: alternate_emulators.py:1036
+msgid "Alternate Emulators *"
+msgstr "Alternative Emulatoren *"
+
+#: alternate_emulators.py:1098
+msgid "Auto Scan ROM Folder"
+msgstr "ROM-Ordner automatisch scannen"
+
+#: alternate_emulators.py:1176 alternate_emulators.py:1163
+msgid "Fill ROM Names"
+msgstr "Füllen Sie ROM-Namen aus"
+
+#: alternate_emulators.py:1218
+msgid "Possible Problems"
+msgstr "Mögliche Probleme"
+
+#: alternate_emulators.py:1292
+msgid "XML File has been updated"
+msgstr "Die XML-Datei wurde aktualisiert"
+
+#: alternate_emulators.py:1293
+msgid "File Updated"
+msgstr "Datei aktualisiert"
+
+#: alternate_emulators.py:1335
+msgid "Edit ROM Entry..."
+msgstr "ROM-Eintrag bearbeiten..."
+
+#: alternate_emulators.py:1385
+msgid "Delete Entry"
+msgstr "Eintrag löschen"
+
+#: alternate_emulators.py:285
+msgid "ROM Entries"
+msgstr "ROM-Einträge"
+
+#: alternate_emulators.py:286
+msgid "Basic Configuration"
+msgstr "Grundkonfiguration"
+
+#: alternate_emulators.py:287
+msgid "ROM Folder Configuration"
+msgstr "ROM-Ordnerkonfiguration"
+
+#: alternate_emulators.py:288
+msgid "Command Line Options"
+msgstr "Befehlszeilenoptionen"
+
+#: alternate_emulators.py:289
+msgid "Actions"
+msgstr "Aktionen"
+
+#: alternate_emulators.py:320
+msgid "Select Emulator Executable File"
+msgstr "Wählen Sie die ausführbare Datei des Emulators aus"
+
+#: alternate_emulators.py:333
+msgid "Select ROMs Folder for this Emulator"
+msgstr "Wählen Sie den ROM-Ordner für diesen Emulator aus"
+
+#: alternate_emulators.py:347
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: alternate_emulators.py:349
+msgid "Include file extension in command line"
+msgstr "Fügen Sie die Dateierweiterung in die Befehlszeile ein"
+
+#: alternate_emulators.py:351
+msgid "Include folder path in command line"
+msgstr "Geben Sie den Ordnerpfad in die Befehlszeile ein"
+
+#: alternate_emulators.py:352
+msgid "Description:"
+msgstr "Beschreibung:"
+
+#: alternate_emulators.py:353
+msgid "Path To Emulator:"
+msgstr "Pfad zum Emulator:"
+
+#: alternate_emulators.py:354
+msgid "Extra Commands:"
+msgstr "Zusätzliche Befehle:"
+
+#: alternate_emulators.py:355
+msgid "ROM Folder:"
+msgstr "ROM-Ordner:"
+
+#: alternate_emulators.py:356
+msgid "Valid Extensions:"
+msgstr "Gültige Erweiterungen:"
+
+#: alternate_emulators.py:367
+msgid ""
+"Unable to find the non_mame_emulators.xml file.  This should be in the same "
+"folder as the pfeMAME files.  You can create a new version from here by "
+"adding at least one alternate emulation engine entry."
+msgstr ""
+"Die Datei non_mame_emulators.xml konnte nicht gefunden werden.  Diese sollte"
+" sich im selben Ordner wie die pfeMAME-Dateien befinden.  Sie können von "
+"hier aus eine neue Version erstellen, indem Sie mindestens einen "
+"alternativen Emulations-Engine-Eintrag hinzufügen."
+
+#: alternate_emulators.py:370 alternate_emulators.py:382
+#: alternate_emulators.py:717 alternate_emulators.py:741
+#: alternate_emulators.py:841 alternate_emulators.py:909
+#: alternate_emulators.py:1257 alternate_emulators.py:1517
+#: alternate_emulators.py:708 alternate_emulators.py:918
+#: alternate_emulators.py:1250 alternate_emulators.py:1286 checkall.py:596
+#: filepaths.py:489 filepaths.py:1357 filepaths.py:1393 filepaths.py:411
+#: filepaths.py:1207 filepaths.py:1373 pfemame.py:2889 pfemame.py:5143
+#: pfemame.py:2541 pfemame.py:3984 pfemame.py:5080 pfemame.py:5122
+#: pfemame.py:5161 pfemame.py:5310 pfemame.py:2377 pfemame.py:2389
+#: pfemame.py:3031 pfemame.py:5069 pfemame.py:5096 pfemame.py:5278
+#: pfemame.py:5331 rominfo.py:227 rominfo.py:363 scrolledwindow.py:88
+#: xmlinfo.py:321 xmlinfo.py:417
+msgid "ERROR"
+msgstr "FEHLER"
+
+#: alternate_emulators.py:379
+msgid ""
+"There is an error in the non_mame_emulators.xml file.  Please check the file"
+" manually or delete the file to allow it to be rebuilt safely.  You can also"
+" restore it from a backup if you have one."
+msgstr ""
+"In der Datei non_mame_emulators.xml liegt ein Fehler vor.  Bitte überprüfen "
+"Sie die Datei manuell oder löschen Sie die Datei, damit sie sicher "
+"wiederhergestellt werden kann.  Sie können es auch aus einem Backup "
+"wiederherstellen, falls Sie eines haben."
+
+#: alternate_emulators.py:434
+msgid ""
+"Add the ROM files in the ROM folder that have one of the valid extensions.  "
+"Existing entries and their names are kept.  Not available when the ROM "
+"folder is 'Default', as that would add every MAME ROM to this emulator."
+msgstr ""
+"Fügen Sie die ROM-Dateien im ROM-Ordner hinzu, die eine der gültigen "
+"Erweiterungen haben.  Bestehende Einträge und deren Namen bleiben erhalten."
+"  Nicht verfügbar, wenn der ROM-Ordner „Standard“ ist, da dadurch jedes "
+"MAME-ROM zu diesem Emulator hinzugefügt würde."
+
+#: alternate_emulators.py:445
+msgid "Only show the ROMs whose name or file name contains this text"
+msgstr ""
+"Zeigen Sie nur die ROMs an, deren Name oder Dateiname diesen Text enthält"
+
+#: alternate_emulators.py:452
+msgid ""
+"Give the unnamed (___) ROMs the names MAME uses for them.  Names you have "
+"entered are kept."
+msgstr ""
+"Geben Sie den unbenannten (___) ROMs die Namen, die MAME für sie verwendet."
+"  Die von Ihnen eingegebenen Namen bleiben erhalten."
+
+#: alternate_emulators.py:514
+msgid "Set the typical default values for this emulator engine."
+msgstr "Legen Sie die typischen Standardwerte für diese Emulator-Engine fest."
+
+#: alternate_emulators.py:523
+msgid ""
+"Update the XML file with any changes you have made.  You need to do this "
+"manually as the changes are not automatically stored."
+msgstr ""
+"Aktualisieren Sie die XML-Datei mit allen von Ihnen vorgenommenen "
+"Änderungen.  Sie müssen dies manuell tun, da die Änderungen nicht "
+"automatisch gespeichert werden."
+
+#: alternate_emulators.py:533
+msgid "Test the selected ROM to see if your configuration is correct"
+msgstr ""
+"Testen Sie das ausgewählte ROM, um festzustellen, ob Ihre Konfiguration "
+"korrekt ist"
+
+#: alternate_emulators.py:542
+msgid ""
+"Change the name of this alternate engine, keeping its settings and ROMs"
+msgstr ""
+"Ändern Sie den Namen dieser alternativen Engine und behalten Sie dabei ihre "
+"Einstellungen und ROMs bei"
+
+#: alternate_emulators.py:551
+msgid ""
+"Make a copy of this alternate engine, with its settings and ROMs.  The copy "
+"starts disabled."
+msgstr ""
+"Erstellen Sie eine Kopie dieser alternativen Engine mit ihren Einstellungen "
+"und ROMs.  Der Kopiervorgang wird deaktiviert gestartet."
+
+#: alternate_emulators.py:560
+msgid "Delete this alternate engine entry and all associated data"
+msgstr ""
+"Löschen Sie diesen alternativen Engine-Eintrag und alle zugehörigen Daten"
+
+#: alternate_emulators.py:678
+msgid ""
+"Click a column heading to sort by it.  Ctrl or Shift click to select several"
+" ROMs, then press Delete to delete them."
+msgstr ""
+"Klicken Sie auf eine Spaltenüberschrift, um danach zu sortieren.  Klicken "
+"Sie bei gedrückter Strg- oder Umschalttaste, um mehrere ROMs auszuwählen, "
+"und drücken Sie dann die Entf-Taste, um sie zu löschen."
+
+#: alternate_emulators.py:681 rom_grid.py:121
+msgid "ROM Name"
+msgstr "ROM-Name"
+
+#: alternate_emulators.py:682
+msgid "ROM File Name (No Extn)"
+msgstr "ROM-Dateiname (keine Erweiterung)"
+
+#: alternate_emulators.py:716
+msgid "No emulators found in defaults file."
+msgstr "In der Standarddatei wurden keine Emulatoren gefunden."
+
+#: alternate_emulators.py:740
+msgid "Selected emulator not found in defaults file."
+msgstr "Der ausgewählte Emulator wurde in der Standarddatei nicht gefunden."
+
+#: alternate_emulators.py:839
+msgid ""
+"ERROR:  The categories.dat file does not exist.  Please ensure you have "
+"refreshed the database and selected some categories."
+msgstr ""
+"FEHLER: Die Datei categories.dat existiert nicht.  Bitte stellen Sie sicher,"
+" dass Sie die Datenbank aktualisiert und einige Kategorien ausgewählt haben."
+
+#: alternate_emulators.py:908
+msgid "Please enter a new valid name."
+msgstr "Bitte geben Sie einen neuen gültigen Namen ein."
+
+#: alternate_emulators.py:1069
+msgid ""
+"I couldn't find any matches for the extension(s) you have listed. Please "
+"check your extensions are correct and the folder path is right."
+msgstr ""
+"Ich konnte keine Übereinstimmungen für die von Ihnen aufgelistete(n) "
+"Erweiterung(en) finden. Bitte überprüfen Sie, ob Ihre Erweiterungen korrekt "
+"sind und der Ordnerpfad richtig ist."
+
+#: alternate_emulators.py:1071
+msgid "ERROR FINDING FILES"
+msgstr "FEHLER BEIM FINDEN VON DATEIEN"
+
+#: alternate_emulators.py:1084
+msgid "ROM Files Not Found"
+msgstr "ROM-Dateien nicht gefunden"
+
+#: alternate_emulators.py:1161
+msgid ""
+"The MAME machine list could not be found.  Please build the ROM database "
+"first, then try again."
+msgstr ""
+"Die MAME-Maschinenliste konnte nicht gefunden werden.  Bitte erstellen Sie "
+"zuerst die ROM-Datenbank und versuchen Sie es dann erneut."
+
+#: alternate_emulators.py:1173
+msgid "ROM names filled in: {}"
+msgstr "Ausgefüllte ROM-Namen: {}"
+
+#: alternate_emulators.py:1217
+msgid "Would you like to save anyway?"
+msgstr "Möchten Sie trotzdem sparen?"
+
+#: alternate_emulators.py:1229
+msgid "Emulator Path"
+msgstr "Emulatorpfad"
+
+#: alternate_emulators.py:1230
+msgid "Emulator Description"
+msgstr "Beschreibung des Emulators"
+
+#: alternate_emulators.py:1231
+msgid "Valid Extensions"
+msgstr "Gültige Erweiterungen"
+
+#: alternate_emulators.py:1256
+msgid "Please remove any dots from the Valid Extensions"
+msgstr "Bitte entfernen Sie alle Punkte aus den gültigen Erweiterungen"
+
+#: alternate_emulators.py:1337
+msgid "Delete ROM Entry"
+msgstr "ROM-Eintrag löschen"
+
+#: alternate_emulators.py:1376
+msgid ""
+"Sorry but you cannot delete the last row. There must always be at least one "
+"row."
+msgstr ""
+"Leider können Sie die letzte Zeile nicht löschen. Es muss immer mindestens "
+"eine Zeile vorhanden sein."
+
+#: alternate_emulators.py:1378
+msgid "Cannot Delete Entry"
+msgstr "Eintrag kann nicht gelöscht werden"
+
+#: alternate_emulators.py:1383
+msgid "Are you sure you want to delete this entry?"
+msgstr "Sind Sie sicher, dass Sie diesen Eintrag löschen möchten?"
+
+#: alternate_emulators.py:1478
+msgid ""
+"You have made some changes that have not been saved to the XML file.  Would "
+"you like to save these changes before exiting?"
+msgstr ""
+"Sie haben einige Änderungen vorgenommen, die nicht in der XML-Datei "
+"gespeichert wurden.  Möchten Sie diese Änderungen vor dem Beenden speichern?"
+
+#: alternate_emulators.py:1480 alternate_emulators.py:1534
+msgid "UNSAVED CHANGES"
+msgstr "NICHT GESPEICHERTE ÄNDERUNGEN"
+
+#: alternate_emulators.py:1516
+msgid "Please select a ROM to run from the list"
+msgstr ""
+"Bitte wählen Sie aus der Liste ein ROM aus, das ausgeführt werden soll"
+
+#: alternate_emulators.py:1523
+msgid ""
+"This emulator is not enabled, so the ROM would run in MAME instead.  Tick "
+"Enabled and save your changes to test it with this emulator."
+msgstr ""
+"Dieser Emulator ist nicht aktiviert, sodass das ROM stattdessen in MAME "
+"ausgeführt wird.  Markieren Sie „Aktiviert“ und speichern Sie Ihre "
+"Änderungen, um es mit diesem Emulator zu testen."
+
+#: alternate_emulators.py:1525
+msgid "Emulator Not Enabled"
+msgstr "Emulator nicht aktiviert"
+
+#: alternate_emulators.py:1532
+msgid ""
+"TEST ROM uses the settings saved in the XML file.  Would you like to save "
+"your changes first?"
+msgstr ""
+"TEST ROM verwendet die in der XML-Datei gespeicherten Einstellungen.  "
+"Möchten Sie Ihre Änderungen zunächst speichern?"
+
+#: alternate_emulators.py:1575
+msgid "Default Settings Selection"
+msgstr "Auswahl der Standardeinstellungen"
+
+#: alternate_emulators.py:1619 pfemame.py:1144
+msgid "ROM Info"
+msgstr "ROM-Info"
+
+#: alternate_emulators.py:255
+msgid "{} (disabled)"
+msgstr "{} (deaktiviert)"
+
+#: alternate_emulators.py:707
+msgid "Unable to read non_mame_defaults.xml file."
+msgstr "Die Datei non_mame_defaults.xml kann nicht gelesen werden."
+
+#: alternate_emulators.py:787
+msgid "Are you sure you want to delete {}?"
+msgstr "Sind Sie sicher, dass Sie {} löschen möchten?"
+
+#: alternate_emulators.py:930
+msgid "Please enter the new name for {}"
+msgstr "Bitte geben Sie den neuen Namen für {} ein"
+
+#: alternate_emulators.py:950
+msgid "Please enter the name for the copy of {}"
+msgstr "Bitte geben Sie den Namen für die Kopie von {} ein"
+
+#: alternate_emulators.py:990
+msgid "Number of alternate emulator engines in file: {}"
+msgstr "Anzahl alternativer Emulator-Engines in der Datei: {}"
+
+#: alternate_emulators.py:1096
+msgid ""
+"ROM entries added: {added}\n"
+"ROM entries removed: {removed}"
+msgstr ""
+"ROM-Einträge hinzugefügt: {added}\n"
+"ROM-Einträge entfernt: {removed}"
+
+#: alternate_emulators.py:1285
+msgid ""
+"Unable to write the new non_mame_emulators.xml file.  Check file / folder "
+"permissions."
+msgstr ""
+"Die neue Datei non_mame_emulators.xml kann nicht geschrieben werden.  "
+"Überprüfen Sie die Datei-/Ordnerberechtigungen."
+
+#: alternate_emulators.py:951
+msgid "{} (copy)"
+msgstr "{} (Kopie)"
+
+#: alternate_emulators.py:1082
+msgid ""
+"{} ROM entries have no matching file in the ROM folder.  Would you like to "
+"remove them?"
+msgstr ""
+"{}-ROM-Einträge haben keine passende Datei im ROM-Ordner.  Möchten Sie sie "
+"entfernen?"
+
+#: alternate_emulators.py:1175
+msgid "ROMs still without a name (not MAME machines): {}"
+msgstr "ROMs noch ohne Namen (keine MAME-Maschinen): {}"
+
+#: alternate_emulators.py:1214
+msgid "... and {} more."
+msgstr "... und {} mehr."
+
+#: alternate_emulators.py:1338
+msgid "Delete {} ROM Entries"
+msgstr "Löschen Sie {}-ROM-Einträge"
+
+#: alternate_emulators.py:1384
+msgid "Are you sure you want to delete these {} entries?"
+msgstr "Sind Sie sicher, dass Sie diese {}-Einträge löschen möchten?"
+
+#: alternate_emulators.py:1632
+msgid "ROM Name:"
+msgstr "ROM-Name:"
+
+#: alternate_emulators.py:1634
+msgid "ROM File Name:"
+msgstr "ROM-Dateiname:"
+
+#: alternate_emulators.py:89
+msgid "{}: no emulator program has been set."
+msgstr "{}: Es wurde kein Emulatorprogramm festgelegt."
+
+#: alternate_emulators.py:96
+msgid ""
+"{}: no ROM folder has been set (use 'Default' for the MAME ROM folder)."
+msgstr ""
+"{}: Es wurde kein ROM-Ordner festgelegt (verwenden Sie „Standard“ für den "
+"MAME-ROM-Ordner)."
+
+#: alternate_emulators.py:107
+msgid "{emulator}: {file_name} is listed more than once."
+msgstr "{emulator}: {file_name} ist mehr als einmal aufgeführt."
+
+#: alternate_emulators.py:917
+msgid "The emulator name {} already exists"
+msgstr "Der Emulatorname {} existiert bereits"
+
+#: alternate_emulators.py:1216
+msgid "Please check the following:"
+msgstr "Bitte überprüfen Sie Folgendes:"
+
+#: alternate_emulators.py:1249
+msgid "You must have an entry for {}"
+msgstr "Sie müssen einen Eintrag für {} haben"
+
+#: alternate_emulators.py:91
+msgid "{emulator}: the emulator program {path} was not found."
+msgstr "{emulator}: Das Emulatorprogramm {path} wurde nicht gefunden."
+
+#: alternate_emulators.py:99
+msgid "{emulator}: the ROM folder {folder} was not found."
+msgstr "{emulator}: Der ROM-Ordner {folder} wurde nicht gefunden."
+
+#: alternate_emulators.py:115
+msgid ""
+"{file_name} is listed under both {first} and {second}.  Only {first} will be"
+" used."
+msgstr ""
+"{file_name} ist sowohl unter {first} als auch unter {second} aufgeführt.  Es"
+" wird nur {first} verwendet."
+
+#: busy_window.py:78
+msgid "Please Wait..."
+msgstr "Bitte warten..."
+
+#: busy_window.py:126
+msgid "Cancelling..."
+msgstr "Wird abgebrochen..."
+
+#: busy_window.py:89 image_picker_dialog.py:173 pfemame.py:1035
+#: rom_picker_dialog.py:92 rom_source_dialog.py:63 rom_source_dialog.py:153
+msgid "Cancel"
+msgstr "Stornieren"
+
+#: checkall.py:152
+msgid ""
+"The check was stopped before it finished, so not all of your ROMs were "
+"checked."
+msgstr ""
+"Die Prüfung wurde vor dem Ende gestoppt, daher wurden nicht alle Ihre ROMs "
+"geprüft."
+
+#: checkall.py:194 checkall.py:178
+msgid "No ROM sets match this filter."
+msgstr "Keine ROM-Sets entsprechen diesem Filter."
+
+#: checkall.py:319 checkall.py:546 checkall.py:604 pfemame_ribbon_bar.py:623
+msgid "Check All ROMs"
+msgstr "Überprüfen Sie alle ROMs"
+
+#: checkall.py:399
+msgid "SAVE RESULTS"
+msgstr "ERGEBNISSE SPEICHERN"
+
+#: checkall.py:401
+msgid "COPY"
+msgstr "KOPIEREN"
+
+#: checkall.py:403
+msgid "RE-CHECK BAD"
+msgstr "FEHLERHAFTE ERNEUT PRÜFEN"
+
+#: checkall.py:405
+msgid "RUN CHECK"
+msgstr "PRÜFUNG STARTEN"
+
+#: checkall.py:406 fix_artwork_file.py:460
+msgid "STOP"
+msgstr "STOPP"
+
+#: checkall.py:407 fix_artwork_file.py:461
+msgid "EXIT"
+msgstr "BEENDEN"
+
+#: checkall.py:515 fix_artwork_file.py:675
+msgid "Output path"
+msgstr "Ausgabepfad"
+
+#: checkall.py:72
+msgid ""
+"romset {} was not found (it is missing from your ROM folders or unknown to "
+"this version of MAME)"
+msgstr ""
+"ROM-Set {} wurde nicht gefunden (es fehlt in Ihren ROM-Ordnern oder ist "
+"dieser MAME-Version unbekannt)"
+
+#: checkall.py:147
+msgid ""
+"ROM sets checked: {total}   Good: {good}   Bad: {bad}   Best available: "
+"{best}   Not found: {not_found}"
+msgstr ""
+"Geprüfte ROM-Sets: {total}   Gut: {good}   Fehlerhaft: {bad}   Bestmöglich: "
+"{best}   Nicht gefunden: {not_found}"
+
+#: checkall.py:150
+msgid "The check took {} seconds."
+msgstr "Die Prüfung dauerte {} Sekunden."
+
+#: checkall.py:191 checkall.py:174
+msgid "MAME reported:"
+msgstr "MAME meldete:"
+
+#: checkall.py:375
+msgid "This could take 5 minutes or more depending upon a number of factors"
+msgstr ""
+"Dies kann abhängig von einer Reihe von Faktoren 5 Minuten oder länger dauern"
+
+#: checkall.py:380 views.py:40
+msgid "All"
+msgstr "Alle"
+
+#: checkall.py:381
+msgid "Is Good"
+msgstr "Ist gut"
+
+#: checkall.py:382
+msgid "Is Bad"
+msgstr "Ist schlecht"
+
+#: checkall.py:383
+msgid "Is Best Available"
+msgstr "Ist am besten verfügbar"
+
+#: checkall.py:384
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: checkall.py:400
+msgid "Save the results shown to a text file"
+msgstr "Die angezeigten Ergebnisse in einer Textdatei speichern"
+
+#: checkall.py:402
+msgid "Copy the results shown to the clipboard"
+msgstr "Die angezeigten Ergebnisse in die Zwischenablage kopieren"
+
+#: checkall.py:404
+msgid "Check only the bad and not found ROM sets again"
+msgstr "Nur die fehlerhaften und nicht gefundenen ROM-Sets erneut prüfen"
+
+#: checkall.py:546
+msgid "Results copied to the clipboard"
+msgstr "Ergebnisse in die Zwischenablage kopiert"
+
+#: checkall.py:602
+msgid ""
+"There are no ROMs to check.  Your ROM list is empty or none of its ROMs are "
+"present in your ROM folders."
+msgstr ""
+"Es gibt keine ROMs zu prüfen.  Ihre ROM-Liste ist leer oder keines ihrer "
+"ROMs ist in Ihren ROM-Ordnern vorhanden."
+
+#: checkall.py:610
+msgid "Started checking all ROMs"
+msgstr "Habe mit der Überprüfung aller ROMs begonnen"
+
+#: checkall.py:654
+msgid "Completed checking all ROMs"
+msgstr "Die Überprüfung aller ROMs ist abgeschlossen"
+
+#: checkall.py:528 fix_artwork_file.py:685
+msgid "Results written to file"
+msgstr "Ergebnisse in Datei geschrieben"
+
+#: checkall.py:529 fix_artwork_file.py:685
+msgid "File Written"
+msgstr "Datei geschrieben"
+
+#: checkall.py:635
+msgid "Checked {done} of {total} ROM sets"
+msgstr "{done} von {total} ROM-Sets geprüft"
+
+#: checkall.py:532 fix_artwork_file.py:687
+msgid "Unable to save file to location.  Check permissions."
+msgstr ""
+"Datei kann nicht am Speicherort gespeichert werden.  Überprüfen Sie die "
+"Berechtigungen."
+
+#: checkall.py:533 fix_artwork_file.py:687
+msgid "File Write Error"
+msgstr "Fehler beim Schreiben der Datei"
+
+#: checkall.py:594
+msgid ""
+"The path {} for your ROMs folder doesnt exist.  Please check file paths "
+"settings."
+msgstr ""
+"Der Pfad {} für Ihren ROM-Ordner existiert nicht.  Bitte überprüfen Sie die "
+"Dateipfadeinstellungen."
+
+#: checkall.py:207
+msgid "ERROR opening mylist.db file: {}"
+msgstr "FEHLER beim Öffnen der Datei mylist.db: {}"
+
+#: checkall.py:286 rominfo.py:199
+msgid "Error running MAME: {}"
+msgstr "Fehler beim Ausführen von MAME: {}"
+
+#: filepaths.py:432
+msgid ""
+"Instructions\n"
+"-------------------------------\n"
+"You need to set up valid file paths for the files listed on this page.  Critical ones are the MAME executable, catver.ini, and history.xml.  Most of the others are recommended but not critical.\n"
+"\n"
+"The application has attempted to find the mame.ini file in its most likely location - please check this is correct.  You cant just put it anywhere as MAME needs to find it in very specific locations.  Please read the manual for more information on this.\n"
+"\n"
+"Any file paths found in mame.ini have been automatically populated. These may not be correct for a first run, so please review them.\n"
+"\n"
+"Setting paths:\n"
+"  - Double-click any row to browse for a file or folder, or drag one onto the row from your file manager.\n"
+"  - Right-click any row for more options: add an extra path (for entries that support multiple locations), delete one of them, move one up or down (MAME searches them in order), clear a path back to empty, or open its folder.\n"
+"  - A row shown in red has a problem (missing, or required but not set).  Hover the mouse over it to see why.\n"
+"\n"
+"You can also select the AUTO FIND option at the bottom of the window.  It will ask you to select the root MAME folder where your ROMs etc are located, after which it will try to determine all folder locations and set them automatically."
+msgstr ""
+"Anweisungen\n"
+"-------------------------------\n"
+"Sie müssen gültige Dateipfade für die auf dieser Seite aufgeführten Dateien einrichten.  Kritisch sind die ausführbare MAME-Datei, catver.ini und History.xml.  Die meisten anderen werden empfohlen, sind aber nicht kritisch.\n"
+"\n"
+"Die Anwendung hat versucht, die Datei mame.ini am wahrscheinlichsten Speicherort zu finden. Bitte überprüfen Sie, ob diese korrekt ist.  Sie können es nicht einfach irgendwo platzieren, da MAME es an ganz bestimmten Orten finden muss.  Weitere Informationen hierzu finden Sie im Handbuch.\n"
+"\n"
+"Alle in mame.ini gefundenen Dateipfade wurden automatisch ausgefüllt. Beim ersten Durchlauf sind diese möglicherweise nicht korrekt. Überprüfen Sie sie daher bitte.\n"
+"\n"
+"Pfade festlegen:\n"
+"  - Doppelklicken Sie auf eine beliebige Zeile, um nach einer Datei oder einem Ordner zu suchen, oder ziehen Sie eine Datei oder einen Ordner aus Ihrem Dateimanager in die Zeile.\n"
+"  - Klicken Sie mit der rechten Maustaste auf eine beliebige Zeile, um weitere Optionen anzuzeigen: Fügen Sie einen zusätzlichen Pfad hinzu (für Einträge, die mehrere Speicherorte unterstützen), löschen Sie einen davon, verschieben Sie einen nach oben oder unten (MAME durchsucht sie der Reihe nach), löschen Sie einen Pfad zurück, um ihn zu leeren, oder öffnen Sie seinen Ordner.\n"
+"  - In einer rot angezeigten Zeile liegt ein Problem vor (fehlt oder ist erforderlich, aber nicht festgelegt).  Bewegen Sie die Maus darüber, um zu sehen, warum.\n"
+"\n"
+"Sie können auch die Option AUTOMATISCHE SUCHE unten im Fenster auswählen.  Sie werden aufgefordert, den MAME-Stammordner auszuwählen, in dem sich Ihre ROMs usw. befinden. Anschließend wird versucht, alle Ordnerspeicherorte zu ermitteln und automatisch festzulegen."
+
+#: filepaths.py:132
+msgid "double click to set"
+msgstr "Zum Festlegen doppelklicken"
+
+#: filepaths.py:210
+msgid "Edit File Paths"
+msgstr "Dateipfade bearbeiten"
+
+#: filepaths.py:494
+msgid ""
+"FILEPATHS ERROR: Not getting the right output from MAME.  Check that the "
+"path is defined correctly"
+msgstr ""
+"FILEPATHS-FEHLER: Es wird nicht die richtige Ausgabe von MAME angezeigt.  "
+"Überprüfen Sie, ob der Pfad korrekt definiert ist"
+
+#: filepaths.py:646
+msgid "MAME version:  checking..."
+msgstr "MAME-Version: Überprüfung..."
+
+#: filepaths.py:885
+msgid "Clear path"
+msgstr "Freier Weg"
+
+#: filepaths.py:1034
+msgid "Drop one file or folder at a time."
+msgstr "Löschen Sie jeweils eine Datei oder einen Ordner."
+
+#: filepaths.py:1074
+msgid "Different mame.ini"
+msgstr "Andere mame.ini"
+
+#: filepaths.py:1104
+msgid ""
+"Are you sure you want to automatically look for all file & folder paths?  "
+"This will use the mame -createconfig command which will overwrite any "
+"existing mame.ini settings."
+msgstr ""
+"Sind Sie sicher, dass Sie automatisch nach allen Datei- und Ordnerpfaden "
+"suchen möchten?  Dazu wird der Befehl mame -createconfig verwendet, der alle"
+" vorhandenen mame.ini-Einstellungen überschreibt."
+
+#: filepaths.py:1107
+msgid "Auto Find file & folder paths"
+msgstr "Datei- und Ordnerpfade automatisch finden"
+
+#: filepaths.py:1233 filepaths.py:1232
+msgid "Auto Find complete"
+msgstr "Automatische Suche abgeschlossen"
+
+#: filepaths.py:1294
+msgid "Check the paths, then APPLY to save them or REVERT to undo."
+msgstr ""
+"Überprüfen Sie die Pfade und klicken Sie dann auf ANWENDEN, um sie zu "
+"speichern, oder auf ZURÜCK, um sie rückgängig zu machen."
+
+#: filepaths.py:1400
+msgid "Done"
+msgstr "Erledigt"
+
+#: filepaths.py:1404
+msgid "Are you sure you want to clear all file & folder paths?"
+msgstr ""
+"Sind Sie sicher, dass Sie alle Datei- und Ordnerpfade löschen möchten?"
+
+#: filepaths.py:1405
+msgid "Clear all file paths"
+msgstr "Löschen Sie alle Dateipfade"
+
+#: filepaths.py:333
+msgid "APPLY"
+msgstr "BEWERBEN"
+
+#: filepaths.py:333
+msgid "Apply the file path changes"
+msgstr "Übernehmen Sie die Dateipfadänderungen"
+
+#: filepaths.py:334
+msgid "REVERT"
+msgstr "ZURÜCK"
+
+#: filepaths.py:334
+msgid ""
+"Discard any unsaved changes and reload the file paths from the INI files."
+msgstr ""
+"Verwerfen Sie alle nicht gespeicherten Änderungen und laden Sie die "
+"Dateipfade aus den INI-Dateien neu."
+
+#: filepaths.py:336
+msgid "CLEAR ALL"
+msgstr "ALLES LÖSCHEN"
+
+#: filepaths.py:336
+msgid "Clear all file & folder path input fields."
+msgstr "Löschen Sie alle Eingabefelder für Datei- und Ordnerpfade."
+
+#: filepaths.py:337
+msgid "AUTO FIND"
+msgstr "Automatische Suche"
+
+#: filepaths.py:337
+msgid "Search for all file & folder paths automatically."
+msgstr "Suchen Sie automatisch nach allen Datei- und Ordnerpfaden."
+
+#: filepaths.py:338
+msgid "MAKE INI"
+msgstr "MACHEN SIE INI"
+
+#: filepaths.py:338
+msgid ""
+"Create the mame.ini file using the MAME executable - in the folder of the "
+"MAME INI File row if it is set, otherwise in the MAME folder on Windows and "
+"macOS, or in ~/.mame on Linux."
+msgstr ""
+"Erstellen Sie die mame.ini-Datei mit der ausführbaren MAME-Datei – im Ordner"
+" der MAME-INI-Dateizeile, sofern diese festgelegt ist, andernfalls im MAME-"
+"Ordner unter Windows und macOS oder in ~/.mame unter Linux."
+
+#: filepaths.py:525
+msgid ""
+"The path to the mame.ini file is empty, so nothing has been saved.  Set the "
+"MAME INI File row (or use AUTO FIND or MAKE INI) and then apply again."
+msgstr ""
+"Der Pfad zur mame.ini-Datei ist leer, daher wurde nichts gespeichert.  Legen"
+" Sie die MAME-INI-Dateizeile fest (oder verwenden Sie AUTO FIND oder MAKE "
+"INI) und wenden Sie sie dann erneut an."
+
+#: filepaths.py:527 filepaths.py:549
+msgid "ERROR writing to mame.ini file"
+msgstr "FEHLER beim Schreiben in die mame.ini-Datei"
+
+#: filepaths.py:548
+msgid ""
+"Unable to write to the mame.ini file. The file is most likely read-only."
+msgstr ""
+"In die mame.ini-Datei kann nicht geschrieben werden. Die Datei ist "
+"höchstwahrscheinlich schreibgeschützt."
+
+#: filepaths.py:554
+msgid "Unable to write to the ui.ini file. The file is most likely read-only."
+msgstr ""
+"In die Datei ui.ini kann nicht geschrieben werden. Die Datei ist "
+"höchstwahrscheinlich schreibgeschützt."
+
+#: filepaths.py:555 filepaths.py:540
+msgid "ERROR writing to ui.ini file"
+msgstr "FEHLER beim Schreiben in die Datei ui.ini"
+
+#: filepaths.py:560
+msgid ""
+"Unable to write to the pfemame.ini file. The file is most likely read-only."
+msgstr ""
+"In die Datei pfemame.ini kann nicht geschrieben werden. Die Datei ist "
+"höchstwahrscheinlich schreibgeschützt."
+
+#: filepaths.py:561
+msgid "ERROR writing to pfemame.ini file"
+msgstr "FEHLER beim Schreiben in die Datei pfemame.ini"
+
+#: filepaths.py:592
+msgid "File paths saved.  Restart pfeMAME now so all the changes take effect?"
+msgstr ""
+"Dateipfade gespeichert.  pfeMAME jetzt neu starten, damit alle Änderungen "
+"wirksam werden?"
+
+#: filepaths.py:593 pfemame.py:1744
+msgid "Restart Required"
+msgstr "Neustart erforderlich"
+
+#: filepaths.py:607
+msgid "Are you sure you want to discard all unsaved file path changes?"
+msgstr ""
+"Sind Sie sicher, dass Sie alle nicht gespeicherten Dateipfadänderungen "
+"verwerfen möchten?"
+
+#: filepaths.py:608
+msgid "Revert file paths"
+msgstr "Dateipfade zurücksetzen"
+
+#: filepaths.py:614
+msgid "File paths reloaded"
+msgstr "Dateipfade neu geladen"
+
+#: filepaths.py:673
+msgid "Required - pfeMAME needs this to be set."
+msgstr "Erforderlich – für pfeMAME muss dies festgelegt werden."
+
+#: filepaths.py:783
+msgid "MAME INI File:"
+msgstr "MAME INI-Datei:"
+
+#: filepaths.py:784
+msgid "MAME Executable:"
+msgstr "Ausführbare MAME-Datei:"
+
+#: filepaths.py:785
+msgid "History file:"
+msgstr "Verlaufsdatei:"
+
+#: filepaths.py:786
+msgid "MAME info file:"
+msgstr "MAME-Infodatei:"
+
+#: filepaths.py:787
+msgid "catver.ini file:"
+msgstr "catver.ini-Datei:"
+
+#: filepaths.py:788
+msgid "Roms folder:"
+msgstr "Roms-Ordner:"
+
+#: filepaths.py:789
+msgid "Video folder:"
+msgstr "Videoordner:"
+
+#: filepaths.py:790
+msgid "Samples folder:"
+msgstr "Beispielordner:"
+
+#: filepaths.py:791
+msgid "Softwarelist HASH folder:"
+msgstr "Softwarelist-HASH-Ordner:"
+
+#: filepaths.py:792
+msgid "Plugins folder:"
+msgstr "Plugins-Ordner:"
+
+#: filepaths.py:793
+msgid "Artwork folder:"
+msgstr "Artwork-Ordner:"
+
+#: filepaths.py:794
+msgid "Icon folder:"
+msgstr "Icon-Ordner:"
+
+#: filepaths.py:795
+msgid "Snap folder:"
+msgstr "Snap-Ordner:"
+
+#: filepaths.py:796
+msgid "PCBs folder:"
+msgstr "PCBs-Ordner:"
+
+#: filepaths.py:797
+msgid "Cabinets folder:"
+msgstr "Ordner „Schränke“:"
+
+#: filepaths.py:798
+msgid "Control Panels folder:"
+msgstr "Ordner „Kontrollfelder“:"
+
+#: filepaths.py:799
+msgid "Flyers folder:"
+msgstr "Flyer-Ordner:"
+
+#: filepaths.py:800
+msgid "Titles folder:"
+msgstr "Titelordner:"
+
+#: filepaths.py:801
+msgid "Ends folder:"
+msgstr "Endet den Ordner:"
+
+#: filepaths.py:802
+msgid "Marquees folder:"
+msgstr "Marquees-Ordner:"
+
+#: filepaths.py:803
+msgid "Bosses folder:"
+msgstr "Bosses-Ordner:"
+
+#: filepaths.py:804
+msgid "Controller folder:"
+msgstr "Controller-Ordner:"
+
+#: filepaths.py:805
+msgid "INI folder:"
+msgstr "INI-Ordner:"
+
+#: filepaths.py:806
+msgid "Config folder:"
+msgstr "Konfigurationsordner:"
+
+#: filepaths.py:807
+msgid "Mapping folder:"
+msgstr "Zuordnungsordner:"
+
+#: filepaths.py:808
+msgid "NVRAM folder:"
+msgstr "NVRAM-Ordner:"
+
+#: filepaths.py:809
+msgid "Difference folder:"
+msgstr "Differenzordner:"
+
+#: filepaths.py:810
+msgid "Cheat File folder:"
+msgstr "Cheat-Dateiordner:"
+
+#: filepaths.py:811
+msgid "Inputs folder:"
+msgstr "Eingabeordner:"
+
+#: filepaths.py:812
+msgid "States folder:"
+msgstr "Ordner „Staaten“:"
+
+#: filepaths.py:882
+msgid "Add extra path for this entry"
+msgstr "Fügen Sie einen zusätzlichen Pfad für diesen Eintrag hinzu"
+
+#: filepaths.py:884
+msgid "Delete this path"
+msgstr "Löschen Sie diesen Pfad"
+
+#: filepaths.py:895
+msgid "Open folder"
+msgstr "Ordner öffnen"
+
+#: filepaths.py:913
+msgid "Are you sure you want to DELETE this row?"
+msgstr "Sind Sie sicher, dass Sie diese Zeile LÖSCHEN möchten?"
+
+#: filepaths.py:914
+msgid "Delete selected row"
+msgstr "Ausgewählte Zeile löschen"
+
+#: filepaths.py:920
+msgid "Are you sure you want to clear this row (set to empty)?"
+msgstr ""
+"Sind Sie sicher, dass Sie diese Zeile löschen (auf leer setzen) möchten?"
+
+#: filepaths.py:921
+msgid "Clear selected row"
+msgstr "Ausgewählte Zeile löschen"
+
+#: filepaths.py:1117
+msgid ""
+"Select the MAME folder where your various files & folders are located, e.g. "
+"ROMs, SNAPs, etc"
+msgstr ""
+"Wählen Sie den MAME-Ordner aus, in dem sich Ihre verschiedenen Dateien und "
+"Ordner befinden, z. B. ROMs, SNAPs usw"
+
+#: filepaths.py:1130
+msgid "Auto Find: searching for MAME paths..."
+msgstr "Automatische Suche: Suche nach MAME-Pfaden..."
+
+#: filepaths.py:1291
+msgid "Changed:"
+msgstr "Geändert:"
+
+#: filepaths.py:1293
+msgid "Not found (left as they were):"
+msgstr "Nicht gefunden (so belassen wie sie waren):"
+
+#: filepaths.py:1357
+msgid "The path to the MAME executable is invalid."
+msgstr "Der Pfad zur ausführbaren MAME-Datei ist ungültig."
+
+#: filepaths.py:1400
+msgid "Completed creating mame.ini"
+msgstr "Die Erstellung von mame.ini ist abgeschlossen"
+
+#: filepaths.py:1418
+msgid "All files"
+msgstr "Alle Dateien"
+
+#: filepaths.py:1425
+msgid "Choose a file"
+msgstr "Wählen Sie eine Datei"
+
+#: filepaths.py:1433
+msgid "Choose a directory"
+msgstr "Wählen Sie ein Verzeichnis"
+
+#: filepaths.py:139 rominfo.py:167 tileview.py:804 xmlinfo.py:220
+msgid "Name"
+msgstr "Name"
+
+#: filepaths.py:139
+msgid "Path"
+msgstr "Pfad"
+
+#: filepaths.py:486
+msgid ""
+"Not getting the right output from MAME or cannot find the MAME executable.  "
+"Check that the path is defined correctly.  If the OS is Linux, try running "
+"\"mame\" from the command line."
+msgstr ""
+"Es wird nicht die richtige Ausgabe von MAME angezeigt oder die ausführbare "
+"MAME-Datei kann nicht gefunden werden.  Überprüfen Sie, ob der Pfad korrekt "
+"definiert ist.  Wenn das Betriebssystem Linux ist, versuchen Sie, „mame“ "
+"über die Befehlszeile auszuführen."
+
+#: filepaths.py:536
+msgid ""
+"None of the INI folders exist, so there is nowhere to save the PCBs, "
+"Cabinets, Control Panels, Flyers, Titles, Ends, Marquees and Bosses folders "
+"(MAME keeps them in ui.ini).  Nothing has been saved.  Set the INI folder "
+"row and then apply again."
+msgstr ""
+"Da keiner der INI-Ordner vorhanden ist, können die Ordner PCBs, Cabinets, "
+"Control Panels, Flyers, Titles, Ends, Marquees und Bosses nirgendwo "
+"gespeichert werden (MAME behält sie in ui.ini).  Es wurde nichts "
+"gespeichert.  Legen Sie die INI-Ordnerzeile fest und wenden Sie sie dann "
+"erneut an."
+
+#: filepaths.py:581
+msgid "File paths saved"
+msgstr "Dateipfade gespeichert"
+
+#: filepaths.py:661
+msgid "MAME version:  no MAME executable set"
+msgstr "MAME-Version: kein ausführbarer MAME-Satz"
+
+#: filepaths.py:679
+msgid "Folder not found:  {}"
+msgstr "Ordner nicht gefunden: {}"
+
+#: filepaths.py:890
+msgid "Move up (searched earlier)"
+msgstr "Nach oben verschieben (früher gesucht)"
+
+#: filepaths.py:892
+msgid "Move down (searched later)"
+msgstr "Nach unten bewegen (später gesucht)"
+
+#: filepaths.py:1072
+msgid ""
+"Load the folder paths from this mame.ini?\n"
+"\n"
+"{}\n"
+"\n"
+"(No keeps the folder paths shown now, and they will be saved into it when you APPLY.)"
+msgstr ""
+"Die Ordnerpfade aus dieser mame.ini laden?\n"
+"\n"
+"{}\n"
+"\n"
+"(Nein behält die jetzt angezeigten Ordnerpfade bei und sie werden dort gespeichert, wenn Sie sich bewerben.)"
+
+#: filepaths.py:1143
+msgid "Looking in {}"
+msgstr "Suche in {}"
+
+#: filepaths.py:1179
+msgid "Auto Find cancelled - nothing has been changed"
+msgstr "Automatische Suche abgebrochen – es wurde nichts geändert"
+
+#: filepaths.py:1201
+msgid "Unable to find the MAME executable so setting to default"
+msgstr ""
+"Die ausführbare MAME-Datei konnte nicht gefunden werden, daher wird sie auf "
+"die Standardeinstellung zurückgesetzt"
+
+#: filepaths.py:1203
+msgid ""
+"Unable to auto-find the MAME executable.  Either I am looking in the wrong "
+"place, or you dont have MAME installed yet.  Setting it to the default "
+"'mame' which may work.  If not, you will need to find it manually"
+msgstr ""
+"Die ausführbare MAME-Datei kann nicht automatisch gefunden werden.  Entweder"
+" suche ich an der falschen Stelle, oder Sie haben MAME noch nicht "
+"installiert.  Setzen Sie es auf die Standardeinstellung „mame“, was "
+"möglicherweise funktioniert.  Wenn nicht, müssen Sie es manuell finden"
+
+#: filepaths.py:1288
+msgid "Found {found} of {total} paths ({changed} changed)."
+msgstr "{found} von {total}-Pfaden gefunden ({changed} geändert)."
+
+#: filepaths.py:1386
+msgid "MAME reported an error (exit code {})."
+msgstr "MAME hat einen Fehler gemeldet (Exit-Code {})."
+
+#: filepaths.py:1392
+msgid "Check the MAME executable path and that the folder is not read-only."
+msgstr ""
+"Überprüfen Sie den Pfad der ausführbaren MAME-Datei und stellen Sie sicher, "
+"dass der Ordner nicht schreibgeschützt ist."
+
+#: filepaths.py:411
+msgid "Something went wrong:"
+msgstr "Etwas ist schief gelaufen:"
+
+#: filepaths.py:602
+msgid "File paths saved - restart pfeMAME for all the changes to take effect"
+msgstr ""
+"Dateipfade gespeichert – starten Sie pfeMAME neu, damit alle Änderungen "
+"wirksam werden"
+
+#: filepaths.py:659
+msgid "MAME version:  {}"
+msgstr "MAME-Version: {}"
+
+#: filepaths.py:678
+msgid "File not found:  {}"
+msgstr "Datei nicht gefunden: {}"
+
+#: filepaths.py:1036
+msgid "{} needs a file, not a folder."
+msgstr "{} benötigt eine Datei, keinen Ordner."
+
+#: filepaths.py:1161 filepaths.py:1276
+msgid "Checking {}"
+msgstr "Überprüfung von {}"
+
+#: filepaths.py:1373
+msgid "Unable to create the folder for mame.ini:"
+msgstr "Der Ordner für mame.ini kann nicht erstellt werden:"
+
+#: filepaths.py:1388
+msgid "MAME ran, but no mame.ini was written to {}."
+msgstr "MAME lief, aber es wurde keine mame.ini in {} geschrieben."
+
+#: filepaths.py:663
+msgid "MAME version:  not working ({})"
+msgstr "MAME-Version: funktioniert nicht ({})"
+
+#: filepaths.py:1038
+msgid "{} needs a folder, not a file."
+msgstr "{} benötigt einen Ordner, keine Datei."
+
+#: filepaths.py:1063
+msgid "Unable to open {}"
+msgstr "{} kann nicht geöffnet werden"
+
+#: filepaths.py:1338 rominfo.py:197
+msgid "MAME did not finish within {} seconds."
+msgstr "MAME wurde nicht innerhalb von {} Sekunden beendet."
+
+#: filepaths.py:1341
+msgid "MAME could not be run:  {}"
+msgstr "MAME konnte nicht ausgeführt werden: {}"
+
+#: filepaths.py:1391
+msgid "Unable to create the mame.ini file."
+msgstr "Die Datei mame.ini kann nicht erstellt werden."
+
+#: fix_artwork_file.py:308 fix_artwork_file.py:333 fix_artwork_file.py:347
+msgid "SUMMARY"
+msgstr "ZUSAMMENFASSUNG"
+
+#: fix_artwork_file.py:340
+msgid "Stopped before all the artwork sets were updated."
+msgstr "Angehalten, bevor alle Artwork-Sets aktualisiert wurden."
+
+#: fix_artwork_file.py:351
+msgid "Stopped before all the files were restored."
+msgstr "Angehalten, bevor alle Dateien wiederhergestellt wurden."
+
+#: fix_artwork_file.py:407 fix_artwork_file.py:567 fix_artwork_file.py:643
+msgid "Artwork Layout Fixer"
+msgstr "Artwork-Layout-Reparatur"
+
+#: fix_artwork_file.py:429
+msgid ""
+"Finds artwork whose layout files use old tags (backdrop, overlay, bezel, "
+"cpanel and marquee) that newer MAME versions no longer support, and updates "
+"them.  Artwork folders:"
+msgstr ""
+"Findet Artwork, dessen Layout-Dateien alte Tags (backdrop, overlay, bezel, "
+"cpanel und marquee) verwenden, die neuere MAME-Versionen nicht mehr "
+"unterstützen, und aktualisiert es.  Artwork-Ordner:"
+
+#: fix_artwork_file.py:450
+msgid "ANALYSE"
+msgstr "ANALYSIEREN"
+
+#: fix_artwork_file.py:452
+msgid "FIX"
+msgstr "REPARIEREN"
+
+#: fix_artwork_file.py:455
+msgid "RESTORE BACKUP"
+msgstr "SICHERUNG WIEDERHERSTELLEN"
+
+#: fix_artwork_file.py:458
+msgid "SAVE LOG"
+msgstr "PROTOKOLL SPEICHERN"
+
+#: fix_artwork_file.py:594
+msgid "Checking the artwork..."
+msgstr "Artwork wird geprüft..."
+
+#: fix_artwork_file.py:636
+msgid "Updating the artwork..."
+msgstr "Artwork wird aktualisiert..."
+
+#: fix_artwork_file.py:670
+msgid "Restoring the artwork..."
+msgstr "Artwork wird wiederhergestellt..."
+
+#: fix_artwork_file.py:309
+msgid "Artwork sets checked: {total} (zip files: {zips}, folders: {folders})"
+msgstr ""
+"Geprüfte Artwork-Sets: {total} (ZIP-Dateien: {zips}, Ordner: {folders})"
+
+#: fix_artwork_file.py:311
+msgid "Layout (.lay) files checked: {}"
+msgstr "Geprüfte Layout-Dateien (.lay): {}"
+
+#: fix_artwork_file.py:312
+msgid "Artwork sets that need updating: {}"
+msgstr "Artwork-Sets, die aktualisiert werden müssen: {}"
+
+#: fix_artwork_file.py:328
+msgid "Your artwork is up to date - nothing needs changing."
+msgstr "Ihr Artwork ist aktuell - es muss nichts geändert werden."
+
+#: fix_artwork_file.py:334
+msgid "Artwork sets updated: {}"
+msgstr "Aktualisierte Artwork-Sets: {}"
+
+#: fix_artwork_file.py:335
+msgid "Old tags replaced: {total} ({detail})"
+msgstr "Ersetzte alte Tags: {total} ({detail})"
+
+#: fix_artwork_file.py:347
+msgid "Files restored from backup: {}"
+msgstr "Aus der Sicherung wiederhergestellte Dateien: {}"
+
+#: fix_artwork_file.py:451
+msgid "Check the artwork again (changes nothing)"
+msgstr "Artwork erneut prüfen (ändert nichts)"
+
+#: fix_artwork_file.py:453
+msgid ""
+"Update the artwork that uses old tags.  The original files are backed up "
+"first"
+msgstr ""
+"Artwork mit alten Tags aktualisieren.  Die Originaldateien werden vorher "
+"gesichert"
+
+#: fix_artwork_file.py:459
+msgid "Save the messages shown to a text file"
+msgstr "Die angezeigten Meldungen in einer Textdatei speichern"
+
+#: fix_artwork_file.py:643
+msgid "There are no backed up artwork files to restore."
+msgstr "Es gibt keine gesicherten Artwork-Dateien zum Wiederherstellen."
+
+#: fix_artwork_file.py:667
+msgid "Press ANALYSE to check the artwork again."
+msgstr "Drücken Sie ANALYSIEREN, um das Artwork erneut zu prüfen."
+
+#: fix_artwork_file.py:294
+msgid "{name}: could not be read - {error}"
+msgstr "{name}: konnte nicht gelesen werden - {error}"
+
+#: fix_artwork_file.py:314
+msgid "Old tags to replace: {total} ({detail})"
+msgstr "Zu ersetzende alte Tags: {total} ({detail})"
+
+#: fix_artwork_file.py:317
+msgid "Artwork sets that could not be read: {}"
+msgstr "Artwork-Sets, die nicht gelesen werden konnten: {}"
+
+#: fix_artwork_file.py:319
+msgid ".7z artwork skipped (only .zip files and folders can be updated): {}"
+msgstr ""
+".7z-Artwork übersprungen (nur .zip-Dateien und Ordner können aktualisiert "
+"werden): {}"
+
+#: fix_artwork_file.py:322
+msgid "Artwork folder not found: {}"
+msgstr "Artwork-Ordner nicht gefunden: {}"
+
+#: fix_artwork_file.py:325
+msgid ""
+"Press FIX to update them.  The original files are copied to the {} folder "
+"first."
+msgstr ""
+"Drücken Sie REPARIEREN, um sie zu aktualisieren.  Die Originaldateien werden"
+" vorher in den Ordner {} kopiert."
+
+#: fix_artwork_file.py:338
+msgid "Artwork sets that failed (left unchanged): {}"
+msgstr "Fehlgeschlagene Artwork-Sets (unverändert gelassen): {}"
+
+#: fix_artwork_file.py:342
+msgid "The original files are in: {}"
+msgstr "Die Originaldateien befinden sich in: {}"
+
+#: fix_artwork_file.py:349
+msgid "Files that could not be restored: {}"
+msgstr "Dateien, die nicht wiederhergestellt werden konnten: {}"
+
+#: fix_artwork_file.py:526
+msgid "{done} of {total}"
+msgstr "{done} von {total}"
+
+#: fix_artwork_file.py:434
+msgid "(none set in mame.ini)"
+msgstr "(keiner in mame.ini festgelegt)"
+
+#: fix_artwork_file.py:456
+msgid "Put back the original artwork files from the {} folders"
+msgstr "Die originalen Artwork-Dateien aus den Ordnern {} zurückspielen"
+
+#: fix_artwork_file.py:581
+msgid "Stopped."
+msgstr "Angehalten."
+
+#: fix_artwork_file.py:609
+msgid ""
+"Update {count} artwork sets?\n"
+"\n"
+"The original files are copied to the {folder} folder inside each artwork folder first, so they can be restored."
+msgstr ""
+"{count} Artwork-Sets aktualisieren?\n"
+"\n"
+"Die Originaldateien werden vorher in den Ordner {folder} im jeweiligen Artwork-Ordner kopiert, damit sie wiederhergestellt werden können."
+
+#: fix_artwork_file.py:647
+msgid ""
+"Restore {count} files from the {folder} folders?\n"
+"\n"
+"This replaces the current versions of those files with the originals."
+msgstr ""
+"{count} Dateien aus den Ordnern {folder} wiederherstellen?\n"
+"\n"
+"Dabei werden die aktuellen Versionen dieser Dateien durch die Originale ersetzt."
+
+#: fix_artwork_file.py:387
+msgid "ERROR: {}"
+msgstr "FEHLER: {}"
+
+#: fix_artwork_file.py:588
+msgid "{}: skipped - .7z artwork cannot be updated"
+msgstr "{}: übersprungen - .7z-Artwork kann nicht aktualisiert werden"
+
+#: fix_artwork_file.py:624
+msgid "{}: updated"
+msgstr "{}: aktualisiert"
+
+#: fix_artwork_file.py:659
+msgid "{}: restored"
+msgstr "{}: wiederhergestellt"
+
+#: fix_artwork_file.py:630
+msgid "{name}: FAILED, left unchanged - {error}"
+msgstr "{name}: FEHLGESCHLAGEN, unverändert gelassen - {error}"
+
+#: fix_artwork_file.py:662
+msgid "{name}: FAILED - {error}"
+msgstr "{name}: FEHLGESCHLAGEN - {error}"
+
+#: fullscreenplay.py:108
+msgid "Running Fullscreen video player"
+msgstr "Ausführen des Vollbild-Videoplayers"
+
+#: fullscreenplay.py:111
+msgid "ffmpeg not available"
+msgstr "ffmpeg nicht verfügbar"
+
+#: fullscreenplay.py:128 fullscreenplay.py:131
+msgid "No video files found that can be played or folder error: {}"
+msgstr "Keine abspielbaren Videodateien gefunden oder Ordnerfehler: {}"
+
+#: fullscreenplay.py:198
+msgid ""
+"None of the videos in {} could be played - closing the full screen video "
+"player"
+msgstr ""
+"Keines der Videos in {} konnte abgespielt werden - der Vollbild-Videoplayer "
+"wird geschlossen"
+
+#: fullscreenplay.py:225
+msgid "Playing video {}\n"
+msgstr "Video {} wird abgespielt\n"
+
+#: fullscreenplay.py:258
+msgid "Metadata error: {}"
+msgstr "Metadatenfehler: {}"
+
+#: functions.py:136
+msgid "Categories file loaded successfully"
+msgstr "Die Kategoriendatei wurde erfolgreich geladen"
+
+#: functions.py:824
+msgid "Reading history.xml file."
+msgstr "Die Datei history.xml wird gelesen."
+
+#: functions.py:857
+msgid "No History file defined"
+msgstr "Keine Verlaufsdatei definiert"
+
+#: functions.py:141
+msgid ""
+"Unable to locate categories.dat file.  Select some ROM categories by "
+"checking the box for the category."
+msgstr ""
+"Die Datei categories.dat konnte nicht gefunden werden.  Wählen Sie einige "
+"ROM-Kategorien aus, indem Sie das Kontrollkästchen für die Kategorie "
+"aktivieren."
+
+#: functions.py:827
+msgid "Reading mameinfo.dat file."
+msgstr "Lesen der Datei mameinfo.dat."
+
+#: functions.py:1249
+msgid "Total ROMs: "
+msgstr "Gesamt-ROMs:"
+
+#: functions.py:1254
+msgid "Exists: "
+msgstr "Existiert:"
+
+#: functions.py:1259
+msgid "In Current View: "
+msgstr "In der aktuellen Ansicht:"
+
+#: functions.py:877
+msgid ""
+"No information in the History file for System: {rom} with system program "
+"{program}"
+msgstr ""
+"Keine Informationen in der Verlaufsdatei für System: {rom} mit "
+"Systemprogramm {program}"
+
+#: functions.py:887
+msgid "No information in the History file for {}"
+msgstr "Keine Informationen in der Verlaufsdatei für {}"
+
+#: functions.py:1333
+msgid "Skipped {} as it does not exist\n"
+msgstr "{} wurde übersprungen, da es nicht existiert\n"
+
+#: functions.py:834
+msgid "Unable to read the {file_type} file at \"{path}\": {error}"
+msgstr ""
+"Die {file_type}-Datei unter „{path}“ kann nicht gelesen werden: {error}"
+
+#: functions.py:863
+msgid ""
+"No information in the {file_type} file for System: {rom} with system program"
+" {program}"
+msgstr ""
+"Keine Informationen in der Datei {file_type} für System: {rom} mit "
+"Systemprogramm {program}"
+
+#: functions.py:870
+msgid "No history text found between $mame and $end tags for ROM: {}"
+msgstr ""
+"Kein Verlaufstext zwischen den Tags $mame und $end für ROM gefunden: {}"
+
+#: functions.py:1021
+msgid "No joystick available for navigation"
+msgstr "Für die Navigation ist kein Joystick verfügbar"
+
+#: functions.py:993
+msgid "Using {} for navigation"
+msgstr "Verwendung von {} für die Navigation"
+
+#: global_defaults.py:50
+msgid "English"
+msgstr "Englisch"
+
+#: global_defaults.py:51
+msgid "German"
+msgstr "Deutsch"
+
+#: global_defaults.py:52
+msgid "Spanish"
+msgstr "Spanisch"
+
+#: global_defaults.py:53
+msgid "French"
+msgstr "Französisch"
+
+#: global_defaults.py:54
+msgid "Japanese"
+msgstr "Japanisch"
+
+#: global_defaults.py:55
+msgid "Chinese"
+msgstr "Chinesisch"
+
+#: global_defaults.py:56
+msgid "Russian"
+msgstr "Russisch"
+
+#: image_picker_dialog.py:75 software_browser.py:87
+msgid "Loading..."
+msgstr "Laden..."
+
+#: image_picker_dialog.py:97
+msgid "No preview"
+msgstr "Keine Vorschau"
+
+#: image_picker_dialog.py:171
+msgid "Use This Image"
+msgstr "Verwenden Sie dieses Bild"
+
+#: image_picker_dialog.py:139
+msgid ""
+"Click an image to select it, then choose \"Use This Image\". Double-click to"
+" use it straight away."
+msgstr ""
+"Klicken Sie auf ein Bild, um es auszuwählen, und wählen Sie dann „Dieses "
+"Bild verwenden“. Doppelklicken Sie, um es sofort zu verwenden."
+
+#: languagepicker.py:116
+msgid "Select Language"
+msgstr "Sprache auswählen"
+
+#: languagepicker.py:193
+msgid "pfeMAME will use the new language after it has been restarted."
+msgstr "pfeMAME verwendet die neue Sprache nach einem Neustart."
+
+#: online_rom_search.py:297
+msgid "Searching archive.org for {}.zip"
+msgstr "Suche auf archive.org nach {}.zip"
+
+#: online_rom_search.py:454
+msgid "Logging in to archive.org"
+msgstr "Anmeldung bei archive.org"
+
+#: online_rom_search.py:557
+msgid "Connecting to retroroms.net"
+msgstr "Verbindung zu retroroms.net wird hergestellt"
+
+#: online_rom_search.py:561
+msgid "Logging in to retroroms.net and looking for {rom}.zip in {folder}"
+msgstr "Anmeldung bei retroroms.net und Suche nach {rom}.zip in {folder}"
+
+#: online_rom_search.py:630
+msgid "Searching the web (DuckDuckGo) for {}"
+msgstr "Websuche (DuckDuckGo) nach {}"
+
+#: online_rom_search.py:396
+msgid "Checking {source} item {number} of {count} ({found} found so far)"
+msgstr ""
+"Prüfe {source}: Eintrag {number} von {count} (bisher {found} gefunden)"
+
+#: online_rom_search.py:457
+msgid "archive.org login failed"
+msgstr "Anmeldung bei archive.org fehlgeschlagen"
+
+#: PanelDebug.py:30
+msgid "Write MAME log messages to file"
+msgstr "Schreiben Sie MAME-Protokollmeldungen in eine Datei"
+
+#: PanelDebug.py:32
+msgid "Display debug messages"
+msgstr "Debug-Meldungen anzeigen"
+
+#: PanelDebug.py:36
+msgid "Write MAME messages to the log file"
+msgstr "Schreiben Sie MAME-Nachrichten in die Protokolldatei"
+
+#: PanelDebug.py:37
+msgid "Displays MAME diagnostics messages.  Can be useful for debugging."
+msgstr "Zeigt MAME-Diagnosemeldungen an.  Kann beim Debuggen nützlich sein."
+
+#: PanelInput.py:35
+msgid "Use Mouse"
+msgstr "Verwenden Sie die Maus"
+
+#: PanelInput.py:37
+msgid "Use Joystick"
+msgstr "Verwenden Sie den Joystick"
+
+#: PanelInput.py:39
+msgid "Use Lightgun (Don't use with Use Mouse)"
+msgstr "Lightgun verwenden (nicht mit Maus verwenden)"
+
+#: PanelInput.py:41
+msgid "Offscreen Reload"
+msgstr "Offscreen-Neuladen"
+
+#: PanelInput.py:45
+msgid ""
+"Enables the mouse for ROMs that can use it - typically lightgun ROMs that "
+"just use the mouse."
+msgstr ""
+"Aktiviert die Maus für ROMs, die sie verwenden können – typischerweise "
+"Lightgun-ROMs, die nur die Maus verwenden."
+
+#: PanelInput.py:47
+msgid "Enables the joystick for ROMs that can use it"
+msgstr "Aktiviert den Joystick für ROMs, die ihn verwenden können"
+
+#: PanelInput.py:48
+msgid ""
+"Enables the lightgun controller if present.  Most lightgun ROMs just use the"
+" mouse.  If you have to enable this, disable the Use Mouse."
+msgstr ""
+"Aktiviert den Lightgun-Controller, falls vorhanden.  Die meisten Lightgun-"
+"ROMs verwenden einfach die Maus.  Wenn Sie dies aktivieren müssen, "
+"deaktivieren Sie die Option Maus verwenden."
+
+#: PanelInput.py:51
+msgid "Reload when pointer is out of bounds by simulating offscreen"
+msgstr ""
+"Durch Simulation außerhalb des Bildschirms neu laden, wenn der Zeiger "
+"außerhalb der Grenzen liegt"
+
+#: PanelMisc.py:36
+msgid "Enable Cheats"
+msgstr "Cheats aktivieren"
+
+#: PanelMisc.py:38
+msgid "Skip ROM Info on startup"
+msgstr "ROM-Info beim Start überspringen"
+
+#: PanelMisc.py:42
+msgid ""
+"This enables ROMs cheats.  The cheat file must exist and MAME must know "
+"where it is."
+msgstr ""
+"Dies ermöglicht ROMs-Cheats.  Die Cheat-Datei muss vorhanden sein und MAME "
+"muss wissen, wo sie sich befindet."
+
+#: PanelMisc.py:44
+msgid "Skips the ROM information screen when MAME launches."
+msgstr "Überspringt den ROM-Informationsbildschirm, wenn MAME gestartet wird."
+
+#: PanelOSD.py:33
+msgid "OSD UI Key"
+msgstr "OSD-UI-Taste"
+
+#: PanelOSD.py:36
+msgid "Select the key used to toggle the OSD UI mode for systems"
+msgstr ""
+"Wählen Sie die Taste aus, die zum Umschalten des OSD-UI-Modus für Systeme "
+"verwendet wird"
+
+#: PanelPerformance.py:29
+msgid "Auto Frame skip"
+msgstr "Automatisches Überspringen von Frames"
+
+#: PanelPerformance.py:33
+msgid ""
+"Automatically skip frames to improve ROM speed.  Can be useful for slow "
+"ROMs."
+msgstr ""
+"Frames automatisch überspringen, um die ROM-Geschwindigkeit zu verbessern.  "
+"Kann für langsame ROMs nützlich sein."
+
+#: PanelPfeMame.py:58
+msgid "Startup"
+msgstr "Startup"
+
+#: PanelPfeMame.py:77
+msgid "Main View and ROMs List"
+msgstr "Hauptansicht und ROM-Liste"
+
+#: PanelPfeMame.py:96 pfemame_ribbon_bar.py:595
+msgid "Tile View"
+msgstr "Kachelansicht"
+
+#: PanelPfeMame.py:107
+msgid "Playing ROMs and Videos"
+msgstr "ROMs und Videos abspielen"
+
+#: PanelPfeMame.py:130
+msgid "Joystick"
+msgstr "Joystick"
+
+#: PanelPfeMame.py:149
+msgid "List Colors"
+msgstr "Farben auflisten"
+
+#: PanelPfeMame.py:156
+msgid "UI Elements"
+msgstr "UI-Elemente"
+
+#: PanelPfeMame.py:163
+msgid "Special UI"
+msgstr "Spezielle Benutzeroberfläche"
+
+#: PanelPfeMame.py:254
+msgid "Set the size of the ROM image tiles in 'Tile View'."
+msgstr "Legen Sie die Größe der ROM-Bildkacheln in Kachelansicht fest."
+
+#: PanelPfeMame.py:257
+msgid ""
+"This sets the default view that the ROMs list will show when the application"
+" starts up."
+msgstr ""
+"Dadurch wird die Standardansicht festgelegt, die in der ROM-Liste angezeigt "
+"wird, wenn die Anwendung gestartet wird."
+
+#: PanelPfeMame.py:260
+msgid ""
+"This sets the number of days after which a prompt is produced at startup to "
+"refresh the ROMs cache."
+msgstr ""
+"Dadurch wird die Anzahl der Tage festgelegt, nach denen beim Start eine "
+"Aufforderung zum Aktualisieren des ROM-Cache angezeigt wird."
+
+#: PanelPfeMame.py:263
+msgid ""
+"Number of minutes of inactivity before the screensaver is activated.  Set to"
+" Zero to disable."
+msgstr ""
+"Anzahl der Minuten der Inaktivität, bevor der Bildschirmschoner aktiviert "
+"wird.  Zum Deaktivieren auf Null setzen."
+
+#: PanelPfeMame.py:267
+msgid ""
+"This sets the scaling size for the ROM icons (if any exist and they are "
+"enabled).  16 pixels is the default."
+msgstr ""
+"Dadurch wird die Skalierungsgröße für die ROM-Symbole festgelegt (falls "
+"vorhanden und aktiviert).  16 Pixel sind die Standardeinstellung."
+
+#: PanelPfeMame.py:273
+msgid "The joystick or gamepad used to navigate the Main View and Tile View."
+msgstr ""
+"Der Joystick oder das Gamepad zum Navigieren in der Hauptansicht und der "
+"Kachelansicht."
+
+#: PanelPfeMame.py:276
+msgid "* - Requires restart  ** - Requires database refresh"
+msgstr ""
+"* – Erfordert einen Neustart. ** – Erfordert eine Datenbankaktualisierung"
+
+#: PanelPfeMame.py:290
+msgid ""
+"Choose the language pfeMAME uses.  pfeMAME must be restarted for the change "
+"to take effect."
+msgstr ""
+"Wählen Sie die Sprache, die pfeMAME verwendet.  Damit die Änderung wirksam "
+"wird, muss pfeMAME neu gestartet werden."
+
+#: PanelPfeMame.py:293
+msgid "Language (*)"
+msgstr "Sprache (*)"
+
+#: PanelPfeMame.py:337
+msgid "Number of days to check ROM cache"
+msgstr "Anzahl der Tage, an denen der ROM-Cache überprüft werden soll"
+
+#: PanelPfeMame.py:338
+msgid "Minutes for Screensaver"
+msgstr "Minuten für Bildschirmschoner"
+
+#: PanelPfeMame.py:339
+msgid "Default ROM list view at startup"
+msgstr "Standard-ROM-Listenansicht beim Start"
+
+#: PanelPfeMame.py:340
+msgid "Icons Size for ROMs list (*)"
+msgstr "Symbolgröße für ROM-Liste (*)"
+
+#: PanelPfeMame.py:341
+msgid "Tile Size in Tile View"
+msgstr "Kachelgröße in der Kachelansicht"
+
+#: PanelPfeMame.py:342
+msgid "Joystick Selected For Navigation (*)"
+msgstr "Joystick für Navigation ausgewählt (*)"
+
+#: PanelPfeMame.py:532
+msgid "Are you sure you want to reset all colors?"
+msgstr "Sind Sie sicher, dass Sie alle Farben zurücksetzen möchten?"
+
+#: PanelPfeMame.py:532
+msgid "Reset all colors to default"
+msgstr "Alle Farben auf Standard zurücksetzen"
+
+#: PanelPfeMame.py:537
+msgid "Are you sure you want to change all colors to the Dark Theme?"
+msgstr ""
+"Sind Sie sicher, dass Sie alle Farben auf das dunkle Design umstellen "
+"möchten?"
+
+#: PanelPfeMame.py:538
+msgid "Select Dark Theme"
+msgstr "Wählen Sie Dunkles Thema"
+
+#: PanelPfeMame.py:693
+msgid "DEFAULT ALL COLORS"
+msgstr "STANDARD ALLE FARBEN"
+
+#: PanelPfeMame.py:694
+msgid "Set all color values to their application default."
+msgstr "Setzen Sie alle Farbwerte auf ihre Anwendungsstandardwerte."
+
+#: PanelPfeMame.py:701
+msgid "SELECT DARK THEME"
+msgstr "WÄHLEN SIE DUNKLES THEMA"
+
+#: PanelPfeMame.py:702
+msgid "Set the application colors to Dark Theme."
+msgstr "Stellen Sie die Anwendungsfarben auf Dunkles Design ein."
+
+#: PanelPfeMame.py:59
+msgid "Check software version on startup"
+msgstr "Überprüfen Sie die Softwareversion beim Start"
+
+#: PanelPfeMame.py:60
+msgid ""
+"Check for updates to the application software version online on startup "
+"automatically."
+msgstr ""
+"Suchen Sie beim Start automatisch online nach Updates für die Version der "
+"Anwendungssoftware."
+
+#: PanelPfeMame.py:61
+msgid "Check Catver.ini file version on startup"
+msgstr "Überprüfen Sie beim Start die Version der Catver.ini-Datei"
+
+#: PanelPfeMame.py:62
+msgid ""
+"Check the version of the Catver.ini file on startup and compare to the MAME "
+"version.  If not matched then warn the user that the versions are not "
+"matched"
+msgstr ""
+"Überprüfen Sie beim Start die Version der Catver.ini-Datei und vergleichen "
+"Sie sie mit der MAME-Version.  Wenn keine Übereinstimmung vorliegt, warnen "
+"Sie den Benutzer, dass die Versionen nicht übereinstimmen"
+
+#: PanelPfeMame.py:64
+msgid "Check ROMs database age on startup"
+msgstr "Überprüfen Sie beim Start das Alter der ROM-Datenbank"
+
+#: PanelPfeMame.py:65
+msgid "Check the age of the ROMs database when the application is started."
+msgstr ""
+"Überprüfen Sie das Alter der ROM-Datenbank, wenn die Anwendung gestartet "
+"wird."
+
+#: PanelPfeMame.py:66
+msgid "Auto Select the last ROM selected and last view (*)"
+msgstr ""
+"Automatisch: Wählen Sie das zuletzt ausgewählte ROM und die letzte Ansicht "
+"(*) aus."
+
+#: PanelPfeMame.py:67
+msgid ""
+"Automatically select the View and last ROM selected when pfeMAME was "
+"previously shut down.  This overrides the control above."
+msgstr ""
+"Wählen Sie automatisch die Ansicht und das letzte ROM aus, die beim "
+"vorherigen Herunterfahren von pfeMAME ausgewählt wurden.  Dies überschreibt "
+"die obige Steuerung."
+
+#: PanelPfeMame.py:69
+msgid "Set Tile View as Default (after startup)"
+msgstr "Kachelansicht als Standard festlegen (nach dem Start)"
+
+#: PanelPfeMame.py:70
+msgid ""
+"Select this if you want the 'Tile' view to run automatically after the "
+"pfeMAME application has launched."
+msgstr ""
+"Wählen Sie diese Option aus, wenn die Kachel-Ansicht automatisch ausgeführt "
+"werden soll, nachdem die pfeMAME-Anwendung gestartet wurde."
+
+#: PanelPfeMame.py:72
+msgid "Set main window full-screen on startup"
+msgstr "Stellen Sie das Hauptfenster beim Start auf Vollbild ein"
+
+#: PanelPfeMame.py:73
+msgid "Sets the main view window to full-screen after startup."
+msgstr "Stellt das Hauptansichtsfenster nach dem Start auf Vollbild ein."
+
+#: PanelPfeMame.py:74
+msgid "Recall column widths on startup"
+msgstr "Spaltenbreiten beim Start abrufen"
+
+#: PanelPfeMame.py:75
+msgid ""
+"Recalls the ROM list column widths based on what they were when the "
+"application was closed."
+msgstr ""
+"Ruft die Spaltenbreiten der ROM-Liste basierend auf dem Stand zum Zeitpunkt "
+"des Schließens der Anwendung ab."
+
+#: PanelPfeMame.py:78
+msgid "Highlight ROMs with missing files (*)"
+msgstr "Highlite-ROMs mit fehlenden Dateien (*)"
+
+#: PanelPfeMame.py:79
+msgid ""
+"Select this if you want ROMs that don't have a corresponding rom file in the"
+" defined path to be highlighted."
+msgstr ""
+"Wählen Sie diese Option, wenn Sie möchten, dass ROMs hervorgehoben werden, "
+"für die es im definierten Pfad keine entsprechende ROM-Datei gibt."
+
+#: PanelPfeMame.py:81
+msgid "Show an icon of the ROM in the ROMs list (can slow down startup) (*)"
+msgstr ""
+"Zeigt ein Symbol des ROM in der ROM-Liste an (kann den Start verlangsamen) "
+"(*)"
+
+#: PanelPfeMame.py:82
+msgid ""
+"When selected, the ROM list view will show a small icon next to the ROM "
+"name.  This can slow down the start up time if the icons are larger than "
+"16x16 pixels"
+msgstr ""
+"Bei Auswahl wird in der ROM-Listenansicht ein kleines Symbol neben dem ROM-"
+"Namen angezeigt.  Dies kann die Startzeit verlangsamen, wenn die Symbole "
+"größer als 16 x 16 Pixel sind"
+
+#: PanelPfeMame.py:84
+msgid "Click to set Favorite + Rating (*)"
+msgstr "Klicken Sie hier, um Favorit + Bewertung (*) festzulegen."
+
+#: PanelPfeMame.py:85
+msgid ""
+"Allows double clicking on the Favorite and Rating columns to invoke their "
+"selection for the selected ROM."
+msgstr ""
+"Ermöglicht einen Doppelklick auf die Spalten Favorit und Bewertung, um deren"
+" Auswahl für das ausgewählte ROM aufzurufen."
+
+#: PanelPfeMame.py:87
+msgid "Flash errors in messages window"
+msgstr "Flash-Fehler im Nachrichtenfenster"
+
+#: PanelPfeMame.py:88
+msgid "Flash the messages window if errors are detected."
+msgstr "Blinken Sie das Nachrichtenfenster, wenn Fehler erkannt werden."
+
+#: PanelPfeMame.py:89
+msgid "Systems / Software Lists support (*)(**)"
+msgstr "Unterstützung für Systeme/Softwarelisten (*)(**)"
+
+#: PanelPfeMame.py:90
+msgid ""
+"Provide support for Systems (e.g. ZX Spectrum) by searching for their "
+"programs and including them in the ROMs list when a refresh is performed "
+"(Requires a database refresh)."
+msgstr ""
+"Bieten Sie Unterstützung für Systeme (z. B. ZX Spectrum), indem Sie nach "
+"deren Programmen suchen und diese bei einer Aktualisierung in die ROM-Liste "
+"aufnehmen (erfordert eine Datenbankaktualisierung)."
+
+#: PanelPfeMame.py:92
+msgid "Suppress Short Names"
+msgstr "Kurznamen unterdrücken"
+
+#: PanelPfeMame.py:93
+msgid ""
+"Override the detection of short names in ROMs XML files.  For systems this "
+"will prevent cheats from being available but is necessary if the rom file "
+"doesn't match the detail in the XML file"
+msgstr ""
+"Überschreiben Sie die Erkennung von Kurznamen in XML-Dateien von ROMs.  Auf "
+"Systemen verhindert dies, dass Cheats verfügbar sind. Dies ist jedoch "
+"erforderlich, wenn die ROM-Datei nicht mit den Details in der XML-Datei "
+"übereinstimmt"
+
+#: PanelPfeMame.py:97
+msgid "Dim Tile View Tiles not selected"
+msgstr "Kachelansicht dimmen Kacheln nicht ausgewählt"
+
+#: PanelPfeMame.py:98
+msgid ""
+"Dim ROM image tiles in 'Tile View' so that the selected ROM stands out."
+msgstr ""
+"Dimmen Sie ROM-Bildkacheln in der Kachelansicht, damit das ausgewählte ROM "
+"hervorsticht."
+
+#: PanelPfeMame.py:99
+msgid "Jump to a letter in Tile View with the A-Z keys"
+msgstr ""
+"Springen Sie mit den Tasten A-Z zu einem Buchstaben in der Kachelansicht"
+
+#: PanelPfeMame.py:100
+msgid ""
+"In Tile View, pressing a letter key jumps to the next ROM starting with that"
+" letter.  Leave this off if your control panel sends letter keys for its "
+"buttons."
+msgstr ""
+"In der Kachelansicht springt das Drücken einer Buchstabentaste zum nächsten "
+"ROM, das mit diesem Buchstaben beginnt.  Lassen Sie diese Option "
+"deaktiviert, wenn Ihr Bedienfeld Buchstabentasten für seine Tasten sendet."
+
+#: PanelPfeMame.py:102
+msgid "Mouse support in Tile View"
+msgstr "Mausunterstützung in der Kachelansicht"
+
+#: PanelPfeMame.py:103
+msgid ""
+"Use the mouse in Tile View: click to select, double-click to play, the wheel"
+" to move and right-click for the menu.  The pointer shows while the mouse "
+"moves.  Leave this off if your cabinet has a trackball or spinner set up as "
+"a mouse."
+msgstr ""
+"Verwenden Sie die Maus in der Kachelansicht: Klicken Sie zum Auswählen, "
+"doppelklicken Sie zum Abspielen, drehen Sie das Rad zum Bewegen und klicken "
+"Sie mit der rechten Maustaste, um das Menü aufzurufen.  Der Zeiger wird "
+"angezeigt, während die Maus bewegt wird.  Lassen Sie diese Option "
+"deaktiviert, wenn Ihr Schrank über einen Trackball oder Spinner verfügt, der"
+" als Maus eingerichtet ist."
+
+#: PanelPfeMame.py:108
+msgid "Play all ROMs in Full Screen"
+msgstr "Spielen Sie alle ROMs im Vollbildmodus ab"
+
+#: PanelPfeMame.py:109
+msgid ""
+"Forces all ROMs to be played in Full Screen regardless of the ROM specific "
+"preference setting."
+msgstr ""
+"Erzwingt die Wiedergabe aller ROMs im Vollbildmodus, unabhängig von der ROM-"
+"spezifischen Voreinstellung."
+
+#: PanelPfeMame.py:110
+msgid "Play all ROMs in a Window"
+msgstr "Spielen Sie alle ROMs in einem Fenster ab"
+
+#: PanelPfeMame.py:111
+msgid ""
+"Forces all ROMs to be played in a window regardless of the ROM specific "
+"preference setting (Except for Tile View that is always in Full Screen.)"
+msgstr ""
+"Erzwingt die Wiedergabe aller ROMs in einem Fenster, unabhängig von der ROM-"
+"spezifischen Voreinstellung (mit Ausnahme der Kachelansicht, die immer im "
+"Vollbildmodus angezeigt wird)."
+
+#: PanelPfeMame.py:113
+msgid "Disable Artwork for all ROMs"
+msgstr "Deaktivieren Sie Artwork für alle ROMs"
+
+#: PanelPfeMame.py:114
+msgid ""
+"This disables the showing of artwork around the ROM playing area on the "
+"screen for all ROMs"
+msgstr ""
+"Dadurch wird die Anzeige von Grafiken rund um den ROM-Spielbereich auf dem "
+"Bildschirm für alle ROMs deaktiviert"
+
+#: PanelPfeMame.py:115
+msgid "Auto load the ROM video if available (*)"
+msgstr "Laden Sie das ROM-Video automatisch, falls verfügbar (*)"
+
+#: PanelPfeMame.py:116
+msgid ""
+"Auto Load the ROM video if one exists for the selected ROM.  Video loads and"
+" plays after 5 seconds in the main view unless another ROM is selected.  In "
+"Tile View this turns the tile preview videos on or off (the screensaver is "
+"not affected)."
+msgstr ""
+"Laden Sie das ROM-Video automatisch, falls eines für das ausgewählte ROM "
+"vorhanden ist.  Das Video wird nach 5 Sekunden in der Hauptansicht geladen "
+"und abgespielt, sofern kein anderes ROM ausgewählt ist.  In der "
+"Kachelansicht werden dadurch die Kachelvorschauvideos ein- oder "
+"ausgeschaltet (der Bildschirmschoner ist davon nicht betroffen)."
+
+#: PanelPfeMame.py:119
+msgid "Disable all video playback (*)"
+msgstr "Deaktivieren Sie die gesamte Videowiedergabe (*)"
+
+#: PanelPfeMame.py:120
+msgid "Disable all video playback in the Main and Tile Views."
+msgstr ""
+"Deaktivieren Sie die gesamte Videowiedergabe in der Haupt- und "
+"Kachelansicht."
+
+#: PanelPfeMame.py:121
+msgid "Use software video rendering (*)"
+msgstr "Verwenden Sie Software-Video-Rendering (*)"
+
+#: PanelPfeMame.py:122
+msgid ""
+"Draw videos without OpenGL.  Try this if videos show as a black or "
+"flickering box, which can happen with some Linux / Wayland graphics drivers."
+"  It uses more CPU than OpenGL.  pfeMAME also switches to software rendering"
+" by itself if OpenGL fails to start."
+msgstr ""
+"Zeichnen Sie Videos ohne OpenGL.  Versuchen Sie dies, wenn Videos als "
+"schwarzes oder flackerndes Kästchen angezeigt werden, was bei einigen "
+"Linux-/Wayland-Grafiktreibern passieren kann.  Es verbraucht mehr CPU als "
+"OpenGL.  pfeMAME schaltet auch selbständig auf Software-Rendering um, wenn "
+"OpenGL nicht startet."
+
+#: PanelPfeMame.py:125
+msgid "Hide the screensaver video title after a few seconds"
+msgstr ""
+"Den Videotitel des Bildschirmschoners nach einigen Sekunden ausblenden"
+
+#: PanelPfeMame.py:126
+msgid ""
+"In the full screen video player (the screensaver), show the video title for "
+"a few seconds when each video starts and then hide it so it does not cover "
+"the video.  When this is off the title stays on screen."
+msgstr ""
+"Im Vollbild-Videoplayer (dem Bildschirmschoner) wird der Videotitel zu "
+"Beginn jedes Videos einige Sekunden lang angezeigt und dann ausgeblendet, "
+"damit er das Video nicht verdeckt.  Ist diese Option aus, bleibt der Titel "
+"sichtbar."
+
+#: PanelPfeMame.py:131
+msgid "Enable joystick navigation for Main View (*)"
+msgstr "Joystick-Navigation für die Hauptansicht aktivieren (*)"
+
+#: PanelPfeMame.py:132
+msgid ""
+"Allow the joystick or gamepad selected above to provide navigation in the "
+"Main View window."
+msgstr ""
+"Ermöglichen Sie dem oben ausgewählten Joystick oder Gamepad die Navigation "
+"im Hauptansichtsfenster."
+
+#: PanelPfeMame.py:134
+msgid "Enable joystick navigation for Tile View (*)"
+msgstr "Joystick-Navigation für die Kachelansicht aktivieren (*)"
+
+#: PanelPfeMame.py:135
+msgid ""
+"Allow the joystick or gamepad selected above to provide navigation in the "
+"Tile View window."
+msgstr ""
+"Erlauben Sie dem oben ausgewählten Joystick oder Gamepad, die Navigation im "
+"Fenster Kachelansicht bereitzustellen."
+
+#: PanelPfeMame.py:150
+msgid "Alternate Row Color 1:"
+msgstr "Alternative Zeilenfarbe 1:"
+
+#: PanelPfeMame.py:151
+msgid "Alternate Row Color 2:"
+msgstr "Alternative Zeilenfarbe 2:"
+
+#: PanelPfeMame.py:152
+msgid "Selected Row Color:"
+msgstr "Ausgewählte Zeilenfarbe:"
+
+#: PanelPfeMame.py:153
+msgid "Selected Row BG Color:"
+msgstr "Hintergrundfarbe der ausgewählten Zeile:"
+
+#: PanelPfeMame.py:154
+msgid "Missing ROM Color:"
+msgstr "Fehlende ROM-Farbe:"
+
+#: PanelPfeMame.py:157
+msgid "Text Color:"
+msgstr "Textfarbe:"
+
+#: PanelPfeMame.py:158
+msgid "Text Background Color:"
+msgstr "Texthintergrundfarbe:"
+
+#: PanelPfeMame.py:159
+msgid "Window Background Color:"
+msgstr "Fensterhintergrundfarbe:"
+
+#: PanelPfeMame.py:160
+msgid "Control Bar Color:"
+msgstr "Farbe der Steuerleiste:"
+
+#: PanelPfeMame.py:161
+msgid "Button Background Color:"
+msgstr "Hintergrundfarbe der Schaltfläche:"
+
+#: PanelPfeMame.py:164
+msgid "Ribbon Bar Color:"
+msgstr "Farbe der Multifunktionsleistenleiste:"
+
+#: PanelPfeMame.py:165
+msgid "Ribbon Bar Highlight Color:"
+msgstr "Hervorhebungsfarbe der Multifunktionsleistenleiste:"
+
+#: PanelPfeMame.py:166
+msgid "Scrollbar Slider Color:"
+msgstr "Farbe des Bildlaufleisten-Schiebereglers:"
+
+#: PanelPfeMame.py:167
+msgid "Scrollbar Track Color:"
+msgstr "Farbe der Bildlaufleistenspur:"
+
+#: PanelPfeMame.py:670
+msgid "Click here to change the color"
+msgstr "Klicken Sie hier, um die Farbe zu ändern"
+
+#: PanelSlots.py:113
+msgid "Slots Configuration"
+msgstr "Slots-Konfiguration"
+
+#: PanelSlots.py:177
+msgid "Manual Configuration:"
+msgstr "Manuelle Konfiguration:"
+
+#: PanelSlots.py:265
+msgid "Slots Configuration: Slots From INI File"
+msgstr "Slots-Konfiguration: Slots aus INI-Datei"
+
+#: PanelSlots.py:411
+msgid "Slots Configuration: Slots Empty"
+msgstr "Steckplatzkonfiguration: Steckplätze leer"
+
+#: PanelSlots.py:465
+msgid "Load Slot Preset"
+msgstr "Slot-Vorlage laden"
+
+#: PanelSlots.py:476 PanelSlots.py:477
+msgid "Delete Slot Preset"
+msgstr "Slot-Vorlage löschen"
+
+#: PanelSlots.py:547
+msgid "Remove the device from this slot"
+msgstr "Gerät aus diesem Slot entfernen"
+
+#: PanelSlots.py:586
+msgid "Slot Name"
+msgstr "Slot-Name"
+
+#: PanelSlots.py:586
+msgid "Device Name"
+msgstr "Gerätename"
+
+#: PanelSlots.py:587
+msgid "Slot Option Name"
+msgstr "Name der Slot-Option"
+
+#: PanelSlots.py:587
+msgid "Slot Parent"
+msgstr "Slot-Elternteil"
+
+#: PanelSlots.py:137
+msgid "Clear All Selections"
+msgstr "Alle Auswahl löschen"
+
+#: PanelSlots.py:139
+msgid ""
+"This removes the device from every slot.  Note that MAME uses its own "
+"default for any slot that is left empty here."
+msgstr ""
+"Entfernt das Gerät aus allen Slots.  Hinweis: Für jeden hier leer gelassenen"
+" Slot verwendet MAME seine eigene Standardeinstellung."
+
+#: PanelSlots.py:147
+msgid "Load MAME Defaults"
+msgstr "Laden Sie die MAME-Standardeinstellungen"
+
+#: PanelSlots.py:149
+msgid ""
+"This sets the slot controls, including the sub-slots of each default device,"
+" to their MAME DEFAULT values found in the systems XML data."
+msgstr ""
+"Setzt die Slot-Einstellungen, einschließlich der Unter-Slots jedes "
+"Standardgeräts, auf die MAME-STANDARDWERTE aus den XML-Daten des Systems."
+
+#: PanelSlots.py:260 PanelSlots.py:422
+msgid "Slots Configuration: Slots Set To Default from XML"
+msgstr ""
+"Slots-Konfiguration: Slots werden per XML auf den Standardwert gesetzt"
+
+#: PanelSlots.py:447
+msgid "Choose a slot preset:"
+msgstr "Slot-Vorlage auswählen:"
+
+#: PanelSlots.py:451
+msgid "Name for this slot setup:"
+msgstr "Name für diese Slot-Konfiguration:"
+
+#: PanelSlots.py:451 PanelSlots.py:458
+msgid "Save Slot Preset"
+msgstr "Slot-Vorlage speichern"
+
+#: PanelSlots.py:157
+msgid "Save Preset..."
+msgstr "Vorlage speichern..."
+
+#: PanelSlots.py:158
+msgid ""
+"Save the current slot setup under a name, so you can switch back to it "
+"later."
+msgstr ""
+"Speichert die aktuelle Slot-Konfiguration unter einem Namen, damit Sie "
+"später wieder zu ihr wechseln können."
+
+#: PanelSlots.py:159
+msgid "Load Preset..."
+msgstr "Vorlage laden..."
+
+#: PanelSlots.py:159
+msgid "Replace the current slot setup with a saved one."
+msgstr "Ersetzt die aktuelle Slot-Konfiguration durch eine gespeicherte."
+
+#: PanelSlots.py:160
+msgid "Delete Preset..."
+msgstr "Vorlage löschen..."
+
+#: PanelSlots.py:160
+msgid "Delete a saved slot setup."
+msgstr "Löscht eine gespeicherte Slot-Konfiguration."
+
+#: PanelSlots.py:161
+msgid "Copy MAME Command Line"
+msgstr "MAME-Befehlszeile kopieren"
+
+#: PanelSlots.py:162
+msgid ""
+"Copy the slot and BIOS options as MAME command-line arguments (e.g. for "
+"sharing)."
+msgstr ""
+"Kopiert die Slot- und BIOS-Optionen als MAME-Befehlszeilenargumente (z. B. "
+"zum Teilen)."
+
+#: PanelSlots.py:472
+msgid "Slots Configuration: Preset \"{}\""
+msgstr "Slots-Konfiguration: Vorlage \"{}\""
+
+#: PanelSlots.py:444
+msgid "There are no saved slot presets for {} yet."
+msgstr "Für {} gibt es noch keine gespeicherten Slot-Vorlagen."
+
+#: PanelSlots.py:462
+msgid "Slot preset \"{}\" saved"
+msgstr "Slot-Vorlage \"{}\" gespeichert"
+
+#: PanelSlots.py:458
+msgid "Replace the existing preset \"{}\"?"
+msgstr "Vorhandene Vorlage \"{}\" ersetzen?"
+
+#: PanelSlots.py:477
+msgid "Delete the preset \"{}\"?"
+msgstr "Vorlage \"{}\" löschen?"
+
+#: PanelSlots.py:486
+msgid "Copied: {}"
+msgstr "Kopiert: {}"
+
+#: PanelSlots.py:486
+msgid "(no slot options)"
+msgstr "(keine Slot-Optionen)"
+
+#: PanelSound.py:48
+msgid "Sample Rate"
+msgstr "Abtastrate"
+
+#: PanelSound.py:52
+msgid "Volume"
+msgstr "Volumen"
+
+#: PanelSound.py:58
+msgid "Sound SubSystem"
+msgstr "Sound-Subsystem"
+
+#: PanelSound.py:62
+msgid "Audio Latency"
+msgstr "Audiolatenz"
+
+#: PanelSound.py:64
+msgid "Use Sample Files"
+msgstr "Verwenden Sie Beispieldateien"
+
+#: PanelSound.py:68
+msgid ""
+"Sets the audio sample rate. Smaller values (e.g. 11025) cause lower audio "
+"quality but faster emulation speed."
+msgstr ""
+"Legt die Audio-Abtastrate fest. Kleinere Werte (z. B. 11025) führen zu einer"
+" geringeren Audioqualität, aber einer schnelleren Emulationsgeschwindigkeit."
+
+#: PanelSound.py:70
+msgid ""
+"Sets the startup volume. It can later be changed with the user interface "
+"(see Keys section). The volume is an attenuation in dB: e.g., \"-12\" will "
+"start with -12dB attenuation.  Allowable values are from 0 to -30."
+msgstr ""
+"Legt die Startlautstärke fest. Sie kann später über die Benutzeroberfläche "
+"geändert werden (siehe Abschnitt „Tasten“). Die Lautstärke ist eine Dämpfung"
+" in dB: Beispielsweise beginnt „-12“ mit einer Dämpfung von -12 dB.  "
+"Zulässige Werte liegen zwischen 0 und -30."
+
+#: PanelSound.py:74
+msgid ""
+"Specifies which sound subsystem to use. Selecting none disables sound output"
+" altogether (sound hardware is still emulated).  On Windows and Linux, "
+"portaudio is likely to give the lowest possible latency, while Mac users "
+"will find coreaudio provides the best results."
+msgstr ""
+"Gibt an, welches Sound-Subsystem verwendet werden soll. Wenn Sie Keine "
+"auswählen, wird die Tonausgabe vollständig deaktiviert (die Sound-Hardware "
+"wird weiterhin emuliert).  Unter Windows und Linux bietet portaudio "
+"wahrscheinlich die geringstmögliche Latenz, während Mac-Benutzer feststellen"
+" werden, dass coreaudio die besten Ergebnisse liefert."
+
+#: PanelSound.py:78
+msgid ""
+"The exact behavior depends on the selected audio output module. Smaller "
+"values provide less audio delay while requiring better system performance. "
+"Higher values increase audio delay but may help avoid buffer under-runs and "
+"audio interruptions.  Allowable values are 1 to 5."
+msgstr ""
+"Das genaue Verhalten hängt vom gewählten Audio-Ausgabemodul ab. Kleinere "
+"Werte sorgen für eine geringere Audioverzögerung und erfordern gleichzeitig "
+"eine bessere Systemleistung. Höhere Werte erhöhen die Audioverzögerung, "
+"können jedoch dabei helfen, Pufferunterschreitungen und Audiounterbrechungen"
+" zu vermeiden.  Zulässige Werte sind 1 bis 5."
+
+#: PanelSound.py:83
+msgid "Use samples if available."
+msgstr "Verwenden Sie Muster, sofern verfügbar."
+
+#: PanelVideo.py:49
+msgid "Enable Window Mode"
+msgstr "Aktivieren Sie den Fenstermodus"
+
+#: PanelVideo.py:52
+msgid "Crop displayed artwork"
+msgstr "Angezeigtes Kunstwerk zuschneiden"
+
+#: PanelVideo.py:55
+msgid "Disable the display of artwork"
+msgstr "Deaktivieren Sie die Anzeige von Kunstwerken"
+
+#: PanelVideo.py:61
+msgid "Video System for Drawing"
+msgstr "Videosystem zum Zeichnen"
+
+#: PanelVideo.py:66
+msgid "BGFX Backend"
+msgstr "BGFX-Backend"
+
+#: PanelVideo.py:71
+msgid "BGFX Screen Chains"
+msgstr "BGFX-Bildschirmketten"
+
+#: PanelVideo.py:76
+msgid "BGFX Shadow Mask"
+msgstr "BGFX-Schattenmaske"
+
+#: PanelVideo.py:79
+msgid ""
+"Select this to run the ROM in windowed mode, otherwise it will run "
+"fullscreen."
+msgstr ""
+"Wählen Sie diese Option, um das ROM im Fenstermodus auszuführen, andernfalls"
+" wird es im Vollbildmodus ausgeführt."
+
+#: PanelVideo.py:81
+msgid ""
+"Enable cropping of artwork to the system screen area only. This means that "
+"vertically oriented systems running full screen can display their artwork to"
+" the left and right sides of the screen."
+msgstr ""
+"Aktivieren Sie das Zuschneiden von Grafiken nur auf den "
+"Systembildschirmbereich. Dies bedeutet, dass vertikal ausgerichtete Systeme,"
+" die im Vollbildmodus laufen, ihre Grafiken auf der linken und rechten Seite"
+" des Bildschirms anzeigen können."
+
+#: PanelVideo.py:85
+msgid ""
+"This will disable the displaying of ROM artwork defined by the artwork path."
+"  It is not a MAME option but is handled by pfeMAME."
+msgstr ""
+"Dadurch wird die Anzeige von ROM-Grafiken deaktiviert, die durch den "
+"Grafikpfad definiert sind.  Es handelt sich nicht um eine MAME-Option, "
+"sondern wird von pfeMAME verwaltet."
+
+#: PanelVideo.py:88
+msgid ""
+"Select the video system that is used for rendering the ROM.  In Linux: "
+"OpenGL can speed things up but may have compatibility issues.  OpenGL16 may "
+"be even faster.  In Windows:  recommend d3d for Direct3D performance.  Use "
+"soft for software rendering if you are having issues."
+msgstr ""
+"Wählen Sie das Videosystem aus, das zum Rendern des ROM verwendet wird.  "
+"Unter Linux: OpenGL kann die Geschwindigkeit erhöhen, kann aber zu "
+"Kompatibilitätsproblemen führen.  OpenGL16 ist möglicherweise noch "
+"schneller.  Unter Windows: empfehlen Sie d3d für Direct3D-Leistung.  Wenn "
+"Sie Probleme haben, verwenden Sie Soft für das Software-Rendering."
+
+#: PanelVideo.py:92
+msgid "Selects a rendering backend for BGFX to use."
+msgstr "Wählt ein Rendering-Backend für die Verwendung durch BGFX aus."
+
+#: PanelVideo.py:93
+msgid "This dictates how to handle BGFX rendering on a per-display basis."
+msgstr "Dies bestimmt, wie das BGFX-Rendering pro Anzeige gehandhabt wird."
+
+#: PanelVideo.py:95
+msgid "This specifies the shadow mask effect PNG file."
+msgstr "Dies gibt die PNG-Datei mit Schattenmaskeneffekt an."
+
+#: pfemame.py:953 pfemame.py:713 pfemame.py:731 pfemame.py:978 pfemame.py:1619
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: pfemame.py:1258
+msgid "pfeMAME was restarted automatically"
+msgstr "pfeMAME wurde automatisch neu gestartet"
+
+#: pfemame.py:2943
+msgid ""
+"\n"
+"It Looks like this is the first time you have run pfeMAME\n"
+"as the INI file data is missing.  Your first step is to \n"
+"set up the necessary file paths to MAME files and supporting\n"
+"folders.\n"
+"\n"
+"Please open EDIT > File Paths and set the MAME \n"
+"executable file path and ROMS folder as a minimum.  \n"
+"NOTE:  You can use the Auto Find option in the file paths \n"
+"window to make this a lot easier in most cases.\n"
+"\n"
+"After this you need to select some ROM categories (the right of the screen).\n"
+"Then restart the application and refresh the ROMs database using\n"
+"VIEW > Refresh ROMs Database.\n"
+"        "
+msgstr ""
+"\n"
+"Es sieht so aus, als ob Sie pfeMAME zum ersten Mal ausführen\n"
+"Da die INI-Dateidaten fehlen. Ihr erster Schritt besteht darin, \n"
+"Richten Sie die erforderlichen Dateipfade zu MAME-Dateien und Unterstützung ein\n"
+"Ordner.\n"
+"\n"
+"Bitte öffnen Sie BEARBEITEN > Dateipfade und legen Sie MAME fest \n"
+"Pfad der ausführbaren Datei und ROMS-Ordner als Minimum. \n"
+"HINWEIS: Sie können die Option Automatisch suchen in den Dateipfaden verwenden \n"
+"Fenster, um dies in den meisten Fällen viel einfacher zu machen.\n"
+"\n"
+"Danach müssen Sie einige ROM-Kategorien auswählen (rechts auf dem Bildschirm).\n"
+"Starten Sie dann die Anwendung neu und aktualisieren Sie die ROM-Datenbank mit\n"
+"ANSICHT > ROMs-Datenbank aktualisieren.\n"
+"        "
+
+#: pfemame.py:2959
+msgid "MAME file path or ROMS folder not found"
+msgstr "MAME-Dateipfad oder ROMS-Ordner nicht gefunden"
+
+#: pfemame.py:3173
+msgid "Confirm Remove From Favorites"
+msgstr "Bestätigen Sie Aus Favoriten entfernen."
+
+#: pfemame.py:462
+msgid "Application Started"
+msgstr "Anwendung gestartet"
+
+#: pfemame.py:640
+msgid "View:"
+msgstr "Ansicht:"
+
+#: pfemame.py:709
+msgid "MAME Version: "
+msgstr "MAME-Version:"
+
+#: pfemame.py:727
+msgid "Database Age: "
+msgstr "Datenbankalter:"
+
+#: pfemame.py:779
+msgid "ROMs List"
+msgstr "ROMs-Liste"
+
+#: pfemame.py:783
+msgid "File Paths"
+msgstr "Dateipfade"
+
+#: pfemame.py:792
+msgid "pfeMAME Preferences"
+msgstr "pfeMAME-Einstellungen"
+
+#: pfemame.py:847
+msgid "Messages:"
+msgstr "Nachrichten:"
+
+#: pfemame.py:966
+msgid "Deployment build is frozen (cx_freeze)"
+msgstr "Bereitstellungs-Build ist eingefroren (cx_freeze)"
+
+#: pfemame.py:968
+msgid "Deployment build is source (i.e. not frozen)"
+msgstr "Der Bereitstellungs-Build ist die Quelle (d. h. nicht eingefroren)"
+
+#: pfemame.py:970
+msgid "Retrieved MAME & pfeMAME version"
+msgstr "Abgerufene MAME- und pfeMAME-Version"
+
+#: pfemame.py:1037
+msgid "Stop rebuilding the ROMs database"
+msgstr "Neuaufbau der ROM-Datenbank abbrechen"
+
+#: pfemame.py:1052
+msgid "ROM Categories:"
+msgstr "ROM-Kategorien:"
+
+#: pfemame.py:1145
+msgid "MAME Info"
+msgstr "MAME-Info"
+
+#: pfemame.py:1688 pfemame.py:2927 pfemame.py:3520 pfemame.py:3811
+#: pfemame.py:3853 pfemame.py:5853 pfemame.py:3942 pfemame.py:2129
+#: pfemame.py:2186 pfemame.py:3550 pfemame.py:3561 pfemame.py:3573
+#: pfemame.py:3871 pfemame.py:4283
+msgid "Ready"
+msgstr "Bereit"
+
+#: pfemame.py:1855
+msgid ""
+"Reset the pfeMAME INI file to its default settings?  WARNING:  This resets "
+"any changes you have made!"
+msgstr ""
+"Die pfeMAME-INI-Datei auf die Standardeinstellungen zurücksetzen?  ACHTUNG: "
+"Dadurch werden alle von Ihnen vorgenommenen Änderungen zurückgesetzt!"
+
+#: pfemame.py:1857
+msgid "Reset pfeMAME INI file"
+msgstr "Setzen Sie die pfeMAME-INI-Datei zurück"
+
+#: pfemame.py:1861
+msgid ""
+"Please restart pfeMAME for the new default INI file settings to be used."
+msgstr ""
+"Bitte starten Sie pfeMAME neu, damit die neuen Standardeinstellungen der "
+"INI-Datei verwendet werden."
+
+#: pfemame.py:1862
+msgid "Restart pfeMAME"
+msgstr "Starten Sie pfeMAME neu"
+
+#: pfemame.py:1874
+msgid ""
+"IMPORTANT NOTIFICATION:  Please check this window for the ERROR message.  "
+"Double-click to cancel alert."
+msgstr ""
+"WICHTIGER HINWEIS: Bitte überprüfen Sie dieses Fenster auf die Fehlermeldung"
+" FEHLER.  Doppelklicken Sie, um die Warnung abzubrechen."
+
+#: pfemame.py:1897
+msgid "Reading INI file settings"
+msgstr "Lesen der INI-Dateieinstellungen"
+
+#: pfemame.py:2147
+msgid "Received data from sourceforge"
+msgstr "Daten von SourceForge erhalten"
+
+#: pfemame.py:2504
+msgid "Clipboard does not contain a supported image format"
+msgstr "Die Zwischenablage enthält kein unterstütztes Bildformat"
+
+#: pfemame.py:2525
+msgid "File saved successfully"
+msgstr "Datei erfolgreich gespeichert"
+
+#: pfemame.py:2529
+msgid "Unable to access the clipboard image"
+msgstr "Auf das Zwischenablagebild kann nicht zugegriffen werden"
+
+#: pfemame.py:2532 pfemame.py:2506
+msgid "Image Saving Message"
+msgstr "Meldung zum Speichern des Bildes"
+
+#: pfemame.py:2578
+msgid ""
+"The INI Folder path is not valid.  Please select EDIT > File Paths and set a"
+" valid path for this folder."
+msgstr ""
+"Der INI-Ordnerpfad ist ungültig.  Bitte wählen Sie BEARBEITEN > Dateipfade "
+"und legen Sie einen gültigen Pfad für diesen Ordner fest."
+
+#: pfemame.py:2580
+msgid "No INI folder path set"
+msgstr "Kein INI-Ordnerpfad festgelegt"
+
+#: pfemame.py:2590
+msgid "Switching to tile view"
+msgstr "Wechsel zur Kachelansicht"
+
+#: pfemame.py:2678
+msgid "Building ROM list. Please Wait........."
+msgstr "Erstellen einer ROM-Liste. Bitte warten........."
+
+#: pfemame.py:2679
+msgid "Started building full ROMs database"
+msgstr "Mit dem Aufbau einer vollständigen ROM-Datenbank begonnen"
+
+#: pfemame.py:2778 pfemame.py:2760 pfemame.py:2776 pfemame.py:2762
+msgid "What's New in MAME"
+msgstr "Neu in MAME"
+
+#: pfemame.py:2822
+msgid "ROMs database rebuild cancelled"
+msgstr "Neuaufbau der ROM-Datenbank abgebrochen"
+
+#: pfemame.py:2889
+msgid "Unable to find the MAME executable."
+msgstr "Die ausführbare MAME-Datei konnte nicht gefunden werden."
+
+#: pfemame.py:2892
+msgid "Started reading the temporary ROMs database file"
+msgstr "Mit dem Lesen der temporären ROM-Datenbankdatei begonnen"
+
+#: pfemame.py:2911
+msgid ""
+"Looks like your ROMs list is empty. Please check that you have at least one "
+"ROM category selected."
+msgstr ""
+"Anscheinend ist Ihre ROM-Liste leer. Bitte überprüfen Sie, ob Sie mindestens"
+" eine ROM-Kategorie ausgewählt haben."
+
+#: pfemame.py:2912
+msgid "Empty ROMs list"
+msgstr "Liste der leeren ROMs"
+
+#: pfemame.py:2926
+msgid "0 days"
+msgstr "0 Tage"
+
+#: pfemame.py:2934
+msgid "File Paths need to be set up"
+msgstr "Dateipfade müssen eingerichtet werden"
+
+#: pfemame.py:2970
+msgid "Writing the temporary ROMs database file"
+msgstr "Schreiben der temporären ROM-Datenbankdatei"
+
+#: pfemame.py:2990
+msgid "Reading categories from catver.ini"
+msgstr "Lesen von Kategorien aus catver.ini"
+
+#: pfemame.py:3039
+msgid "Completed reading categories from catver.ini"
+msgstr "Abgeschlossene Lesekategorien von catver.ini"
+
+#: pfemame.py:3229
+msgid "Confirm Remove From Watchlist"
+msgstr "Entfernen aus der Beobachtungsliste bestätigen"
+
+#: pfemame.py:3540
+msgid "Downloading image..."
+msgstr "Bild wird heruntergeladen..."
+
+#: pfemame.py:3581 pfemame.py:5653
+msgid "Image updated"
+msgstr "Bild aktualisiert"
+
+#: pfemame.py:3686
+msgid "ROM search cancelled"
+msgstr "ROM-Suche abgebrochen"
+
+#: pfemame.py:3948
+msgid "ROM downloaded"
+msgstr "ROM heruntergeladen"
+
+#: pfemame.py:4125
+msgid "Important Notification"
+msgstr "Wichtige Mitteilung"
+
+#: pfemame.py:5142
+msgid ""
+"Please select a valid ROMs folder and path to the MAME executable from the "
+"File Paths window."
+msgstr ""
+"Bitte wählen Sie im Fenster Dateipfade einen gültigen ROM-Ordner und Pfad "
+"zur ausführbaren MAME-Datei aus."
+
+#: pfemame.py:5447
+msgid ""
+"You have not set a Mapping folder under File Paths.  This is not a standard "
+"MAME folder.  You need to create a folder (Suggest within your MAME folder) "
+"called Mapping, and then in the File Paths window you need to set the Input "
+"Mapping folder to the folder you have created."
+msgstr ""
+"Sie haben unter Dateipfade keinen Zuordnungsordner festgelegt.  Dies ist "
+"kein Standard-MAME-Ordner.  Sie müssen einen Ordner (Suggest in Ihrem MAME-"
+"Ordner) mit dem Namen Mapping erstellen und dann im Fenster Dateipfade den "
+"Ordner Input Mapping auf den Ordner festlegen, den Sie erstellt haben."
+
+#: pfemame.py:5451
+msgid "Mapping Folder Not Defined"
+msgstr "Zuordnungsordner nicht definiert"
+
+#: pfemame.py:5455
+msgid ""
+"You have not set a Config Folder under file paths.  This needs to be defined"
+" so that the default.cfg file can be copied."
+msgstr ""
+"Sie haben unter Dateipfaden keinen Konfigurationsordner festgelegt.  Dies "
+"muss definiert werden, damit die Datei default.cfg kopiert werden kann."
+
+#: pfemame.py:5457
+msgid "Config Folder Not Defined"
+msgstr "Konfigurationsordner nicht definiert"
+
+#: pfemame.py:5461
+msgid ""
+"I am unable to find the default.cfg file within the Config folder set in "
+"File Paths.  Check that the folder exists and that within it there is a "
+"valid default.cfg file.  If the file is not present, maybe you have not run "
+"MAME for the first time so run it and check again if the file exists."
+msgstr ""
+"Ich kann die Datei default.cfg nicht im Konfigurationsordner finden, der "
+"unter Dateipfade festgelegt ist.  Überprüfen Sie, ob der Ordner vorhanden "
+"ist und ob sich darin eine gültige Datei default.cfg befindet.  Wenn die "
+"Datei nicht vorhanden ist, haben Sie MAME möglicherweise nicht zum ersten "
+"Mal ausgeführt. Führen Sie es daher aus und prüfen Sie erneut, ob die Datei "
+"vorhanden ist."
+
+#: pfemame.py:5465
+msgid "ERROR - cant find default.cfg"
+msgstr "FEHLER – default.cfg kann nicht gefunden werden"
+
+#: pfemame.py:5909
+msgid "Replace image from online..."
+msgstr "Bild aus dem Internet ersetzen..."
+
+#: pfemame.py:305
+msgid "Developer mode enabled\n"
+msgstr "Entwicklermodus aktiviert\n"
+
+#: pfemame.py:320
+msgid "Application startup complete in {:.2f} seconds"
+msgstr "Der Anwendungsstart ist in {:.2f} Sekunden abgeschlossen"
+
+#: pfemame.py:786
+msgid "Default Preferences"
+msgstr "Standardeinstellungen"
+
+#: pfemame.py:817 pfemame.py:4811 pfemame.py:3310 pfemame.py:3328
+msgid "No Video Available"
+msgstr "Kein Video verfügbar"
+
+#: pfemame.py:1057
+msgid "Toggle All"
+msgstr "Alle umschalten"
+
+#: pfemame.py:1187
+msgid "Empty"
+msgstr "Leer"
+
+#: pfemame.py:1317
+msgid ""
+"pfeMAME is a cross-platform front-end for the widely popular MAME emulation engine.\n"
+"Please read the manual for a full description of the application and how to use it.\n"
+"Please also rate pfeMAME at the SourceForge page you downloaded it from.\n"
+"For additional requests, you can email pfemame@gmail.com."
+msgstr ""
+"pfeMAME ist ein plattformübergreifendes Frontend für die weit verbreitete MAME-Emulations-Engine.\n"
+"Bitte lesen Sie das Handbuch für eine vollständige Beschreibung der Anwendung und ihrer Verwendung.\n"
+"Bitte bewerten Sie pfeMAME auch auf der SourceForge-Seite, von der Sie es heruntergeladen haben.\n"
+"Für weitere Anfragen können Sie eine E-Mail an pfemame@gmail.com senden."
+
+#: pfemame.py:1465
+msgid ""
+"Restored the default.cfg file left over from an unfinished game with an "
+"inputs mapping"
+msgstr ""
+"Die default.cfg-Datei aus einem nicht beendeten Spiel mit Eingabezuordnung "
+"wurde wiederhergestellt"
+
+#: pfemame.py:1637
+msgid "None of your favorites were found in the ROM folders."
+msgstr "Keiner Ihrer Favoriten wurde in den ROM-Ordnern gefunden."
+
+#: pfemame.py:1638 pfemame.py:1699
+msgid "Export Complete"
+msgstr "Export abgeschlossen"
+
+#: pfemame.py:1691
+msgid "{} favorite file(s) successfully exported."
+msgstr "{} Lieblingsdatei(en) erfolgreich exportiert."
+
+#: pfemame.py:1697
+msgid "The export was cancelled."
+msgstr "Der Export wurde abgebrochen."
+
+#: pfemame.py:1708 pfemame.py:4224
+msgid "Unapplied FilePath changes – are you sure you wish to discard changes?"
+msgstr ""
+"Nicht angewendete FilePath-Änderungen – Sind Sie sicher, dass Sie die "
+"Änderungen verwerfen möchten?"
+
+#: pfemame.py:1709 pfemame.py:4225
+msgid "Unapplied Changes"
+msgstr "Nicht angewendete Änderungen"
+
+#: pfemame.py:1902
+msgid "New pfeMAME.ini file created as existing one not found"
+msgstr ""
+"Neue pfeMAME.ini-Datei wurde erstellt, da die vorhandene Datei nicht "
+"gefunden wurde"
+
+#: pfemame.py:2079
+msgid "New Version Available"
+msgstr "Neue Version verfügbar"
+
+#: pfemame.py:2082
+msgid "Don't check for updates on startup"
+msgstr "Suchen Sie beim Start nicht nach Updates"
+
+#: pfemame.py:2121
+msgid "Checking for Software Updates"
+msgstr "Suchen nach Software-Updates"
+
+#: pfemame.py:2124
+msgid "Checking for software update - requesting data from sourceforge"
+msgstr "Suche nach Software-Updates – Anfordern von Daten von SourceForge"
+
+#: pfemame.py:2429 rominfo.py:363 xmlinfo.py:417
+msgid "Unable to open the clipboard"
+msgstr "Die Zwischenablage kann nicht geöffnet werden"
+
+#: pfemame.py:2429 pfemame.py:2222
+msgid "Error"
+msgstr "Fehler"
+
+#: pfemame.py:2492
+msgid "File Already Exists"
+msgstr "Datei existiert bereits"
+
+#: pfemame.py:2540 preferences.py:154
+msgid ""
+"Unable to find the MAME executable path.  Check the file path settings."
+msgstr ""
+"Der Pfad zur ausführbaren MAME-Datei konnte nicht gefunden werden.  "
+"Überprüfen Sie die Dateipfadeinstellungen."
+
+#: pfemame.py:2623
+msgid "The ROMs database is already being rebuilt - please wait"
+msgstr "Die ROM-Datenbank wird bereits neu aufgebaut - bitte warten"
+
+#: pfemame.py:2725
+msgid "Cancelling the ROMs database rebuild..."
+msgstr "Neuaufbau der ROM-Datenbank wird abgebrochen..."
+
+#: pfemame.py:2774
+msgid ""
+"No MAME upgrade has been recorded yet.  The list of new, now-working and "
+"removed machines is made the first time the ROMs database is rebuilt after "
+"MAME is updated."
+msgstr ""
+"Es wurde noch kein MAME-Update erfasst.  Die Liste der neuen, jetzt "
+"funktionierenden und entfernten Maschinen wird beim ersten Neuaufbau der "
+"ROM-Datenbank nach einem MAME-Update erstellt."
+
+#: pfemame.py:2789 software_browser.py:220 software_browser.py:229
+msgid "Software Lists"
+msgstr "Softwarelisten"
+
+#: pfemame.py:2837
+msgid "ERROR WITH MAME XML"
+msgstr "FEHLER MIT MAME XML"
+
+#: pfemame.py:2862
+msgid ""
+"Errors detected when building ROMs database.  Check the build_errors.txt "
+"file."
+msgstr ""
+"Beim Erstellen der ROM-Datenbank wurden Fehler festgestellt.  Überprüfen Sie"
+" die Datei build_errors.txt."
+
+#: pfemame.py:2869
+msgid ""
+"Errors were detected when building the ROMs database.  Please check the "
+"build_errors.txt file for information."
+msgstr ""
+"Beim Aufbau der ROM-Datenbank wurden Fehler festgestellt.  Weitere "
+"Informationen finden Sie in der Datei build_errors.txt."
+
+#: pfemame.py:2871
+msgid "Errors during Database Build"
+msgstr "Fehler beim Datenbankaufbau"
+
+#: pfemame.py:2900
+msgid "Completed reading the temporary ROMs database file"
+msgstr "Das Lesen der temporären ROM-Datenbankdatei ist abgeschlossen"
+
+#: pfemame.py:3172
+msgid "Are you sure you want to remove {} from favorites?"
+msgstr "Sind Sie sicher, dass Sie {} aus den Favoriten entfernen möchten?"
+
+#: pfemame.py:3192
+msgid "ERROR: Unable to find the favorites.dat file in the pfemame folder"
+msgstr ""
+"FEHLER: Die Datei favorites.dat konnte im Pfemame-Ordner nicht gefunden "
+"werden"
+
+#: pfemame.py:3201
+msgid "Romset {} removed from favorites"
+msgstr "Romset {} aus den Favoriten entfernt"
+
+#: pfemame.py:3252
+msgid "ERROR: Unable to find the watchlist.dat file in the pfeMAME folder"
+msgstr ""
+"FEHLER: Die Datei watchlist.dat konnte im Ordner pfeMAME nicht gefunden "
+"werden"
+
+#: pfemame.py:3261
+msgid "Romset {} removed from watchlist"
+msgstr "Romset {} removed from watchlist"
+
+#: pfemame.py:3449 pfemame.py:5608
+msgid "No image folders are configured"
+msgstr "Es sind keine Bildordner konfiguriert"
+
+#: pfemame.py:3454 pfemame.py:3612 pfemame.py:5613
+msgid "Select a ROM first"
+msgstr "Wählen Sie zuerst ein ROM aus"
+
+#: pfemame.py:3524
+msgid "No suitable images were found online for this ROM."
+msgstr "Für dieses ROM wurden online keine passenden Bilder gefunden."
+
+#: pfemame.py:3525
+msgid "No Images Found"
+msgstr "Keine Bilder gefunden"
+
+#: pfemame.py:3528
+msgid "Select a {0} image for {1}"
+msgstr "Wählen Sie ein {0}-Image für {1} aus"
+
+#: pfemame.py:3559 pfemame.py:5633
+msgid "Replace Existing Image"
+msgstr "Vorhandenes Bild ersetzen"
+
+#: pfemame.py:3605
+msgid "No ROM folder (rompath) is configured"
+msgstr "Es ist kein ROM-Ordner (rompath) konfiguriert"
+
+#: pfemame.py:3606
+msgid ""
+"No ROM folder is configured in mame.ini (rompath), so the ROM cannot be "
+"saved."
+msgstr ""
+"In mame.ini (Rompfad) ist kein ROM-Ordner konfiguriert, daher kann das ROM "
+"nicht gespeichert werden."
+
+#: pfemame.py:3607
+msgid "No ROM Folder"
+msgstr "Kein ROM-Ordner"
+
+#: pfemame.py:3816
+msgid "No downloadable ROM ZIP was found online for this ROM."
+msgstr ""
+"Für dieses ROM wurde online keine herunterladbare ROM-ZIP-Datei gefunden."
+
+#: pfemame.py:3817
+msgid "No ROM Found"
+msgstr "Kein ROM gefunden"
+
+#: pfemame.py:3824
+msgid "Select a ROM ZIP to download for {}"
+msgstr "Wählen Sie eine ROM-ZIP-Datei zum Herunterladen für {} aus"
+
+#: pfemame.py:3869
+msgid "Replace Existing ROM"
+msgstr "Ersetzen Sie das vorhandene ROM"
+
+#: pfemame.py:3936
+msgid "ROM download cancelled"
+msgstr "ROM-Download abgebrochen"
+
+#: pfemame.py:3944 pfemame.py:3552
+msgid "Download Failed"
+msgstr "Download fehlgeschlagen"
+
+#: pfemame.py:3983
+msgid ""
+"I am having trouble finding a ROM to play that exists. Do you actually have "
+"any?"
+msgstr ""
+"Ich habe Probleme, ein vorhandenes ROM zum Spielen zu finden. Hast du "
+"tatsächlich welche?"
+
+#: pfemame.py:4075
+msgid "Tried running a ROM without a file name selected"
+msgstr "Habe versucht, ein ROM ohne ausgewählten Dateinamen auszuführen"
+
+#: pfemame.py:4442 tileview.py:969
+msgid "ROM set {} added to favorites"
+msgstr "ROM-Set {} zu Favoriten hinzugefügt"
+
+#: pfemame.py:4465
+msgid "You cannot add a favourite file to the watchlist"
+msgstr "Sie können der Merkliste keine Lieblingsdatei hinzufügen"
+
+#: pfemame.py:4466
+msgid "ERROR - Already Favourite"
+msgstr "FEHLER – Bereits Favorit"
+
+#: pfemame.py:4494
+msgid "ROM set {} added to watchlist"
+msgstr "ROM-Set {} zur Beobachtungsliste hinzugefügt"
+
+#: pfemame.py:4811 pfemame.py:3317
+msgid "Video Available - Click to Play"
+msgstr "Video verfügbar – Zum Abspielen anklicken"
+
+#: pfemame.py:4972
+msgid "WARNING:  The MAME samples folder has not been set in filepaths\n"
+msgstr ""
+"WARNUNG: Der MAME-Beispielordner wurde nicht in den Dateipfaden festgelegt\n"
+
+#: pfemame.py:5024
+msgid "MAME Controls"
+msgstr "MAME-Steuerelemente"
+
+#: pfemame.py:5033
+msgid "pfeMAME Log File"
+msgstr "pfeMAME-Protokolldatei"
+
+#: pfemame.py:5078
+msgid ""
+"Unable to find the pfeMAME_Manual.pdf file!  Please check that it exists in "
+"the pfeMAME folder."
+msgstr ""
+"Die Datei pfeMAME_Manual.pdf konnte nicht gefunden werden!  Bitte überprüfen"
+" Sie, ob es im pfeMAME-Ordner vorhanden ist."
+
+#: pfemame.py:5108
+msgid ""
+"pfeMAME could not find out which version of MAME you have, so the artwork "
+"files cannot be checked.  Please check the path to the MAME executable in "
+"the File Paths window."
+msgstr ""
+"pfeMAME konnte nicht ermitteln, welche MAME-Version Sie haben, daher können "
+"die Artwork-Dateien nicht geprüft werden.  Bitte prüfen Sie den Pfad zur "
+"MAME-Programmdatei im Fenster Dateipfade."
+
+#: pfemame.py:5110
+msgid "Unknown MAME Version"
+msgstr "Unbekannte MAME-Version"
+
+#: pfemame.py:5115
+msgid "Incorrect Mame Version"
+msgstr "Falsche Mame-Version"
+
+#: pfemame.py:5121
+msgid ""
+"No artwork folder was found.  Please set the Artwork folder in the File "
+"Paths window."
+msgstr ""
+"Es wurde kein Artwork-Ordner gefunden.  Bitte legen Sie den Artwork-Ordner "
+"im Fenster Dateipfade fest."
+
+#: pfemame.py:5160
+msgid "Please set a valid Inputs folder under the File Paths"
+msgstr ""
+"Bitte legen Sie unter den Dateipfaden einen gültigen Eingabeordner fest"
+
+#: pfemame.py:5281
+msgid "Application preferences and DAT files backed up to {path}"
+msgstr "Anwendungseinstellungen und DAT-Dateien werden auf {path} gesichert"
+
+#: pfemame.py:5308 pfemame.py:5329
+msgid ""
+"Unable to restore the preferences and DAT files from the selected folder.  "
+"Check this is the correct folder and check folder & file permissions."
+msgstr ""
+"Die Einstellungen und DAT-Dateien aus dem ausgewählten Ordner können nicht "
+"wiederhergestellt werden.  Überprüfen Sie, ob es sich um den richtigen "
+"Ordner handelt, und überprüfen Sie die Ordner- und Dateiberechtigungen."
+
+#: pfemame.py:5317
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: pfemame.py:5334
+msgid "Application preferences and DAT files restored from {path}"
+msgstr "Anwendungseinstellungen und DAT-Dateien aus {path} wiederhergestellt"
+
+#: pfemame.py:5481
+msgid "ERROR - cant write map file"
+msgstr "FEHLER – Kartendatei kann nicht geschrieben werden"
+
+#: pfemame.py:5497
+msgid ""
+"Unable to reset the INI file as the INI folder has not been correctly "
+"defined\n"
+msgstr ""
+"Die INI-Datei konnte nicht zurückgesetzt werden, da der INI-Ordner nicht "
+"korrekt definiert wurde\n"
+
+#: pfemame.py:5754 pfemame_ribbon_bar.py:585
+msgid "Play ROM"
+msgstr "ROM abspielen"
+
+#: pfemame.py:5754 tileview.py:808
+msgid "Play the selected ROM"
+msgstr "Spielen Sie das ausgewählte ROM ab"
+
+#: pfemame.py:5755
+msgid "Play ROM with MAME rather than alternate engine"
+msgstr "Spielen Sie ROM mit MAME statt mit einer alternativen Engine"
+
+#: pfemame.py:5756
+msgid "Play the selected ROM with MAME"
+msgstr "Spielen Sie das ausgewählte ROM mit MAME ab"
+
+#: pfemame.py:5757
+msgid "Play ROM without softlist HASH support"
+msgstr "Spielen Sie ROM ohne Softlist-HASH-Unterstützung ab"
+
+#: pfemame.py:5758
+msgid ""
+"Play the system program directly without using the softwarelist HASH file"
+msgstr ""
+"Spielen Sie das Systemprogramm direkt ab, ohne die Softwarelist-HASH-Datei "
+"zu verwenden"
+
+#: pfemame.py:5762
+msgid "ROM information"
+msgstr "ROM-Informationen"
+
+#: pfemame.py:5762
+msgid "Information on the selected ROM"
+msgstr "Informationen zum ausgewählten ROM"
+
+#: pfemame.py:5763
+msgid "View media types"
+msgstr "Medientypen anzeigen"
+
+#: pfemame.py:5763
+msgid "View supported media types"
+msgstr "Unterstützte Medientypen anzeigen"
+
+#: pfemame.py:5765
+msgid "Browse software lists..."
+msgstr "Softwarelisten durchsuchen..."
+
+#: pfemame.py:5766
+msgid "Browse all the software MAME knows for this system, and what you have"
+msgstr ""
+"Die gesamte Software, die MAME für dieses System kennt, und Ihre vorhandene "
+"anzeigen"
+
+#: pfemame.py:5767
+msgid "Analyse XML info"
+msgstr "Analyse XML info"
+
+#: pfemame.py:5767
+msgid "Check XML info for this program"
+msgstr "Überprüfen Sie die XML-Informationen für dieses Programm"
+
+#: pfemame.py:5770 tileview.py:810
+msgid "Add to favorites"
+msgstr "Zu Favoriten hinzufügen"
+
+#: pfemame.py:5770
+msgid "Add ROM to favorites"
+msgstr "ROM zu Favoriten hinzufügen"
+
+#: pfemame.py:5771 tileview.py:810
+msgid "Remove from favorites"
+msgstr "Aus Favoriten entfernen"
+
+#: pfemame.py:5771
+msgid "Remove ROM from favorites"
+msgstr "ROM aus den Favoriten entfernen"
+
+#: pfemame.py:5772
+msgid "Add to watchlist"
+msgstr "Auf die Beobachtungsliste"
+
+#: pfemame.py:5772
+msgid "Add ROM to watch list"
+msgstr "ROM zur Beobachtungsliste hinzufügen"
+
+#: pfemame.py:5773
+msgid "Remove from watchlist"
+msgstr "Von der Merkliste entfernen"
+
+#: pfemame.py:5773
+msgid "Remove ROM from watch list"
+msgstr "ROM aus der Beobachtungsliste entfernen"
+
+#: pfemame.py:5774
+msgid "Set ROM rating..."
+msgstr "ROM-Bewertung festlegen..."
+
+#: pfemame.py:5774
+msgid "Set star rating for this ROM"
+msgstr "Legen Sie die Sternebewertung für dieses ROM fest"
+
+#: pfemame.py:5777
+msgid "ROM preferences"
+msgstr "ROM-Einstellungen"
+
+#: pfemame.py:5777
+msgid "Set MAME preferences for this ROM"
+msgstr "Legen Sie die MAME-Einstellungen für dieses ROM fest"
+
+#: pfemame.py:5779
+msgid "Copy controller mapping to this ROM"
+msgstr "Kopieren Sie die Controller-Zuordnung in dieses ROM"
+
+#: pfemame.py:5780
+msgid "Copy default.cfg to this ROM for per-ROM input mapping"
+msgstr ""
+"Kopieren Sie default.cfg in dieses ROM, um die Eingabezuordnung pro ROM zu "
+"ermöglichen"
+
+#: pfemame.py:5781
+msgid "Reset INI file"
+msgstr "INI-Dateien zurücksetzen"
+
+#: pfemame.py:5781
+msgid "Reset the INI config file for this program"
+msgstr "Setzen Sie die INI-Konfigurationsdatei für dieses Programm zurück"
+
+#: pfemame.py:5785
+msgid "Verify ROM"
+msgstr "ROM überprüfen"
+
+#: pfemame.py:5785
+msgid "Verify the integrity of the selected ROM"
+msgstr "Überprüfen Sie die Integrität des ausgewählten ROM"
+
+#: pfemame.py:5787
+msgid "Search for ROM online..."
+msgstr "Online nach ROM suchen..."
+
+#: pfemame.py:5788
+msgid ""
+"Search online for this ROM's ZIP file and download it to the ROMs folder"
+msgstr ""
+"Suchen Sie online nach der ZIP-Datei dieses ROM und laden Sie sie in den "
+"ROM-Ordner herunter"
+
+#: pfemame.py:1581
+msgid "MAME and catver version mismatch"
+msgstr "MAME- und Catver-Version stimmen nicht überein"
+
+#: pfemame.py:1584
+msgid "Don't show this message again"
+msgstr "Diese Nachricht nicht mehr anzeigen"
+
+#: pfemame.py:1630
+msgid "Choose a path to export the file to"
+msgstr "Wählen Sie einen Pfad zum Exportieren der Datei"
+
+#: pfemame.py:1649
+msgid "Export Favorites"
+msgstr "Favoriten exportieren"
+
+#: pfemame.py:1671
+msgid "Exporting favorite {number} of {count}: {name}"
+msgstr "Favorit {number} von {count} wird exportiert: {name}"
+
+#: pfemame.py:1742
+msgid ""
+"A setting has been changed that will only take effect when pfeMAME is "
+"restarted.  Would you like it to restart now?"
+msgstr ""
+"Es wurde eine Einstellung geändert, die nur wirksam wird, wenn pfeMAME neu "
+"gestartet wird.  Möchten Sie, dass es jetzt neu startet?"
+
+#: pfemame.py:2109
+msgid "Don't check software on startup"
+msgstr "Überprüfen Sie die Software nicht beim Start"
+
+#: pfemame.py:2125
+msgid "Checking for software update\n"
+msgstr "Suche nach Software-Update\n"
+
+#: pfemame.py:2376
+msgid "Please set up a valid Videos folder in Filepaths"
+msgstr "Bitte richten Sie in den Dateipfaden einen gültigen Videoordner ein"
+
+#: pfemame.py:2388
+msgid ""
+"It doesn't look like there are any valid video files in the Video folder"
+msgstr ""
+"Es sieht nicht so aus, als ob sich im Videoordner gültige Videodateien "
+"befinden"
+
+#: pfemame.py:2500
+msgid "Trying to save clipboard image as file {}"
+msgstr "Bild aus der Zwischenablage wird als Datei {} gespeichert"
+
+#: pfemame.py:2834
+msgid ""
+"ERROR:  Can't read XML cache file and unable to get MAME to create a new "
+"one.  Check that the MAME executable is working correctly and the MAME path "
+"is correct in FilePaths."
+msgstr ""
+"FEHLER: XML-Cache-Datei kann nicht gelesen werden und MAME kann keine neue "
+"Datei erstellen.  Überprüfen Sie, ob die ausführbare MAME-Datei "
+"ordnungsgemäß funktioniert und der MAME-Pfad in FilePaths korrekt ist."
+
+#: pfemame.py:2878
+msgid "ROMs database refresh completed in {} seconds."
+msgstr ""
+"Die Aktualisierung der ROM-Datenbank wurde in {} Sekunden abgeschlossen."
+
+#: pfemame.py:2897
+msgid "The ROMs database is empty. Forcing full rebuild."
+msgstr "Die ROM-Datenbank ist leer. Vollständiger Neuaufbau wird erzwungen."
+
+#: pfemame.py:2975
+msgid "Unable to write the temporary ROMs database file"
+msgstr "Die temporäre ROM-Datenbankdatei kann nicht geschrieben werden"
+
+#: pfemame.py:3024
+msgid ""
+"Parsing error in the catver.ini file. Please revert to a previous version."
+msgstr ""
+"Parsing-Fehler in der Datei catver.ini. Bitte kehren Sie zu einer früheren "
+"Version zurück."
+
+#: pfemame.py:3228
+msgid "Are you sure you want to remove {} from watchlist?"
+msgstr ""
+"Sind Sie sicher, dass Sie {} von der Beobachtungsliste entfernen möchten?"
+
+#: pfemame.py:3310
+msgid "Video Playback Disabled"
+msgstr "Videowiedergabe deaktiviert"
+
+#: pfemame.py:3483
+msgid "Searching online for {} images..."
+msgstr "Suche online nach {}-Bildern..."
+
+#: pfemame.py:3484
+msgid "Searching online for {0} images for \"{1}\"\n"
+msgstr "Suche online nach {0}-Bildern für „{1}“\n"
+
+#: pfemame.py:3548
+msgid "Failed to download the selected image\n"
+msgstr "Das ausgewählte Bild konnte nicht heruntergeladen werden\n"
+
+#: pfemame.py:3551
+msgid "The selected image could not be downloaded."
+msgstr "Das ausgewählte Bild konnte nicht heruntergeladen werden."
+
+#: pfemame.py:3575 pfemame.py:5647
+msgid "Save Failed"
+msgstr "Speichern fehlgeschlagen"
+
+#: pfemame.py:3580 pfemame.py:5652
+msgid "Saved new image to {}\n"
+msgstr "Neues Bild in {} gespeichert\n"
+
+#: pfemame.py:3636
+msgid "Searching online for ROM \"{}\"..."
+msgstr "Suche online nach ROM „{}“..."
+
+#: pfemame.py:3637
+msgid "Searching online for ROM \"{0}\" ({1})\n"
+msgstr "Online-Suche nach ROM „{0}“ ({1})\n"
+
+#: pfemame.py:3685
+msgid "Online ROM search for \"{}\" cancelled\n"
+msgstr "Online-Suche nach ROM „{}“ abgebrochen\n"
+
+#: pfemame.py:3743
+msgid "Downloading result {number} of {count} from {source} to check it"
+msgstr "Lade Ergebnis {number} von {count} von {source} zur Prüfung herunter"
+
+#: pfemame.py:3769
+msgid "Checking result {number} of {count} with MAME"
+msgstr "Prüfe Ergebnis {number} von {count} mit MAME"
+
+#: pfemame.py:3875
+msgid "Saving ROM {}..."
+msgstr "ROM {} wird gespeichert..."
+
+#: pfemame.py:3887
+msgid "Downloading {file_name} from {source} ({done} of {total})"
+msgstr "Lade {file_name} von {source} herunter ({done} von {total})"
+
+#: pfemame.py:3947
+msgid "Downloaded ROM to {}\n"
+msgstr "ROM auf {} heruntergeladen\n"
+
+#: pfemame.py:4079
+msgid "System {rom} started with program {program} selected"
+msgstr "System {rom} wurde mit ausgewähltem Programm {program} gestartet"
+
+#: pfemame.py:4082
+msgid "Romset {} started"
+msgstr "Romset {} wurde gestartet"
+
+#: pfemame.py:4235
+msgid "Application Ended after {}"
+msgstr "Bewerbung beendet nach {}"
+
+#: pfemame.py:4308
+msgid "Updating number of runs info for ROM {}"
+msgstr "Informationen zur Anzahl der Läufe für ROM {} werden aktualisiert."
+
+#: pfemame.py:4328
+msgid "ERROR: Unable to write to runs.dat file"
+msgstr "FEHLER: In die Datei runs.dat kann nicht geschrieben werden"
+
+#: pfemame.py:4384
+msgid "Romset {} rating updated"
+msgstr "Romset {} Bewertung aktualisiert"
+
+#: pfemame.py:4409
+msgid "Adding ROM {} to favorites"
+msgstr "ROM {} zu den Favoriten hinzufügen"
+
+#: pfemame.py:4421 tileview.py:971
+msgid "ERROR: Unable to write to favorites.dat file"
+msgstr "FEHLER: In die Datei favorites.dat kann nicht geschrieben werden"
+
+#: pfemame.py:4429
+msgid ""
+"The selected ROM currently exists in the watchlist.  Would you like it "
+"removed?"
+msgstr ""
+"Das ausgewählte ROM ist derzeit in der Watchlist vorhanden.  Möchten Sie, "
+"dass es entfernt wird?"
+
+#: pfemame.py:4431
+msgid "File In Watchlist"
+msgstr "In der Beobachtungsliste ablegen"
+
+#: pfemame.py:4469
+msgid "Adding ROM {} to watchlist"
+msgstr "ROM {} wird zur Beobachtungsliste hinzugefügt"
+
+#: pfemame.py:4480
+msgid "WARNING: Unable to read from watchlist.dat file"
+msgstr "WARNUNG: Die Datei watchlist.dat kann nicht gelesen werden"
+
+#: pfemame.py:4490
+msgid "ERROR: Unable to write to watchlist.dat file"
+msgstr "FEHLER: In die Datei watchlist.dat kann nicht geschrieben werden"
+
+#: pfemame.py:4555
+msgid "Reading ROM {} flags"
+msgstr "ROM-{}-Flags werden gelesen"
+
+#: pfemame.py:4556
+msgid "Reading ROM {} flags.  Please Wait........."
+msgstr "ROM-{}-Flags werden gelesen.  Bitte warten........."
+
+#: pfemame.py:4647
+msgid "Completed reading ROM {} flags"
+msgstr "Das Lesen der ROM {}-Flags wurde abgeschlossen"
+
+#: pfemame.py:4950
+msgid "Verifying ROM image for {}\n"
+msgstr "Überprüfe ROM-Image für {}\n"
+
+#: pfemame.py:4960
+msgid "Verifying sample files for {}\n"
+msgstr "Beispieldateien für {} werden überprüft\n"
+
+#: pfemame.py:5061
+msgid "pfeMAME Changelog File"
+msgstr "pfeMAME Changelog-Datei"
+
+#: pfemame.py:5067
+msgid ""
+"Unable to find the changelog.docx file.  Please check that it exists in the "
+"pfeMAME folder."
+msgstr ""
+"Die Datei changelog.docx konnte nicht gefunden werden.  Bitte überprüfen "
+"Sie, ob es im pfeMAME-Ordner vorhanden ist."
+
+#: pfemame.py:5244
+msgid "Choose a directory for backup:"
+msgstr "Wählen Sie ein Verzeichnis für die Sicherung:"
+
+#: pfemame.py:5248 pfemame.py:5265
+msgid "Backup process canceled"
+msgstr "Sicherungsvorgang abgebrochen"
+
+#: pfemame.py:5248 pfemame.py:5265 pfemame.py:5294 pfemame.py:5320
+msgid "INFORMATION"
+msgstr "INFORMATION"
+
+#: pfemame.py:5261
+msgid "Backup ROM Source Logins?"
+msgstr "Anmeldedaten der ROM-Quellen sichern?"
+
+#: pfemame.py:5276
+msgid ""
+"Unable to copy the application files to the selected folder.  Check the "
+"folder permissions."
+msgstr ""
+"Die Anwendungsdateien können nicht in den ausgewählten Ordner kopiert "
+"werden.  Check the folder permissions."
+
+#: pfemame.py:5288
+msgid ""
+"Choose the backup to restore application preferences and DAT files from:"
+msgstr ""
+"Wählen Sie die Sicherung, aus der Einstellungen und DAT-Dateien "
+"wiederhergestellt werden sollen:"
+
+#: pfemame.py:5294 pfemame.py:5320
+msgid "Restore process canceled"
+msgstr "Wiederherstellungsvorgang abgebrochen"
+
+#: pfemame.py:1458
+msgid ""
+"Restored the INI file for {} left over from an unfinished system program run"
+msgstr ""
+"INI-Datei für {} aus einem nicht beendeten Systemprogrammlauf "
+"wiederhergestellt"
+
+#: pfemame.py:1535
+msgid "ROMs Database Cache out of date"
+msgstr "ROMs-Datenbankcache veraltet"
+
+#: pfemame.py:1538
+msgid "Don’t show this message again"
+msgstr "Diese Nachricht nicht mehr anzeigen"
+
+#: pfemame.py:1549
+msgid ""
+"Unable to check age of ROMs cache. Please check the Preferences and then "
+"refresh the ROMs cache"
+msgstr ""
+"Das Alter des ROM-Cache kann nicht überprüft werden. Bitte überprüfen Sie "
+"die Einstellungen und aktualisieren Sie dann den ROM-Cache"
+
+#: pfemame.py:1550
+msgid "ROMs Database Cache check error"
+msgstr "Fehler bei der ROM-Datenbank-Cache-Prüfung"
+
+#: pfemame.py:1572
+msgid ""
+"Your MAME version is {mame_version} while your catver.ini file version is "
+"{catver_version}.  Suggest you find an updated copy of the catver.ini file "
+"if it is older than the MAME version."
+msgstr ""
+"Ihre MAME-Version ist {mame_version}, während Ihre catver.ini-Dateiversion "
+"{catver_version} ist.  Wir empfehlen Ihnen, eine aktualisierte Kopie der "
+"Datei catver.ini zu finden, wenn diese älter als die MAME-Version ist."
+
+#: pfemame.py:1693
+msgid "{} file(s) were already in the folder and were left as they were."
+msgstr "{} Datei(en) waren bereits im Ordner und wurden nicht verändert."
+
+#: pfemame.py:1695
+msgid "{} file(s) could not be copied - see the log file."
+msgstr "{} Datei(en) konnten nicht kopiert werden – siehe Protokolldatei."
+
+#: pfemame.py:2077
+msgid ""
+"A newer version of pfeMAME is available.\n"
+"\n"
+"You have version {0}, and version {1} is available.\n"
+"\n"
+"Would you like to download and install it now?"
+msgstr ""
+"Eine neuere Version von pfeMAME ist verfügbar.\n"
+"\n"
+"Sie haben Version {0} und Version {1} ist verfügbar.\n"
+"\n"
+"Möchten Sie es jetzt herunterladen und installieren?"
+
+#: pfemame.py:2141
+msgid "Connection timed out - server is taking too long to respond"
+msgstr ""
+"Zeitüberschreitung bei der Verbindung – der Server braucht zu lange, um zu "
+"antworten"
+
+#: pfemame.py:2144
+msgid "Unable to access network connection or update version file not found"
+msgstr ""
+"Auf die Netzwerkverbindung kann nicht zugegriffen werden oder die "
+"Aktualisierungsversionsdatei wurde nicht gefunden"
+
+#: pfemame.py:2152
+msgid "Trying to calculate version"
+msgstr "Versuche die Version zu berechnen"
+
+#: pfemame.py:2165
+msgid "You already have the latest version"
+msgstr "Sie haben bereits die neueste Version"
+
+#: pfemame.py:2490
+msgid ""
+"The file name {}.png already exists in the Snapshots folder.  Would you like"
+" to continue?"
+msgstr ""
+"Die Datei {}.png ist im Ordner „Snapshots“ bereits vorhanden.  Möchten Sie "
+"fortfahren?"
+
+#: pfemame.py:2759
+msgid ""
+"{}\n"
+"\n"
+"Would you like to see the list?"
+msgstr ""
+"{}\n"
+"\n"
+"Möchten Sie die Liste sehen?"
+
+#: pfemame.py:2788
+msgid "{} is not a system with software lists."
+msgstr "{} ist kein System mit Softwarelisten."
+
+#: pfemame.py:2852 pfemame.py:4887
+msgid "ERROR:  "
+msgstr "FEHLER:  "
+
+#: pfemame.py:2867
+msgid "Unable to write to the build_errors.txt file"
+msgstr "In die Datei build_errors.txt kann nicht geschrieben werden"
+
+#: pfemame.py:3026
+msgid ""
+"Unable to read the catver.ini file. Please check file and folder "
+"permissions."
+msgstr ""
+"Die Datei catver.ini kann nicht gelesen werden. Bitte überprüfen Sie die "
+"Datei- und Ordnerberechtigungen."
+
+#: pfemame.py:3028
+msgid ""
+"Cannot find the catver.ini file. Please check file path settings.  All ROMs "
+"will default to Not Classified."
+msgstr ""
+"Die Datei catver.ini kann nicht gefunden werden. Bitte überprüfen Sie die "
+"Dateipfadeinstellungen.  Alle ROMs werden standardmäßig auf Nicht "
+"klassifiziert eingestellt."
+
+#: pfemame.py:3523
+msgid "No online images were found for \"{}\"\n"
+msgstr "Für „{}“ wurden keine Online-Bilder gefunden\n"
+
+#: pfemame.py:3558
+msgid ""
+"An image already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the selected image?"
+msgstr ""
+"Ein Bild existiert bereits unter:\n"
+"{}\n"
+"\n"
+"Durch das ausgewählte Bild ersetzen?"
+
+#: pfemame.py:3815
+msgid "No online ROM downloads were found for \"{}\"\n"
+msgstr "Für „{}“ wurden keine Online-ROM-Downloads gefunden.\n"
+
+#: pfemame.py:3868
+msgid ""
+"A ROM already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the downloaded ROM?"
+msgstr ""
+"Ein ROM existiert bereits unter:\n"
+"{}\n"
+"\n"
+"Durch das heruntergeladene ROM ersetzen?"
+
+#: pfemame.py:3905
+msgid "Downloading {file_name} from {source}"
+msgstr "Lade {file_name} von {source} herunter"
+
+#: pfemame.py:3935
+msgid "Download of ROM \"{}\" cancelled\n"
+msgstr "Download des ROMs „{}“ abgebrochen\n"
+
+#: pfemame.py:3940
+msgid "Failed to download ROM \"{}\"\n"
+msgstr "Das Herunterladen des ROM „{}“ ist fehlgeschlagen.\n"
+
+#: pfemame.py:3943
+msgid ""
+"The ROM could not be downloaded:\n"
+"{}"
+msgstr ""
+"Das ROM konnte nicht heruntergeladen werden:\n"
+"{}"
+
+#: pfemame.py:4363
+msgid "Romset {rom} rated as {stars} stars"
+msgstr "Romset {rom} mit {stars} Sternen bewertet"
+
+#: pfemame.py:4594
+msgid "Unsupported data file: {}"
+msgstr "Nicht unterstützte Datendatei: {}"
+
+#: pfemame.py:4644
+msgid ""
+"{count} error(s) found in {file} file.  See logfile.log for more "
+"information.\n"
+msgstr ""
+"{count} Fehler in der Datei {file} gefunden. Weitere Informationen finden "
+"Sie in logfile.log.\n"
+
+#: pfemame.py:4985
+msgid "Media types associated with ROM {}:\n"
+msgstr "Mit ROM {} verknüpfte Medientypen:\n"
+
+#: pfemame.py:5113
+msgid ""
+"The artwork files can only be updated for MAME {minimum} or newer.  You have"
+" MAME {version}."
+msgstr ""
+"Die Artwork-Dateien können nur für MAME {minimum} oder neuer aktualisiert "
+"werden.  Sie haben MAME {version}."
+
+#: pfemame.py:5191
+msgid "Recording playback for the rom using {}"
+msgstr "Aufnahme der Wiedergabe für das ROM mit {}"
+
+#: pfemame.py:5192
+msgid "Playing the rom using recorded input from {}"
+msgstr "Abspielen der ROM mit aufgezeichnetem Input von {}"
+
+#: pfemame.py:5314
+msgid ""
+"The following files will be restored, replacing your current ones:\n"
+"\n"
+"{}\n"
+"\n"
+"Your current files are saved to the backups folder first.  pfeMAME will then restart to load the restored settings.\n"
+"\n"
+"Continue?"
+msgstr ""
+"Die folgenden Dateien werden wiederhergestellt und ersetzen Ihre aktuellen:\n"
+"\n"
+"{}\n"
+"\n"
+"Ihre aktuellen Dateien werden zuerst im Ordner backups gesichert.  Danach startet pfeMAME neu, um die wiederhergestellten Einstellungen zu laden.\n"
+"\n"
+"Fortfahren?"
+
+#: pfemame.py:5474
+msgid "Configuration file copied across for ROM file {}\n"
+msgstr "Konfigurationsdatei für ROM-Datei {} kopiert\n"
+
+#: pfemame.py:5475
+msgid "Configuration file copied to Mapping folder for ROM file {}"
+msgstr ""
+"Konfigurationsdatei in den Zuordnungsordner für die ROM-Datei {} kopiert"
+
+#: pfemame.py:5477
+msgid ""
+"I am unable to write the {}.map file into the Mapping folder.  Check the "
+"folder permissions and that the folder and files within are not Read Only or"
+" write protected.  Under Linux check that everyone has permissions to write "
+"to the file / folder."
+msgstr ""
+"Ich kann die {}.map-Datei nicht in den Mapping-Ordner schreiben.  Überprüfen"
+" Sie die Ordnerberechtigungen und stellen Sie sicher, dass der Ordner und "
+"die darin enthaltenen Dateien nicht schreibgeschützt oder schreibgeschützt "
+"sind.  Überprüfen Sie unter Linux, ob jeder die Berechtigung hat, in die "
+"Datei/den Ordner zu schreiben."
+
+#: pfemame.py:5522
+msgid "INI file for system program \"{}\" removed\n"
+msgstr "INI-Datei für das Systemprogramm „{}“ entfernt\n"
+
+#: pfemame.py:5524
+msgid "INI file for ROM \"{}\" removed\n"
+msgstr "INI-Datei für ROM „{}“ entfernt\n"
+
+#: pfemame.py:5527
+msgid "No INI file for system program \"{}\" exists so it can’t be removed\n"
+msgstr ""
+"Für das Systemprogramm „{}“ ist keine INI-Datei vorhanden, daher kann sie "
+"nicht entfernt werden\n"
+
+#: pfemame.py:5529
+msgid "No INI file for ROM \"{}\" exists so it can’t be removed\n"
+msgstr ""
+"Für ROM „{}“ ist keine INI-Datei vorhanden, daher kann sie nicht entfernt "
+"werden\n"
+
+#: pfemame.py:5620
+msgid "{} is not a valid image file\n"
+msgstr "{} ist keine gültige Bilddatei\n"
+
+#: pfemame.py:5632
+msgid ""
+"An image already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the dropped image?"
+msgstr ""
+"Es gibt bereits ein Bild unter:\n"
+"{}\n"
+"\n"
+"Durch das abgelegte Bild ersetzen?"
+
+#: pfemame.py:1645
+msgid ""
+"{existing} of the {count} favorite file(s) are already in the folder.  Replace them?\n"
+"\n"
+"Yes replaces them, No only copies the others."
+msgstr ""
+"{existing} der {count} Lieblingsdatei(en) sind bereits im Ordner.  Ersetzen?\n"
+"\n"
+"Ja ersetzt sie, Nein kopiert nur die übrigen."
+
+#: pfemame.py:2156
+msgid "New pfeMAME version exists"
+msgstr "Es gibt eine neue pfeMAME-Version"
+
+#: pfemame.py:2222
+msgid ""
+"Failed to launch updater:\n"
+"{}"
+msgstr ""
+"Das Update-Programm konnte nicht gestartet werden:\n"
+"{}"
+
+#: pfemame.py:2273
+msgid "Unable to write to the categories.dat file: {}"
+msgstr "Die Datei categories.dat kann nicht geschrieben werden: {}"
+
+#: pfemame.py:2573
+msgid "{} Preferences"
+msgstr "{} Einstellungen"
+
+#: pfemame.py:3571 pfemame.py:5644
+msgid "Failed to save the image to {}\n"
+msgstr "Das Bild konnte nicht in {} gespeichert werden\n"
+
+#: pfemame.py:3574 pfemame.py:5646
+msgid ""
+"The image could not be saved to:\n"
+"{}"
+msgstr ""
+"Das Bild konnte nicht gespeichert werden unter:\n"
+"{}"
+
+#: pfemame.py:3754
+msgid ""
+"Downloading result {number} of {count} from {source} ({done} of {total})"
+msgstr ""
+"Lade Ergebnis {number} von {count} von {source} herunter ({done} von "
+"{total})"
+
+#: pfemame.py:4641
+msgid "WARNING: {} file does not exist"
+msgstr "WARNUNG: Die Datei {} existiert nicht"
+
+#: pfemame.py:5094
+msgid ""
+"Sorry, but I was unable to open the pfeMAME manual. Please open it manually:"
+" {}"
+msgstr ""
+"Leider konnte ich das pfeMAME-Handbuch nicht öffnen. Bitte öffnen Sie es "
+"manuell: {}"
+
+#: pfemame.py:5176
+msgid "Create the file for recording inputs for {}"
+msgstr "Erstellen Sie die Datei zum Aufzeichnen von Eingaben für {}"
+
+#: pfemame.py:5177
+msgid "Select the file to play back inputs for {}"
+msgstr "Wählen Sie die Datei aus, um Eingaben für {} wiederzugeben."
+
+#: pfemame.py:5258
+msgid ""
+"Include your saved online ROM source logins ({}) in the backup?\n"
+"\n"
+"They are stored obfuscated, not encrypted, so anyone with the backup file and pfeMAME could recover them."
+msgstr ""
+"Gespeicherte Anmeldedaten der Online-ROM-Quellen ({}) in die Sicherung aufnehmen?\n"
+"\n"
+"Sie sind nur verschleiert, nicht verschlüsselt gespeichert – jeder mit der Sicherungsdatei und pfeMAME könnte sie wiederherstellen."
+
+#: pfemame.py:5290
+msgid "pfeMAME backup"
+msgstr "pfeMAME-Sicherung"
+
+#: pfemame.py:5291
+msgid "Older backup folder"
+msgstr "Älterer Sicherungsordner"
+
+#: pfemame.py:5518
+msgid "Unable to remove the INI file {path}: {error}\n"
+msgstr "Die INI-Datei {path} kann nicht entfernt werden: {error}\n"
+
+#: pfemame.py:1533
+msgid ""
+"The database cache is {} days old. I suggest you refresh the ROMs database "
+"cache manually."
+msgstr ""
+"Der Datenbankcache ist {} Tage alt. Ich schlage vor, dass Sie den ROM-"
+"Datenbankcache manuell aktualisieren."
+
+#: pfemame.py:3324 pfemame.py:2332
+msgid "Auto loading video in {} seconds"
+msgstr "Automatisches Laden des Videos in {} Sekunden"
+
+#: pfemame.py:4375
+msgid "WARNING: Failed to read {}"
+msgstr "WARNUNG: {} konnte nicht gelesen werden"
+
+#: pfemame.py:4382
+msgid "ERROR: Unable to write to {}"
+msgstr "FEHLER: Es konnte nicht auf {} geschrieben werden."
+
+#: pfemame.py:4637
+msgid ""
+"A file name called {rom} in the {file} file does not exist in the MAME ROM "
+"list"
+msgstr ""
+"Ein Dateiname mit dem Namen {rom} in der Datei {file} ist in der MAME-ROM-"
+"Liste nicht vorhanden"
+
+#: pfemame.py:4885
+msgid "The snapshot image {} could not be loaded.  It may be corrupted."
+msgstr ""
+"Das Bild {} konnte nicht geladen werden.  Es ist möglicherweise beschädigt."
+
+#: pfemame.py:2172
+msgid "You already have the latest version of pfeMAME installed."
+msgstr "Sie haben bereits die neueste Version von pfeMAME installiert."
+
+#: pfemame.py:2173
+msgid "Check for software update"
+msgstr "Suchen Sie nach Software-Updates"
+
+#: pfemame.py:2176
+msgid ""
+"Unable to get version information from Sourceforge.  Request returned: {}. "
+"It should have returned three numbers separated by a dot (e.g. 2.2.2)"
+msgstr ""
+"Es können keine Versionsinformationen von Sourceforge abgerufen werden.  "
+"Anfrage zurückgegeben: {}. Es sollten drei durch einen Punkt getrennte "
+"Zahlen zurückgegeben worden sein (z. B. 2.2.2)."
+
+#: pfemame.py:2182
+msgid ""
+"An error has occurred and I am unable to check the online version. Check the"
+" logfile for more information."
+msgstr ""
+"Es ist ein Fehler aufgetreten und ich kann die Online-Version nicht "
+"überprüfen. Weitere Informationen finden Sie in der Protokolldatei."
+
+#: pfemame.py:2184
+msgid "Error retrieving version"
+msgstr "Fehler beim Abrufen der Version"
+
+#: pfemame.py:2566
+msgid "ROM Preferences - {}"
+msgstr "ROM-Einstellungen – {}"
+
+#: pfemame.py:3008
+msgid "catver.ini file version: {}"
+msgstr "catver.ini-Dateiversion: {}"
+
+#: pfemame_ribbon_bar.py:592
+msgid "Refresh ROMs Database"
+msgstr "Aktualisieren Sie die ROM-Datenbank"
+
+#: pfemame_ribbon_bar.py:598
+msgid "Record User Inputs"
+msgstr "Zeichnen Sie Benutzereingaben auf"
+
+#: pfemame_ribbon_bar.py:599
+msgid "Playback User Inputs"
+msgstr "Benutzereingaben wiedergeben"
+
+#: pfemame_ribbon_bar.py:602
+msgid "Backup All User Settings"
+msgstr "Sichern Sie alle Benutzereinstellungen"
+
+#: pfemame_ribbon_bar.py:603
+msgid "Restore All User Settings"
+msgstr "Alle Benutzereinstellungen wiederherstellen"
+
+#: pfemame_ribbon_bar.py:604
+msgid "Export Favorite ROMs"
+msgstr "Exportieren Sie Lieblings-ROMs"
+
+#: pfemame_ribbon_bar.py:607
+msgid "Quit"
+msgstr "Aufhören"
+
+#: pfemame_ribbon_bar.py:611
+msgid "Add the selected ROM to Favorite list"
+msgstr "Fügen Sie das ausgewählte ROM zur Favoritenliste hinzu"
+
+#: pfemame_ribbon_bar.py:612
+msgid "Set Rating for selected ROM"
+msgstr "Legen Sie die Bewertung für das ausgewählte ROM fest"
+
+#: pfemame_ribbon_bar.py:613
+msgid "Copy image to clipboard"
+msgstr "Bild in die Zwischenablage kopieren"
+
+#: pfemame_ribbon_bar.py:614
+msgid "Find"
+msgstr "Finden"
+
+#: pfemame_ribbon_bar.py:615
+msgid "Clear the messages window"
+msgstr "Leeren Sie das Nachrichtenfenster"
+
+#: pfemame_ribbon_bar.py:616
+msgid "Copy messages window to clipboard"
+msgstr "Nachrichtenfenster in die Zwischenablage kopieren"
+
+#: pfemame_ribbon_bar.py:617
+msgid "Reset the ROMs list column spacing to default"
+msgstr ""
+"Setzen Sie den Spaltenabstand der ROM-Liste auf den Standardwert zurück"
+
+#: pfemame_ribbon_bar.py:618
+msgid "Setup alternate emulator engines"
+msgstr "Richten Sie alternative Emulator-Engines ein"
+
+#: pfemame_ribbon_bar.py:622
+msgid "Verify the selected ROM files"
+msgstr "Überprüfen Sie die ausgewählten ROM-Dateien"
+
+#: pfemame_ribbon_bar.py:624
+msgid "Check the artwork files"
+msgstr "Überprüfen Sie die Bilddateien"
+
+#: pfemame_ribbon_bar.py:625
+msgid "Reset the ROM specific INI file to its default settings"
+msgstr ""
+"Setzen Sie die ROM-spezifische INI-Datei auf ihre Standardeinstellungen "
+"zurück"
+
+#: pfemame_ribbon_bar.py:626
+msgid "Browse the software lists of the selected system"
+msgstr "Softwarelisten des ausgewählten Systems durchsuchen"
+
+#: pfemame_ribbon_bar.py:630
+msgid "Display ROM files information"
+msgstr "Informationen zu ROM-Dateien anzeigen"
+
+#: pfemame_ribbon_bar.py:631
+msgid "Full screen video player"
+msgstr "Vollbild-Videoplayer"
+
+#: pfemame_ribbon_bar.py:632
+msgid "View the pfeMAME log file"
+msgstr "Sehen Sie sich die pfeMAME-Protokolldatei an"
+
+#: pfemame_ribbon_bar.py:633
+msgid "View the selected file media types supported"
+msgstr "Sehen Sie sich die ausgewählten unterstützten Dateimedientypen an"
+
+#: pfemame_ribbon_bar.py:634
+msgid "What's new in the latest MAME (new, now working and removed machines)"
+msgstr ""
+"Neu im aktuellen MAME (neue, jetzt funktionierende und entfernte Maschinen)"
+
+#: pfemame_ribbon_bar.py:638
+msgid "View MAME controls"
+msgstr "MAME-Steuerelemente anzeigen"
+
+#: pfemame_ribbon_bar.py:639
+msgid "View the pfeMAME manual"
+msgstr "Sehen Sie sich das pfeMAME-Handbuch an"
+
+#: pfemame_ribbon_bar.py:640
+msgid "Check for pfeMAME updates"
+msgstr "Suchen Sie nach pfeMAME-Updates"
+
+#: pfemame_ribbon_bar.py:641
+msgid "Open the pfeMAME web page"
+msgstr "Öffnen Sie die pfeMAME-Webseite"
+
+#: pfemame_ribbon_bar.py:642
+msgid "View the pfeMAME changelog"
+msgstr "Sehen Sie sich das pfeMAME-Änderungsprotokoll an"
+
+#: pfemame_ribbon_bar.py:643
+msgid "About"
+msgstr "Um"
+
+#: play_stats.py:109
+msgid "Played once, {1} in total"
+msgstr "Einmal gespielt, insgesamt {1}"
+
+#: play_stats.py:110
+msgid "Played {0} times, {1} in total"
+msgstr "{0}-mal gespielt, insgesamt {1}"
+
+#: play_stats.py:113
+msgid ", last played {}"
+msgstr ", zuletzt gespielt am {}"
+
+#: preferences.py:286
+msgid "Please set a valid value for the "
+msgstr "Bitte legen Sie einen gültigen Wert für fest"
+
+#: preferences.py:429
+msgid "ROM INI file settings updated"
+msgstr "Einstellungen der ROM-INI-Datei aktualisiert"
+
+#: preferences.py:300
+msgid "Volume Attenuation Value Error"
+msgstr "Fehler beim Lautstärkedämpfungswert"
+
+#: preferences.py:303
+msgid "Volume Latency Value Error"
+msgstr "Fehler beim Volume-Latenzwert"
+
+#: preferences.py:156
+msgid ""
+"You need to set a valid INI path.  This is where ROM specific INI files are "
+"stored and used by the MAME executable."
+msgstr ""
+"Sie müssen einen gültigen INI-Pfad festlegen.  Hier werden ROM-spezifische "
+"INI-Dateien gespeichert und von der ausführbaren MAME-Datei verwendet."
+
+#: preferences.py:292
+msgid "Cache Check Days Error"
+msgstr "Fehler Cache Check Days."
+
+#: preferences.py:295
+msgid "Screensaver Time Value Error"
+msgstr "Fehler beim Zeitwert des Bildschirmschoners"
+
+#: preferences.py:299
+msgid "volume attenuation (-30 to 0)"
+msgstr "Lautstärkedämpfung (-30 bis 0)"
+
+#: preferences.py:302
+msgid "volume latency (1 to 5)"
+msgstr "Lautstärkelatenz (1 bis 5)"
+
+#: preferences.py:374
+msgid "INI file settings updated"
+msgstr "INI-Dateieinstellungen aktualisiert"
+
+#: preferences.py:375
+msgid "pfeMAME and MAME INI file settings updated"
+msgstr "pfeMAME- und MAME-INI-Dateieinstellungen aktualisiert"
+
+#: preferences.py:377
+msgid "ERROR: Unable to write to the mame.ini file"
+msgstr "FEHLER: In die Datei mame.ini kann nicht geschrieben werden"
+
+#: preferences.py:378
+msgid ""
+"ERROR: pfeMAME settings updated but unable to write to the mame.ini file"
+msgstr ""
+"FEHLER: Die pfeMAME-Einstellungen wurden aktualisiert, es konnte jedoch "
+"nicht in die Datei mame.ini geschrieben werden"
+
+#: preferences.py:390
+msgid "The INI folder has not been set.  Check folder settings."
+msgstr ""
+"Der INI-Ordner wurde nicht festgelegt.  Überprüfen Sie die "
+"Ordnereinstellungen."
+
+#: preferences.py:391 preferences.py:368 preferences.py:415
+msgid "Error in writing INI file"
+msgstr "Fehler beim Schreiben der INI-Datei"
+
+#: preferences.py:396
+msgid "ERROR: Path to INI folder not set"
+msgstr "FEHLER: Pfad zum INI-Ordner nicht festgelegt"
+
+#: preferences.py:291
+msgid "cache check days (1 to 365)"
+msgstr "Cache-Check-Tage (1 bis 365)"
+
+#: preferences.py:294
+msgid "screensaver time in minutes (0 to 60)"
+msgstr "Bildschirmschonerzeit in Minuten (0 bis 60)"
+
+#: preferences.py:365
+msgid ""
+"Unable to write to the mame.ini file.  Check that the MAME INI File path is "
+"set in File Paths and that the file is not read-only.  The pfeMAME settings "
+"have been saved."
+msgstr ""
+"In die mame.ini-Datei kann nicht geschrieben werden.  Überprüfen Sie, ob der"
+" MAME-INI-Dateipfad unter Dateipfade festgelegt ist und die Datei nicht "
+"schreibgeschützt ist.  Die pfeMAME-Einstellungen wurden gespeichert."
+
+#: preferences.py:413
+msgid ""
+"Unable to write to the ROM specific INI file.  Check that the INI folder is "
+"defined and that you have permission to write to it."
+msgstr ""
+"Es kann nicht in die ROM-spezifische INI-Datei geschrieben werden.  "
+"Überprüfen Sie, ob der INI-Ordner definiert ist und Sie über "
+"Schreibberechtigungen verfügen."
+
+#: preferences.py:421
+msgid ""
+"ERROR: Unable to write to ROM INI file.  Check the folder permissions and "
+"file / folder path settings."
+msgstr ""
+"FEHLER: In die ROM-INI-Datei kann nicht geschrieben werden.  Überprüfen Sie "
+"die Ordnerberechtigungen und Datei-/Ordnerpfadeinstellungen."
+
+#: preferences.py:137
+msgid "Error reading from ROM INI file"
+msgstr "Fehler beim Lesen der ROM-INI-Datei"
+
+#: rominfo.py:318
+msgid "Verifying..."
+msgstr "Überprüfung..."
+
+#: rominfo.py:167 rom_picker_dialog.py:69 xmlinfo.py:220
+msgid "Size"
+msgstr "Größe"
+
+#: rominfo.py:167 xmlinfo.py:221
+msgid "CRC"
+msgstr "CRC"
+
+#: rominfo.py:167
+msgid "SHA1"
+msgstr "SHA1"
+
+#: rominfo.py:272
+msgid "VERIFY"
+msgstr "ÜBERPRÜFEN"
+
+#: rominfo.py:168
+msgid "Dump"
+msgstr "Dump"
+
+#: rominfo.py:169 rom_picker_dialog.py:70 xmlinfo.py:221
+msgid "Status"
+msgstr "Status"
+
+#: rominfo.py:171
+msgid "BAD DUMP"
+msgstr "SCHLECHTER DUMP"
+
+#: rominfo.py:171
+msgid "NO GOOD DUMP KNOWN"
+msgstr "KEIN GUTER DUMP BEKANNT"
+
+#: rominfo.py:227 xmlinfo.py:321
+msgid "Unable to find the MAME executable path."
+msgstr "Der Pfad zur ausführbaren MAME-Datei konnte nicht gefunden werden."
+
+#: rominfo.py:273
+msgid "Check the ROM files in your ROM folders against what MAME expects"
+msgstr ""
+"Vergleichen Sie die ROM-Dateien in Ihren ROM-Ordnern mit den Erwartungen von"
+" MAME"
+
+#: rominfo.py:276 xmlinfo.py:367
+msgid "COPY TO CLIPBOARD"
+msgstr "In die Zwischenablage kopieren"
+
+#: rominfo.py:216
+msgid "ROM Information - {}"
+msgstr "ROM-Informationen – {}"
+
+#: rominfo.py:261
+msgid "MAME did not return any ROM information for {}."
+msgstr "MAME hat keine ROM-Informationen für {} zurückgegeben."
+
+#: rominfo.py:174
+msgid "disk (CHD)"
+msgstr "Festplatte (CHD)"
+
+#: rom_database.py:251
+msgid "Reading the MAME machine list"
+msgstr "MAME-Maschinenliste wird gelesen"
+
+#: rom_database.py:461
+msgid "Scanning system folders"
+msgstr "Systemordner werden durchsucht"
+
+#: rom_database.py:523
+msgid "Checking which ROMs exist"
+msgstr "Vorhandene ROMs werden geprüft"
+
+#: rom_database.py:408
+msgid "Checking merged ROM sets for clones"
+msgstr "Zusammengeführte ROM-Sätze werden auf Klone geprüft"
+
+#: rom_database.py:487
+msgid "Reading the software lists"
+msgstr "Softwarelisten werden gelesen"
+
+#: rom_database.py:501
+msgid "Building the ROM list"
+msgstr "ROM-Liste wird erstellt"
+
+#: rom_database.py:109
+msgid "Reading the MAME machine list ({:,} machines)"
+msgstr "MAME-Maschinenliste wird gelesen ({:,} Maschinen)"
+
+#: rom_grid.py:121
+msgid "File Name"
+msgstr "Dateiname"
+
+#: rom_grid.py:121
+msgid "System File"
+msgstr "Systemdatei"
+
+#: rom_grid.py:121 views.py:40
+msgid "Exists"
+msgstr "Existiert"
+
+#: rom_grid.py:122
+msgid "Rating"
+msgstr "Bewertung"
+
+#: rom_grid.py:122
+msgid "Runs"
+msgstr "Läuft"
+
+#: rom_grid.py:122
+msgid "Fav"
+msgstr "Favorit"
+
+#: rom_grid.py:122
+msgid "Category"
+msgstr "Kategorie"
+
+#: rom_grid.py:122
+msgid "Short Name"
+msgstr "Kurzname"
+
+#: rom_grid.py:123
+msgid "Path Media Name"
+msgstr "Pfadmedienname"
+
+#: rom_grid.py:123 software_browser.py:26
+msgid "Year"
+msgstr "Jahr"
+
+#: rom_grid.py:123
+msgid "Manufacturer"
+msgstr "Hersteller"
+
+#: rom_grid.py:404
+msgid "Started building ROM grid."
+msgstr "Mit dem Aufbau des ROM-Gitters begonnen."
+
+#: rom_grid.py:453
+msgid "Completed building ROM grid."
+msgstr "Der Aufbau des ROM-Rasters ist abgeschlossen."
+
+#: rom_picker_dialog.py:30
+msgid "Good"
+msgstr "Gut"
+
+#: rom_picker_dialog.py:31
+msgid "Bad / incomplete"
+msgstr "Schlecht / unvollständig"
+
+#: rom_picker_dialog.py:32
+msgid "Best available"
+msgstr "Am besten verfügbar"
+
+#: rom_picker_dialog.py:33
+msgid "Could not verify"
+msgstr "Konnte nicht überprüft werden"
+
+#: rom_picker_dialog.py:34 rom_picker_dialog.py:114
+msgid "Not verified"
+msgstr "Nicht verifiziert"
+
+#: rom_picker_dialog.py:65
+msgid "Source"
+msgstr "Quelle"
+
+#: rom_picker_dialog.py:66
+msgid "ROM"
+msgstr "ROM"
+
+#: rom_picker_dialog.py:67
+msgid "All matching files"
+msgstr "Alle passenden Dateien"
+
+#: rom_picker_dialog.py:68
+msgid "Partial matching files"
+msgstr "Teilweise übereinstimmende Dateien"
+
+#: rom_picker_dialog.py:71
+msgid "Found in"
+msgstr "Gefunden in"
+
+#: rom_picker_dialog.py:90
+msgid "Download Selected"
+msgstr "Ausgewählte herunterladen"
+
+#: rom_picker_dialog.py:60
+msgid ""
+"Select a ROM ZIP to download, then choose \"Download Selected\". Double-"
+"click a row to download it straight away."
+msgstr ""
+"Wählen Sie eine ROM-ZIP-Datei zum Herunterladen aus und wählen Sie dann "
+"„Ausgewählte herunterladen“. Doppelklicken Sie auf eine Zeile, um sie sofort"
+" herunterzuladen."
+
+#: rom_picker_dialog.py:87
+msgid "Verify more"
+msgstr "Überprüfen Sie mehr"
+
+#: rom_source_dialog.py:62
+msgid "Save"
+msgstr "Speichern"
+
+#: rom_source_dialog.py:89
+msgid "Stored credentials cleared."
+msgstr "Gespeicherte Anmeldeinformationen gelöscht."
+
+#: rom_source_dialog.py:98
+msgid "Testing..."
+msgstr "Testen..."
+
+#: rom_source_dialog.py:152
+msgid "Search"
+msgstr "Suchen"
+
+#: rom_source_dialog.py:43
+msgid "Credentials are stored locally (obfuscated, not strongly encrypted)."
+msgstr ""
+"Anmeldeinformationen werden lokal gespeichert (verschleiert, nicht stark "
+"verschlüsselt)."
+
+#: rom_source_dialog.py:60
+msgid "Test"
+msgstr "Prüfen"
+
+#: rom_source_dialog.py:61
+msgid "Clear"
+msgstr "Klar"
+
+#: rom_source_dialog.py:95
+msgid "Enter a username and password first."
+msgstr "Geben Sie zunächst einen Benutzernamen und ein Passwort ein."
+
+#: rom_source_dialog.py:121
+msgid "Choose ROM download source"
+msgstr "Wählen Sie die ROM-Downloadquelle"
+
+#: rom_source_dialog.py:131
+msgid "Select one or more sources to search for this ROM:"
+msgstr ""
+"Wählen Sie eine oder mehrere Quellen aus, um nach diesem ROM zu suchen:"
+
+#: rom_source_dialog.py:204
+msgid "Select at least one source to search."
+msgstr "Wählen Sie mindestens eine Quelle zum Durchsuchen aus."
+
+#: rom_source_dialog.py:204
+msgid "No Source Selected"
+msgstr "Keine Quelle ausgewählt"
+
+#: rom_source_dialog.py:48
+msgid "Username / email:"
+msgstr "Benutzername/E-Mail:"
+
+#: rom_source_dialog.py:51
+msgid "Password:"
+msgstr "Passwort:"
+
+#: rom_source_dialog.py:175
+msgid "(no login needed)"
+msgstr "(kein Login erforderlich)"
+
+#: rom_source_dialog.py:178
+msgid "credentials stored"
+msgstr "Anmeldeinformationen gespeichert"
+
+#: rom_source_dialog.py:181
+msgid "no credentials - add them to use"
+msgstr "Keine Anmeldeinformationen – fügen Sie diese zur Verwendung hinzu"
+
+#: rom_source_dialog.py:33
+msgid "Credentials for {}"
+msgstr "Anmeldeinformationen für {}"
+
+#: rom_source_dialog.py:141
+msgid "Credentials..."
+msgstr "Anmeldeinformationen..."
+
+#: rungame.py:415
+msgid "MAME failed its validity checks."
+msgstr "MAME hat die Gültigkeitsprüfung nicht bestanden."
+
+#: rungame.py:416
+msgid ""
+"Required files are missing - check that the ROM set (and any CHD or BIOS it "
+"needs) is complete for this version of MAME."
+msgstr ""
+"Benötigte Dateien fehlen - prüfen Sie, ob der ROM-Satz (und jede benötigte "
+"CHD oder BIOS) für diese MAME-Version vollständig ist."
+
+#: rungame.py:418
+msgid "MAME stopped with a fatal error - see the messages above."
+msgstr ""
+"MAME wurde mit einem schweren Fehler beendet - siehe die Meldungen oben."
+
+#: rungame.py:419
+msgid "A device (such as a slot device or media image) could not be started."
+msgstr ""
+"Ein Gerät (z. B. ein Steckplatzgerät oder ein Medienabbild) konnte nicht "
+"gestartet werden."
+
+#: rungame.py:420
+msgid ""
+"This version of MAME does not have this machine - it may have been renamed "
+"or removed."
+msgstr ""
+"Diese MAME-Version enthält diese Maschine nicht - sie wurde möglicherweise "
+"umbenannt oder entfernt."
+
+#: rungame.py:421
+msgid ""
+"The configuration is not valid - check the ROM's INI file and the options "
+"set for it."
+msgstr ""
+"Die Konfiguration ist ungültig - prüfen Sie die INI-Datei des ROMs und die "
+"dafür gesetzten Optionen."
+
+#: rungame.py:423
+msgid "MAME ended unexpectedly."
+msgstr "MAME wurde unerwartet beendet."
+
+#: rungame.py:903
+msgid "Re-Running system using full path name (not XML short name)"
+msgstr ""
+"System erneut ausführen unter Verwendung des vollständigen Pfadnamens (nicht"
+" des XML-Kurznamens)"
+
+#: rungame.py:424
+msgid "ROM {0} did not run correctly (MAME exit code {1}).  {2}"
+msgstr "ROM {0} lief nicht korrekt (MAME-Exitcode {1}).  {2}"
+
+#: rungame.py:870
+msgid "Using ROM specific INI file for preferences"
+msgstr "Verwendung einer ROM-spezifischen INI-Datei für Einstellungen"
+
+#: rungame.py:872
+msgid "Using default preferences"
+msgstr "Standardeinstellungen verwenden"
+
+#: rungame.py:166
+msgid ""
+"Found inputs mapping file for the ROM.  Copied across and overwriting "
+"default.cfg file."
+msgstr ""
+"Eingangszuordnungsdatei für das ROM gefunden.  Kopiert und überschreibt die "
+"Datei default.cfg."
+
+#: rungame.py:169
+msgid ""
+"I am unable to overwrite the default.cfg file in the Config folder.  Check "
+"the folder permissions and that the folder and files within are not Read "
+"Only or write protected.  Under Linux check that everyone has permissions to"
+" write to the file / folder."
+msgstr ""
+"Ich kann die Datei default.cfg im Ordner Config nicht überschreiben.  "
+"Überprüfen Sie die Ordnerberechtigungen und stellen Sie sicher, dass der "
+"Ordner und die darin enthaltenen Dateien nicht schreibgeschützt oder "
+"schreibgeschützt sind.  Überprüfen Sie unter Linux, ob jeder die "
+"Berechtigung hat, in die Datei/den Ordner zu schreiben."
+
+#: rungame.py:358
+msgid ""
+"ERROR:  There was a problem processing the non_mame_emulators.xml file.  "
+"There is likely an error in this file.  Please check it out."
+msgstr ""
+"FEHLER: Bei der Verarbeitung der Datei non_mame_emulators.xml ist ein "
+"Problem aufgetreten.  Wahrscheinlich liegt ein Fehler in dieser Datei vor.  "
+"Bitte schauen Sie es sich an."
+
+#: rungame.py:404
+msgid "signal {}"
+msgstr "Signal {}"
+
+#: rungame.py:411
+msgid "The {0} emulator ended with an error running ROM {1} (exit code {2})."
+msgstr ""
+"Der Emulator {0} wurde beim Ausführen von ROM {1} mit einem Fehler beendet "
+"(Exitcode {2})."
+
+#: rungame.py:601
+msgid "Running system using full path name (not XML short name)"
+msgstr "Laufendes System mit vollständigem Pfadnamen (nicht XML-Kurzname)"
+
+#: rungame.py:892
+msgid ""
+"ERROR Detected.  You have tried running a system program with an XML file "
+"short name but MAME was unable to locate it where it was expected; "
+"{0}{1}{2}{3}{4}{5}{6} The application will now attempt to run the system "
+"program using the full file path."
+msgstr ""
+"FEHLER erkannt.  Sie haben versucht, ein Systemprogramm mit einem XML-"
+"Dateikurznamen auszuführen, aber MAME konnte es nicht an der erwarteten "
+"Stelle finden; {0}{1}{2}{3}{4}{5}{6} Die Anwendung versucht nun, das "
+"Systemprogramm unter Verwendung des vollständigen Dateipfads auszuführen."
+
+#: rungame.py:173
+msgid "Permission error: Unable to overwrite the default.cfg file."
+msgstr ""
+"Berechtigungsfehler: Die Datei default.cfg kann nicht überschrieben werden."
+
+#: rungame.py:362
+msgid "XML File Error : non_mame_emulators.xml file may be corrupted"
+msgstr ""
+"XML-Dateifehler: Die Datei non_mame_emulators.xml ist möglicherweise "
+"beschädigt"
+
+#: rungame.py:605
+msgid "Running system using XML short name: {}"
+msgstr "Laufendes System mit XML-Kurzname: {}"
+
+#: rungame.py:579
+msgid ""
+"The file extension '{}' for the program you have tried to run does not exist"
+" in the list of acceptable media types for this system."
+msgstr ""
+"Die Dateierweiterung {} für das Programm, das Sie auszuführen versucht "
+"haben, ist nicht in der Liste der zulässigen Medientypen für dieses System "
+"vorhanden."
+
+#: rungame.py:583
+msgid "Unknown File Extension Type '{}'\n"
+msgstr "Unbekannter Dateierweiterungstyp ‚{}‘\n"
+
+#: rungame.py:585
+msgid ""
+"Unable to run the program - no file extension match for '{}' in the system "
+"media types"
+msgstr ""
+"Das Programm kann nicht ausgeführt werden – keine passende Dateierweiterung "
+"für {} in den Systemmedientypen"
+
+#: rungame.py:777
+msgid ""
+"Unable to run the program {0}: it has no file extension, so pfeMAME cannot "
+"tell which media type of the {1} system it is."
+msgstr ""
+"Das Programm {0} kann nicht ausgeführt werden: Es hat keine "
+"Dateierweiterung, daher kann pfeMAME nicht erkennen, welcher Medientyp des "
+"Systems {1} es ist."
+
+#: rungame.py:916
+msgid "Starting ROM {1} in {0}, Options: {2}, Using engine: {3}"
+msgstr ""
+"ROM {1} wird in {0} gestartet, Optionen: {2}, Engine wird verwendet: {3}"
+
+#: rungame.py:641
+msgid "ERROR:  The emulator cannot be found: {}"
+msgstr "FEHLER:  Der Emulator wurde nicht gefunden: {}"
+
+#: rungame.py:644
+msgid ""
+"ERROR:  The emulator could not be started - permission denied: {}.  Check "
+"that it is a program and not a folder, and under Linux / macOS that it is "
+"marked as executable (chmod +x)."
+msgstr ""
+"FEHLER:  Der Emulator konnte nicht gestartet werden - Zugriff verweigert: "
+"{}.  Prüfen Sie, ob es ein Programm und kein Ordner ist und ob es unter "
+"Linux / macOS als ausführbar markiert ist (chmod +x)."
+
+#: rungame.py:648
+msgid "ERROR:  The emulator could not be started: {0} ({1})"
+msgstr "FEHLER:  Der Emulator konnte nicht gestartet werden: {0} ({1})"
+
+#: rungame.py:751
+msgid "ERROR:  Unable to run ROM {0}: {1}"
+msgstr "FEHLER:  ROM {0} kann nicht ausgeführt werden: {1}"
+
+#: rungame.py:764
+msgid ""
+"ERROR:  The extra commands for the {0} emulator could not be read ({1}).  "
+"Check that every \" has a matching \"."
+msgstr ""
+"FEHLER:  Die zusätzlichen Befehle für den Emulator {0} konnten nicht gelesen"
+" werden ({1}).  Prüfen Sie, ob jedes \" ein passendes \" hat."
+
+#: scrolledwindow.py:90
+msgid "ERROR - nothing to display"
+msgstr "FEHLER – es wird nichts angezeigt"
+
+#: scrolledwindow.py:87
+msgid "Unable to find or open the specified file."
+msgstr "Die angegebene Datei konnte nicht gefunden oder geöffnet werden."
+
+#: search.py:63
+msgid ""
+"Search:  words match the name, ROM, category, year or manufacturer.\n"
+"Fields:  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n"
+"Flags:   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n"
+"Put - in front of a term to exclude it, and \"quotes\" around values with spaces."
+msgstr ""
+"Suche:  Wörter werden mit Name, ROM, Kategorie, Jahr oder Hersteller verglichen.\n"
+"Felder:  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n"
+"Merkmale:   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n"
+"Mit - vor einem Begriff wird er ausgeschlossen, \"Anführungszeichen\" umschließen Werte mit Leerzeichen."
+
+#: software_browser.py:28 tileview.py:705
+msgid "Yes"
+msgstr "Ja"
+
+#: software_browser.py:28
+msgid "Partially"
+msgstr "Teilweise"
+
+#: software_browser.py:28 tileview.py:705
+msgid "No"
+msgstr "Nein"
+
+#: software_browser.py:26
+msgid "Have"
+msgstr "Vorhanden"
+
+#: software_browser.py:26
+msgid "Title"
+msgstr "Titel"
+
+#: software_browser.py:26
+msgid "Publisher"
+msgstr "Verlag"
+
+#: software_browser.py:26
+msgid "Supported"
+msgstr "Unterstützt"
+
+#: software_browser.py:27
+msgid "Short name"
+msgstr "Kurzname"
+
+#: software_browser.py:27
+msgid "List"
+msgstr "Liste"
+
+#: software_browser.py:91
+msgid "Search title, publisher, year"
+msgstr "Titel, Verlag, Jahr suchen"
+
+#: software_browser.py:92
+msgid "Only software I have"
+msgstr "Nur vorhandene Software"
+
+#: software_browser.py:93
+msgid "Reading the software lists from MAME..."
+msgstr "Softwarelisten werden aus MAME gelesen..."
+
+#: software_browser.py:103
+msgid "Show in ROM list"
+msgstr "In der ROM-Liste zeigen"
+
+#: software_browser.py:104
+msgid "Play"
+msgstr "Spielen"
+
+#: software_browser.py:105
+msgid "Close"
+msgstr "Schließen"
+
+#: software_browser.py:150
+msgid ""
+"MAME has no software lists for this system (or its HASH files are missing)."
+msgstr ""
+"MAME hat keine Softwarelisten für dieses System (oder die HASH-Dateien "
+"fehlen)."
+
+#: software_browser.py:219
+msgid ""
+"This program is not in the ROM list with the current category selection."
+msgstr ""
+"Dieses Programm ist mit der aktuellen Kategorieauswahl nicht in der ROM-"
+"Liste."
+
+#: software_browser.py:229
+msgid "You don't have this software in your system programs folder."
+msgstr "Diese Software ist nicht in Ihrem Ordner für Systemprogramme."
+
+#: software_browser.py:96
+msgid "List:"
+msgstr "Liste:"
+
+#: software_browser.py:148
+msgid "No software lists"
+msgstr "Keine Softwarelisten"
+
+#: software_browser.py:186
+msgid "{:,} shown, {:,} of them you have"
+msgstr "{:,} angezeigt, davon {:,} vorhanden"
+
+#: software_browser.py:75
+msgid "Software Lists - {}"
+msgstr "Softwarelisten - {}"
+
+#: software_browser.py:153
+msgid "All lists ({:,})"
+msgstr "Alle Listen ({:,})"
+
+#: tileview.py:1917
+msgid ""
+"NAVIGATION:\n"
+"  LEFT = Move left\n"
+"  RIGHT = Move right\n"
+"  UP = Move up\n"
+"  DOWN = Move down\n"
+"  PGUP / PGDN = Move a page\n"
+"  HOME / END = First / last ROM\n"
+"ACTIONS:\n"
+"  L-CTRL(Joy-2) = Change view mode\n"
+"  ALT-1 (Joy-4) = Menu\n"
+"  1 / ENTER (Joy-1) = Start the selected ROM\n"
+"  2 / ESC = Exit Tile View\n"
+"  3 (Joy-3) = Add / remove favorite\n"
+"  4 (Joy-5) = Change the sort order\n"
+"  7 (Joy-6) = Choose a category\n"
+"  5 = Adjust tile brightness\n"
+"  6 = Bring up the Finder"
+msgstr ""
+"NAVIGATION:\n"
+"  LINKS = Nach links bewegen\n"
+"  RECHTS = Nach rechts bewegen\n"
+"  UP = Nach oben bewegen\n"
+"  DOWN = Nach unten bewegen\n"
+"  PGUP / PGDN = Eine Seite verschieben\n"
+"  HOME / END = Erstes / letztes ROM\n"
+"AKTIONEN:\n"
+"  L-STRG(Joy-2) = Ansichtsmodus wechseln\n"
+"  ALT-1 (Joy-4) = Menü\n"
+"  1 / ENTER (Joy-1) = Startet das ausgewählte ROM\n"
+"  2 / ESC = Kachelansicht verlassen\n"
+"  3 (Joy-3) = Favorit hinzufügen/entfernen\n"
+"  4 (Joy-5) = Sortierreihenfolge ändern\n"
+"  7 (Joy-6) = Wählen Sie eine Kategorie\n"
+"  5 = Kachelhelligkeit anpassen\n"
+"  6 = Rufen Sie den Finder auf"
+
+#: tileview.py:677 tileview.py:804
+msgid "Recently played"
+msgstr "Kürzlich gespielt"
+
+#: tileview.py:678 tileview.py:805
+msgid "Most played"
+msgstr "Die meisten gespielt"
+
+#: tileview.py:679 tileview.py:805
+msgid "Most runs"
+msgstr "Die meisten Läufe"
+
+#: tileview.py:1409
+msgid "Switched back to standard view"
+msgstr "Zurück zur Standardansicht gewechselt"
+
+#: tileview.py:1939
+msgid "Selected ROM:"
+msgstr "Ausgewähltes ROM:"
+
+#: tileview.py:1940
+msgid "Number of runs:"
+msgstr "Anzahl der Läufe:"
+
+#: tileview.py:1941
+msgid "Favorite:"
+msgstr "Favorit:"
+
+#: tileview.py:1942
+msgid "Available in this view:"
+msgstr "In dieser Ansicht verfügbar:"
+
+#: tileview.py:1943
+msgid "View mode:"
+msgstr "Ansichtsmodus:"
+
+#: tileview.py:376
+msgid "Choose a category"
+msgstr "Wählen Sie eine Kategorie"
+
+#: tileview.py:383
+msgid "Menu"
+msgstr "Menü"
+
+#: tileview.py:642
+msgid "Video playback disable selected in preferences"
+msgstr ""
+"In den Einstellungen wurde die Deaktivierung der Videowiedergabe ausgewählt"
+
+#: tileview.py:645
+msgid "Video autoload is off - no tile preview videos"
+msgstr ""
+"Das automatische Laden von Videos ist deaktiviert – keine Kachel-"
+"Vorschauvideos"
+
+#: tileview.py:650
+msgid "Trying to set up the video playback device"
+msgstr "Ich versuche, das Videowiedergabegerät einzurichten"
+
+#: tileview.py:676
+msgid "Favorite ROMs"
+msgstr "Lieblings-ROMs"
+
+#: tileview.py:676
+msgid "All available ROMs"
+msgstr "Alle verfügbaren ROMs"
+
+#: tileview.py:814
+msgid "Find a ROM"
+msgstr "Finden Sie ein ROM"
+
+#: tileview.py:817
+msgid "Exit Tile View"
+msgstr "Kachelansicht verlassen"
+
+#: tileview.py:1741
+msgid "ROM Finder"
+msgstr "ROM-Finder"
+
+#: tileview.py:1972
+msgid "ROM Information not available"
+msgstr "ROM-Informationen nicht verfügbar"
+
+#: tileview.py:674
+msgid "Search: \"{}\""
+msgstr "Suche: „{}“"
+
+#: tileview.py:811
+msgid "Show all ROMs"
+msgstr "Alle ROMs anzeigen"
+
+#: tileview.py:811
+msgid "Show favorites"
+msgstr "Favoriten anzeigen"
+
+#: tileview.py:812
+msgid "Sort order: {}"
+msgstr "Sortierreihenfolge: {}"
+
+#: tileview.py:813
+msgid "Category: {}"
+msgstr "Kategorie: {}"
+
+#: tileview.py:813 tileview.py:931
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+#: tileview.py:965
+msgid "ROM set {} removed from favorites"
+msgstr "ROM-Set {} aus Favoriten entfernt"
+
+#: tileview.py:1009
+msgid "No ROMs match \"{}\""
+msgstr "Keine ROMs passen zu „{}“"
+
+#: tileview.py:665
+msgid "No media content player available on this system: {}"
+msgstr "Auf diesem System ist kein Player für Medieninhalte verfügbar: {}"
+
+#: tileview.py:816
+msgid "Tile brightness: {}%"
+msgstr "Kachelhelligkeit: {}%"
+
+#: tileview.py:932
+msgid "No category"
+msgstr "Keine Kategorie"
+
+#: video_class.py:1058
+msgid "Loading video..."
+msgstr "Video wird geladen..."
+
+#: video_class.py:1131
+msgid "Failed to load video"
+msgstr "Video konnte nicht geladen werden"
+
+#: video_class.py:1146
+msgid "Playing Video - Click To Stop"
+msgstr "Video abspielen – Zum Stoppen klicken"
+
+#: video_class.py:927
+msgid "OpenCV video player with audio support initialized"
+msgstr "OpenCV-Videoplayer mit Audiounterstützung initialisiert"
+
+#: video_class.py:1311
+msgid "Video Stopped"
+msgstr "Video gestoppt"
+
+#: video_class.py:1113
+msgid "Audio extracted from video"
+msgstr "Audio aus Video extrahiert"
+
+#: video_class.py:1115
+msgid "No audio found in video or extraction failed"
+msgstr ""
+"Im Video wurde kein Ton gefunden oder die Extraktion ist fehlgeschlagen"
+
+#: video_class.py:1129
+msgid "Failed to load video: {}"
+msgstr "Video konnte nicht geladen werden: {}"
+
+#: video_class.py:930
+msgid "Failed to initialize OpenCV video player: {}"
+msgstr "Fehler beim Initialisieren des OpenCV-Videoplayers: {}"
+
+#: video_class.py:1094
+msgid "Error loading media: {}"
+msgstr "Fehler beim Laden des Mediums: {}"
+
+#: views.py:40
+msgid "Favorites"
+msgstr "Favoriten"
+
+#: views.py:40
+msgid "Missing"
+msgstr "Fehlen"
+
+#: views.py:40
+msgid "Watchlist"
+msgstr "Beobachtungsliste"
+
+#: views.py:40
+msgid "Recently Played"
+msgstr "Zuletzt gespielt"
+
+#: views.py:41
+msgid "Most Played"
+msgstr "Am meisten gespielt"
+
+#: xmlinfo.py:152
+msgid "Wrong size"
+msgstr "Falsche Größe"
+
+#: xmlinfo.py:153
+msgid "Wrong checksum"
+msgstr "Falsche Prüfsumme"
+
+#: xmlinfo.py:154
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#: xmlinfo.py:155
+msgid "Not checked"
+msgstr "Nicht überprüft"
+
+#: xmlinfo.py:157
+msgid "(known bad dump)"
+msgstr "(bekanntermaßen schlechter Dump)"
+
+#: xmlinfo.py:168
+msgid "System:"
+msgstr "System:"
+
+#: xmlinfo.py:169
+msgid "Program file:"
+msgstr "Programmdatei:"
+
+#: xmlinfo.py:170
+msgid "Short name:"
+msgstr "Kurzname:"
+
+#: xmlinfo.py:159
+msgid "(no good dump known)"
+msgstr "(kein guter Dump bekannt)"
+
+#: xmlinfo.py:173
+msgid "Software:"
+msgstr "Software:"
+
+#: xmlinfo.py:174
+msgid "Year / Publisher:"
+msgstr "Jahr / Verlag:"
+
+#: xmlinfo.py:175
+msgid "Software list:"
+msgstr "Softwareliste:"
+
+#: xmlinfo.py:176
+msgid "Found at:"
+msgstr "Gefunden bei:"
+
+#: xmlinfo.py:207 xmlinfo.py:248
+msgid "File size:"
+msgstr "Dateigröße:"
+
+#: xmlinfo.py:208 xmlinfo.py:249
+msgid "CRC:"
+msgstr "CRC:"
+
+#: xmlinfo.py:209 xmlinfo.py:250
+msgid "SHA1:"
+msgstr "SHA1:"
+
+#: xmlinfo.py:253 xmlinfo.py:218
+msgid "Files in this software:"
+msgstr "Dateien in dieser Software:"
+
+#: xmlinfo.py:325
+msgid "This program does not exist in an XML HASH file."
+msgstr "Dieses Programm existiert nicht in einer XML-HASH-Datei."
+
+#: xmlinfo.py:326
+msgid "Information"
+msgstr "Information"
+
+#: xmlinfo.py:355
+msgid "Analysing..."
+msgstr "Analysieren..."
+
+#: xmlinfo.py:161
+msgid "(disk image)"
+msgstr "(Disk-Image)"
+
+#: xmlinfo.py:247 xmlinfo.py:203
+msgid "Compared with:"
+msgstr "Im Vergleich zu:"
+
+#: xmlinfo.py:248 xmlinfo.py:249 xmlinfo.py:250
+msgid "expected"
+msgstr "erwartet"
+
+#: xmlinfo.py:248 xmlinfo.py:249 xmlinfo.py:250
+msgid "actual"
+msgstr "tatsächlich"
+
+#: xmlinfo.py:251 xmlinfo.py:212
+msgid "Result:"
+msgstr "Ergebnis:"
+
+#: xmlinfo.py:265
+msgid ""
+"There is no software called {software} in the software lists of {system}."
+msgstr ""
+"In den Softwarelisten von {system} gibt es keine Software namens {software}."
+
+#: xmlinfo.py:277
+msgid "Unable to find {file_name} in any of these folders: {folders}"
+msgstr "{file_name} kann in keinem dieser Ordner gefunden werden: {folders}"
+
+#: xmlinfo.py:284
+msgid "{} has no files that can be compared (it may be a disk image)."
+msgstr ""
+"{} verfügt über keine Dateien, die verglichen werden können (es kann sich um"
+" ein Disk-Image handeln)."
+
+#: xmlinfo.py:205
+msgid "Expected"
+msgstr "Erwartet"
+
+#: xmlinfo.py:206
+msgid "Actual"
+msgstr "Tatsächlich"
+
+#: xmlinfo.py:297
+msgid "XML Information - {}"
+msgstr "XML-Informationen – {}"
+
+#: xmlinfo.py:394
+msgid "Error: {}"
+msgstr "Fehler: {}"
+
+#: xmlinfo.py:227 xmlinfo.py:255
+msgid "(selected)"
+msgstr "(ausgewählt)"
+
+#: custom_drop_down.py:41
+msgid "Select an option..."
+msgstr "Option auswählen..."
+
+#: tileview.py:770
+msgid "Existing ROMs"
+msgstr "Vorhandene ROMs"
+
+#: tileview.py:772
+msgid "Watchlist ROMs"
+msgstr "ROMs der Beobachtungsliste"
+
+#: tileview.py:815
+msgid "View: {}"
+msgstr "Ansicht: {}"

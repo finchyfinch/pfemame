@@ -1,0 +1,17 @@
+Licencia de pfeMAME
+
+Copyright © 2014-2026 Gareth Finch. Todos los derechos reservados, salvo lo permitido a continuación.
+
+pfeMAME es gratuito. Puede usarlo, copiarlo, compartirlo y modificarlo sin pagar nada, siempre que cumpla las siguientes condiciones:
+
+1. Sin uso comercial. No puede vender pfeMAME ni ninguna versión modificada del mismo, cobrar por él, incluirlo en nada que se venda o se alquile, ni utilizarlo para ganar dinero de ninguna otra forma (por ejemplo, en una máquina recreativa de pago o como parte de un servicio de pago). Se permite el uso personal y cualquier uso por el que no se cobre a nadie.
+2. Comparta su código fuente. Si comparte una versión modificada de pfeMAME, debe poner a disposición su código fuente completo de forma gratuita y bajo esta misma licencia.
+3. Conserve este aviso. Cada copia que comparta, modificada o no, debe incluir este aviso de copyright, estas condiciones y la siguiente exención de responsabilidad.
+
+ESTE SOFTWARE ES PROPORCIONADO POR EL TITULAR DE LOS DERECHOS DE AUTOR Y LOS COLABORADORES "TAL CUAL", Y SE RENUNCIA A CUALQUIER GARANTÍA EXPRESA O IMPLÍCITA, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD E IDONEIDAD PARA UN FIN DETERMINADO. EN NINGÚN CASO EL TITULAR DE LOS DERECHOS DE AUTOR NI LOS COLABORADORES SERÁN RESPONSABLES DE NINGÚN DAÑO DIRECTO, INDIRECTO, INCIDENTAL, ESPECIAL, EJEMPLAR O CONSECUENTE (INCLUIDOS, ENTRE OTROS, LA ADQUISICIÓN DE BIENES O SERVICIOS SUSTITUTIVOS; LA PÉRDIDA DE USO, DATOS O BENEFICIOS; O LA INTERRUPCIÓN DE LA ACTIVIDAD COMERCIAL), CUALQUIERA QUE SEA LA CAUSA Y SEGÚN CUALQUIER TEORÍA DE RESPONSABILIDAD, YA SEA CONTRACTUAL, OBJETIVA O EXTRACONTRACTUAL (INCLUIDA LA NEGLIGENCIA O DE OTRO TIPO), QUE SURJA DE CUALQUIER MANERA DEL USO DE ESTE SOFTWARE, INCLUSO SI SE HA ADVERTIDO DE LA POSIBILIDAD DE DICHOS DAÑOS.
+
+Otro software: esta licencia cubre únicamente el código y los archivos propios de pfeMAME. Las versiones listas para usar de pfeMAME incluyen otro software de código abierto que mantiene su propia licencia; consulte la carpeta third_party_licenses que las acompaña.
+
+Marcas: MAME es una marca registrada de Gregory Ember. pfeMAME no está creado, respaldado ni avalado por el equipo de MAME. PAC-MAN y sus personajes son marcas de Bandai Namco Entertainment Inc.
+
+Traducciones: esta licencia también se ofrece en otros idiomas por comodidad. Si una traducción difiere de la versión en inglés, prevalece la versión en inglés.

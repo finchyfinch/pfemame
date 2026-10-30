@@ -1,0 +1,19 @@
+setuptools
+wxPython # Provides wx module (on Linux, install the wheel for your distro from https://extras.wxpython.org/wxPython4/extras/linux/)
+Pypubsub
+python-docx
+cx_Freeze
+pillow # Provides PIL module
+six
+py7zr
+PyOpenGL
+PyOpenGL_accelerate
+opencv-python-headless # Provides cv2 without OpenCV's own (Qt) windows, which pfeMAME doesn't use.  If opencv-python is installed, pip uninstall it first - both install into the same cv2 folder
+sounddevice
+certifi # CA certificates for update downloads and online searches (needed by frozen builds)
+
+# ---- Development only (not needed to run pfeMAME) ----
+pytest # Test suite:  python -m pytest tests
+polib # tools/create_language_files.py
+requests # tools/create_language_files.py
+# googletrans==3.1.0a0 is only used by tools/create_language_files_old_version.py

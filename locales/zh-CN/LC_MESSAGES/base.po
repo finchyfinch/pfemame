@@ -1,0 +1,5088 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PFEMAME\n"
+"POT-Creation-Date: 2026-10-23 14:04\n"
+"PO-Revision-Date: 2026-10-23 14:04\n"
+"Last-Translator: GFINCH <pfemame@gmail.com>\n"
+"Language-Team: N/A\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: create_language_files.py\n"
+
+#: aboutbox.py:432
+msgid "Visit Website"
+msgstr "访问网站"
+
+#: aboutbox.py:185
+msgid "About pfeMAME"
+msgstr "关于 pfeMAME"
+
+#: aboutbox.py:259 aboutbox.py:487
+msgid "License"
+msgstr "许可证"
+
+#: aboutbox.py:264 alternate_emulators.py:602 alternate_emulators.py:1641
+#: rominfo.py:277 xmlinfo.py:151 xmlinfo.py:369
+msgid "OK"
+msgstr "好的"
+
+#: aboutbox.py:425
+msgid "pfeMAME is a front end for the MAME emulation system"
+msgstr "pfeMAME 是 MAME 仿真系统的前端"
+
+#: aboutbox.py:303
+msgid "License file not found."
+msgstr "未找到许可证文件。"
+
+#: aboutbox.py:487
+msgid "Back"
+msgstr "返回"
+
+#: alternate_emulators.py:51
+msgid "No emulators - use CREATE NEW EMULATOR ENTRY"
+msgstr "没有模拟器 - 使用 CREATE NEW EMULATOR ENTRY"
+
+#: alternate_emulators.py:585
+msgid ""
+"This allows you to create a new alternate emulator (i.e. something other "
+"than MAME).  Once you have created it, you will need to review the settings "
+"below and then assign the ROMs that relate to this alternate emulation "
+"system."
+msgstr "这允许您创建一个新的备用模拟器（即 MAME 以外的模拟器）。  创建后，您需要检查以下设置，然后分配与此备用仿真系统相关的 ROM。"
+
+#: alternate_emulators.py:134 alternate_emulators.py:1299
+msgid "Alternate Emulators"
+msgstr "替代模拟器"
+
+#: alternate_emulators.py:343
+msgid "Use Default ROM Folder"
+msgstr "使用默认 ROM 文件夹"
+
+#: alternate_emulators.py:426
+msgid "ADD NEW ROM ENTRY"
+msgstr "添加新的 ROM 条目"
+
+#: alternate_emulators.py:432
+msgid "AUTO SCAN ROM FOLDER"
+msgstr "自动扫描ROM文件夹"
+
+#: alternate_emulators.py:444
+msgid "Search ROMs"
+msgstr "搜索 ROM"
+
+#: alternate_emulators.py:450
+msgid "FILL ROM NAMES"
+msgstr "填写 ROM 名称"
+
+#: alternate_emulators.py:512
+msgid "SET DEFAULTS"
+msgstr "设置默认值"
+
+#: alternate_emulators.py:521
+msgid "UPDATE XML FILE"
+msgstr "更新 XML 文件"
+
+#: alternate_emulators.py:531
+msgid "TEST ROM"
+msgstr "测试ROM"
+
+#: alternate_emulators.py:540
+msgid "RENAME THIS ENGINE"
+msgstr "重命名该引擎"
+
+#: alternate_emulators.py:549
+msgid "DUPLICATE THIS ENGINE"
+msgstr "复制这个引擎"
+
+#: alternate_emulators.py:558
+msgid "DELETE THIS ENGINE"
+msgstr "删除该引擎"
+
+#: alternate_emulators.py:590
+msgid "CREATE NEW EMULATOR ENTRY"
+msgstr "创建新的模拟器条目"
+
+#: alternate_emulators.py:620
+msgid "This is the full path to the alternate emulator executable file"
+msgstr "这是备用模拟器可执行文件的完整路径"
+
+#: alternate_emulators.py:621
+msgid ""
+"If the emulator has ROMs located in a folder that is not the 'Default' MAME "
+"ROM folder, then you need to define that folder here.  If the ROM can be run"
+" by MAME natively then you don't need to set this.  AUTO SCAN ROM FOLDER "
+"only works with a folder of the emulator's own, not 'Default'."
+msgstr ""
+"如果模拟器的 ROM 位于非“默认”MAME ROM 文件夹的文件夹中，则您需要在此处定义该文件夹。  如果 ROM 可以由 MAME "
+"本机运行，则无需设置此项。  自动扫描 ROM 文件夹仅适用于模拟器自己的文件夹，不适用于“默认”文件夹。"
+
+#: alternate_emulators.py:626
+msgid ""
+"You must list all valid file extensions that can be run by this emulator.  "
+"Do not include any dots.  If multiple extensions then separate by a space."
+msgstr "您必须列出可由该模拟器运行的所有有效文件扩展名。  请勿包含任何点。  如果有多个扩展名，则用空格分隔。"
+
+#: alternate_emulators.py:629
+msgid ""
+"The category that ROMs in this emulator's own ROM folder are listed under in"
+" the ROM list (not used when the ROM folder is 'Default')."
+msgstr "该模拟器自己的 ROM 文件夹中的 ROM 在 ROM 列表中列出的类别（当 ROM 文件夹为“默认”时不使用）。"
+
+#: alternate_emulators.py:631
+msgid ""
+"List any commands to be passed to the emulator in the same format that you "
+"would use from the command line.  Separate multiple commands with a space.  "
+"The ROM is added after them, unless you put {rom} where it should go (e.g. "
+"-play {rom} -exit)."
+msgstr ""
+"列出要传递到模拟器的所有命令，其格式与您从命令行使用的格式相同。  用空格分隔多个命令。  ROM 将添加在它们之后，除非您将 {rom} "
+"放在它应该放置的位置（例如 -play {rom} -exit）。"
+
+#: alternate_emulators.py:635
+msgid "Select this to enable / disable this emulator"
+msgstr "选择此项以启用/禁用该模拟器"
+
+#: alternate_emulators.py:636
+msgid ""
+"If the folder path needs to be given at the command line for the emulator "
+"then check this box.  This will generally depend upon whether or not the "
+"ROMs folder for this emulator is already defined in it's own INI file."
+msgstr "如果需要在模拟器的命令行中给出文件夹路径，请选中此框。  这通常取决于该模拟器的 ROM 文件夹是否已在其自己的 INI 文件中定义。"
+
+#: alternate_emulators.py:640
+msgid ""
+"Check this box if the emulator needs the file extension to be given with the"
+" ROM name"
+msgstr "如果模拟器需要使用 ROM 名称指定文件扩展名，请选中此框"
+
+#: alternate_emulators.py:788
+msgid "Delete Emulator"
+msgstr "删除模拟器"
+
+#: alternate_emulators.py:855
+msgid "Please enter the name for the new emulation engine"
+msgstr "请输入新仿真引擎的名称"
+
+#: alternate_emulators.py:856
+msgid "New Emulator Name"
+msgstr "新模拟器名称"
+
+#: alternate_emulators.py:931
+msgid "Rename Emulator"
+msgstr "重命名模拟器"
+
+#: alternate_emulators.py:951
+msgid "Duplicate Emulator"
+msgstr "重复模拟器"
+
+#: alternate_emulators.py:1036
+msgid "Alternate Emulators *"
+msgstr "备用模拟器 *"
+
+#: alternate_emulators.py:1098
+msgid "Auto Scan ROM Folder"
+msgstr "自动扫描ROM文件夹"
+
+#: alternate_emulators.py:1176 alternate_emulators.py:1163
+msgid "Fill ROM Names"
+msgstr "填写ROM名称"
+
+#: alternate_emulators.py:1218
+msgid "Possible Problems"
+msgstr "可能出现的问题"
+
+#: alternate_emulators.py:1292
+msgid "XML File has been updated"
+msgstr "XML 文件已更新"
+
+#: alternate_emulators.py:1293
+msgid "File Updated"
+msgstr "文件已更新"
+
+#: alternate_emulators.py:1335
+msgid "Edit ROM Entry..."
+msgstr "编辑 ROM 条目..."
+
+#: alternate_emulators.py:1385
+msgid "Delete Entry"
+msgstr "删除条目"
+
+#: alternate_emulators.py:285
+msgid "ROM Entries"
+msgstr "ROM条目"
+
+#: alternate_emulators.py:286
+msgid "Basic Configuration"
+msgstr "基本配置"
+
+#: alternate_emulators.py:287
+msgid "ROM Folder Configuration"
+msgstr "ROM文件夹配置"
+
+#: alternate_emulators.py:288
+msgid "Command Line Options"
+msgstr "命令行选项"
+
+#: alternate_emulators.py:289
+msgid "Actions"
+msgstr "行动"
+
+#: alternate_emulators.py:320
+msgid "Select Emulator Executable File"
+msgstr "选择模拟器可执行文件"
+
+#: alternate_emulators.py:333
+msgid "Select ROMs Folder for this Emulator"
+msgstr "为此模拟器选择 ROM 文件夹"
+
+#: alternate_emulators.py:347
+msgid "Enabled"
+msgstr "启用"
+
+#: alternate_emulators.py:349
+msgid "Include file extension in command line"
+msgstr "在命令行中包含文件扩展名"
+
+#: alternate_emulators.py:351
+msgid "Include folder path in command line"
+msgstr "在命令行中包含文件夹路径"
+
+#: alternate_emulators.py:352
+msgid "Description:"
+msgstr "描述："
+
+#: alternate_emulators.py:353
+msgid "Path To Emulator:"
+msgstr "模拟器路径："
+
+#: alternate_emulators.py:354
+msgid "Extra Commands:"
+msgstr "额外命令："
+
+#: alternate_emulators.py:355
+msgid "ROM Folder:"
+msgstr "ROM文件夹："
+
+#: alternate_emulators.py:356
+msgid "Valid Extensions:"
+msgstr "有效扩展名："
+
+#: alternate_emulators.py:367
+msgid ""
+"Unable to find the non_mame_emulators.xml file.  This should be in the same "
+"folder as the pfeMAME files.  You can create a new version from here by "
+"adding at least one alternate emulation engine entry."
+msgstr ""
+"找不到 non_mame_emulators.xml 文件。  这应该与 pfeMAME 文件位于同一文件夹中。  "
+"您可以通过添加至少一个备用仿真引擎条目从此处创建新版本。"
+
+#: alternate_emulators.py:370 alternate_emulators.py:382
+#: alternate_emulators.py:717 alternate_emulators.py:741
+#: alternate_emulators.py:841 alternate_emulators.py:909
+#: alternate_emulators.py:1257 alternate_emulators.py:1517
+#: alternate_emulators.py:708 alternate_emulators.py:918
+#: alternate_emulators.py:1250 alternate_emulators.py:1286 checkall.py:596
+#: filepaths.py:489 filepaths.py:1357 filepaths.py:1393 filepaths.py:411
+#: filepaths.py:1207 filepaths.py:1373 pfemame.py:2889 pfemame.py:5143
+#: pfemame.py:2541 pfemame.py:3984 pfemame.py:5080 pfemame.py:5122
+#: pfemame.py:5161 pfemame.py:5310 pfemame.py:2377 pfemame.py:2389
+#: pfemame.py:3031 pfemame.py:5069 pfemame.py:5096 pfemame.py:5278
+#: pfemame.py:5331 rominfo.py:227 rominfo.py:363 scrolledwindow.py:88
+#: xmlinfo.py:321 xmlinfo.py:417
+msgid "ERROR"
+msgstr "错误"
+
+#: alternate_emulators.py:379
+msgid ""
+"There is an error in the non_mame_emulators.xml file.  Please check the file"
+" manually or delete the file to allow it to be rebuilt safely.  You can also"
+" restore it from a backup if you have one."
+msgstr ""
+"non_mame_emulators.xml 文件中有错误。  请手动检查该文件或删除该文件以使其能够安全地重建。  "
+"如果有备份，您也可以从备份中恢复它。"
+
+#: alternate_emulators.py:434
+msgid ""
+"Add the ROM files in the ROM folder that have one of the valid extensions.  "
+"Existing entries and their names are kept.  Not available when the ROM "
+"folder is 'Default', as that would add every MAME ROM to this emulator."
+msgstr ""
+"在 ROM 文件夹中添加具有有效扩展名之一的 ROM 文件。  现有条目及其名称将被保留。  当 ROM 文件夹为“默认”时不可用，因为这会将每个 "
+"MAME ROM 添加到此模拟器。"
+
+#: alternate_emulators.py:445
+msgid "Only show the ROMs whose name or file name contains this text"
+msgstr "仅显示名称或文件名包含此文本的 ROM"
+
+#: alternate_emulators.py:452
+msgid ""
+"Give the unnamed (___) ROMs the names MAME uses for them.  Names you have "
+"entered are kept."
+msgstr "为未命名的 (___) ROM 指定 MAME 使用的名称。  您输入的姓名将被保留。"
+
+#: alternate_emulators.py:514
+msgid "Set the typical default values for this emulator engine."
+msgstr "设置该仿真器引擎的典型默认值。"
+
+#: alternate_emulators.py:523
+msgid ""
+"Update the XML file with any changes you have made.  You need to do this "
+"manually as the changes are not automatically stored."
+msgstr "使用您所做的任何更改更新 XML 文件。  您需要手动执行此操作，因为更改不会自动存储。"
+
+#: alternate_emulators.py:533
+msgid "Test the selected ROM to see if your configuration is correct"
+msgstr "测试所选的 ROM，看看您的配置是否正确"
+
+#: alternate_emulators.py:542
+msgid ""
+"Change the name of this alternate engine, keeping its settings and ROMs"
+msgstr "更改此备用引擎的名称，保留其设置和 ROM"
+
+#: alternate_emulators.py:551
+msgid ""
+"Make a copy of this alternate engine, with its settings and ROMs.  The copy "
+"starts disabled."
+msgstr "复制此备用引擎及其设置和 ROM。  副本开始禁用。"
+
+#: alternate_emulators.py:560
+msgid "Delete this alternate engine entry and all associated data"
+msgstr "删除此备用引擎条目和所有关联数据"
+
+#: alternate_emulators.py:678
+msgid ""
+"Click a column heading to sort by it.  Ctrl or Shift click to select several"
+" ROMs, then press Delete to delete them."
+msgstr "单击列标题可按其排序。  按住Ctrl或Shift键单击选择多个ROM，然后按Delete键将其删除。"
+
+#: alternate_emulators.py:681 rom_grid.py:121
+msgid "ROM Name"
+msgstr "ROM名称"
+
+#: alternate_emulators.py:682
+msgid "ROM File Name (No Extn)"
+msgstr "ROM 文件名（无扩展名）"
+
+#: alternate_emulators.py:716
+msgid "No emulators found in defaults file."
+msgstr "默认文件中找不到模拟器。"
+
+#: alternate_emulators.py:740
+msgid "Selected emulator not found in defaults file."
+msgstr "在默认文件中找不到选定的模拟器。"
+
+#: alternate_emulators.py:839
+msgid ""
+"ERROR:  The categories.dat file does not exist.  Please ensure you have "
+"refreshed the database and selected some categories."
+msgstr "错误：categories.dat 文件不存在。  请确保您已刷新数据库并选择了一些类别。"
+
+#: alternate_emulators.py:908
+msgid "Please enter a new valid name."
+msgstr "请输入新的有效名称。"
+
+#: alternate_emulators.py:1069
+msgid ""
+"I couldn't find any matches for the extension(s) you have listed. Please "
+"check your extensions are correct and the folder path is right."
+msgstr "我找不到您列出的扩展程序的任何匹配项。请检查您的扩展名是否正确以及文件夹路径是否正确。"
+
+#: alternate_emulators.py:1071
+msgid "ERROR FINDING FILES"
+msgstr "查找文件时出错"
+
+#: alternate_emulators.py:1084
+msgid "ROM Files Not Found"
+msgstr "未找到 ROM 文件"
+
+#: alternate_emulators.py:1161
+msgid ""
+"The MAME machine list could not be found.  Please build the ROM database "
+"first, then try again."
+msgstr "找不到 MAME 机器列表。  请先建立ROM数据库，然后重试。"
+
+#: alternate_emulators.py:1173
+msgid "ROM names filled in: {}"
+msgstr "ROM名称填写：{}"
+
+#: alternate_emulators.py:1217
+msgid "Would you like to save anyway?"
+msgstr "无论如何你还想保存吗？"
+
+#: alternate_emulators.py:1229
+msgid "Emulator Path"
+msgstr "模拟器路径"
+
+#: alternate_emulators.py:1230
+msgid "Emulator Description"
+msgstr "模拟器说明"
+
+#: alternate_emulators.py:1231
+msgid "Valid Extensions"
+msgstr "有效扩展"
+
+#: alternate_emulators.py:1256
+msgid "Please remove any dots from the Valid Extensions"
+msgstr "请删除有效扩展名中的所有点"
+
+#: alternate_emulators.py:1337
+msgid "Delete ROM Entry"
+msgstr "删除 ROM 条目"
+
+#: alternate_emulators.py:1376
+msgid ""
+"Sorry but you cannot delete the last row. There must always be at least one "
+"row."
+msgstr "抱歉，您无法删除最后一行。必须始终至少有一行。"
+
+#: alternate_emulators.py:1378
+msgid "Cannot Delete Entry"
+msgstr "无法删除条目"
+
+#: alternate_emulators.py:1383
+msgid "Are you sure you want to delete this entry?"
+msgstr "您确定要删除此条目吗？"
+
+#: alternate_emulators.py:1478
+msgid ""
+"You have made some changes that have not been saved to the XML file.  Would "
+"you like to save these changes before exiting?"
+msgstr "您所做的一些更改尚未保存到 XML 文件中。  您想在退出之前保存这些更改吗？"
+
+#: alternate_emulators.py:1480 alternate_emulators.py:1534
+msgid "UNSAVED CHANGES"
+msgstr "未保存的更改"
+
+#: alternate_emulators.py:1516
+msgid "Please select a ROM to run from the list"
+msgstr "请从列表中选择要运行的 ROM"
+
+#: alternate_emulators.py:1523
+msgid ""
+"This emulator is not enabled, so the ROM would run in MAME instead.  Tick "
+"Enabled and save your changes to test it with this emulator."
+msgstr "该模拟器未启用，因此 ROM 将在 MAME 中运行。  勾选启用并保存更改以使用此模拟器进行测试。"
+
+#: alternate_emulators.py:1525
+msgid "Emulator Not Enabled"
+msgstr "模拟器未启用"
+
+#: alternate_emulators.py:1532
+msgid ""
+"TEST ROM uses the settings saved in the XML file.  Would you like to save "
+"your changes first?"
+msgstr "TEST ROM 使用 XML 文件中保存的设置。  您想先保存您的更改吗？"
+
+#: alternate_emulators.py:1575
+msgid "Default Settings Selection"
+msgstr "默认设置选择"
+
+#: alternate_emulators.py:1619 pfemame.py:1144
+msgid "ROM Info"
+msgstr "ROM信息"
+
+#: alternate_emulators.py:255
+msgid "{} (disabled)"
+msgstr "{}（已禁用）"
+
+#: alternate_emulators.py:707
+msgid "Unable to read non_mame_defaults.xml file."
+msgstr "无法读取 non_mame_defaults.xml 文件。"
+
+#: alternate_emulators.py:787
+msgid "Are you sure you want to delete {}?"
+msgstr "您确定要删除 {} 吗？"
+
+#: alternate_emulators.py:930
+msgid "Please enter the new name for {}"
+msgstr "请输入{}的新名称"
+
+#: alternate_emulators.py:950
+msgid "Please enter the name for the copy of {}"
+msgstr "请输入{}副本的名称"
+
+#: alternate_emulators.py:990
+msgid "Number of alternate emulator engines in file: {}"
+msgstr "文件中备用模拟器引擎的数量：{}"
+
+#: alternate_emulators.py:1096
+msgid ""
+"ROM entries added: {added}\n"
+"ROM entries removed: {removed}"
+msgstr ""
+"添加 ROM 条目：{added}\n"
+"已删除 ROM 条目：{removed}"
+
+#: alternate_emulators.py:1285
+msgid ""
+"Unable to write the new non_mame_emulators.xml file.  Check file / folder "
+"permissions."
+msgstr ""
+"Unable to write the new non_mame_emulators.xml file.  Check file / folder "
+"permissions."
+
+#: alternate_emulators.py:951
+msgid "{} (copy)"
+msgstr "{}（副本）"
+
+#: alternate_emulators.py:1082
+msgid ""
+"{} ROM entries have no matching file in the ROM folder.  Would you like to "
+"remove them?"
+msgstr "{} ROM 条目在 ROM 文件夹中没有匹配的文件。  您想删除它们吗？"
+
+#: alternate_emulators.py:1175
+msgid "ROMs still without a name (not MAME machines): {}"
+msgstr "ROM 仍然没有名称（不是 MAME 机器）：{}"
+
+#: alternate_emulators.py:1214
+msgid "... and {} more."
+msgstr "...以及 {} 更多。"
+
+#: alternate_emulators.py:1338
+msgid "Delete {} ROM Entries"
+msgstr "删除 {} ROM 条目"
+
+#: alternate_emulators.py:1384
+msgid "Are you sure you want to delete these {} entries?"
+msgstr "您确定要删除这些 {} 条目吗？"
+
+#: alternate_emulators.py:1632
+msgid "ROM Name:"
+msgstr "ROM名称："
+
+#: alternate_emulators.py:1634
+msgid "ROM File Name:"
+msgstr "ROM文件名："
+
+#: alternate_emulators.py:89
+msgid "{}: no emulator program has been set."
+msgstr "{}：未设置仿真器程序。"
+
+#: alternate_emulators.py:96
+msgid ""
+"{}: no ROM folder has been set (use 'Default' for the MAME ROM folder)."
+msgstr "{}：未设置 ROM 文件夹（对 MAME ROM 文件夹使用“默认”）。"
+
+#: alternate_emulators.py:107
+msgid "{emulator}: {file_name} is listed more than once."
+msgstr "{emulator}：{file_name} 多次列出。"
+
+#: alternate_emulators.py:917
+msgid "The emulator name {} already exists"
+msgstr "模拟器名称 {} 已存在"
+
+#: alternate_emulators.py:1216
+msgid "Please check the following:"
+msgstr "请检查以下内容："
+
+#: alternate_emulators.py:1249
+msgid "You must have an entry for {}"
+msgstr "您必须有一个 {} 条目"
+
+#: alternate_emulators.py:91
+msgid "{emulator}: the emulator program {path} was not found."
+msgstr "{emulator}：找不到仿真器程序{path}。"
+
+#: alternate_emulators.py:99
+msgid "{emulator}: the ROM folder {folder} was not found."
+msgstr "{emulator}：未找到 ROM 文件夹 {folder}。"
+
+#: alternate_emulators.py:115
+msgid ""
+"{file_name} is listed under both {first} and {second}.  Only {first} will be"
+" used."
+msgstr "{file_name} 同时列在 {first} 和 {second} 下。  仅使用 {first}。"
+
+#: busy_window.py:78
+msgid "Please Wait..."
+msgstr "请稍等..."
+
+#: busy_window.py:126
+msgid "Cancelling..."
+msgstr "正在取消..."
+
+#: busy_window.py:89 image_picker_dialog.py:173 pfemame.py:1035
+#: rom_picker_dialog.py:92 rom_source_dialog.py:63 rom_source_dialog.py:153
+msgid "Cancel"
+msgstr "取消"
+
+#: checkall.py:152
+msgid ""
+"The check was stopped before it finished, so not all of your ROMs were "
+"checked."
+msgstr "检查在完成前被停止，因此并非所有 ROM 都已检查。"
+
+#: checkall.py:194 checkall.py:178
+msgid "No ROM sets match this filter."
+msgstr "没有符合此筛选条件的 ROM 集。"
+
+#: checkall.py:319 checkall.py:546 checkall.py:604 pfemame_ribbon_bar.py:623
+msgid "Check All ROMs"
+msgstr "检查所有 ROM"
+
+#: checkall.py:399
+msgid "SAVE RESULTS"
+msgstr "保存结果"
+
+#: checkall.py:401
+msgid "COPY"
+msgstr "复制"
+
+#: checkall.py:403
+msgid "RE-CHECK BAD"
+msgstr "重新检查损坏项"
+
+#: checkall.py:405
+msgid "RUN CHECK"
+msgstr "开始检查"
+
+#: checkall.py:406 fix_artwork_file.py:460
+msgid "STOP"
+msgstr "停止"
+
+#: checkall.py:407 fix_artwork_file.py:461
+msgid "EXIT"
+msgstr "退出"
+
+#: checkall.py:515 fix_artwork_file.py:675
+msgid "Output path"
+msgstr "输出路径"
+
+#: checkall.py:72
+msgid ""
+"romset {} was not found (it is missing from your ROM folders or unknown to "
+"this version of MAME)"
+msgstr "未找到 ROM 集 {}（ROM 文件夹中缺少该文件，或此版本的 MAME 不认识它）"
+
+#: checkall.py:147
+msgid ""
+"ROM sets checked: {total}   Good: {good}   Bad: {bad}   Best available: "
+"{best}   Not found: {not_found}"
+msgstr ""
+"已检查的 ROM 集：{total}   良好：{good}   损坏：{bad}   最佳可用：{best}   未找到：{not_found}"
+
+#: checkall.py:150
+msgid "The check took {} seconds."
+msgstr "检查用时 {} 秒。"
+
+#: checkall.py:191 checkall.py:174
+msgid "MAME reported:"
+msgstr "MAME 报告："
+
+#: checkall.py:375
+msgid "This could take 5 minutes or more depending upon a number of factors"
+msgstr "这可能需要 5 分钟或更长时间，具体取决于多种因素"
+
+#: checkall.py:380 views.py:40
+msgid "All"
+msgstr "全部"
+
+#: checkall.py:381
+msgid "Is Good"
+msgstr "很好"
+
+#: checkall.py:382
+msgid "Is Bad"
+msgstr "很糟糕"
+
+#: checkall.py:383
+msgid "Is Best Available"
+msgstr "是最好的可用"
+
+#: checkall.py:384
+msgid "Not Found"
+msgstr "未找到"
+
+#: checkall.py:400
+msgid "Save the results shown to a text file"
+msgstr "将显示的结果保存到文本文件"
+
+#: checkall.py:402
+msgid "Copy the results shown to the clipboard"
+msgstr "将显示的结果复制到剪贴板"
+
+#: checkall.py:404
+msgid "Check only the bad and not found ROM sets again"
+msgstr "仅重新检查损坏和未找到的 ROM 集"
+
+#: checkall.py:546
+msgid "Results copied to the clipboard"
+msgstr "结果已复制到剪贴板"
+
+#: checkall.py:602
+msgid ""
+"There are no ROMs to check.  Your ROM list is empty or none of its ROMs are "
+"present in your ROM folders."
+msgstr "没有要检查的 ROM。您的 ROM 列表为空，或列表中的 ROM 都不在您的 ROM 文件夹中。"
+
+#: checkall.py:610
+msgid "Started checking all ROMs"
+msgstr "开始检查所有 ROM"
+
+#: checkall.py:654
+msgid "Completed checking all ROMs"
+msgstr "已完成检查所有 ROM"
+
+#: checkall.py:528 fix_artwork_file.py:685
+msgid "Results written to file"
+msgstr "结果写入文件"
+
+#: checkall.py:529 fix_artwork_file.py:685
+msgid "File Written"
+msgstr "文件已写入"
+
+#: checkall.py:635
+msgid "Checked {done} of {total} ROM sets"
+msgstr "已检查 {done} / {total} 个 ROM 集"
+
+#: checkall.py:532 fix_artwork_file.py:687
+msgid "Unable to save file to location.  Check permissions."
+msgstr "无法将文件保存到位置。  检查权限。"
+
+#: checkall.py:533 fix_artwork_file.py:687
+msgid "File Write Error"
+msgstr "文件写入错误"
+
+#: checkall.py:594
+msgid ""
+"The path {} for your ROMs folder doesnt exist.  Please check file paths "
+"settings."
+msgstr "您的 ROM 文件夹的路径 {} 不存在。  请检查文件路径设置。"
+
+#: checkall.py:207
+msgid "ERROR opening mylist.db file: {}"
+msgstr "打开 mylist.db 文件时出错：{}"
+
+#: checkall.py:286 rominfo.py:199
+msgid "Error running MAME: {}"
+msgstr "运行 MAME 时出错：{}"
+
+#: filepaths.py:432
+msgid ""
+"Instructions\n"
+"-------------------------------\n"
+"You need to set up valid file paths for the files listed on this page.  Critical ones are the MAME executable, catver.ini, and history.xml.  Most of the others are recommended but not critical.\n"
+"\n"
+"The application has attempted to find the mame.ini file in its most likely location - please check this is correct.  You cant just put it anywhere as MAME needs to find it in very specific locations.  Please read the manual for more information on this.\n"
+"\n"
+"Any file paths found in mame.ini have been automatically populated. These may not be correct for a first run, so please review them.\n"
+"\n"
+"Setting paths:\n"
+"  - Double-click any row to browse for a file or folder, or drag one onto the row from your file manager.\n"
+"  - Right-click any row for more options: add an extra path (for entries that support multiple locations), delete one of them, move one up or down (MAME searches them in order), clear a path back to empty, or open its folder.\n"
+"  - A row shown in red has a problem (missing, or required but not set).  Hover the mouse over it to see why.\n"
+"\n"
+"You can also select the AUTO FIND option at the bottom of the window.  It will ask you to select the root MAME folder where your ROMs etc are located, after which it will try to determine all folder locations and set them automatically."
+msgstr ""
+"使用说明\n"
+"-------------------------------\n"
+"您需要为此页面上列出的文件设置有效的文件路径。  关键的是 MAME 可执行文件、catver.ini 和 History.xml。  其他大多数都是推荐的，但不是关键的。\n"
+"\n"
+"该应用程序已尝试在最可能的位置查找 mame.ini 文件 - 请检查这是否正确。  你不能把它放在任何地方，因为 MAME 需要在非常特定的位置找到它。  请阅读手册以获取更多相关信息。\n"
+"\n"
+"在 mame.ini 中找到的任何文件路径都已自动填充。这些对于第一次运行可能不正确，因此请检查它们。\n"
+"\n"
+"设置路径：\n"
+"  - 双击任意行浏览文件或文件夹，或将文件或文件夹从文件管理器拖到该行上。\n"
+"  - 右键单击​​任意行可获取更多选项：添加额外路径（适用于支持多个位置的条目）、删除其中一个路径、向上或向下移动一个路径（MAME 按顺序搜索它们）、将路径清除回空或打开其文件夹。\n"
+"  - 以红色显示的行有问题（缺失或必需但未设置）。  将鼠标悬停在其上即可查看原因。\n"
+"\n"
+"您还可以选择窗口底部的“自动查找”选项。  它会要求您选择 ROM 等所在的根 MAME 文件夹，之后它将尝试确定所有文件夹位置并自动设置它们。"
+
+#: filepaths.py:132
+msgid "double click to set"
+msgstr "双击设置"
+
+#: filepaths.py:210
+msgid "Edit File Paths"
+msgstr "编辑文件路径"
+
+#: filepaths.py:494
+msgid ""
+"FILEPATHS ERROR: Not getting the right output from MAME.  Check that the "
+"path is defined correctly"
+msgstr "文件路径错误：未从 MAME 获得正确的输出。  检查路径定义是否正确"
+
+#: filepaths.py:646
+msgid "MAME version:  checking..."
+msgstr "MAME 版本：正在检查..."
+
+#: filepaths.py:885
+msgid "Clear path"
+msgstr "畅通无阻的道路"
+
+#: filepaths.py:1034
+msgid "Drop one file or folder at a time."
+msgstr "一次删除一个文件或文件夹。"
+
+#: filepaths.py:1074
+msgid "Different mame.ini"
+msgstr "不同的mame.ini"
+
+#: filepaths.py:1104
+msgid ""
+"Are you sure you want to automatically look for all file & folder paths?  "
+"This will use the mame -createconfig command which will overwrite any "
+"existing mame.ini settings."
+msgstr ""
+"您确定要自动查找所有文件和文件夹路径吗？  这将使用 mame -createconfig 命令，该命令将覆盖任何现有的 mame.ini 设置。"
+
+#: filepaths.py:1107
+msgid "Auto Find file & folder paths"
+msgstr "自动查找文件和文件夹路径"
+
+#: filepaths.py:1233 filepaths.py:1232
+msgid "Auto Find complete"
+msgstr "自动查找完成"
+
+#: filepaths.py:1294
+msgid "Check the paths, then APPLY to save them or REVERT to undo."
+msgstr "检查路径，然后“应用”(APPLY) 保存它们或“恢复”(REVERT) 撤消。"
+
+#: filepaths.py:1400
+msgid "Done"
+msgstr "完毕"
+
+#: filepaths.py:1404
+msgid "Are you sure you want to clear all file & folder paths?"
+msgstr "您确定要清除所有文件和文件夹路径吗？"
+
+#: filepaths.py:1405
+msgid "Clear all file paths"
+msgstr "清除所有文件路径"
+
+#: filepaths.py:333
+msgid "APPLY"
+msgstr "申请"
+
+#: filepaths.py:333
+msgid "Apply the file path changes"
+msgstr "应用文件路径更改"
+
+#: filepaths.py:334
+msgid "REVERT"
+msgstr "恢复"
+
+#: filepaths.py:334
+msgid ""
+"Discard any unsaved changes and reload the file paths from the INI files."
+msgstr "放弃所有未保存的更改并从 INI 文件重新加载文件路径。"
+
+#: filepaths.py:336
+msgid "CLEAR ALL"
+msgstr "全部清除"
+
+#: filepaths.py:336
+msgid "Clear all file & folder path input fields."
+msgstr "清除所有文件和文件夹路径输入字段。"
+
+#: filepaths.py:337
+msgid "AUTO FIND"
+msgstr "自动查找"
+
+#: filepaths.py:337
+msgid "Search for all file & folder paths automatically."
+msgstr "自动搜索所有文件和文件夹路径。"
+
+#: filepaths.py:338
+msgid "MAKE INI"
+msgstr "制作INI"
+
+#: filepaths.py:338
+msgid ""
+"Create the mame.ini file using the MAME executable - in the folder of the "
+"MAME INI File row if it is set, otherwise in the MAME folder on Windows and "
+"macOS, or in ~/.mame on Linux."
+msgstr ""
+"使用 MAME 可执行文件创建 mame.ini 文件 - 在 MAME INI 文件行的文件夹中（如果已设置），否则在 Windows 和 macOS"
+" 上的 MAME 文件夹中，或在 Linux 上的 ~/.mame 中。"
+
+#: filepaths.py:525
+msgid ""
+"The path to the mame.ini file is empty, so nothing has been saved.  Set the "
+"MAME INI File row (or use AUTO FIND or MAKE INI) and then apply again."
+msgstr ""
+"mame.ini 文件的路径为空，因此未保存任何内容。  设置 MAME INI 文件行（或使用 AUTO FIND 或 MAKE "
+"INI），然后再次应用。"
+
+#: filepaths.py:527 filepaths.py:549
+msgid "ERROR writing to mame.ini file"
+msgstr "写入 mame.ini 文件时出错"
+
+#: filepaths.py:548
+msgid ""
+"Unable to write to the mame.ini file. The file is most likely read-only."
+msgstr "无法写入 mame.ini 文件。该文件很可能是只读的。"
+
+#: filepaths.py:554
+msgid "Unable to write to the ui.ini file. The file is most likely read-only."
+msgstr "无法写入 ui.ini 文件。该文件很可能是只读的。"
+
+#: filepaths.py:555 filepaths.py:540
+msgid "ERROR writing to ui.ini file"
+msgstr "写入 ui.ini 文件时出错"
+
+#: filepaths.py:560
+msgid ""
+"Unable to write to the pfemame.ini file. The file is most likely read-only."
+msgstr "无法写入 pfemame.ini 文件。该文件很可能是只读的。"
+
+#: filepaths.py:561
+msgid "ERROR writing to pfemame.ini file"
+msgstr "写入 pfemame.ini 文件时出错"
+
+#: filepaths.py:592
+msgid "File paths saved.  Restart pfeMAME now so all the changes take effect?"
+msgstr "已保存文件路径。  现在重新启动 pfeMAME 以使所有更改生效？"
+
+#: filepaths.py:593 pfemame.py:1744
+msgid "Restart Required"
+msgstr "需要重新启动"
+
+#: filepaths.py:607
+msgid "Are you sure you want to discard all unsaved file path changes?"
+msgstr "您确定要放弃所有未保存的文件路径更改吗？"
+
+#: filepaths.py:608
+msgid "Revert file paths"
+msgstr "恢复文件路径"
+
+#: filepaths.py:614
+msgid "File paths reloaded"
+msgstr "文件路径已重新加载"
+
+#: filepaths.py:673
+msgid "Required - pfeMAME needs this to be set."
+msgstr "必需 - pfeMAME 需要设置此项。"
+
+#: filepaths.py:783
+msgid "MAME INI File:"
+msgstr "MAME.INI 文件："
+
+#: filepaths.py:784
+msgid "MAME Executable:"
+msgstr "MAME 可执行文件："
+
+#: filepaths.py:785
+msgid "History file:"
+msgstr "历史档案："
+
+#: filepaths.py:786
+msgid "MAME info file:"
+msgstr "MAME信息文件："
+
+#: filepaths.py:787
+msgid "catver.ini file:"
+msgstr "catver.ini 文件："
+
+#: filepaths.py:788
+msgid "Roms folder:"
+msgstr "ROM文件夹："
+
+#: filepaths.py:789
+msgid "Video folder:"
+msgstr "视频文件夹："
+
+#: filepaths.py:790
+msgid "Samples folder:"
+msgstr "样本文件夹："
+
+#: filepaths.py:791
+msgid "Softwarelist HASH folder:"
+msgstr "软件列表HASH文件夹："
+
+#: filepaths.py:792
+msgid "Plugins folder:"
+msgstr "插件文件夹："
+
+#: filepaths.py:793
+msgid "Artwork folder:"
+msgstr "作品文件夹："
+
+#: filepaths.py:794
+msgid "Icon folder:"
+msgstr "图标文件夹："
+
+#: filepaths.py:795
+msgid "Snap folder:"
+msgstr "快照文件夹："
+
+#: filepaths.py:796
+msgid "PCBs folder:"
+msgstr "PCB 文件夹："
+
+#: filepaths.py:797
+msgid "Cabinets folder:"
+msgstr "橱柜文件夹："
+
+#: filepaths.py:798
+msgid "Control Panels folder:"
+msgstr "控制面板文件夹："
+
+#: filepaths.py:799
+msgid "Flyers folder:"
+msgstr "传单文件夹："
+
+#: filepaths.py:800
+msgid "Titles folder:"
+msgstr "标题文件夹："
+
+#: filepaths.py:801
+msgid "Ends folder:"
+msgstr "结束文件夹："
+
+#: filepaths.py:802
+msgid "Marquees folder:"
+msgstr "字幕文件夹："
+
+#: filepaths.py:803
+msgid "Bosses folder:"
+msgstr "老板文件夹："
+
+#: filepaths.py:804
+msgid "Controller folder:"
+msgstr "控制器文件夹："
+
+#: filepaths.py:805
+msgid "INI folder:"
+msgstr "INI 文件夹："
+
+#: filepaths.py:806
+msgid "Config folder:"
+msgstr "配置文件夹："
+
+#: filepaths.py:807
+msgid "Mapping folder:"
+msgstr "映射文件夹："
+
+#: filepaths.py:808
+msgid "NVRAM folder:"
+msgstr "NVRAM 文件夹："
+
+#: filepaths.py:809
+msgid "Difference folder:"
+msgstr "差异文件夹："
+
+#: filepaths.py:810
+msgid "Cheat File folder:"
+msgstr "作弊文件夹："
+
+#: filepaths.py:811
+msgid "Inputs folder:"
+msgstr "输入文件夹："
+
+#: filepaths.py:812
+msgid "States folder:"
+msgstr "状态文件夹："
+
+#: filepaths.py:882
+msgid "Add extra path for this entry"
+msgstr "为此条目添加额外路径"
+
+#: filepaths.py:884
+msgid "Delete this path"
+msgstr "删除该路径"
+
+#: filepaths.py:895
+msgid "Open folder"
+msgstr "打开文件夹"
+
+#: filepaths.py:913
+msgid "Are you sure you want to DELETE this row?"
+msgstr "您确定要删除该行吗？"
+
+#: filepaths.py:914
+msgid "Delete selected row"
+msgstr "删除所选行"
+
+#: filepaths.py:920
+msgid "Are you sure you want to clear this row (set to empty)?"
+msgstr "您确定要清除此行（设置为空）吗？"
+
+#: filepaths.py:921
+msgid "Clear selected row"
+msgstr "清除所选行"
+
+#: filepaths.py:1117
+msgid ""
+"Select the MAME folder where your various files & folders are located, e.g. "
+"ROMs, SNAPs, etc"
+msgstr "选择各种文件和文件夹所在的 MAME 文件夹，例如ROM、SNAP 等"
+
+#: filepaths.py:1130
+msgid "Auto Find: searching for MAME paths..."
+msgstr "自动查找：搜索 MAME 路径..."
+
+#: filepaths.py:1291
+msgid "Changed:"
+msgstr "改变："
+
+#: filepaths.py:1293
+msgid "Not found (left as they were):"
+msgstr "未找到（保持原样）："
+
+#: filepaths.py:1357
+msgid "The path to the MAME executable is invalid."
+msgstr "MAME 可执行文件的路径无效。"
+
+#: filepaths.py:1400
+msgid "Completed creating mame.ini"
+msgstr "完成创建mame.ini"
+
+#: filepaths.py:1418
+msgid "All files"
+msgstr "所有文件"
+
+#: filepaths.py:1425
+msgid "Choose a file"
+msgstr "选择一个文件"
+
+#: filepaths.py:1433
+msgid "Choose a directory"
+msgstr "选择一个目录"
+
+#: filepaths.py:139 rominfo.py:167 tileview.py:804 xmlinfo.py:220
+msgid "Name"
+msgstr "名称"
+
+#: filepaths.py:139
+msgid "Path"
+msgstr "路径"
+
+#: filepaths.py:486
+msgid ""
+"Not getting the right output from MAME or cannot find the MAME executable.  "
+"Check that the path is defined correctly.  If the OS is Linux, try running "
+"\"mame\" from the command line."
+msgstr ""
+"无法从 MAME 获得正确的输出或找不到 MAME 可执行文件。  检查路径定义是否正确。  如果操作系统是 "
+"Linux，请尝试从命令行运行“mame”。"
+
+#: filepaths.py:536
+msgid ""
+"None of the INI folders exist, so there is nowhere to save the PCBs, "
+"Cabinets, Control Panels, Flyers, Titles, Ends, Marquees and Bosses folders "
+"(MAME keeps them in ui.ini).  Nothing has been saved.  Set the INI folder "
+"row and then apply again."
+msgstr ""
+"所有 INI 文件夹都不存在，因此没有地方可以保存 PCB、Cabinets、Control "
+"Panel、Flyers、Titles、Ends、Marquees 和 Bosses 文件夹（MAME 将它们保存在 ui.ini 中）。  "
+"什么都没有保存。  设置INI文件夹行，然后再次应用。"
+
+#: filepaths.py:581
+msgid "File paths saved"
+msgstr "保存的文件路径"
+
+#: filepaths.py:661
+msgid "MAME version:  no MAME executable set"
+msgstr "MAME 版本：无 MAME 可执行文件集"
+
+#: filepaths.py:679
+msgid "Folder not found:  {}"
+msgstr "找不到文件夹：{}"
+
+#: filepaths.py:890
+msgid "Move up (searched earlier)"
+msgstr "向上移动（之前搜索过）"
+
+#: filepaths.py:892
+msgid "Move down (searched later)"
+msgstr "下移（稍后搜索）"
+
+#: filepaths.py:1072
+msgid ""
+"Load the folder paths from this mame.ini?\n"
+"\n"
+"{}\n"
+"\n"
+"(No keeps the folder paths shown now, and they will be saved into it when you APPLY.)"
+msgstr ""
+"从这个 mame.ini 加载文件夹路径？\n"
+"\n"
+"{}\n"
+"\n"
+"（否保留现在显示的文件夹路径，当您申请时它们将被保存到其中。）"
+
+#: filepaths.py:1143
+msgid "Looking in {}"
+msgstr "在 {} 中查找"
+
+#: filepaths.py:1179
+msgid "Auto Find cancelled - nothing has been changed"
+msgstr "自动查找已取消 - 没有任何改变"
+
+#: filepaths.py:1201
+msgid "Unable to find the MAME executable so setting to default"
+msgstr "无法找到 MAME 可执行文件，因此设置为默认值"
+
+#: filepaths.py:1203
+msgid ""
+"Unable to auto-find the MAME executable.  Either I am looking in the wrong "
+"place, or you dont have MAME installed yet.  Setting it to the default "
+"'mame' which may work.  If not, you will need to find it manually"
+msgstr ""
+"无法自动查找 MAME 可执行文件。  要么我找错地方了，要么你还没有安装 MAME。  将其设置为可能有效的默认“mame”。  "
+"如果没有，则需要手动查找"
+
+#: filepaths.py:1288
+msgid "Found {found} of {total} paths ({changed} changed)."
+msgstr "找到 {total} 路径的 {found}（{changed} 已更改）。"
+
+#: filepaths.py:1386
+msgid "MAME reported an error (exit code {})."
+msgstr "MAME 报告错误（退出代码 {}）。"
+
+#: filepaths.py:1392
+msgid "Check the MAME executable path and that the folder is not read-only."
+msgstr "检查 MAME 可执行路径并确保该文件夹不是只读的。"
+
+#: filepaths.py:411
+msgid "Something went wrong:"
+msgstr "出了点问题："
+
+#: filepaths.py:602
+msgid "File paths saved - restart pfeMAME for all the changes to take effect"
+msgstr "已保存文件路径 - 重新启动 pfeMAME 以使所有更改生效"
+
+#: filepaths.py:659
+msgid "MAME version:  {}"
+msgstr "MAME版本：{}"
+
+#: filepaths.py:678
+msgid "File not found:  {}"
+msgstr "未找到文件：{}"
+
+#: filepaths.py:1036
+msgid "{} needs a file, not a folder."
+msgstr "{} 需要一个文件，而不是文件夹。"
+
+#: filepaths.py:1161 filepaths.py:1276
+msgid "Checking {}"
+msgstr "检查{}"
+
+#: filepaths.py:1373
+msgid "Unable to create the folder for mame.ini:"
+msgstr "无法为 mame.ini 创建文件夹："
+
+#: filepaths.py:1388
+msgid "MAME ran, but no mame.ini was written to {}."
+msgstr "MAME 运行，但没有将 mame.ini 写入 {}。"
+
+#: filepaths.py:663
+msgid "MAME version:  not working ({})"
+msgstr "MAME 版本：不工作（{}）"
+
+#: filepaths.py:1038
+msgid "{} needs a folder, not a file."
+msgstr "{} 需要一个文件夹，而不是一个文件。"
+
+#: filepaths.py:1063
+msgid "Unable to open {}"
+msgstr "无法打开{}"
+
+#: filepaths.py:1338 rominfo.py:197
+msgid "MAME did not finish within {} seconds."
+msgstr "MAME 未在 {} 秒内完成。"
+
+#: filepaths.py:1341
+msgid "MAME could not be run:  {}"
+msgstr "MAME 无法运行：{}"
+
+#: filepaths.py:1391
+msgid "Unable to create the mame.ini file."
+msgstr "无法创建 mame.ini 文件。"
+
+#: fix_artwork_file.py:308 fix_artwork_file.py:333 fix_artwork_file.py:347
+msgid "SUMMARY"
+msgstr "摘要"
+
+#: fix_artwork_file.py:340
+msgid "Stopped before all the artwork sets were updated."
+msgstr "在更新所有图稿集之前已停止。"
+
+#: fix_artwork_file.py:351
+msgid "Stopped before all the files were restored."
+msgstr "在还原所有文件之前已停止。"
+
+#: fix_artwork_file.py:407 fix_artwork_file.py:567 fix_artwork_file.py:643
+msgid "Artwork Layout Fixer"
+msgstr "图稿布局修复工具"
+
+#: fix_artwork_file.py:429
+msgid ""
+"Finds artwork whose layout files use old tags (backdrop, overlay, bezel, "
+"cpanel and marquee) that newer MAME versions no longer support, and updates "
+"them.  Artwork folders:"
+msgstr ""
+"查找布局文件仍使用新版 MAME 已不再支持的旧标签（backdrop、overlay、bezel、cpanel 和 marquee）的图稿并进行更新。"
+"  图稿文件夹："
+
+#: fix_artwork_file.py:450
+msgid "ANALYSE"
+msgstr "分析"
+
+#: fix_artwork_file.py:452
+msgid "FIX"
+msgstr "修复"
+
+#: fix_artwork_file.py:455
+msgid "RESTORE BACKUP"
+msgstr "还原备份"
+
+#: fix_artwork_file.py:458
+msgid "SAVE LOG"
+msgstr "保存日志"
+
+#: fix_artwork_file.py:594
+msgid "Checking the artwork..."
+msgstr "正在检查图稿..."
+
+#: fix_artwork_file.py:636
+msgid "Updating the artwork..."
+msgstr "正在更新图稿..."
+
+#: fix_artwork_file.py:670
+msgid "Restoring the artwork..."
+msgstr "正在还原图稿..."
+
+#: fix_artwork_file.py:309
+msgid "Artwork sets checked: {total} (zip files: {zips}, folders: {folders})"
+msgstr "已检查的图稿集：{total}（zip 文件：{zips}，文件夹：{folders}）"
+
+#: fix_artwork_file.py:311
+msgid "Layout (.lay) files checked: {}"
+msgstr "已检查的布局 (.lay) 文件：{}"
+
+#: fix_artwork_file.py:312
+msgid "Artwork sets that need updating: {}"
+msgstr "需要更新的图稿集：{}"
+
+#: fix_artwork_file.py:328
+msgid "Your artwork is up to date - nothing needs changing."
+msgstr "您的图稿已是最新，无需更改。"
+
+#: fix_artwork_file.py:334
+msgid "Artwork sets updated: {}"
+msgstr "已更新的图稿集：{}"
+
+#: fix_artwork_file.py:335
+msgid "Old tags replaced: {total} ({detail})"
+msgstr "已替换的旧标签：{total}（{detail}）"
+
+#: fix_artwork_file.py:347
+msgid "Files restored from backup: {}"
+msgstr "从备份还原的文件：{}"
+
+#: fix_artwork_file.py:451
+msgid "Check the artwork again (changes nothing)"
+msgstr "再次检查图稿（不做任何更改）"
+
+#: fix_artwork_file.py:453
+msgid ""
+"Update the artwork that uses old tags.  The original files are backed up "
+"first"
+msgstr "更新使用旧标签的图稿。  会先备份原始文件"
+
+#: fix_artwork_file.py:459
+msgid "Save the messages shown to a text file"
+msgstr "将显示的消息保存到文本文件"
+
+#: fix_artwork_file.py:643
+msgid "There are no backed up artwork files to restore."
+msgstr "没有可还原的已备份图稿文件。"
+
+#: fix_artwork_file.py:667
+msgid "Press ANALYSE to check the artwork again."
+msgstr "按“分析”再次检查图稿。"
+
+#: fix_artwork_file.py:294
+msgid "{name}: could not be read - {error}"
+msgstr "{name}：无法读取 - {error}"
+
+#: fix_artwork_file.py:314
+msgid "Old tags to replace: {total} ({detail})"
+msgstr "待替换的旧标签：{total}（{detail}）"
+
+#: fix_artwork_file.py:317
+msgid "Artwork sets that could not be read: {}"
+msgstr "无法读取的图稿集：{}"
+
+#: fix_artwork_file.py:319
+msgid ".7z artwork skipped (only .zip files and folders can be updated): {}"
+msgstr "已跳过的 .7z 图稿（只能更新 .zip 文件和文件夹）：{}"
+
+#: fix_artwork_file.py:322
+msgid "Artwork folder not found: {}"
+msgstr "未找到图稿文件夹：{}"
+
+#: fix_artwork_file.py:325
+msgid ""
+"Press FIX to update them.  The original files are copied to the {} folder "
+"first."
+msgstr "按“修复”进行更新。  原始文件会先复制到 {} 文件夹。"
+
+#: fix_artwork_file.py:338
+msgid "Artwork sets that failed (left unchanged): {}"
+msgstr "失败的图稿集（保持不变）：{}"
+
+#: fix_artwork_file.py:342
+msgid "The original files are in: {}"
+msgstr "原始文件位于：{}"
+
+#: fix_artwork_file.py:349
+msgid "Files that could not be restored: {}"
+msgstr "无法还原的文件：{}"
+
+#: fix_artwork_file.py:526
+msgid "{done} of {total}"
+msgstr "{done} / {total}"
+
+#: fix_artwork_file.py:434
+msgid "(none set in mame.ini)"
+msgstr "（mame.ini 中未设置）"
+
+#: fix_artwork_file.py:456
+msgid "Put back the original artwork files from the {} folders"
+msgstr "从 {} 文件夹放回原始图稿文件"
+
+#: fix_artwork_file.py:581
+msgid "Stopped."
+msgstr "已停止。"
+
+#: fix_artwork_file.py:609
+msgid ""
+"Update {count} artwork sets?\n"
+"\n"
+"The original files are copied to the {folder} folder inside each artwork folder first, so they can be restored."
+msgstr ""
+"要更新 {count} 个图稿集吗？\n"
+"\n"
+"原始文件会先复制到每个图稿文件夹内的 {folder} 文件夹中，以便还原。"
+
+#: fix_artwork_file.py:647
+msgid ""
+"Restore {count} files from the {folder} folders?\n"
+"\n"
+"This replaces the current versions of those files with the originals."
+msgstr ""
+"要从 {folder} 文件夹还原 {count} 个文件吗？\n"
+"\n"
+"这些文件的当前版本将被原始文件替换。"
+
+#: fix_artwork_file.py:387
+msgid "ERROR: {}"
+msgstr "错误：{}"
+
+#: fix_artwork_file.py:588
+msgid "{}: skipped - .7z artwork cannot be updated"
+msgstr "{}：已跳过 - 无法更新 .7z 图稿"
+
+#: fix_artwork_file.py:624
+msgid "{}: updated"
+msgstr "{}：已更新"
+
+#: fix_artwork_file.py:659
+msgid "{}: restored"
+msgstr "{}：已还原"
+
+#: fix_artwork_file.py:630
+msgid "{name}: FAILED, left unchanged - {error}"
+msgstr "{name}：失败，保持不变 - {error}"
+
+#: fix_artwork_file.py:662
+msgid "{name}: FAILED - {error}"
+msgstr "{name}：失败 - {error}"
+
+#: fullscreenplay.py:108
+msgid "Running Fullscreen video player"
+msgstr "运行全屏视频播放器"
+
+#: fullscreenplay.py:111
+msgid "ffmpeg not available"
+msgstr "ffmpeg 不可用"
+
+#: fullscreenplay.py:128 fullscreenplay.py:131
+msgid "No video files found that can be played or folder error: {}"
+msgstr "找不到可以播放的视频文件或文件夹错误：{}"
+
+#: fullscreenplay.py:198
+msgid ""
+"None of the videos in {} could be played - closing the full screen video "
+"player"
+msgstr "{} 中的视频都无法播放 - 正在关闭全屏视频播放器"
+
+#: fullscreenplay.py:225
+msgid "Playing video {}\n"
+msgstr ""
+"正在播放视频{}\n"
+"”"
+
+#: fullscreenplay.py:258
+msgid "Metadata error: {}"
+msgstr "元数据错误：{}"
+
+#: functions.py:136
+msgid "Categories file loaded successfully"
+msgstr "类别文件加载成功"
+
+#: functions.py:824
+msgid "Reading history.xml file."
+msgstr "读取history.xml 文件。"
+
+#: functions.py:857
+msgid "No History file defined"
+msgstr "未定义历史文件"
+
+#: functions.py:141
+msgid ""
+"Unable to locate categories.dat file.  Select some ROM categories by "
+"checking the box for the category."
+msgstr "无法找到categories.dat 文件。  通过选中类别复选框来选择某些 ROM 类别。"
+
+#: functions.py:827
+msgid "Reading mameinfo.dat file."
+msgstr "读取mameinfo.dat 文件。"
+
+#: functions.py:1249
+msgid "Total ROMs: "
+msgstr "ROM 总数："
+
+#: functions.py:1254
+msgid "Exists: "
+msgstr "存在："
+
+#: functions.py:1259
+msgid "In Current View: "
+msgstr "在当前视图中："
+
+#: functions.py:877
+msgid ""
+"No information in the History file for System: {rom} with system program "
+"{program}"
+msgstr "系统的历史记录文件中没有信息：{rom} 和系统程序 {program}"
+
+#: functions.py:887
+msgid "No information in the History file for {}"
+msgstr "{} 的历史记录文件中没有信息"
+
+#: functions.py:1333
+msgid "Skipped {} as it does not exist\n"
+msgstr ""
+"跳过了 {}，因为它不存在\n"
+"”"
+
+#: functions.py:834
+msgid "Unable to read the {file_type} file at \"{path}\": {error}"
+msgstr "无法读取“{path}”处的 {file_type} 文件：{error}"
+
+#: functions.py:863
+msgid ""
+"No information in the {file_type} file for System: {rom} with system program"
+" {program}"
+msgstr "系统的 {file_type} 文件中没有信息：带有系统程序 {program} 的 {rom}"
+
+#: functions.py:870
+msgid "No history text found between $mame and $end tags for ROM: {}"
+msgstr "在 ROM 的 $mame 和 $end 标记之间找不到历史文本：{}"
+
+#: functions.py:1021
+msgid "No joystick available for navigation"
+msgstr "没有可用于导航的操纵杆"
+
+#: functions.py:993
+msgid "Using {} for navigation"
+msgstr "使用 {} 进行导航"
+
+#: global_defaults.py:50
+msgid "English"
+msgstr "英语"
+
+#: global_defaults.py:51
+msgid "German"
+msgstr "德语"
+
+#: global_defaults.py:52
+msgid "Spanish"
+msgstr "西班牙语"
+
+#: global_defaults.py:53
+msgid "French"
+msgstr "法语"
+
+#: global_defaults.py:54
+msgid "Japanese"
+msgstr "日语"
+
+#: global_defaults.py:55
+msgid "Chinese"
+msgstr "中文"
+
+#: global_defaults.py:56
+msgid "Russian"
+msgstr "俄语"
+
+#: image_picker_dialog.py:75 software_browser.py:87
+msgid "Loading..."
+msgstr "加载中..."
+
+#: image_picker_dialog.py:97
+msgid "No preview"
+msgstr "无预览"
+
+#: image_picker_dialog.py:171
+msgid "Use This Image"
+msgstr "使用此图片"
+
+#: image_picker_dialog.py:139
+msgid ""
+"Click an image to select it, then choose \"Use This Image\". Double-click to"
+" use it straight away."
+msgstr "单击图像将其选中，然后选择“使用此图像”。双击即可立即使用。"
+
+#: languagepicker.py:116
+msgid "Select Language"
+msgstr "选择语言"
+
+#: languagepicker.py:193
+msgid "pfeMAME will use the new language after it has been restarted."
+msgstr "pfeMAME 重新启动后将使用新语言。"
+
+#: online_rom_search.py:297
+msgid "Searching archive.org for {}.zip"
+msgstr "正在 archive.org 上搜索 {}.zip"
+
+#: online_rom_search.py:454
+msgid "Logging in to archive.org"
+msgstr "正在登录 archive.org"
+
+#: online_rom_search.py:557
+msgid "Connecting to retroroms.net"
+msgstr "正在连接 retroroms.net"
+
+#: online_rom_search.py:561
+msgid "Logging in to retroroms.net and looking for {rom}.zip in {folder}"
+msgstr "正在登录 retroroms.net 并在 {folder} 中查找 {rom}.zip"
+
+#: online_rom_search.py:630
+msgid "Searching the web (DuckDuckGo) for {}"
+msgstr "正在网上 (DuckDuckGo) 搜索 {}"
+
+#: online_rom_search.py:396
+msgid "Checking {source} item {number} of {count} ({found} found so far)"
+msgstr "正在检查 {source} 的第 {number}/{count} 项 (已找到 {found} 个)"
+
+#: online_rom_search.py:457
+msgid "archive.org login failed"
+msgstr "登录 archive.org 失败"
+
+#: PanelDebug.py:30
+msgid "Write MAME log messages to file"
+msgstr "将 MAME 日志消息写入文件"
+
+#: PanelDebug.py:32
+msgid "Display debug messages"
+msgstr "显示调试消息"
+
+#: PanelDebug.py:36
+msgid "Write MAME messages to the log file"
+msgstr "将 MAME 消息写入日志文件"
+
+#: PanelDebug.py:37
+msgid "Displays MAME diagnostics messages.  Can be useful for debugging."
+msgstr "显示 MAME 诊断消息。  对于调试很有用。"
+
+#: PanelInput.py:35
+msgid "Use Mouse"
+msgstr "使用鼠标"
+
+#: PanelInput.py:37
+msgid "Use Joystick"
+msgstr "使用操纵杆"
+
+#: PanelInput.py:39
+msgid "Use Lightgun (Don't use with Use Mouse)"
+msgstr "使用光枪（不要与使用鼠标一起使用）"
+
+#: PanelInput.py:41
+msgid "Offscreen Reload"
+msgstr "离屏重新加载"
+
+#: PanelInput.py:45
+msgid ""
+"Enables the mouse for ROMs that can use it - typically lightgun ROMs that "
+"just use the mouse."
+msgstr "为可以使用鼠标的 ROM 启用鼠标 - 通常是仅使用鼠标的光枪 ROM。"
+
+#: PanelInput.py:47
+msgid "Enables the joystick for ROMs that can use it"
+msgstr "为可以使用操纵杆的 ROM 启用操纵杆"
+
+#: PanelInput.py:48
+msgid ""
+"Enables the lightgun controller if present.  Most lightgun ROMs just use the"
+" mouse.  If you have to enable this, disable the Use Mouse."
+msgstr "启用光枪控制器（如果存在）。  大多数光枪 ROM 仅使用鼠标。  如果必须启用此功能，请禁用使用鼠标”。"
+
+#: PanelInput.py:51
+msgid "Reload when pointer is out of bounds by simulating offscreen"
+msgstr "通过模拟屏幕外，当指针超出范围时重新加载"
+
+#: PanelMisc.py:36
+msgid "Enable Cheats"
+msgstr "启用作弊"
+
+#: PanelMisc.py:38
+msgid "Skip ROM Info on startup"
+msgstr "启动时跳过 ROM 信息"
+
+#: PanelMisc.py:42
+msgid ""
+"This enables ROMs cheats.  The cheat file must exist and MAME must know "
+"where it is."
+msgstr "这使得 ROM 可以作弊。  作弊文件必须存在并且 MAME 必须知道它在哪里。"
+
+#: PanelMisc.py:44
+msgid "Skips the ROM information screen when MAME launches."
+msgstr "MAME 启动时跳过 ROM 信息屏幕。"
+
+#: PanelOSD.py:33
+msgid "OSD UI Key"
+msgstr "OSD 用户界面键"
+
+#: PanelOSD.py:36
+msgid "Select the key used to toggle the OSD UI mode for systems"
+msgstr "选择用于切换系统 OSD UI 模式的键"
+
+#: PanelPerformance.py:29
+msgid "Auto Frame skip"
+msgstr "自动跳帧"
+
+#: PanelPerformance.py:33
+msgid ""
+"Automatically skip frames to improve ROM speed.  Can be useful for slow "
+"ROMs."
+msgstr "自动跳帧以提高 ROM 速度。  对于慢速 ROM 很有用。"
+
+#: PanelPfeMame.py:58
+msgid "Startup"
+msgstr "启动"
+
+#: PanelPfeMame.py:77
+msgid "Main View and ROMs List"
+msgstr "主视图和 ROM 列表"
+
+#: PanelPfeMame.py:96 pfemame_ribbon_bar.py:595
+msgid "Tile View"
+msgstr "平铺视图"
+
+#: PanelPfeMame.py:107
+msgid "Playing ROMs and Videos"
+msgstr "播放 ROM 和视频"
+
+#: PanelPfeMame.py:130
+msgid "Joystick"
+msgstr "操纵杆"
+
+#: PanelPfeMame.py:149
+msgid "List Colors"
+msgstr "列表颜色"
+
+#: PanelPfeMame.py:156
+msgid "UI Elements"
+msgstr "用户界面元素"
+
+#: PanelPfeMame.py:163
+msgid "Special UI"
+msgstr "特殊用户界面"
+
+#: PanelPfeMame.py:254
+msgid "Set the size of the ROM image tiles in 'Tile View'."
+msgstr "在Tile View”中设置 ROM 映像图块的大小。"
+
+#: PanelPfeMame.py:257
+msgid ""
+"This sets the default view that the ROMs list will show when the application"
+" starts up."
+msgstr "这将设置应用程序启动时 ROM 列表将显示的默认视图。"
+
+#: PanelPfeMame.py:260
+msgid ""
+"This sets the number of days after which a prompt is produced at startup to "
+"refresh the ROMs cache."
+msgstr "这设置了多少天后在启动时生成刷新 ROM 缓存的提示。"
+
+#: PanelPfeMame.py:263
+msgid ""
+"Number of minutes of inactivity before the screensaver is activated.  Set to"
+" Zero to disable."
+msgstr "激活屏幕保护程序之前不活动的分钟数。  设置为零以禁用。"
+
+#: PanelPfeMame.py:267
+msgid ""
+"This sets the scaling size for the ROM icons (if any exist and they are "
+"enabled).  16 pixels is the default."
+msgstr "这将设置 ROM 图标的缩放尺寸（如果存在且已启用）。  默认为 16 像素。"
+
+#: PanelPfeMame.py:273
+msgid "The joystick or gamepad used to navigate the Main View and Tile View."
+msgstr "用于导航主视图和平铺视图的操纵杆或游戏手柄。"
+
+#: PanelPfeMame.py:276
+msgid "* - Requires restart  ** - Requires database refresh"
+msgstr "* - 需要重新启动 ** - 需要刷新数据库"
+
+#: PanelPfeMame.py:290
+msgid ""
+"Choose the language pfeMAME uses.  pfeMAME must be restarted for the change "
+"to take effect."
+msgstr "选择 pfeMAME 使用的语言。  必须重新启动 pfeMAME 才能使更改生效。"
+
+#: PanelPfeMame.py:293
+msgid "Language (*)"
+msgstr "语言 (*)"
+
+#: PanelPfeMame.py:337
+msgid "Number of days to check ROM cache"
+msgstr "检查 ROM 缓存的天数"
+
+#: PanelPfeMame.py:338
+msgid "Minutes for Screensaver"
+msgstr "屏幕保护程序的分钟数"
+
+#: PanelPfeMame.py:339
+msgid "Default ROM list view at startup"
+msgstr "启动时的默认 ROM 列表视图"
+
+#: PanelPfeMame.py:340
+msgid "Icons Size for ROMs list (*)"
+msgstr "ROM 列表的图标大小 (*)"
+
+#: PanelPfeMame.py:341
+msgid "Tile Size in Tile View"
+msgstr "平铺视图中的平铺大小"
+
+#: PanelPfeMame.py:342
+msgid "Joystick Selected For Navigation (*)"
+msgstr "选择用于导航的操纵杆 (*)"
+
+#: PanelPfeMame.py:532
+msgid "Are you sure you want to reset all colors?"
+msgstr "您确定要重置所有颜色吗？"
+
+#: PanelPfeMame.py:532
+msgid "Reset all colors to default"
+msgstr "将所有颜色重置为默认值"
+
+#: PanelPfeMame.py:537
+msgid "Are you sure you want to change all colors to the Dark Theme?"
+msgstr "您确定要将所有颜色更改为深色主题吗？"
+
+#: PanelPfeMame.py:538
+msgid "Select Dark Theme"
+msgstr "选择深色主题"
+
+#: PanelPfeMame.py:693
+msgid "DEFAULT ALL COLORS"
+msgstr "默认所有颜色"
+
+#: PanelPfeMame.py:694
+msgid "Set all color values to their application default."
+msgstr "将所有颜色值设置为其应用程序默认值。"
+
+#: PanelPfeMame.py:701
+msgid "SELECT DARK THEME"
+msgstr "选择深色主题"
+
+#: PanelPfeMame.py:702
+msgid "Set the application colors to Dark Theme."
+msgstr "将应用程序颜色设置为深色主题。"
+
+#: PanelPfeMame.py:59
+msgid "Check software version on startup"
+msgstr "启动时检查软件版本"
+
+#: PanelPfeMame.py:60
+msgid ""
+"Check for updates to the application software version online on startup "
+"automatically."
+msgstr "启动时自动在线检查应用软件版本更新。"
+
+#: PanelPfeMame.py:61
+msgid "Check Catver.ini file version on startup"
+msgstr "启动时检查 Catver.ini 文件版本"
+
+#: PanelPfeMame.py:62
+msgid ""
+"Check the version of the Catver.ini file on startup and compare to the MAME "
+"version.  If not matched then warn the user that the versions are not "
+"matched"
+msgstr "在启动时检查 Catver.ini 文件的版本并与 MAME 版本进行比较。  如果不匹配，则警告用户版本不匹配"
+
+#: PanelPfeMame.py:64
+msgid "Check ROMs database age on startup"
+msgstr "启动时检查 ROM 数据库年龄"
+
+#: PanelPfeMame.py:65
+msgid "Check the age of the ROMs database when the application is started."
+msgstr "应用程序启动时检查 ROM 数据库的寿命。"
+
+#: PanelPfeMame.py:66
+msgid "Auto Select the last ROM selected and last view (*)"
+msgstr "自动选择最后选择的 ROM 和最后查看的 (*)"
+
+#: PanelPfeMame.py:67
+msgid ""
+"Automatically select the View and last ROM selected when pfeMAME was "
+"previously shut down.  This overrides the control above."
+msgstr "自动选择先前关闭 pfeMAME 时选择的视图和最后选择的 ROM。  这会覆盖上面的控制。"
+
+#: PanelPfeMame.py:69
+msgid "Set Tile View as Default (after startup)"
+msgstr "将平铺视图设置为默认（启动后）"
+
+#: PanelPfeMame.py:70
+msgid ""
+"Select this if you want the 'Tile' view to run automatically after the "
+"pfeMAME application has launched."
+msgstr "如果您希望平铺”视图在 pfeMAME 应用程序启动后自动运行，请选择此选项。"
+
+#: PanelPfeMame.py:72
+msgid "Set main window full-screen on startup"
+msgstr "设置主窗口在启动时全屏显示"
+
+#: PanelPfeMame.py:73
+msgid "Sets the main view window to full-screen after startup."
+msgstr "启动后将主视图窗口设置为全屏。"
+
+#: PanelPfeMame.py:74
+msgid "Recall column widths on startup"
+msgstr "启动时调用列宽"
+
+#: PanelPfeMame.py:75
+msgid ""
+"Recalls the ROM list column widths based on what they were when the "
+"application was closed."
+msgstr "根据应用程序关闭时的宽度调用 ROM 列表列宽度。"
+
+#: PanelPfeMame.py:78
+msgid "Highlight ROMs with missing files (*)"
+msgstr "缺少文件的 Highlite ROM (*)"
+
+#: PanelPfeMame.py:79
+msgid ""
+"Select this if you want ROMs that don't have a corresponding rom file in the"
+" defined path to be highlighted."
+msgstr "如果您希望突出显示在定义的路径中没有相应 rom 文件的 ROM，请选择此选项。"
+
+#: PanelPfeMame.py:81
+msgid "Show an icon of the ROM in the ROMs list (can slow down startup) (*)"
+msgstr "在 ROM 列表中显示 ROM 的图标（可能会减慢启动速度） (*)"
+
+#: PanelPfeMame.py:82
+msgid ""
+"When selected, the ROM list view will show a small icon next to the ROM "
+"name.  This can slow down the start up time if the icons are larger than "
+"16x16 pixels"
+msgstr "选择后，ROM 列表视图将在 ROM 名称旁边显示一个小图标。  如果图标大于 16x16 像素，这可能会减慢启动时间"
+
+#: PanelPfeMame.py:84
+msgid "Click to set Favorite + Rating (*)"
+msgstr "点击设置收藏+评分(*)"
+
+#: PanelPfeMame.py:85
+msgid ""
+"Allows double clicking on the Favorite and Rating columns to invoke their "
+"selection for the selected ROM."
+msgstr "允许双击收藏夹”和评级”列以调用对所选 ROM 的选择。"
+
+#: PanelPfeMame.py:87
+msgid "Flash errors in messages window"
+msgstr "消息窗口中出现闪烁错误"
+
+#: PanelPfeMame.py:88
+msgid "Flash the messages window if errors are detected."
+msgstr "如果检测到错误，则闪烁消息窗口。"
+
+#: PanelPfeMame.py:89
+msgid "Systems / Software Lists support (*)(**)"
+msgstr "系统/软件列表支持(*)(**)"
+
+#: PanelPfeMame.py:90
+msgid ""
+"Provide support for Systems (e.g. ZX Spectrum) by searching for their "
+"programs and including them in the ROMs list when a refresh is performed "
+"(Requires a database refresh)."
+msgstr ""
+"通过搜索系统（例如 ZX Spectrum）的程序并在执行刷新时将它们包含在 ROM 列表中（需要刷新数据库），为系统（例如 ZX "
+"Spectrum）提供支持。"
+
+#: PanelPfeMame.py:92
+msgid "Suppress Short Names"
+msgstr "禁止短名称"
+
+#: PanelPfeMame.py:93
+msgid ""
+"Override the detection of short names in ROMs XML files.  For systems this "
+"will prevent cheats from being available but is necessary if the rom file "
+"doesn't match the detail in the XML file"
+msgstr ""
+"覆盖 ROM XML 文件中短名称的检测。  对于系统，这将防止作弊可用，但如果 rom 文件与 XML 文件中的详细信息不匹配，则这是必要的"
+
+#: PanelPfeMame.py:97
+msgid "Dim Tile View Tiles not selected"
+msgstr "未选择暗平铺视图平铺"
+
+#: PanelPfeMame.py:98
+msgid ""
+"Dim ROM image tiles in 'Tile View' so that the selected ROM stands out."
+msgstr "在平铺视图”中调暗 ROM 图像平铺，以便所选 ROM 脱颖而出。"
+
+#: PanelPfeMame.py:99
+msgid "Jump to a letter in Tile View with the A-Z keys"
+msgstr "使用 A-Z 键跳转到平铺视图中的字母"
+
+#: PanelPfeMame.py:100
+msgid ""
+"In Tile View, pressing a letter key jumps to the next ROM starting with that"
+" letter.  Leave this off if your control panel sends letter keys for its "
+"buttons."
+msgstr "在平铺视图中，按字母键可跳转到以该字母开头的下一个 ROM。  如果您的控制面板为其按钮发送字母键，请关闭此选项。"
+
+#: PanelPfeMame.py:102
+msgid "Mouse support in Tile View"
+msgstr "平铺视图中的鼠标支持"
+
+#: PanelPfeMame.py:103
+msgid ""
+"Use the mouse in Tile View: click to select, double-click to play, the wheel"
+" to move and right-click for the menu.  The pointer shows while the mouse "
+"moves.  Leave this off if your cabinet has a trackball or spinner set up as "
+"a mouse."
+msgstr ""
+"在平铺视图中使用鼠标：单击选择、双击播放、滚轮移动、右键菜单。  鼠标移动时会显示指针。  如果您的机柜有轨迹球或旋转器设置为鼠标，请将其关闭。"
+
+#: PanelPfeMame.py:108
+msgid "Play all ROMs in Full Screen"
+msgstr "全屏播放所有 ROM"
+
+#: PanelPfeMame.py:109
+msgid ""
+"Forces all ROMs to be played in Full Screen regardless of the ROM specific "
+"preference setting."
+msgstr "强制所有 ROM 以全屏模式播放，无论 ROM 特定首选项设置如何。"
+
+#: PanelPfeMame.py:110
+msgid "Play all ROMs in a Window"
+msgstr "在一个窗口中播放所有 ROM"
+
+#: PanelPfeMame.py:111
+msgid ""
+"Forces all ROMs to be played in a window regardless of the ROM specific "
+"preference setting (Except for Tile View that is always in Full Screen.)"
+msgstr "强制所有 ROM 在窗口中播放，无论 ROM 特定首选项设置如何（始终处于全屏状态的平铺视图除外。）"
+
+#: PanelPfeMame.py:113
+msgid "Disable Artwork for all ROMs"
+msgstr "禁用所有 ROM 的图稿"
+
+#: PanelPfeMame.py:114
+msgid ""
+"This disables the showing of artwork around the ROM playing area on the "
+"screen for all ROMs"
+msgstr "这将禁止在所有 ROM 的屏幕上 ROM 播放区域周围显示艺术作品"
+
+#: PanelPfeMame.py:115
+msgid "Auto load the ROM video if available (*)"
+msgstr "自动加载 ROM 视频（如果可用） (*)"
+
+#: PanelPfeMame.py:116
+msgid ""
+"Auto Load the ROM video if one exists for the selected ROM.  Video loads and"
+" plays after 5 seconds in the main view unless another ROM is selected.  In "
+"Tile View this turns the tile preview videos on or off (the screensaver is "
+"not affected)."
+msgstr ""
+"如果所选 ROM 存在视频，则自动加载 ROM 视频。  除非选择另一个 ROM，否则视频会在主视图中加载并播放 5 秒。  "
+"在平铺视图中，这会打开或关闭平铺预览视频（屏幕保护程序不受影响）。"
+
+#: PanelPfeMame.py:119
+msgid "Disable all video playback (*)"
+msgstr "禁用所有视频播放 (*)"
+
+#: PanelPfeMame.py:120
+msgid "Disable all video playback in the Main and Tile Views."
+msgstr "禁用主视图和平铺视图中的所有视频播放。"
+
+#: PanelPfeMame.py:121
+msgid "Use software video rendering (*)"
+msgstr "使用软件视频渲染 (*)"
+
+#: PanelPfeMame.py:122
+msgid ""
+"Draw videos without OpenGL.  Try this if videos show as a black or "
+"flickering box, which can happen with some Linux / Wayland graphics drivers."
+"  It uses more CPU than OpenGL.  pfeMAME also switches to software rendering"
+" by itself if OpenGL fails to start."
+msgstr ""
+"无需 OpenGL 即可绘制视频。  如果视频显示为黑框或闪烁框（某些 Linux/Wayland 图形驱动程序可能会出现这种情况），请尝试此操作。  "
+"它比 OpenGL 使用更多的 CPU。  如果 OpenGL 无法启动，pfeMAME 也会自行切换到软件渲染。"
+
+#: PanelPfeMame.py:125
+msgid "Hide the screensaver video title after a few seconds"
+msgstr "几秒后隐藏屏幕保护程序的视频标题"
+
+#: PanelPfeMame.py:126
+msgid ""
+"In the full screen video player (the screensaver), show the video title for "
+"a few seconds when each video starts and then hide it so it does not cover "
+"the video.  When this is off the title stays on screen."
+msgstr "在全屏视频播放器（屏幕保护程序）中，每个视频开始时显示视频标题几秒钟，然后将其隐藏，以免遮挡视频。  关闭此项时，标题会一直显示。"
+
+#: PanelPfeMame.py:131
+msgid "Enable joystick navigation for Main View (*)"
+msgstr "启用主视图的操纵杆导航(*)"
+
+#: PanelPfeMame.py:132
+msgid ""
+"Allow the joystick or gamepad selected above to provide navigation in the "
+"Main View window."
+msgstr "允许上面选择的操纵杆或游戏手柄在主视图窗口中提供导航。"
+
+#: PanelPfeMame.py:134
+msgid "Enable joystick navigation for Tile View (*)"
+msgstr "为平铺视图启用操纵杆导航(*)"
+
+#: PanelPfeMame.py:135
+msgid ""
+"Allow the joystick or gamepad selected above to provide navigation in the "
+"Tile View window."
+msgstr "允许上面选择的操纵杆或游戏手柄在平铺视图窗口中提供导航。"
+
+#: PanelPfeMame.py:150
+msgid "Alternate Row Color 1:"
+msgstr "替代行颜色 1："
+
+#: PanelPfeMame.py:151
+msgid "Alternate Row Color 2:"
+msgstr "替代行颜色 2："
+
+#: PanelPfeMame.py:152
+msgid "Selected Row Color:"
+msgstr "选定的行颜色："
+
+#: PanelPfeMame.py:153
+msgid "Selected Row BG Color:"
+msgstr "所选行 BG 颜色："
+
+#: PanelPfeMame.py:154
+msgid "Missing ROM Color:"
+msgstr "缺少 ROM 颜色："
+
+#: PanelPfeMame.py:157
+msgid "Text Color:"
+msgstr "文字颜色："
+
+#: PanelPfeMame.py:158
+msgid "Text Background Color:"
+msgstr "文本背景颜色："
+
+#: PanelPfeMame.py:159
+msgid "Window Background Color:"
+msgstr "窗口背景颜色："
+
+#: PanelPfeMame.py:160
+msgid "Control Bar Color:"
+msgstr "控制栏颜色："
+
+#: PanelPfeMame.py:161
+msgid "Button Background Color:"
+msgstr "按钮背景颜色："
+
+#: PanelPfeMame.py:164
+msgid "Ribbon Bar Color:"
+msgstr "丝带条颜色："
+
+#: PanelPfeMame.py:165
+msgid "Ribbon Bar Highlight Color:"
+msgstr "功能区突出显示颜色："
+
+#: PanelPfeMame.py:166
+msgid "Scrollbar Slider Color:"
+msgstr "滚动条滑块颜色："
+
+#: PanelPfeMame.py:167
+msgid "Scrollbar Track Color:"
+msgstr "滚动条轨道颜色："
+
+#: PanelPfeMame.py:670
+msgid "Click here to change the color"
+msgstr "单击此处更改颜色"
+
+#: PanelSlots.py:113
+msgid "Slots Configuration"
+msgstr "插槽配置"
+
+#: PanelSlots.py:177
+msgid "Manual Configuration:"
+msgstr "手动配置："
+
+#: PanelSlots.py:265
+msgid "Slots Configuration: Slots From INI File"
+msgstr "插槽配置：INI 文件中的插槽"
+
+#: PanelSlots.py:411
+msgid "Slots Configuration: Slots Empty"
+msgstr "插槽配置：插槽为空"
+
+#: PanelSlots.py:465
+msgid "Load Slot Preset"
+msgstr "加载插槽预设"
+
+#: PanelSlots.py:476 PanelSlots.py:477
+msgid "Delete Slot Preset"
+msgstr "删除插槽预设"
+
+#: PanelSlots.py:547
+msgid "Remove the device from this slot"
+msgstr "从此插槽移除设备"
+
+#: PanelSlots.py:586
+msgid "Slot Name"
+msgstr "插槽名称"
+
+#: PanelSlots.py:586
+msgid "Device Name"
+msgstr "设备名称"
+
+#: PanelSlots.py:587
+msgid "Slot Option Name"
+msgstr "插槽选项名称"
+
+#: PanelSlots.py:587
+msgid "Slot Parent"
+msgstr "插槽父级"
+
+#: PanelSlots.py:137
+msgid "Clear All Selections"
+msgstr "清除所有选择"
+
+#: PanelSlots.py:139
+msgid ""
+"This removes the device from every slot.  Note that MAME uses its own "
+"default for any slot that is left empty here."
+msgstr "从所有插槽中移除设备。  注意：此处留空的插槽将使用 MAME 自己的默认设置。"
+
+#: PanelSlots.py:147
+msgid "Load MAME Defaults"
+msgstr "加载 MAME 默认值"
+
+#: PanelSlots.py:149
+msgid ""
+"This sets the slot controls, including the sub-slots of each default device,"
+" to their MAME DEFAULT values found in the systems XML data."
+msgstr "将插槽设置（包括每个默认设备的子插槽）设为系统 XML 数据中的 MAME 默认值。"
+
+#: PanelSlots.py:260 PanelSlots.py:422
+msgid "Slots Configuration: Slots Set To Default from XML"
+msgstr "插槽配置：从 XML 将插槽设置​​为默认值"
+
+#: PanelSlots.py:447
+msgid "Choose a slot preset:"
+msgstr "选择插槽预设："
+
+#: PanelSlots.py:451
+msgid "Name for this slot setup:"
+msgstr "此插槽配置的名称："
+
+#: PanelSlots.py:451 PanelSlots.py:458
+msgid "Save Slot Preset"
+msgstr "保存插槽预设"
+
+#: PanelSlots.py:157
+msgid "Save Preset..."
+msgstr "保存预设..."
+
+#: PanelSlots.py:158
+msgid ""
+"Save the current slot setup under a name, so you can switch back to it "
+"later."
+msgstr "以名称保存当前插槽配置，以便以后切换回来。"
+
+#: PanelSlots.py:159
+msgid "Load Preset..."
+msgstr "加载预设..."
+
+#: PanelSlots.py:159
+msgid "Replace the current slot setup with a saved one."
+msgstr "用已保存的配置替换当前插槽配置。"
+
+#: PanelSlots.py:160
+msgid "Delete Preset..."
+msgstr "删除预设..."
+
+#: PanelSlots.py:160
+msgid "Delete a saved slot setup."
+msgstr "删除已保存的插槽配置。"
+
+#: PanelSlots.py:161
+msgid "Copy MAME Command Line"
+msgstr "复制 MAME 命令行"
+
+#: PanelSlots.py:162
+msgid ""
+"Copy the slot and BIOS options as MAME command-line arguments (e.g. for "
+"sharing)."
+msgstr "将插槽和 BIOS 选项复制为 MAME 命令行参数（例如用于分享）。"
+
+#: PanelSlots.py:472
+msgid "Slots Configuration: Preset \"{}\""
+msgstr "插槽配置：预设“{}”"
+
+#: PanelSlots.py:444
+msgid "There are no saved slot presets for {} yet."
+msgstr "{} 还没有已保存的插槽预设。"
+
+#: PanelSlots.py:462
+msgid "Slot preset \"{}\" saved"
+msgstr "插槽预设“{}”已保存"
+
+#: PanelSlots.py:458
+msgid "Replace the existing preset \"{}\"?"
+msgstr "替换现有预设“{}”？"
+
+#: PanelSlots.py:477
+msgid "Delete the preset \"{}\"?"
+msgstr "删除预设“{}”？"
+
+#: PanelSlots.py:486
+msgid "Copied: {}"
+msgstr "已复制：{}"
+
+#: PanelSlots.py:486
+msgid "(no slot options)"
+msgstr "（无插槽选项）"
+
+#: PanelSound.py:48
+msgid "Sample Rate"
+msgstr "采样率"
+
+#: PanelSound.py:52
+msgid "Volume"
+msgstr "体积"
+
+#: PanelSound.py:58
+msgid "Sound SubSystem"
+msgstr "声音子系统"
+
+#: PanelSound.py:62
+msgid "Audio Latency"
+msgstr "音频延迟"
+
+#: PanelSound.py:64
+msgid "Use Sample Files"
+msgstr "使用示例文件"
+
+#: PanelSound.py:68
+msgid ""
+"Sets the audio sample rate. Smaller values (e.g. 11025) cause lower audio "
+"quality but faster emulation speed."
+msgstr "设置音频采样率。较小的值（例如 11025）会导致音频质量较低，但仿真速度较快。"
+
+#: PanelSound.py:70
+msgid ""
+"Sets the startup volume. It can later be changed with the user interface "
+"(see Keys section). The volume is an attenuation in dB: e.g., \"-12\" will "
+"start with -12dB attenuation.  Allowable values are from 0 to -30."
+msgstr ""
+"设置启动音量。稍后可以通过用户界面对其进行更改（请参阅“按键”部分）。音量是以 dB 为单位的衰减：例如，“-12”将以 -12dB 衰减开始。  "
+"允许的值为 0 到 -30。"
+
+#: PanelSound.py:74
+msgid ""
+"Specifies which sound subsystem to use. Selecting none disables sound output"
+" altogether (sound hardware is still emulated).  On Windows and Linux, "
+"portaudio is likely to give the lowest possible latency, while Mac users "
+"will find coreaudio provides the best results."
+msgstr ""
+"指定要使用的声音子系统。选择无”将完全禁用声音输出（仍然模拟声音硬件）。  在 Windows 和 Linux 上，portaudio "
+"可能会提供尽可能低的延迟，而 Mac 用户会发现 coreaudio 提供最佳结果。"
+
+#: PanelSound.py:78
+msgid ""
+"The exact behavior depends on the selected audio output module. Smaller "
+"values provide less audio delay while requiring better system performance. "
+"Higher values increase audio delay but may help avoid buffer under-runs and "
+"audio interruptions.  Allowable values are 1 to 5."
+msgstr ""
+"确切的行为取决于所选的音频输出模块。较小的值提供较少的音频延迟，同时要求更好的系统性能。较高的值会增加音频延迟，但可能有助于避免缓冲区不足和音频中断。"
+"  允许的值为 1 到 5。"
+
+#: PanelSound.py:83
+msgid "Use samples if available."
+msgstr "如果有样品，请使用样品。"
+
+#: PanelVideo.py:49
+msgid "Enable Window Mode"
+msgstr "启用窗口模式"
+
+#: PanelVideo.py:52
+msgid "Crop displayed artwork"
+msgstr "裁剪展示的艺术品"
+
+#: PanelVideo.py:55
+msgid "Disable the display of artwork"
+msgstr "禁用艺术品的显示"
+
+#: PanelVideo.py:61
+msgid "Video System for Drawing"
+msgstr "绘图视频系统"
+
+#: PanelVideo.py:66
+msgid "BGFX Backend"
+msgstr "BGFX 后端"
+
+#: PanelVideo.py:71
+msgid "BGFX Screen Chains"
+msgstr "BGFX 屏幕链"
+
+#: PanelVideo.py:76
+msgid "BGFX Shadow Mask"
+msgstr "BGFX 阴影遮罩"
+
+#: PanelVideo.py:79
+msgid ""
+"Select this to run the ROM in windowed mode, otherwise it will run "
+"fullscreen."
+msgstr "选择此项以窗口模式运行 ROM，否则将以全屏模式运行。"
+
+#: PanelVideo.py:81
+msgid ""
+"Enable cropping of artwork to the system screen area only. This means that "
+"vertically oriented systems running full screen can display their artwork to"
+" the left and right sides of the screen."
+msgstr "仅允许将图稿裁剪到系统屏幕区域。这意味着全屏运行的垂直方向系统可以将其图稿显示在屏幕的左侧和右侧。"
+
+#: PanelVideo.py:85
+msgid ""
+"This will disable the displaying of ROM artwork defined by the artwork path."
+"  It is not a MAME option but is handled by pfeMAME."
+msgstr "这将禁用由艺术作品路径定义的 ROM 艺术作品的显示。  它不是 MAME 选项，而是由 pfeMAME 处理。"
+
+#: PanelVideo.py:88
+msgid ""
+"Select the video system that is used for rendering the ROM.  In Linux: "
+"OpenGL can speed things up but may have compatibility issues.  OpenGL16 may "
+"be even faster.  In Windows:  recommend d3d for Direct3D performance.  Use "
+"soft for software rendering if you are having issues."
+msgstr ""
+"选择用于渲染 ROM 的视频系统。  在 Linux 中：OpenGL 可以加快速度，但可能存在兼容性问题。  OpenGL16 可能更快。  在 "
+"Windows 中：建议使用 d3d 以获得 Direct3D 性能。  如果遇到问题，请使用软件进行软件渲染。"
+
+#: PanelVideo.py:92
+msgid "Selects a rendering backend for BGFX to use."
+msgstr "选择供 BGFX 使用的渲染后端。"
+
+#: PanelVideo.py:93
+msgid "This dictates how to handle BGFX rendering on a per-display basis."
+msgstr "这决定了如何在每个显示器的基础上处理 BGFX 渲染。"
+
+#: PanelVideo.py:95
+msgid "This specifies the shadow mask effect PNG file."
+msgstr "这指定阴影遮罩效果 PNG 文件。"
+
+#: pfemame.py:953 pfemame.py:713 pfemame.py:731 pfemame.py:978 pfemame.py:1619
+msgid "Unknown"
+msgstr "未知"
+
+#: pfemame.py:1258
+msgid "pfeMAME was restarted automatically"
+msgstr "pfeMAME 已自动重新启动"
+
+#: pfemame.py:2943
+msgid ""
+"\n"
+"It Looks like this is the first time you have run pfeMAME\n"
+"as the INI file data is missing.  Your first step is to \n"
+"set up the necessary file paths to MAME files and supporting\n"
+"folders.\n"
+"\n"
+"Please open EDIT > File Paths and set the MAME \n"
+"executable file path and ROMS folder as a minimum.  \n"
+"NOTE:  You can use the Auto Find option in the file paths \n"
+"window to make this a lot easier in most cases.\n"
+"\n"
+"After this you need to select some ROM categories (the right of the screen).\n"
+"Then restart the application and refresh the ROMs database using\n"
+"VIEW > Refresh ROMs Database.\n"
+"        "
+msgstr ""
+"\n"
+"”看来这是您第一次运行 pfeMAME\n"
+"”因为 INI 文件数据丢失。您的第一步是 \n"
+"”设置 MAME 文件和支持的必要文件路径\n"
+"”文件夹。\n"
+"”\n"
+"”请打开编辑 > 文件路径并设置 MAME \n"
+"”至少有可执行文件路径和 ROMS 文件夹。\n"
+"”注意：您可以在文件路径中使用自动查找选项\n"
+"”在大多数情况下使这变得更容易的窗口。\n"
+"”\n"
+"”此后您需要选择一些 ROM 类别（屏幕右侧）。\n"
+"”然后重新启动应用程序并使用刷新 ROM 数据库\n"
+"”查看 > 刷新 ROM 数据库。\n"
+"”        "
+
+#: pfemame.py:2959
+msgid "MAME file path or ROMS folder not found"
+msgstr "找不到 MAME 文件路径或 ROMS 文件夹"
+
+#: pfemame.py:3173
+msgid "Confirm Remove From Favorites"
+msgstr "确认从收藏夹中删除"
+
+#: pfemame.py:462
+msgid "Application Started"
+msgstr "申请开始"
+
+#: pfemame.py:640
+msgid "View:"
+msgstr "视图："
+
+#: pfemame.py:709
+msgid "MAME Version: "
+msgstr "玛梅版本："
+
+#: pfemame.py:727
+msgid "Database Age: "
+msgstr "数据库年龄："
+
+#: pfemame.py:779
+msgid "ROMs List"
+msgstr "ROM 列表"
+
+#: pfemame.py:783
+msgid "File Paths"
+msgstr "文件路径"
+
+#: pfemame.py:792
+msgid "pfeMAME Preferences"
+msgstr "pfeMAME 首选项"
+
+#: pfemame.py:847
+msgid "Messages:"
+msgstr "留言："
+
+#: pfemame.py:966
+msgid "Deployment build is frozen (cx_freeze)"
+msgstr "部署构建被冻结 (cx_freeze)"
+
+#: pfemame.py:968
+msgid "Deployment build is source (i.e. not frozen)"
+msgstr "部署构建是源代码（即未冻结）"
+
+#: pfemame.py:970
+msgid "Retrieved MAME & pfeMAME version"
+msgstr "检索到的 MAME 和 pfeMAME 版本"
+
+#: pfemame.py:1037
+msgid "Stop rebuilding the ROMs database"
+msgstr "停止重建 ROM 数据库"
+
+#: pfemame.py:1052
+msgid "ROM Categories:"
+msgstr "ROM类别："
+
+#: pfemame.py:1145
+msgid "MAME Info"
+msgstr "玛梅信息"
+
+#: pfemame.py:1688 pfemame.py:2927 pfemame.py:3520 pfemame.py:3811
+#: pfemame.py:3853 pfemame.py:5853 pfemame.py:3942 pfemame.py:2129
+#: pfemame.py:2186 pfemame.py:3550 pfemame.py:3561 pfemame.py:3573
+#: pfemame.py:3871 pfemame.py:4283
+msgid "Ready"
+msgstr "准备好"
+
+#: pfemame.py:1855
+msgid ""
+"Reset the pfeMAME INI file to its default settings?  WARNING:  This resets "
+"any changes you have made!"
+msgstr "将 pfeMAME INI 文件重置为其默认设置？  警告：这将重置您所做的任何更改！"
+
+#: pfemame.py:1857
+msgid "Reset pfeMAME INI file"
+msgstr "重置 pfeMAME INI 文件"
+
+#: pfemame.py:1861
+msgid ""
+"Please restart pfeMAME for the new default INI file settings to be used."
+msgstr "请重新启动 pfeMAME 以使用新的默认 INI 文件设置。"
+
+#: pfemame.py:1862
+msgid "Restart pfeMAME"
+msgstr "重新启动 pfeMAME"
+
+#: pfemame.py:1874
+msgid ""
+"IMPORTANT NOTIFICATION:  Please check this window for the ERROR message.  "
+"Double-click to cancel alert."
+msgstr "重要通知：请检查此窗口中是否有错误消息。  双击取消警报。"
+
+#: pfemame.py:1897
+msgid "Reading INI file settings"
+msgstr "读取INI文件设置"
+
+#: pfemame.py:2147
+msgid "Received data from sourceforge"
+msgstr "从sourceforge收到数据"
+
+#: pfemame.py:2504
+msgid "Clipboard does not contain a supported image format"
+msgstr "剪贴板不包含受支持的图像格式"
+
+#: pfemame.py:2525
+msgid "File saved successfully"
+msgstr "文件保存成功"
+
+#: pfemame.py:2529
+msgid "Unable to access the clipboard image"
+msgstr "无法访问剪贴板图像"
+
+#: pfemame.py:2532 pfemame.py:2506
+msgid "Image Saving Message"
+msgstr "图像保存信息"
+
+#: pfemame.py:2578
+msgid ""
+"The INI Folder path is not valid.  Please select EDIT > File Paths and set a"
+" valid path for this folder."
+msgstr "INI 文件夹路径无效。  请选择编辑”>文件路径”并为此文件夹设置有效路径。"
+
+#: pfemame.py:2580
+msgid "No INI folder path set"
+msgstr "未设置 INI 文件夹路径"
+
+#: pfemame.py:2590
+msgid "Switching to tile view"
+msgstr "切换到平铺视图"
+
+#: pfemame.py:2678
+msgid "Building ROM list. Please Wait........."
+msgstr "构建 ROM 列表。请稍等........."
+
+#: pfemame.py:2679
+msgid "Started building full ROMs database"
+msgstr "开始建立完整的 ROM 数据库"
+
+#: pfemame.py:2778 pfemame.py:2760 pfemame.py:2776 pfemame.py:2762
+msgid "What's New in MAME"
+msgstr "MAME 新内容"
+
+#: pfemame.py:2822
+msgid "ROMs database rebuild cancelled"
+msgstr "ROM 数据库重建已取消"
+
+#: pfemame.py:2889
+msgid "Unable to find the MAME executable."
+msgstr "无法找到 MAME 可执行文件。"
+
+#: pfemame.py:2892
+msgid "Started reading the temporary ROMs database file"
+msgstr "开始读取临时 ROM 数据库文件"
+
+#: pfemame.py:2911
+msgid ""
+"Looks like your ROMs list is empty. Please check that you have at least one "
+"ROM category selected."
+msgstr "您的 ROM 列表似乎是空的。请检查您是否至少选择了一种 ROM 类别。"
+
+#: pfemame.py:2912
+msgid "Empty ROMs list"
+msgstr "空 ROM 列表"
+
+#: pfemame.py:2926
+msgid "0 days"
+msgstr "0 天"
+
+#: pfemame.py:2934
+msgid "File Paths need to be set up"
+msgstr "需要设置文件路径"
+
+#: pfemame.py:2970
+msgid "Writing the temporary ROMs database file"
+msgstr "写入临时 ROM 数据库文件"
+
+#: pfemame.py:2990
+msgid "Reading categories from catver.ini"
+msgstr "从 catver.ini 读取类别"
+
+#: pfemame.py:3039
+msgid "Completed reading categories from catver.ini"
+msgstr "从 catver.ini 完成阅读类别"
+
+#: pfemame.py:3229
+msgid "Confirm Remove From Watchlist"
+msgstr "确认从关注列表中删除"
+
+#: pfemame.py:3540
+msgid "Downloading image..."
+msgstr "正在下载图像..."
+
+#: pfemame.py:3581 pfemame.py:5653
+msgid "Image updated"
+msgstr "图片已更新"
+
+#: pfemame.py:3686
+msgid "ROM search cancelled"
+msgstr "ROM 搜索已取消"
+
+#: pfemame.py:3948
+msgid "ROM downloaded"
+msgstr "ROM已下载"
+
+#: pfemame.py:4125
+msgid "Important Notification"
+msgstr "重要通知"
+
+#: pfemame.py:5142
+msgid ""
+"Please select a valid ROMs folder and path to the MAME executable from the "
+"File Paths window."
+msgstr "请从文件路径”窗口中选择有效的 ROM 文件夹和 MAME 可执行文件的路径。"
+
+#: pfemame.py:5447
+msgid ""
+"You have not set a Mapping folder under File Paths.  This is not a standard "
+"MAME folder.  You need to create a folder (Suggest within your MAME folder) "
+"called Mapping, and then in the File Paths window you need to set the Input "
+"Mapping folder to the folder you have created."
+msgstr ""
+"您尚未在文件路径下设置映射文件夹。  这不是标准的 MAME 文件夹。  您需要创建一个名为Mapping”的文件夹（建议在您的 MAME "
+"文件夹中），然后在文件路径”窗口中将输入映射”文件夹设置为您创建的文件夹。"
+
+#: pfemame.py:5451
+msgid "Mapping Folder Not Defined"
+msgstr "未定义映射文件夹"
+
+#: pfemame.py:5455
+msgid ""
+"You have not set a Config Folder under file paths.  This needs to be defined"
+" so that the default.cfg file can be copied."
+msgstr "您尚未在文件路径下设置配置文件夹。  需要对其进行定义，以便可以复制 default.cfg 文件。"
+
+#: pfemame.py:5457
+msgid "Config Folder Not Defined"
+msgstr "未定义配置文件夹"
+
+#: pfemame.py:5461
+msgid ""
+"I am unable to find the default.cfg file within the Config folder set in "
+"File Paths.  Check that the folder exists and that within it there is a "
+"valid default.cfg file.  If the file is not present, maybe you have not run "
+"MAME for the first time so run it and check again if the file exists."
+msgstr ""
+"我无法在文件路径中设置的 Config 文件夹中找到 default.cfg 文件。  检查该文件夹是否存在以及其中是否有有效的default.cfg "
+"文件。  如果该文件不存在，可能您不是第一次运行 MAME，因此运行它并再次检查该文件是否存在。"
+
+#: pfemame.py:5465
+msgid "ERROR - cant find default.cfg"
+msgstr "错误 - 找不到 default.cfg"
+
+#: pfemame.py:5909
+msgid "Replace image from online..."
+msgstr "替换网上的图片..."
+
+#: pfemame.py:305
+msgid "Developer mode enabled\n"
+msgstr ""
+"开发者模式已启用\n"
+"”"
+
+#: pfemame.py:320
+msgid "Application startup complete in {:.2f} seconds"
+msgstr "应用程序启动在 {:.2f} 秒内完成"
+
+#: pfemame.py:786
+msgid "Default Preferences"
+msgstr "默认首选项"
+
+#: pfemame.py:817 pfemame.py:4811 pfemame.py:3310 pfemame.py:3328
+msgid "No Video Available"
+msgstr "没有可用视频"
+
+#: pfemame.py:1057
+msgid "Toggle All"
+msgstr "全部切换"
+
+#: pfemame.py:1187
+msgid "Empty"
+msgstr "空的"
+
+#: pfemame.py:1317
+msgid ""
+"pfeMAME is a cross-platform front-end for the widely popular MAME emulation engine.\n"
+"Please read the manual for a full description of the application and how to use it.\n"
+"Please also rate pfeMAME at the SourceForge page you downloaded it from.\n"
+"For additional requests, you can email pfemame@gmail.com."
+msgstr ""
+"pfeMAME 是广泛流行的 MAME 仿真引擎的跨平台前端。\n"
+"”请阅读手册以获取应用程序的完整说明以及如何使用它。\n"
+"”还请在您下载 pfeMAME 的 SourceForge 页面上对 pfeMAME 进行评分。\n"
+"”如有其他请求，您可以发送电子邮件至 pfemame@gmail.com。”"
+
+#: pfemame.py:1465
+msgid ""
+"Restored the default.cfg file left over from an unfinished game with an "
+"inputs mapping"
+msgstr "已恢复未完成的使用输入映射的游戏遗留的 default.cfg 文件"
+
+#: pfemame.py:1637
+msgid "None of your favorites were found in the ROM folders."
+msgstr "在 ROM 文件夹中找不到任何收藏。"
+
+#: pfemame.py:1638 pfemame.py:1699
+msgid "Export Complete"
+msgstr "导出完成"
+
+#: pfemame.py:1691
+msgid "{} favorite file(s) successfully exported."
+msgstr "{} 个喜爱的文件已成功导出。"
+
+#: pfemame.py:1697
+msgid "The export was cancelled."
+msgstr "导出已取消。"
+
+#: pfemame.py:1708 pfemame.py:4224
+msgid "Unapplied FilePath changes – are you sure you wish to discard changes?"
+msgstr "未应用的文件路径更改 - 您确定要放弃更改吗？"
+
+#: pfemame.py:1709 pfemame.py:4225
+msgid "Unapplied Changes"
+msgstr "未应用的更改"
+
+#: pfemame.py:1902
+msgid "New pfeMAME.ini file created as existing one not found"
+msgstr "未找到现有文件而创建的新 pfeMAME.ini 文件"
+
+#: pfemame.py:2079
+msgid "New Version Available"
+msgstr "新版本上线"
+
+#: pfemame.py:2082
+msgid "Don't check for updates on startup"
+msgstr "启动时不检查更新"
+
+#: pfemame.py:2121
+msgid "Checking for Software Updates"
+msgstr "检查软件更新"
+
+#: pfemame.py:2124
+msgid "Checking for software update - requesting data from sourceforge"
+msgstr "检查软件更新 - 从 sourceforge 请求数据"
+
+#: pfemame.py:2429 rominfo.py:363 xmlinfo.py:417
+msgid "Unable to open the clipboard"
+msgstr "无法打开剪贴板"
+
+#: pfemame.py:2429 pfemame.py:2222
+msgid "Error"
+msgstr "错误"
+
+#: pfemame.py:2492
+msgid "File Already Exists"
+msgstr "文件已存在"
+
+#: pfemame.py:2540 preferences.py:154
+msgid ""
+"Unable to find the MAME executable path.  Check the file path settings."
+msgstr "无法找到 MAME 可执行路径。  检查文件路径设置。"
+
+#: pfemame.py:2623
+msgid "The ROMs database is already being rebuilt - please wait"
+msgstr "ROM 数据库已在重建中，请稍候"
+
+#: pfemame.py:2725
+msgid "Cancelling the ROMs database rebuild..."
+msgstr "正在取消重建 ROM 数据库..."
+
+#: pfemame.py:2774
+msgid ""
+"No MAME upgrade has been recorded yet.  The list of new, now-working and "
+"removed machines is made the first time the ROMs database is rebuilt after "
+"MAME is updated."
+msgstr "尚未记录任何 MAME 升级。  新增、现已可用和已移除机器的列表会在 MAME 更新后首次重建 ROM 数据库时生成。"
+
+#: pfemame.py:2789 software_browser.py:220 software_browser.py:229
+msgid "Software Lists"
+msgstr "软件列表"
+
+#: pfemame.py:2837
+msgid "ERROR WITH MAME XML"
+msgstr "MAME XML 错误"
+
+#: pfemame.py:2862
+msgid ""
+"Errors detected when building ROMs database.  Check the build_errors.txt "
+"file."
+msgstr "构建 ROM 数据库时检测到错误。  检查 build_errors.txt 文件。"
+
+#: pfemame.py:2869
+msgid ""
+"Errors were detected when building the ROMs database.  Please check the "
+"build_errors.txt file for information."
+msgstr "构建 ROM 数据库时检测到错误。  请检查 build_errors.txt 文件以获取信息。"
+
+#: pfemame.py:2871
+msgid "Errors during Database Build"
+msgstr "数据库构建期间的错误"
+
+#: pfemame.py:2900
+msgid "Completed reading the temporary ROMs database file"
+msgstr "完成读取临时 ROM 数据库文件"
+
+#: pfemame.py:3172
+msgid "Are you sure you want to remove {} from favorites?"
+msgstr "您确定要从收藏夹中删除 {} 吗？"
+
+#: pfemame.py:3192
+msgid "ERROR: Unable to find the favorites.dat file in the pfemame folder"
+msgstr "错误：无法在 pfemame 文件夹中找到 favorites.dat 文件"
+
+#: pfemame.py:3201
+msgid "Romset {} removed from favorites"
+msgstr "Romset {}已从收藏夹中删除"
+
+#: pfemame.py:3252
+msgid "ERROR: Unable to find the watchlist.dat file in the pfeMAME folder"
+msgstr "错误：无法在 pfeMAME 文件夹中找到 watchlist.dat 文件"
+
+#: pfemame.py:3261
+msgid "Romset {} removed from watchlist"
+msgstr "Romset {} 从监视列表中删除"
+
+#: pfemame.py:3449 pfemame.py:5608
+msgid "No image folders are configured"
+msgstr "没有配置图像文件夹"
+
+#: pfemame.py:3454 pfemame.py:3612 pfemame.py:5613
+msgid "Select a ROM first"
+msgstr "首先选择一个ROM"
+
+#: pfemame.py:3524
+msgid "No suitable images were found online for this ROM."
+msgstr "在网上没有找到适合此 ROM 的图像。"
+
+#: pfemame.py:3525
+msgid "No Images Found"
+msgstr "未找到图像"
+
+#: pfemame.py:3528
+msgid "Select a {0} image for {1}"
+msgstr "为 {1} 选择 {0} 图像"
+
+#: pfemame.py:3559 pfemame.py:5633
+msgid "Replace Existing Image"
+msgstr "替换现有图像"
+
+#: pfemame.py:3605
+msgid "No ROM folder (rompath) is configured"
+msgstr "未配置 ROM 文件夹（rompath）"
+
+#: pfemame.py:3606
+msgid ""
+"No ROM folder is configured in mame.ini (rompath), so the ROM cannot be "
+"saved."
+msgstr "mame.ini（rompath）中没有配置ROM文件夹，因此无法保存ROM。"
+
+#: pfemame.py:3607
+msgid "No ROM Folder"
+msgstr "没有 ROM 文件夹"
+
+#: pfemame.py:3816
+msgid "No downloadable ROM ZIP was found online for this ROM."
+msgstr "在网上找不到该 ROM 的可下载 ROM ZIP。"
+
+#: pfemame.py:3817
+msgid "No ROM Found"
+msgstr "未找到 ROM"
+
+#: pfemame.py:3824
+msgid "Select a ROM ZIP to download for {}"
+msgstr "选择要下载 {} 的 ROM ZIP"
+
+#: pfemame.py:3869
+msgid "Replace Existing ROM"
+msgstr "替换现有 ROM"
+
+#: pfemame.py:3936
+msgid "ROM download cancelled"
+msgstr "ROM 下载已取消"
+
+#: pfemame.py:3944 pfemame.py:3552
+msgid "Download Failed"
+msgstr "下载失败"
+
+#: pfemame.py:3983
+msgid ""
+"I am having trouble finding a ROM to play that exists. Do you actually have "
+"any?"
+msgstr "我无法找到可用的 ROM 来玩。你真的有吗？"
+
+#: pfemame.py:4075
+msgid "Tried running a ROM without a file name selected"
+msgstr "尝试在未选择文件名的情况下运行 ROM"
+
+#: pfemame.py:4442 tileview.py:969
+msgid "ROM set {} added to favorites"
+msgstr "ROM 集 {} 已添加到收藏夹"
+
+#: pfemame.py:4465
+msgid "You cannot add a favourite file to the watchlist"
+msgstr "您无法将收藏夹文件添加到监视列表"
+
+#: pfemame.py:4466
+msgid "ERROR - Already Favourite"
+msgstr "错误 - 已收藏"
+
+#: pfemame.py:4494
+msgid "ROM set {} added to watchlist"
+msgstr "ROM 集 {} 已添加到监视列表"
+
+#: pfemame.py:4811 pfemame.py:3317
+msgid "Video Available - Click to Play"
+msgstr "视频可用 - 点击播放"
+
+#: pfemame.py:4972
+msgid "WARNING:  The MAME samples folder has not been set in filepaths\n"
+msgstr ""
+"警告：MAME 示例文件夹尚未在文件路径中设置\n"
+"”"
+
+#: pfemame.py:5024
+msgid "MAME Controls"
+msgstr "MAME 控制"
+
+#: pfemame.py:5033
+msgid "pfeMAME Log File"
+msgstr "pfeMAME 日志文件"
+
+#: pfemame.py:5078
+msgid ""
+"Unable to find the pfeMAME_Manual.pdf file!  Please check that it exists in "
+"the pfeMAME folder."
+msgstr "找不到 pfeMAME_Manual.pdf 文件！  请检查它是否存在于 pfeMAME 文件夹中。"
+
+#: pfemame.py:5108
+msgid ""
+"pfeMAME could not find out which version of MAME you have, so the artwork "
+"files cannot be checked.  Please check the path to the MAME executable in "
+"the File Paths window."
+msgstr "pfeMAME 无法确定您的 MAME 版本，因此无法检查图稿文件。  请在“文件路径”窗口中检查 MAME 可执行文件的路径。"
+
+#: pfemame.py:5110
+msgid "Unknown MAME Version"
+msgstr "未知的 MAME 版本"
+
+#: pfemame.py:5115
+msgid "Incorrect Mame Version"
+msgstr "Mame 版本不正确"
+
+#: pfemame.py:5121
+msgid ""
+"No artwork folder was found.  Please set the Artwork folder in the File "
+"Paths window."
+msgstr "未找到图稿文件夹。  请在“文件路径”窗口中设置图稿文件夹。"
+
+#: pfemame.py:5160
+msgid "Please set a valid Inputs folder under the File Paths"
+msgstr "请在文件路径下设置有效的输入文件夹"
+
+#: pfemame.py:5281
+msgid "Application preferences and DAT files backed up to {path}"
+msgstr "应用程序首选项和 DAT 文件备份到 {path}"
+
+#: pfemame.py:5308 pfemame.py:5329
+msgid ""
+"Unable to restore the preferences and DAT files from the selected folder.  "
+"Check this is the correct folder and check folder & file permissions."
+msgstr "无法从所选文件夹中恢复首选项和 DAT 文件。  检查这是正确的文件夹并检查文件夹和文件权限。"
+
+#: pfemame.py:5317
+msgid "Restore"
+msgstr "恢复"
+
+#: pfemame.py:5334
+msgid "Application preferences and DAT files restored from {path}"
+msgstr "从 {path} 恢复的应用程序首选项和 DAT 文件"
+
+#: pfemame.py:5481
+msgid "ERROR - cant write map file"
+msgstr "错误 - 无法写入地图文件"
+
+#: pfemame.py:5497
+msgid ""
+"Unable to reset the INI file as the INI folder has not been correctly "
+"defined\n"
+msgstr ""
+"无法重置 INI 文件，因为 INI 文件夹尚未正确定义\n"
+"”"
+
+#: pfemame.py:5754 pfemame_ribbon_bar.py:585
+msgid "Play ROM"
+msgstr "播放ROM"
+
+#: pfemame.py:5754 tileview.py:808
+msgid "Play the selected ROM"
+msgstr "播放选定的 ROM"
+
+#: pfemame.py:5755
+msgid "Play ROM with MAME rather than alternate engine"
+msgstr "使用 MAME 而不是备用引擎播放 ROM"
+
+#: pfemame.py:5756
+msgid "Play the selected ROM with MAME"
+msgstr "使用 MAME 播放选定的 ROM"
+
+#: pfemame.py:5757
+msgid "Play ROM without softlist HASH support"
+msgstr "在没有软列表 HASH 支持的情况下播放 ROM"
+
+#: pfemame.py:5758
+msgid ""
+"Play the system program directly without using the softwarelist HASH file"
+msgstr "直接播放系统程序，不使用softwarelist HASH文件"
+
+#: pfemame.py:5762
+msgid "ROM information"
+msgstr "ROM信息"
+
+#: pfemame.py:5762
+msgid "Information on the selected ROM"
+msgstr "有关所选 ROM 的信息"
+
+#: pfemame.py:5763
+msgid "View media types"
+msgstr "查看媒体类型"
+
+#: pfemame.py:5763
+msgid "View supported media types"
+msgstr "查看支持的媒体类型"
+
+#: pfemame.py:5765
+msgid "Browse software lists..."
+msgstr "浏览软件列表..."
+
+#: pfemame.py:5766
+msgid "Browse all the software MAME knows for this system, and what you have"
+msgstr "浏览 MAME 已知的此系统全部软件，以及您拥有的软件"
+
+#: pfemame.py:5767
+msgid "Analyse XML info"
+msgstr "分析 XML 信息"
+
+#: pfemame.py:5767
+msgid "Check XML info for this program"
+msgstr "检查该程序的 XML 信息"
+
+#: pfemame.py:5770 tileview.py:810
+msgid "Add to favorites"
+msgstr "添加到收藏夹"
+
+#: pfemame.py:5770
+msgid "Add ROM to favorites"
+msgstr "将 ROM 添加到收藏夹"
+
+#: pfemame.py:5771 tileview.py:810
+msgid "Remove from favorites"
+msgstr "从收藏夹中删除"
+
+#: pfemame.py:5771
+msgid "Remove ROM from favorites"
+msgstr "从收藏夹中删除 ROM"
+
+#: pfemame.py:5772
+msgid "Add to watchlist"
+msgstr "添加到监视列表"
+
+#: pfemame.py:5772
+msgid "Add ROM to watch list"
+msgstr "将 ROM 添加到监视列表"
+
+#: pfemame.py:5773
+msgid "Remove from watchlist"
+msgstr "从监视列表中删除"
+
+#: pfemame.py:5773
+msgid "Remove ROM from watch list"
+msgstr "从监视列表中删除 ROM"
+
+#: pfemame.py:5774
+msgid "Set ROM rating..."
+msgstr "设置 ROM 评级..."
+
+#: pfemame.py:5774
+msgid "Set star rating for this ROM"
+msgstr "设置此 ROM 的星级"
+
+#: pfemame.py:5777
+msgid "ROM preferences"
+msgstr "ROM 偏好设置"
+
+#: pfemame.py:5777
+msgid "Set MAME preferences for this ROM"
+msgstr "为此 ROM 设置 MAME 首选项"
+
+#: pfemame.py:5779
+msgid "Copy controller mapping to this ROM"
+msgstr "将控制器映射复制到此 ROM"
+
+#: pfemame.py:5780
+msgid "Copy default.cfg to this ROM for per-ROM input mapping"
+msgstr "将 default.cfg 复制到此 ROM 以进行每个 ROM 输入映射"
+
+#: pfemame.py:5781
+msgid "Reset INI file"
+msgstr "重置 INI 文件"
+
+#: pfemame.py:5781
+msgid "Reset the INI config file for this program"
+msgstr "重置该程序的 INI 配置文件"
+
+#: pfemame.py:5785
+msgid "Verify ROM"
+msgstr "验证ROM"
+
+#: pfemame.py:5785
+msgid "Verify the integrity of the selected ROM"
+msgstr "验证所选 ROM 的完整性"
+
+#: pfemame.py:5787
+msgid "Search for ROM online..."
+msgstr "在线搜索 ROM..."
+
+#: pfemame.py:5788
+msgid ""
+"Search online for this ROM's ZIP file and download it to the ROMs folder"
+msgstr "在线搜索该 ROM 的 ZIP 文件并将其下载到 ROMs 文件夹"
+
+#: pfemame.py:1581
+msgid "MAME and catver version mismatch"
+msgstr "MAME 和 catver 版本不匹配"
+
+#: pfemame.py:1584
+msgid "Don't show this message again"
+msgstr "不再显示此消息"
+
+#: pfemame.py:1630
+msgid "Choose a path to export the file to"
+msgstr "选择导出文件的路径"
+
+#: pfemame.py:1649
+msgid "Export Favorites"
+msgstr "导出收藏"
+
+#: pfemame.py:1671
+msgid "Exporting favorite {number} of {count}: {name}"
+msgstr "正在导出收藏 {number} / {count}：{name}"
+
+#: pfemame.py:1742
+msgid ""
+"A setting has been changed that will only take effect when pfeMAME is "
+"restarted.  Would you like it to restart now?"
+msgstr "已更改的设置仅在重新启动 pfeMAME 时生效。  您希望现在重新启动吗？"
+
+#: pfemame.py:2109
+msgid "Don't check software on startup"
+msgstr "启动时不检查软件"
+
+#: pfemame.py:2125
+msgid "Checking for software update\n"
+msgstr ""
+"正在检查软件更新\n"
+"”"
+
+#: pfemame.py:2376
+msgid "Please set up a valid Videos folder in Filepaths"
+msgstr "请在文件路径中设置有效的视频文件夹"
+
+#: pfemame.py:2388
+msgid ""
+"It doesn't look like there are any valid video files in the Video folder"
+msgstr "视频文件夹中似乎没有任何有效的视频文件"
+
+#: pfemame.py:2500
+msgid "Trying to save clipboard image as file {}"
+msgstr "正在尝试将剪贴板图像保存为文件 {}"
+
+#: pfemame.py:2834
+msgid ""
+"ERROR:  Can't read XML cache file and unable to get MAME to create a new "
+"one.  Check that the MAME executable is working correctly and the MAME path "
+"is correct in FilePaths."
+msgstr ""
+"错误：无法读取 XML 缓存文件，并且无法让 MAME 创建新文件。  检查 MAME 可执行文件是否正常工作以及 FilePaths 中的 MAME "
+"路径是否正确。"
+
+#: pfemame.py:2878
+msgid "ROMs database refresh completed in {} seconds."
+msgstr "ROM 数据库刷新在 {} 秒内完成。"
+
+#: pfemame.py:2897
+msgid "The ROMs database is empty. Forcing full rebuild."
+msgstr "ROM 数据库为空。将强制完全重建。"
+
+#: pfemame.py:2975
+msgid "Unable to write the temporary ROMs database file"
+msgstr "无法写入临时 ROM 数据库文件"
+
+#: pfemame.py:3024
+msgid ""
+"Parsing error in the catver.ini file. Please revert to a previous version."
+msgstr "catver.ini 文件中的解析错误。请恢复到以前的版本。"
+
+#: pfemame.py:3228
+msgid "Are you sure you want to remove {} from watchlist?"
+msgstr "您确定要从监视列表中删除 {} 吗？"
+
+#: pfemame.py:3310
+msgid "Video Playback Disabled"
+msgstr "视频播放已禁用"
+
+#: pfemame.py:3483
+msgid "Searching online for {} images..."
+msgstr "在线搜索 {} 图像..."
+
+#: pfemame.py:3484
+msgid "Searching online for {0} images for \"{1}\"\n"
+msgstr "Searching online for {0} images for \"{1}\"\n"
+
+#: pfemame.py:3548
+msgid "Failed to download the selected image\n"
+msgstr "Failed to download the selected image\n"
+
+#: pfemame.py:3551
+msgid "The selected image could not be downloaded."
+msgstr "无法下载所选图像。"
+
+#: pfemame.py:3575 pfemame.py:5647
+msgid "Save Failed"
+msgstr "保存失败"
+
+#: pfemame.py:3580 pfemame.py:5652
+msgid "Saved new image to {}\n"
+msgstr "Saved new image to {}\n"
+
+#: pfemame.py:3636
+msgid "Searching online for ROM \"{}\"..."
+msgstr "在线搜索 ROM“{}”..."
+
+#: pfemame.py:3637
+msgid "Searching online for ROM \"{0}\" ({1})\n"
+msgstr "Searching online for ROM \"{0}\" ({1})\n"
+
+#: pfemame.py:3685
+msgid "Online ROM search for \"{}\" cancelled\n"
+msgstr "ROM“{}”的在线搜索已取消\n"
+
+#: pfemame.py:3743
+msgid "Downloading result {number} of {count} from {source} to check it"
+msgstr "正在从 {source} 下载第 {number}/{count} 个结果以进行检查"
+
+#: pfemame.py:3769
+msgid "Checking result {number} of {count} with MAME"
+msgstr "正在用 MAME 检查第 {number}/{count} 个结果"
+
+#: pfemame.py:3875
+msgid "Saving ROM {}..."
+msgstr "正在保存 ROM {}..."
+
+#: pfemame.py:3887
+msgid "Downloading {file_name} from {source} ({done} of {total})"
+msgstr "正在从 {source} 下载 {file_name} ({done} / {total})"
+
+#: pfemame.py:3947
+msgid "Downloaded ROM to {}\n"
+msgstr "下载ROM到{}\n"
+
+#: pfemame.py:4079
+msgid "System {rom} started with program {program} selected"
+msgstr "系统 {rom} 启动并选择了程序 {program}"
+
+#: pfemame.py:4082
+msgid "Romset {} started"
+msgstr "Romset {} 已启动"
+
+#: pfemame.py:4235
+msgid "Application Ended after {}"
+msgstr "应用程序在 {} 之后结束"
+
+#: pfemame.py:4308
+msgid "Updating number of runs info for ROM {}"
+msgstr "更新 ROM {} 的运行次数信息"
+
+#: pfemame.py:4328
+msgid "ERROR: Unable to write to runs.dat file"
+msgstr "错误：无法写入 running.dat 文件"
+
+#: pfemame.py:4384
+msgid "Romset {} rating updated"
+msgstr "Romset {} 评级已更新"
+
+#: pfemame.py:4409
+msgid "Adding ROM {} to favorites"
+msgstr "将 ROM {} 添加到收藏夹"
+
+#: pfemame.py:4421 tileview.py:971
+msgid "ERROR: Unable to write to favorites.dat file"
+msgstr "错误：无法写入 favorites.dat 文件"
+
+#: pfemame.py:4429
+msgid ""
+"The selected ROM currently exists in the watchlist.  Would you like it "
+"removed?"
+msgstr "所选 ROM 当前存在于监视列表中。  您想将其删除吗？"
+
+#: pfemame.py:4431
+msgid "File In Watchlist"
+msgstr "文件在监视列表中"
+
+#: pfemame.py:4469
+msgid "Adding ROM {} to watchlist"
+msgstr "将 ROM {} 添加到监视列表"
+
+#: pfemame.py:4480
+msgid "WARNING: Unable to read from watchlist.dat file"
+msgstr "警告：无法读取 watchlist.dat 文件"
+
+#: pfemame.py:4490
+msgid "ERROR: Unable to write to watchlist.dat file"
+msgstr "错误：无法写入 watchlist.dat 文件"
+
+#: pfemame.py:4555
+msgid "Reading ROM {} flags"
+msgstr "读取 ROM {} 标志"
+
+#: pfemame.py:4556
+msgid "Reading ROM {} flags.  Please Wait........."
+msgstr "读取 ROM {} 标志。  请稍等........."
+
+#: pfemame.py:4647
+msgid "Completed reading ROM {} flags"
+msgstr "已完成读取 ROM {} 标志"
+
+#: pfemame.py:4950
+msgid "Verifying ROM image for {}\n"
+msgstr ""
+"正在验证 {} 的 ROM 映像\n"
+"”"
+
+#: pfemame.py:4960
+msgid "Verifying sample files for {}\n"
+msgstr ""
+"正在验证 {} 的示例文件\n"
+"”"
+
+#: pfemame.py:5061
+msgid "pfeMAME Changelog File"
+msgstr "pfeMAME 变更日志文件"
+
+#: pfemame.py:5067
+msgid ""
+"Unable to find the changelog.docx file.  Please check that it exists in the "
+"pfeMAME folder."
+msgstr "找不到changelog.docx 文件。  请检查它是否存在于 pfeMAME 文件夹中。"
+
+#: pfemame.py:5244
+msgid "Choose a directory for backup:"
+msgstr "选择备份目录："
+
+#: pfemame.py:5248 pfemame.py:5265
+msgid "Backup process canceled"
+msgstr "备份过程已取消"
+
+#: pfemame.py:5248 pfemame.py:5265 pfemame.py:5294 pfemame.py:5320
+msgid "INFORMATION"
+msgstr "信息"
+
+#: pfemame.py:5261
+msgid "Backup ROM Source Logins?"
+msgstr "备份 ROM 来源登录信息？"
+
+#: pfemame.py:5276
+msgid ""
+"Unable to copy the application files to the selected folder.  Check the "
+"folder permissions."
+msgstr "无法将应用程序文件复制到所选文件夹。  检查文件夹权限。"
+
+#: pfemame.py:5288
+msgid ""
+"Choose the backup to restore application preferences and DAT files from:"
+msgstr "选择用于恢复程序设置和 DAT 文件的备份："
+
+#: pfemame.py:5294 pfemame.py:5320
+msgid "Restore process canceled"
+msgstr "恢复过程已取消"
+
+#: pfemame.py:1458
+msgid ""
+"Restored the INI file for {} left over from an unfinished system program run"
+msgstr "已恢复 {} 的 INI 文件（上次系统程序运行未正常结束）"
+
+#: pfemame.py:1535
+msgid "ROMs Database Cache out of date"
+msgstr "ROM 数据库缓存已过期"
+
+#: pfemame.py:1538
+msgid "Don’t show this message again"
+msgstr "不再显示此消息"
+
+#: pfemame.py:1549
+msgid ""
+"Unable to check age of ROMs cache. Please check the Preferences and then "
+"refresh the ROMs cache"
+msgstr "无法检查 ROM 缓存的寿命。请检查首选项，然后刷新 ROM 缓存"
+
+#: pfemame.py:1550
+msgid "ROMs Database Cache check error"
+msgstr "ROM 数据库缓存检查错误"
+
+#: pfemame.py:1572
+msgid ""
+"Your MAME version is {mame_version} while your catver.ini file version is "
+"{catver_version}.  Suggest you find an updated copy of the catver.ini file "
+"if it is older than the MAME version."
+msgstr ""
+"您的 MAME 版本是 {mame_version}，而您的 catver.ini 文件版本是 {catver_version}。  如果 "
+"catver.ini 文件比 MAME 版本旧，建议您找到该文件的更新副本。"
+
+#: pfemame.py:1693
+msgid "{} file(s) were already in the folder and were left as they were."
+msgstr "{} 个文件已在文件夹中，保持不变。"
+
+#: pfemame.py:1695
+msgid "{} file(s) could not be copied - see the log file."
+msgstr "有 {} 个文件无法复制，请查看日志文件。"
+
+#: pfemame.py:2077
+msgid ""
+"A newer version of pfeMAME is available.\n"
+"\n"
+"You have version {0}, and version {1} is available.\n"
+"\n"
+"Would you like to download and install it now?"
+msgstr ""
+"有更新版本的 pfeMAME 可用。\n"
+"”\n"
+"”您有版本 {0}，并且版本 {1} 可用。\n"
+"”\n"
+"”您想立即下载并安装吗？”"
+
+#: pfemame.py:2141
+msgid "Connection timed out - server is taking too long to respond"
+msgstr "连接超时 - 服务器响应时间过长"
+
+#: pfemame.py:2144
+msgid "Unable to access network connection or update version file not found"
+msgstr "无法访问网络连接或找不到更新版本文件"
+
+#: pfemame.py:2152
+msgid "Trying to calculate version"
+msgstr "尝试计算版本"
+
+#: pfemame.py:2165
+msgid "You already have the latest version"
+msgstr "您已经拥有最新版本"
+
+#: pfemame.py:2490
+msgid ""
+"The file name {}.png already exists in the Snapshots folder.  Would you like"
+" to continue?"
+msgstr "截图文件夹中已存在文件 {}.png。要继续吗？"
+
+#: pfemame.py:2759
+msgid ""
+"{}\n"
+"\n"
+"Would you like to see the list?"
+msgstr ""
+"{}\n"
+"\n"
+"要查看列表吗？"
+
+#: pfemame.py:2788
+msgid "{} is not a system with software lists."
+msgstr "{} 不是带有软件列表的系统。"
+
+#: pfemame.py:2852 pfemame.py:4887
+msgid "ERROR:  "
+msgstr "错误：  "
+
+#: pfemame.py:2867
+msgid "Unable to write to the build_errors.txt file"
+msgstr "Unable to write to the build_errors.txt file"
+
+#: pfemame.py:3026
+msgid ""
+"Unable to read the catver.ini file. Please check file and folder "
+"permissions."
+msgstr "无法读取 catver.ini 文件。请检查文件和文件夹权限。"
+
+#: pfemame.py:3028
+msgid ""
+"Cannot find the catver.ini file. Please check file path settings.  All ROMs "
+"will default to Not Classified."
+msgstr "找不到 catver.ini 文件。请检查文件路径设置。  所有 ROM 将默认为未分类”。"
+
+#: pfemame.py:3523
+msgid "No online images were found for \"{}\"\n"
+msgstr "No online images were found for \"{}\"\n"
+
+#: pfemame.py:3558
+msgid ""
+"An image already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the selected image?"
+msgstr ""
+"图像已存在于：\n"
+"{}\n"
+"\n"
+"将其替换为所选图像？"
+
+#: pfemame.py:3815
+msgid "No online ROM downloads were found for \"{}\"\n"
+msgstr "No online ROM downloads were found for \"{}\"\n"
+
+#: pfemame.py:3868
+msgid ""
+"A ROM already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the downloaded ROM?"
+msgstr ""
+"ROM 已存在于：\n"
+"{}\n"
+"\n"
+"用下载的ROM替换它？"
+
+#: pfemame.py:3905
+msgid "Downloading {file_name} from {source}"
+msgstr "正在从 {source} 下载 {file_name}"
+
+#: pfemame.py:3935
+msgid "Download of ROM \"{}\" cancelled\n"
+msgstr "ROM“{}”的下载已取消\n"
+
+#: pfemame.py:3940
+msgid "Failed to download ROM \"{}\"\n"
+msgstr "Failed to download ROM \"{}\"\n"
+
+#: pfemame.py:3943
+msgid ""
+"The ROM could not be downloaded:\n"
+"{}"
+msgstr ""
+"ROM无法下载：\n"
+"{}"
+
+#: pfemame.py:4363
+msgid "Romset {rom} rated as {stars} stars"
+msgstr "Romset {rom} 评为 {stars} 星"
+
+#: pfemame.py:4594
+msgid "Unsupported data file: {}"
+msgstr "不支持的数据文件：{}"
+
+#: pfemame.py:4644
+msgid ""
+"{count} error(s) found in {file} file.  See logfile.log for more "
+"information.\n"
+msgstr "在 {file} 文件中发现 {count} 错误。  有关详细信息，请参阅 logfile.log。\n"
+
+#: pfemame.py:4985
+msgid "Media types associated with ROM {}:\n"
+msgstr ""
+"与 ROM {} 关联的媒体类型：\n"
+"”"
+
+#: pfemame.py:5113
+msgid ""
+"The artwork files can only be updated for MAME {minimum} or newer.  You have"
+" MAME {version}."
+msgstr "只能为 MAME {minimum} 或更高版本更新图稿文件。  您的 MAME 版本是 {version}。"
+
+#: pfemame.py:5191
+msgid "Recording playback for the rom using {}"
+msgstr "使用 {} 为 ROM 录制播放"
+
+#: pfemame.py:5192
+msgid "Playing the rom using recorded input from {}"
+msgstr "使用来自 {} 的录制输入播放 ROM"
+
+#: pfemame.py:5314
+msgid ""
+"The following files will be restored, replacing your current ones:\n"
+"\n"
+"{}\n"
+"\n"
+"Your current files are saved to the backups folder first.  pfeMAME will then restart to load the restored settings.\n"
+"\n"
+"Continue?"
+msgstr ""
+"将恢复以下文件并替换当前文件：\n"
+"\n"
+"{}\n"
+"\n"
+"当前文件会先保存到 backups 文件夹。  随后 pfeMAME 将重新启动以加载恢复的设置。\n"
+"\n"
+"继续吗？"
+
+#: pfemame.py:5474
+msgid "Configuration file copied across for ROM file {}\n"
+msgstr ""
+"为 ROM 文件 {} 复制配置文件\n"
+"”"
+
+#: pfemame.py:5475
+msgid "Configuration file copied to Mapping folder for ROM file {}"
+msgstr "配置文件已复制到 ROM 文件 {} 的映射文件夹"
+
+#: pfemame.py:5477
+msgid ""
+"I am unable to write the {}.map file into the Mapping folder.  Check the "
+"folder permissions and that the folder and files within are not Read Only or"
+" write protected.  Under Linux check that everyone has permissions to write "
+"to the file / folder."
+msgstr ""
+"我无法将 {}.map 文件写入 Mapping 文件夹。  检查文件夹权限，并确保其中的文件夹和文件不是只读或写保护。  在 Linux "
+"下检查每个人是否都有写入文件/文件夹的权限。"
+
+#: pfemame.py:5522
+msgid "INI file for system program \"{}\" removed\n"
+msgstr "系统程序“{}”的 INI 文件已删除\n"
+
+#: pfemame.py:5524
+msgid "INI file for ROM \"{}\" removed\n"
+msgstr "ROM“{}”的 INI 文件已删除\n"
+
+#: pfemame.py:5527
+msgid "No INI file for system program \"{}\" exists so it can’t be removed\n"
+msgstr "系统程序“{}”的 INI 文件不存在，因此无法删除\n"
+
+#: pfemame.py:5529
+msgid "No INI file for ROM \"{}\" exists so it can’t be removed\n"
+msgstr "ROM“{}”的 INI 文件不存在，因此无法删除\n"
+
+#: pfemame.py:5620
+msgid "{} is not a valid image file\n"
+msgstr "{} 不是有效的图像文件\n"
+
+#: pfemame.py:5632
+msgid ""
+"An image already exists at:\n"
+"{}\n"
+"\n"
+"Replace it with the dropped image?"
+msgstr ""
+"以下位置已存在图像：\n"
+"{}\n"
+"\n"
+"用拖放的图像替换吗？"
+
+#: pfemame.py:1645
+msgid ""
+"{existing} of the {count} favorite file(s) are already in the folder.  Replace them?\n"
+"\n"
+"Yes replaces them, No only copies the others."
+msgstr ""
+"{existing} 个（共 {count} 个）收藏文件已在文件夹中。要替换它们吗？\n"
+"\n"
+"“是”将替换它们，“否”只复制其他文件。"
+
+#: pfemame.py:2156
+msgid "New pfeMAME version exists"
+msgstr "存在新的 pfeMAME 版本"
+
+#: pfemame.py:2222
+msgid ""
+"Failed to launch updater:\n"
+"{}"
+msgstr ""
+"无法启动更新程序：\n"
+"{}"
+
+#: pfemame.py:2273
+msgid "Unable to write to the categories.dat file: {}"
+msgstr "无法写入 categories.dat 文件：{}"
+
+#: pfemame.py:2573
+msgid "{} Preferences"
+msgstr "{} 偏好设置"
+
+#: pfemame.py:3571 pfemame.py:5644
+msgid "Failed to save the image to {}\n"
+msgstr "Failed to save the image to {}\n"
+
+#: pfemame.py:3574 pfemame.py:5646
+msgid ""
+"The image could not be saved to:\n"
+"{}"
+msgstr ""
+"图像无法保存到：\n"
+"{}"
+
+#: pfemame.py:3754
+msgid ""
+"Downloading result {number} of {count} from {source} ({done} of {total})"
+msgstr "正在从 {source} 下载第 {number}/{count} 个结果 ({done} / {total})"
+
+#: pfemame.py:4641
+msgid "WARNING: {} file does not exist"
+msgstr "警告：{} 文件不存在"
+
+#: pfemame.py:5094
+msgid ""
+"Sorry, but I was unable to open the pfeMAME manual. Please open it manually:"
+" {}"
+msgstr "抱歉，我无法打开 pfeMAME 手册。请手动打开它：{}"
+
+#: pfemame.py:5176
+msgid "Create the file for recording inputs for {}"
+msgstr "创建用于记录 {} 输入的文件"
+
+#: pfemame.py:5177
+msgid "Select the file to play back inputs for {}"
+msgstr "选择要回放 {} 输入的文件"
+
+#: pfemame.py:5258
+msgid ""
+"Include your saved online ROM source logins ({}) in the backup?\n"
+"\n"
+"They are stored obfuscated, not encrypted, so anyone with the backup file and pfeMAME could recover them."
+msgstr ""
+"将已保存的在线 ROM 来源登录信息（{}）包含在备份中吗？\n"
+"\n"
+"这些信息只是经过混淆而非加密，任何拥有备份文件和 pfeMAME 的人都可以恢复它们。"
+
+#: pfemame.py:5290
+msgid "pfeMAME backup"
+msgstr "pfeMAME 备份"
+
+#: pfemame.py:5291
+msgid "Older backup folder"
+msgstr "旧版备份文件夹"
+
+#: pfemame.py:5518
+msgid "Unable to remove the INI file {path}: {error}\n"
+msgstr "无法删除 INI 文件 {path}：{error}\n"
+
+#: pfemame.py:1533
+msgid ""
+"The database cache is {} days old. I suggest you refresh the ROMs database "
+"cache manually."
+msgstr "数据库缓存已存在 {} 天。我建议您手动刷新 ROM 数据库缓存。"
+
+#: pfemame.py:3324 pfemame.py:2332
+msgid "Auto loading video in {} seconds"
+msgstr "{} 秒后自动加载视频"
+
+#: pfemame.py:4375
+msgid "WARNING: Failed to read {}"
+msgstr "警告：无法读取 {}"
+
+#: pfemame.py:4382
+msgid "ERROR: Unable to write to {}"
+msgstr "错误：无法写入 {}"
+
+#: pfemame.py:4637
+msgid ""
+"A file name called {rom} in the {file} file does not exist in the MAME ROM "
+"list"
+msgstr "{file} 文件中名为 {rom} 的文件名在 MAME ROM 列表中不存在"
+
+#: pfemame.py:4885
+msgid "The snapshot image {} could not be loaded.  It may be corrupted."
+msgstr "无法加载图像 {}。它可能已损坏。"
+
+#: pfemame.py:2172
+msgid "You already have the latest version of pfeMAME installed."
+msgstr "您已经安装了最新版本的 pfeMAME。"
+
+#: pfemame.py:2173
+msgid "Check for software update"
+msgstr "检查软件更新"
+
+#: pfemame.py:2176
+msgid ""
+"Unable to get version information from Sourceforge.  Request returned: {}. "
+"It should have returned three numbers separated by a dot (e.g. 2.2.2)"
+msgstr "无法从 Sourceforge 获取版本信息。  返回的请求：{}。它应该返回三个由点分隔的数字（例如 2.2.2）"
+
+#: pfemame.py:2182
+msgid ""
+"An error has occurred and I am unable to check the online version. Check the"
+" logfile for more information."
+msgstr "发生错误，无法查看在线版本。检查日志文件以获取更多信息。"
+
+#: pfemame.py:2184
+msgid "Error retrieving version"
+msgstr "检索版本时出错"
+
+#: pfemame.py:2566
+msgid "ROM Preferences - {}"
+msgstr "ROM 首选项 - {}"
+
+#: pfemame.py:3008
+msgid "catver.ini file version: {}"
+msgstr "catver.ini 文件版本：{}"
+
+#: pfemame_ribbon_bar.py:592
+msgid "Refresh ROMs Database"
+msgstr "刷新 ROM 数据库"
+
+#: pfemame_ribbon_bar.py:598
+msgid "Record User Inputs"
+msgstr "记录用户输入"
+
+#: pfemame_ribbon_bar.py:599
+msgid "Playback User Inputs"
+msgstr "回放用户输入"
+
+#: pfemame_ribbon_bar.py:602
+msgid "Backup All User Settings"
+msgstr "备份所有用户设置"
+
+#: pfemame_ribbon_bar.py:603
+msgid "Restore All User Settings"
+msgstr "恢复所有用户设置"
+
+#: pfemame_ribbon_bar.py:604
+msgid "Export Favorite ROMs"
+msgstr "导出最喜欢的 ROM"
+
+#: pfemame_ribbon_bar.py:607
+msgid "Quit"
+msgstr "辞职"
+
+#: pfemame_ribbon_bar.py:611
+msgid "Add the selected ROM to Favorite list"
+msgstr "将选定的 ROM 添加到收藏夹列表"
+
+#: pfemame_ribbon_bar.py:612
+msgid "Set Rating for selected ROM"
+msgstr "为选定的 ROM 设置评级"
+
+#: pfemame_ribbon_bar.py:613
+msgid "Copy image to clipboard"
+msgstr "将图像复制到剪贴板"
+
+#: pfemame_ribbon_bar.py:614
+msgid "Find"
+msgstr "寻找"
+
+#: pfemame_ribbon_bar.py:615
+msgid "Clear the messages window"
+msgstr "清除消息窗口"
+
+#: pfemame_ribbon_bar.py:616
+msgid "Copy messages window to clipboard"
+msgstr "将消息窗口复制到剪贴板"
+
+#: pfemame_ribbon_bar.py:617
+msgid "Reset the ROMs list column spacing to default"
+msgstr "将 ROM 列表列间距重置为默认值"
+
+#: pfemame_ribbon_bar.py:618
+msgid "Setup alternate emulator engines"
+msgstr "设置备用仿真器引擎"
+
+#: pfemame_ribbon_bar.py:622
+msgid "Verify the selected ROM files"
+msgstr "验证所选的 ROM 文件"
+
+#: pfemame_ribbon_bar.py:624
+msgid "Check the artwork files"
+msgstr "检查艺术品文件"
+
+#: pfemame_ribbon_bar.py:625
+msgid "Reset the ROM specific INI file to its default settings"
+msgstr "将 ROM 特定的 INI 文件重置为其默认设置"
+
+#: pfemame_ribbon_bar.py:626
+msgid "Browse the software lists of the selected system"
+msgstr "浏览所选系统的软件列表"
+
+#: pfemame_ribbon_bar.py:630
+msgid "Display ROM files information"
+msgstr "显示ROM文件信息"
+
+#: pfemame_ribbon_bar.py:631
+msgid "Full screen video player"
+msgstr "全屏视频播放器"
+
+#: pfemame_ribbon_bar.py:632
+msgid "View the pfeMAME log file"
+msgstr "查看 pfeMAME 日志文件"
+
+#: pfemame_ribbon_bar.py:633
+msgid "View the selected file media types supported"
+msgstr "查看支持的所选文件媒体类型"
+
+#: pfemame_ribbon_bar.py:634
+msgid "What's new in the latest MAME (new, now working and removed machines)"
+msgstr "最新 MAME 的新内容（新增、现已可用和已移除的机器）"
+
+#: pfemame_ribbon_bar.py:638
+msgid "View MAME controls"
+msgstr "查看 MAME 控件"
+
+#: pfemame_ribbon_bar.py:639
+msgid "View the pfeMAME manual"
+msgstr "查看 pfeMAME 手册"
+
+#: pfemame_ribbon_bar.py:640
+msgid "Check for pfeMAME updates"
+msgstr "检查 pfeMAME 更新"
+
+#: pfemame_ribbon_bar.py:641
+msgid "Open the pfeMAME web page"
+msgstr "打开 pfeMAME 网页"
+
+#: pfemame_ribbon_bar.py:642
+msgid "View the pfeMAME changelog"
+msgstr "查看 pfeMAME 变更日志"
+
+#: pfemame_ribbon_bar.py:643
+msgid "About"
+msgstr "关于"
+
+#: play_stats.py:109
+msgid "Played once, {1} in total"
+msgstr "玩过 1 次，共 {1}"
+
+#: play_stats.py:110
+msgid "Played {0} times, {1} in total"
+msgstr "玩过 {0} 次，共 {1}"
+
+#: play_stats.py:113
+msgid ", last played {}"
+msgstr "，最近一次 {}"
+
+#: preferences.py:286
+msgid "Please set a valid value for the "
+msgstr "请设置一个有效的值"
+
+#: preferences.py:429
+msgid "ROM INI file settings updated"
+msgstr "更新了 ROM INI 文件设置"
+
+#: preferences.py:300
+msgid "Volume Attenuation Value Error"
+msgstr "音量衰减值误差"
+
+#: preferences.py:303
+msgid "Volume Latency Value Error"
+msgstr "卷延迟值错误"
+
+#: preferences.py:156
+msgid ""
+"You need to set a valid INI path.  This is where ROM specific INI files are "
+"stored and used by the MAME executable."
+msgstr "您需要设置有效的 INI 路径。  这是 MAME 可执行文件存储和使用 ROM 特定 INI 文件的位置。"
+
+#: preferences.py:292
+msgid "Cache Check Days Error"
+msgstr "缓存检查天数错误"
+
+#: preferences.py:295
+msgid "Screensaver Time Value Error"
+msgstr "屏幕保护时间值错误"
+
+#: preferences.py:299
+msgid "volume attenuation (-30 to 0)"
+msgstr "音量衰减（-30 至 0）"
+
+#: preferences.py:302
+msgid "volume latency (1 to 5)"
+msgstr "音量延迟（1 至 5）"
+
+#: preferences.py:374
+msgid "INI file settings updated"
+msgstr "INI 文件设置已更新"
+
+#: preferences.py:375
+msgid "pfeMAME and MAME INI file settings updated"
+msgstr "pfeMAME 和 MAME INI 文件设置已更新"
+
+#: preferences.py:377
+msgid "ERROR: Unable to write to the mame.ini file"
+msgstr "错误：无法写入 mame.ini 文件"
+
+#: preferences.py:378
+msgid ""
+"ERROR: pfeMAME settings updated but unable to write to the mame.ini file"
+msgstr "错误：pfeMAME 设置已更新，但无法写入 mame.ini 文件"
+
+#: preferences.py:390
+msgid "The INI folder has not been set.  Check folder settings."
+msgstr "INI 文件夹尚未设置。  检查文件夹设置。"
+
+#: preferences.py:391 preferences.py:368 preferences.py:415
+msgid "Error in writing INI file"
+msgstr "写入INI文件时出错"
+
+#: preferences.py:396
+msgid "ERROR: Path to INI folder not set"
+msgstr "错误：未设置 INI 文件夹的路径"
+
+#: preferences.py:291
+msgid "cache check days (1 to 365)"
+msgstr "缓存检查天数（1 到 365）"
+
+#: preferences.py:294
+msgid "screensaver time in minutes (0 to 60)"
+msgstr "屏幕保护时间（以分钟为单位）（0 到 60）"
+
+#: preferences.py:365
+msgid ""
+"Unable to write to the mame.ini file.  Check that the MAME INI File path is "
+"set in File Paths and that the file is not read-only.  The pfeMAME settings "
+"have been saved."
+msgstr ""
+"无法写入 mame.ini 文件。  检查文件路径中是否设置了 MAME INI 文件路径，并且该文件不是只读的。  pfeMAME 设置已保存。"
+
+#: preferences.py:413
+msgid ""
+"Unable to write to the ROM specific INI file.  Check that the INI folder is "
+"defined and that you have permission to write to it."
+msgstr "无法写入 ROM 特定的 INI 文件。  检查 INI 文件夹是否已定义以及您是否有权写入该文件夹。"
+
+#: preferences.py:421
+msgid ""
+"ERROR: Unable to write to ROM INI file.  Check the folder permissions and "
+"file / folder path settings."
+msgstr "错误：无法写入 ROM INI 文件。  检查文件夹权限和文件/文件夹路径设置。"
+
+#: preferences.py:137
+msgid "Error reading from ROM INI file"
+msgstr "从 ROM INI 文件读取时出错"
+
+#: rominfo.py:318
+msgid "Verifying..."
+msgstr "正在验证..."
+
+#: rominfo.py:167 rom_picker_dialog.py:69 xmlinfo.py:220
+msgid "Size"
+msgstr "尺寸"
+
+#: rominfo.py:167 xmlinfo.py:221
+msgid "CRC"
+msgstr "CRC"
+
+#: rominfo.py:167
+msgid "SHA1"
+msgstr "SHA1"
+
+#: rominfo.py:272
+msgid "VERIFY"
+msgstr "验证"
+
+#: rominfo.py:168
+msgid "Dump"
+msgstr "转储"
+
+#: rominfo.py:169 rom_picker_dialog.py:70 xmlinfo.py:221
+msgid "Status"
+msgstr "地位"
+
+#: rominfo.py:171
+msgid "BAD DUMP"
+msgstr "错误转储"
+
+#: rominfo.py:171
+msgid "NO GOOD DUMP KNOWN"
+msgstr "没有已知的好的转储"
+
+#: rominfo.py:227 xmlinfo.py:321
+msgid "Unable to find the MAME executable path."
+msgstr "无法找到 MAME 可执行路径。"
+
+#: rominfo.py:273
+msgid "Check the ROM files in your ROM folders against what MAME expects"
+msgstr "根据 MAME 的预期检查 ROM 文件夹中的 ROM 文件"
+
+#: rominfo.py:276 xmlinfo.py:367
+msgid "COPY TO CLIPBOARD"
+msgstr "复制到剪贴板"
+
+#: rominfo.py:216
+msgid "ROM Information - {}"
+msgstr "ROM 信息 - {}"
+
+#: rominfo.py:261
+msgid "MAME did not return any ROM information for {}."
+msgstr "MAME 没有返回 {} 的任何 ROM 信息。"
+
+#: rominfo.py:174
+msgid "disk (CHD)"
+msgstr "磁盘（CHD）"
+
+#: rom_database.py:251
+msgid "Reading the MAME machine list"
+msgstr "正在读取 MAME 机器列表"
+
+#: rom_database.py:461
+msgid "Scanning system folders"
+msgstr "正在扫描系统文件夹"
+
+#: rom_database.py:523
+msgid "Checking which ROMs exist"
+msgstr "正在检查哪些 ROM 存在"
+
+#: rom_database.py:408
+msgid "Checking merged ROM sets for clones"
+msgstr "正在检查合并 ROM 集中的克隆版本"
+
+#: rom_database.py:487
+msgid "Reading the software lists"
+msgstr "正在读取软件列表"
+
+#: rom_database.py:501
+msgid "Building the ROM list"
+msgstr "正在生成 ROM 列表"
+
+#: rom_database.py:109
+msgid "Reading the MAME machine list ({:,} machines)"
+msgstr "正在读取 MAME 机器列表（{:,} 台机器）"
+
+#: rom_grid.py:121
+msgid "File Name"
+msgstr "文件名"
+
+#: rom_grid.py:121
+msgid "System File"
+msgstr "系统文件"
+
+#: rom_grid.py:121 views.py:40
+msgid "Exists"
+msgstr "存在"
+
+#: rom_grid.py:122
+msgid "Rating"
+msgstr "等级"
+
+#: rom_grid.py:122
+msgid "Runs"
+msgstr "跑步"
+
+#: rom_grid.py:122
+msgid "Fav"
+msgstr "最爱"
+
+#: rom_grid.py:122
+msgid "Category"
+msgstr "类别"
+
+#: rom_grid.py:122
+msgid "Short Name"
+msgstr "简称"
+
+#: rom_grid.py:123
+msgid "Path Media Name"
+msgstr "路径媒体名称"
+
+#: rom_grid.py:123 software_browser.py:26
+msgid "Year"
+msgstr "年"
+
+#: rom_grid.py:123
+msgid "Manufacturer"
+msgstr "制造商"
+
+#: rom_grid.py:404
+msgid "Started building ROM grid."
+msgstr "开始构建 ROM 网格。"
+
+#: rom_grid.py:453
+msgid "Completed building ROM grid."
+msgstr "已完成 ROM 网格的构建。"
+
+#: rom_picker_dialog.py:30
+msgid "Good"
+msgstr "好的"
+
+#: rom_picker_dialog.py:31
+msgid "Bad / incomplete"
+msgstr "坏/不完整"
+
+#: rom_picker_dialog.py:32
+msgid "Best available"
+msgstr "最好的可用"
+
+#: rom_picker_dialog.py:33
+msgid "Could not verify"
+msgstr "无法验证"
+
+#: rom_picker_dialog.py:34 rom_picker_dialog.py:114
+msgid "Not verified"
+msgstr "未验证"
+
+#: rom_picker_dialog.py:65
+msgid "Source"
+msgstr "来源"
+
+#: rom_picker_dialog.py:66
+msgid "ROM"
+msgstr "只读存储器"
+
+#: rom_picker_dialog.py:67
+msgid "All matching files"
+msgstr "所有匹配的文件"
+
+#: rom_picker_dialog.py:68
+msgid "Partial matching files"
+msgstr "部分匹配文件"
+
+#: rom_picker_dialog.py:71
+msgid "Found in"
+msgstr "发现于"
+
+#: rom_picker_dialog.py:90
+msgid "Download Selected"
+msgstr "下载所选内容"
+
+#: rom_picker_dialog.py:60
+msgid ""
+"Select a ROM ZIP to download, then choose \"Download Selected\". Double-"
+"click a row to download it straight away."
+msgstr "选择要下载的 ROM ZIP，然后选择“下载所选内容”。双击某一行即可立即下载。"
+
+#: rom_picker_dialog.py:87
+msgid "Verify more"
+msgstr "验证更多"
+
+#: rom_source_dialog.py:62
+msgid "Save"
+msgstr "节省"
+
+#: rom_source_dialog.py:89
+msgid "Stored credentials cleared."
+msgstr "已清除存储的凭据。"
+
+#: rom_source_dialog.py:98
+msgid "Testing..."
+msgstr "测试..."
+
+#: rom_source_dialog.py:152
+msgid "Search"
+msgstr "搜索"
+
+#: rom_source_dialog.py:43
+msgid "Credentials are stored locally (obfuscated, not strongly encrypted)."
+msgstr "凭证存储在本地（经过混淆，未高度加密）。"
+
+#: rom_source_dialog.py:60
+msgid "Test"
+msgstr "测试"
+
+#: rom_source_dialog.py:61
+msgid "Clear"
+msgstr "清除"
+
+#: rom_source_dialog.py:95
+msgid "Enter a username and password first."
+msgstr "首先输入用户名和密码。"
+
+#: rom_source_dialog.py:121
+msgid "Choose ROM download source"
+msgstr "选择ROM下载源"
+
+#: rom_source_dialog.py:131
+msgid "Select one or more sources to search for this ROM:"
+msgstr "选择一个或多个来源来搜索此 ROM："
+
+#: rom_source_dialog.py:204
+msgid "Select at least one source to search."
+msgstr "至少选择一个来源进行搜索。"
+
+#: rom_source_dialog.py:204
+msgid "No Source Selected"
+msgstr "未选择来源"
+
+#: rom_source_dialog.py:48
+msgid "Username / email:"
+msgstr "用户名/电子邮件："
+
+#: rom_source_dialog.py:51
+msgid "Password:"
+msgstr "密码："
+
+#: rom_source_dialog.py:175
+msgid "(no login needed)"
+msgstr "（无需登录）"
+
+#: rom_source_dialog.py:178
+msgid "credentials stored"
+msgstr "存储的凭证"
+
+#: rom_source_dialog.py:181
+msgid "no credentials - add them to use"
+msgstr "没有凭据 - 添加它们以使用"
+
+#: rom_source_dialog.py:33
+msgid "Credentials for {}"
+msgstr "{} 的凭证"
+
+#: rom_source_dialog.py:141
+msgid "Credentials..."
+msgstr "证书..."
+
+#: rungame.py:415
+msgid "MAME failed its validity checks."
+msgstr "MAME 未通过有效性检查。"
+
+#: rungame.py:416
+msgid ""
+"Required files are missing - check that the ROM set (and any CHD or BIOS it "
+"needs) is complete for this version of MAME."
+msgstr "缺少必需的文件 - 请检查 ROM 集（以及所需的 CHD 或 BIOS）对于此版本的 MAME 是否完整。"
+
+#: rungame.py:418
+msgid "MAME stopped with a fatal error - see the messages above."
+msgstr "MAME 因严重错误而停止 - 请查看上面的消息。"
+
+#: rungame.py:419
+msgid "A device (such as a slot device or media image) could not be started."
+msgstr "无法启动某个设备（例如插槽设备或媒体映像）。"
+
+#: rungame.py:420
+msgid ""
+"This version of MAME does not have this machine - it may have been renamed "
+"or removed."
+msgstr "此版本的 MAME 没有这台机器 - 它可能已被重命名或删除。"
+
+#: rungame.py:421
+msgid ""
+"The configuration is not valid - check the ROM's INI file and the options "
+"set for it."
+msgstr "配置无效 - 请检查该 ROM 的 INI 文件以及为其设置的选项。"
+
+#: rungame.py:423
+msgid "MAME ended unexpectedly."
+msgstr "MAME 意外结束。"
+
+#: rungame.py:903
+msgid "Re-Running system using full path name (not XML short name)"
+msgstr "使用完整路径名（不是 XML 短名称）重新运行系统"
+
+#: rungame.py:424
+msgid "ROM {0} did not run correctly (MAME exit code {1}).  {2}"
+msgstr "ROM {0} 未能正确运行（MAME 退出代码 {1}）。  {2}"
+
+#: rungame.py:870
+msgid "Using ROM specific INI file for preferences"
+msgstr "使用 ROM 特定的 INI 文件作为首选项"
+
+#: rungame.py:872
+msgid "Using default preferences"
+msgstr "使用默认首选项"
+
+#: rungame.py:166
+msgid ""
+"Found inputs mapping file for the ROM.  Copied across and overwriting "
+"default.cfg file."
+msgstr "找到 ROM 的输入映射文件。  复制并覆盖 default.cfg 文件。"
+
+#: rungame.py:169
+msgid ""
+"I am unable to overwrite the default.cfg file in the Config folder.  Check "
+"the folder permissions and that the folder and files within are not Read "
+"Only or write protected.  Under Linux check that everyone has permissions to"
+" write to the file / folder."
+msgstr ""
+"我无法覆盖 Config 文件夹中的 default.cfg 文件。  检查文件夹权限，并确保其中的文件夹和文件不是只读或写保护。  在 Linux "
+"下检查每个人是否都有写入文件/文件夹的权限。"
+
+#: rungame.py:358
+msgid ""
+"ERROR:  There was a problem processing the non_mame_emulators.xml file.  "
+"There is likely an error in this file.  Please check it out."
+msgstr "错误：处理 non_mame_emulators.xml 文件时出现问题。  该文件中可能存在错误。  请检查一下。"
+
+#: rungame.py:404
+msgid "signal {}"
+msgstr "信号 {}"
+
+#: rungame.py:411
+msgid "The {0} emulator ended with an error running ROM {1} (exit code {2})."
+msgstr "{0} 模拟器在运行 ROM {1} 时出错结束（退出代码 {2}）。"
+
+#: rungame.py:601
+msgid "Running system using full path name (not XML short name)"
+msgstr "使用完整路径名（不是 XML 短名称）运行系统"
+
+#: rungame.py:892
+msgid ""
+"ERROR Detected.  You have tried running a system program with an XML file "
+"short name but MAME was unable to locate it where it was expected; "
+"{0}{1}{2}{3}{4}{5}{6} The application will now attempt to run the system "
+"program using the full file path."
+msgstr ""
+"检测到错误。  您尝试使用 XML 文件短名称运行系统程序，但 MAME 无法将其定位到预期的位置； {0}{1}{2}{3}{4}{5}{6} "
+"应用程序现在将尝试使用完整文件路径运行系统程序。"
+
+#: rungame.py:173
+msgid "Permission error: Unable to overwrite the default.cfg file."
+msgstr "权限错误：无法覆盖default.cfg 文件。"
+
+#: rungame.py:362
+msgid "XML File Error : non_mame_emulators.xml file may be corrupted"
+msgstr "XML 文件错误：non_mame_emulators.xml 文件可能已损坏"
+
+#: rungame.py:605
+msgid "Running system using XML short name: {}"
+msgstr "使用 XML 短名称运行系统：{}"
+
+#: rungame.py:579
+msgid ""
+"The file extension '{}' for the program you have tried to run does not exist"
+" in the list of acceptable media types for this system."
+msgstr "您尝试运行的程序的文件扩展名{}”不存在于此系统可接受的媒体类型列表中。"
+
+#: rungame.py:583
+msgid "Unknown File Extension Type '{}'\n"
+msgstr ""
+"未知的文件扩展名类型‘{}’\n"
+"”"
+
+#: rungame.py:585
+msgid ""
+"Unable to run the program - no file extension match for '{}' in the system "
+"media types"
+msgstr "无法运行程序 - 系统媒体类型中没有与{}”匹配的文件扩展名"
+
+#: rungame.py:777
+msgid ""
+"Unable to run the program {0}: it has no file extension, so pfeMAME cannot "
+"tell which media type of the {1} system it is."
+msgstr "无法运行程序 {0}：它没有文件扩展名，因此 pfeMAME 无法判断它是 {1} 系统的哪种媒体类型。"
+
+#: rungame.py:916
+msgid "Starting ROM {1} in {0}, Options: {2}, Using engine: {3}"
+msgstr "在 {0} 中启动 ROM {1}，选项：{2}，使用引擎：{3}"
+
+#: rungame.py:641
+msgid "ERROR:  The emulator cannot be found: {}"
+msgstr "错误：  找不到模拟器：{}"
+
+#: rungame.py:644
+msgid ""
+"ERROR:  The emulator could not be started - permission denied: {}.  Check "
+"that it is a program and not a folder, and under Linux / macOS that it is "
+"marked as executable (chmod +x)."
+msgstr ""
+"错误：  无法启动模拟器 - 权限被拒绝：{}。  请检查它是程序而不是文件夹，并且在 Linux / macOS 下已标记为可执行 (chmod "
+"+x)。"
+
+#: rungame.py:648
+msgid "ERROR:  The emulator could not be started: {0} ({1})"
+msgstr "错误：  无法启动模拟器：{0} ({1})"
+
+#: rungame.py:751
+msgid "ERROR:  Unable to run ROM {0}: {1}"
+msgstr "错误：  无法运行 ROM {0}：{1}"
+
+#: rungame.py:764
+msgid ""
+"ERROR:  The extra commands for the {0} emulator could not be read ({1}).  "
+"Check that every \" has a matching \"."
+msgstr "错误：  无法读取 {0} 模拟器的附加命令 ({1})。  请检查每个 \" 都有对应的 \"。"
+
+#: scrolledwindow.py:90
+msgid "ERROR - nothing to display"
+msgstr "错误 - 没有任何内容可显示"
+
+#: scrolledwindow.py:87
+msgid "Unable to find or open the specified file."
+msgstr "无法找到或打开指定的文件。"
+
+#: search.py:63
+msgid ""
+"Search:  words match the name, ROM, category, year or manufacturer.\n"
+"Fields:  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n"
+"Flags:   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n"
+"Put - in front of a term to exclude it, and \"quotes\" around values with spaces."
+msgstr ""
+"搜索：  词语会匹配名称、ROM、类别、年份或制造商。\n"
+"字段：  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n"
+"标志：   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n"
+"在词语前加 - 可排除它，含空格的值请用 \"引号\" 括起来。"
+
+#: software_browser.py:28 tileview.py:705
+msgid "Yes"
+msgstr "是"
+
+#: software_browser.py:28
+msgid "Partially"
+msgstr "部分"
+
+#: software_browser.py:28 tileview.py:705
+msgid "No"
+msgstr "否"
+
+#: software_browser.py:26
+msgid "Have"
+msgstr "拥有"
+
+#: software_browser.py:26
+msgid "Title"
+msgstr "标题"
+
+#: software_browser.py:26
+msgid "Publisher"
+msgstr "发行商"
+
+#: software_browser.py:26
+msgid "Supported"
+msgstr "支持"
+
+#: software_browser.py:27
+msgid "Short name"
+msgstr "短名称"
+
+#: software_browser.py:27
+msgid "List"
+msgstr "列表"
+
+#: software_browser.py:91
+msgid "Search title, publisher, year"
+msgstr "搜索标题、发行商、年份"
+
+#: software_browser.py:92
+msgid "Only software I have"
+msgstr "仅显示我拥有的软件"
+
+#: software_browser.py:93
+msgid "Reading the software lists from MAME..."
+msgstr "正在从 MAME 读取软件列表..."
+
+#: software_browser.py:103
+msgid "Show in ROM list"
+msgstr "在 ROM 列表中显示"
+
+#: software_browser.py:104
+msgid "Play"
+msgstr "运行"
+
+#: software_browser.py:105
+msgid "Close"
+msgstr "关闭"
+
+#: software_browser.py:150
+msgid ""
+"MAME has no software lists for this system (or its HASH files are missing)."
+msgstr "MAME 没有此系统的软件列表（或缺少其 HASH 文件）。"
+
+#: software_browser.py:219
+msgid ""
+"This program is not in the ROM list with the current category selection."
+msgstr "在当前类别选择下，此程序不在 ROM 列表中。"
+
+#: software_browser.py:229
+msgid "You don't have this software in your system programs folder."
+msgstr "您的系统程序文件夹中没有此软件。"
+
+#: software_browser.py:96
+msgid "List:"
+msgstr "列表："
+
+#: software_browser.py:148
+msgid "No software lists"
+msgstr "无软件列表"
+
+#: software_browser.py:186
+msgid "{:,} shown, {:,} of them you have"
+msgstr "显示 {:,} 个，其中您拥有 {:,} 个"
+
+#: software_browser.py:75
+msgid "Software Lists - {}"
+msgstr "软件列表 - {}"
+
+#: software_browser.py:153
+msgid "All lists ({:,})"
+msgstr "全部列表（{:,}）"
+
+#: tileview.py:1917
+msgid ""
+"NAVIGATION:\n"
+"  LEFT = Move left\n"
+"  RIGHT = Move right\n"
+"  UP = Move up\n"
+"  DOWN = Move down\n"
+"  PGUP / PGDN = Move a page\n"
+"  HOME / END = First / last ROM\n"
+"ACTIONS:\n"
+"  L-CTRL(Joy-2) = Change view mode\n"
+"  ALT-1 (Joy-4) = Menu\n"
+"  1 / ENTER (Joy-1) = Start the selected ROM\n"
+"  2 / ESC = Exit Tile View\n"
+"  3 (Joy-3) = Add / remove favorite\n"
+"  4 (Joy-5) = Change the sort order\n"
+"  7 (Joy-6) = Choose a category\n"
+"  5 = Adjust tile brightness\n"
+"  6 = Bring up the Finder"
+msgstr ""
+"导航：\n"
+"  左 = 向左移动\n"
+"  右 = 向右移动\n"
+"  向上 = 向上移动\n"
+"  向下 = 向下移动\n"
+"  PGUP / PGDN = 移动页面\n"
+"  HOME / END = 第一个/最后一个 ROM\n"
+"行动：\n"
+"  L-CTRL(Joy-2) = 更改视图模式\n"
+"  ALT-1 (Joy-4) = 菜单\n"
+"  1 / ENTER (Joy-1) = 启动选定的 ROM\n"
+"  2 / ESC = 退出平铺视图\n"
+"  3 (Joy-3) = 添加/删除收藏夹\n"
+"  4 (Joy-5) = 更改排序顺序\n"
+"  7 (Joy-6) = 选择一个类别\n"
+"  5 = 调整图块亮度\n"
+"  6 = 调出取景器"
+
+#: tileview.py:677 tileview.py:804
+msgid "Recently played"
+msgstr "最近玩过"
+
+#: tileview.py:678 tileview.py:805
+msgid "Most played"
+msgstr "玩得最多的"
+
+#: tileview.py:679 tileview.py:805
+msgid "Most runs"
+msgstr "大多数跑步"
+
+#: tileview.py:1409
+msgid "Switched back to standard view"
+msgstr "切换回标准视图"
+
+#: tileview.py:1939
+msgid "Selected ROM:"
+msgstr "选定的ROM："
+
+#: tileview.py:1940
+msgid "Number of runs:"
+msgstr "运行次数："
+
+#: tileview.py:1941
+msgid "Favorite:"
+msgstr "最喜欢的："
+
+#: tileview.py:1942
+msgid "Available in this view:"
+msgstr "在此视图中可用："
+
+#: tileview.py:1943
+msgid "View mode:"
+msgstr "查看模式："
+
+#: tileview.py:376
+msgid "Choose a category"
+msgstr "选择一个类别"
+
+#: tileview.py:383
+msgid "Menu"
+msgstr "菜单"
+
+#: tileview.py:642
+msgid "Video playback disable selected in preferences"
+msgstr "在首选项中选择禁用视频播放"
+
+#: tileview.py:645
+msgid "Video autoload is off - no tile preview videos"
+msgstr "视频自动加载已关闭 - 无平铺预览视频"
+
+#: tileview.py:650
+msgid "Trying to set up the video playback device"
+msgstr "尝试设置视频播放设备"
+
+#: tileview.py:676
+msgid "Favorite ROMs"
+msgstr "最喜欢的 ROM"
+
+#: tileview.py:676
+msgid "All available ROMs"
+msgstr "所有可用的 ROM"
+
+#: tileview.py:814
+msgid "Find a ROM"
+msgstr "查找ROM"
+
+#: tileview.py:817
+msgid "Exit Tile View"
+msgstr "退出平铺视图"
+
+#: tileview.py:1741
+msgid "ROM Finder"
+msgstr "ROM查找器"
+
+#: tileview.py:1972
+msgid "ROM Information not available"
+msgstr "ROM 信息不可用"
+
+#: tileview.py:674
+msgid "Search: \"{}\""
+msgstr "搜索：“{}”"
+
+#: tileview.py:811
+msgid "Show all ROMs"
+msgstr "显示所有 ROM"
+
+#: tileview.py:811
+msgid "Show favorites"
+msgstr "显示收藏夹"
+
+#: tileview.py:812
+msgid "Sort order: {}"
+msgstr "排序顺序：{}"
+
+#: tileview.py:813
+msgid "Category: {}"
+msgstr "类别：{}"
+
+#: tileview.py:813 tileview.py:931
+msgid "All categories"
+msgstr "所有类别"
+
+#: tileview.py:965
+msgid "ROM set {} removed from favorites"
+msgstr "ROM 集 {} 从收藏夹中删除"
+
+#: tileview.py:1009
+msgid "No ROMs match \"{}\""
+msgstr "没有 ROM 匹配“{}”"
+
+#: tileview.py:665
+msgid "No media content player available on this system: {}"
+msgstr "此系统上没有可用的媒体内容播放器：{}"
+
+#: tileview.py:816
+msgid "Tile brightness: {}%"
+msgstr "瓷砖亮度：{}%"
+
+#: tileview.py:932
+msgid "No category"
+msgstr "没有类别"
+
+#: video_class.py:1058
+msgid "Loading video..."
+msgstr "正在加载视频..."
+
+#: video_class.py:1131
+msgid "Failed to load video"
+msgstr "视频加载失败"
+
+#: video_class.py:1146
+msgid "Playing Video - Click To Stop"
+msgstr "播放视频 - 单击停止"
+
+#: video_class.py:927
+msgid "OpenCV video player with audio support initialized"
+msgstr "已初始化支持音频的 OpenCV 视频播放器"
+
+#: video_class.py:1311
+msgid "Video Stopped"
+msgstr "视频停止"
+
+#: video_class.py:1113
+msgid "Audio extracted from video"
+msgstr "从视频中提取音频"
+
+#: video_class.py:1115
+msgid "No audio found in video or extraction failed"
+msgstr "视频中找不到音频或提取失败"
+
+#: video_class.py:1129
+msgid "Failed to load video: {}"
+msgstr "无法加载视频：{}"
+
+#: video_class.py:930
+msgid "Failed to initialize OpenCV video player: {}"
+msgstr "无法初始化 OpenCV 视频播放器：{}"
+
+#: video_class.py:1094
+msgid "Error loading media: {}"
+msgstr "加载媒体时出错：{}"
+
+#: views.py:40
+msgid "Favorites"
+msgstr "收藏夹"
+
+#: views.py:40
+msgid "Missing"
+msgstr "丢失的"
+
+#: views.py:40
+msgid "Watchlist"
+msgstr "关注列表"
+
+#: views.py:40
+msgid "Recently Played"
+msgstr "最近玩过"
+
+#: views.py:41
+msgid "Most Played"
+msgstr "最常玩"
+
+#: xmlinfo.py:152
+msgid "Wrong size"
+msgstr "尺寸错误"
+
+#: xmlinfo.py:153
+msgid "Wrong checksum"
+msgstr "校验和错误"
+
+#: xmlinfo.py:154
+msgid "Not found"
+msgstr "未找到"
+
+#: xmlinfo.py:155
+msgid "Not checked"
+msgstr "未检查"
+
+#: xmlinfo.py:157
+msgid "(known bad dump)"
+msgstr "（已知坏转储）"
+
+#: xmlinfo.py:168
+msgid "System:"
+msgstr "系统："
+
+#: xmlinfo.py:169
+msgid "Program file:"
+msgstr "程序文件："
+
+#: xmlinfo.py:170
+msgid "Short name:"
+msgstr "简称："
+
+#: xmlinfo.py:159
+msgid "(no good dump known)"
+msgstr "（没有已知的好的转储）"
+
+#: xmlinfo.py:173
+msgid "Software:"
+msgstr "软件："
+
+#: xmlinfo.py:174
+msgid "Year / Publisher:"
+msgstr "年份/出版商："
+
+#: xmlinfo.py:175
+msgid "Software list:"
+msgstr "软件清单："
+
+#: xmlinfo.py:176
+msgid "Found at:"
+msgstr "发现于："
+
+#: xmlinfo.py:207 xmlinfo.py:248
+msgid "File size:"
+msgstr "文件大小："
+
+#: xmlinfo.py:208 xmlinfo.py:249
+msgid "CRC:"
+msgstr "CRC："
+
+#: xmlinfo.py:209 xmlinfo.py:250
+msgid "SHA1:"
+msgstr "SHA1："
+
+#: xmlinfo.py:253 xmlinfo.py:218
+msgid "Files in this software:"
+msgstr "本软件中的文件："
+
+#: xmlinfo.py:325
+msgid "This program does not exist in an XML HASH file."
+msgstr "XML HASH 文件中不存在该程序。"
+
+#: xmlinfo.py:326
+msgid "Information"
+msgstr "信息"
+
+#: xmlinfo.py:355
+msgid "Analysing..."
+msgstr "正在分析..."
+
+#: xmlinfo.py:161
+msgid "(disk image)"
+msgstr "（磁盘映像）"
+
+#: xmlinfo.py:247 xmlinfo.py:203
+msgid "Compared with:"
+msgstr "与以下相比："
+
+#: xmlinfo.py:248 xmlinfo.py:249 xmlinfo.py:250
+msgid "expected"
+msgstr "预计"
+
+#: xmlinfo.py:248 xmlinfo.py:249 xmlinfo.py:250
+msgid "actual"
+msgstr "实际的"
+
+#: xmlinfo.py:251 xmlinfo.py:212
+msgid "Result:"
+msgstr "结果："
+
+#: xmlinfo.py:265
+msgid ""
+"There is no software called {software} in the software lists of {system}."
+msgstr "{system}的软件列表中没有名为{software}的软件。"
+
+#: xmlinfo.py:277
+msgid "Unable to find {file_name} in any of these folders: {folders}"
+msgstr "无法在以下任何文件夹中找到 {file_name}：{folders}"
+
+#: xmlinfo.py:284
+msgid "{} has no files that can be compared (it may be a disk image)."
+msgstr "{}没有可以比较的文件（可能是磁盘映像）。"
+
+#: xmlinfo.py:205
+msgid "Expected"
+msgstr "预计"
+
+#: xmlinfo.py:206
+msgid "Actual"
+msgstr "实际"
+
+#: xmlinfo.py:297
+msgid "XML Information - {}"
+msgstr "XML 信息 - {}"
+
+#: xmlinfo.py:394
+msgid "Error: {}"
+msgstr "错误：{}"
+
+#: xmlinfo.py:227 xmlinfo.py:255
+msgid "(selected)"
+msgstr "（选定）"
+
+#: custom_drop_down.py:41
+msgid "Select an option..."
+msgstr "请选择一个选项..."
+
+#: tileview.py:770
+msgid "Existing ROMs"
+msgstr "现有 ROM"
+
+#: tileview.py:772
+msgid "Watchlist ROMs"
+msgstr "关注列表 ROM"
+
+#: tileview.py:815
+msgid "View: {}"
+msgstr "视图：{}"
