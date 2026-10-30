@@ -22,8 +22,11 @@ def slots_page(wx_app, data_dir, tmp_path):
 
 def tab_stops(page):
     """The slot rows' TAB stops in TAB order (wx tabs through siblings in the order of GetChildren)"""
+    import wx
+    # macOS adds its native wx.ScrollBar as a child of the scrolled window and it accepts keyboard focus - it isn't
+    # one of the slot rows' controls
     return [child for child in page.slots_scrolled.GetChildren()
-            if child.IsShown() and child.AcceptsFocusFromKeyboard()]
+            if child.IsShown() and child.AcceptsFocusFromKeyboard() and not isinstance(child, wx.ScrollBar)]
 
 
 def test_slot_names_are_labels_not_drop_downs(slots_page):
