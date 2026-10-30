@@ -1,0 +1,86 @@
+# Builds the macOS release zips on GitHub's own Macs: one for Apple silicon (arm64) and one for Intel (x86_64).
+# Each zip has the same layout as the earlier pfemame_mac_v*.zip releases - the frozen cx_Freeze folder with
+# pfeMAME, pfemame_updater, lib/ and the data files at the top level.
+#
+# Run it from the Actions tab ("Run workflow").  Type a release tag (e.g. v3.10.2) to also attach the zips to that
+# GitHub release; leave it empty to only build them (they are kept as downloadable build artifacts for 14 days).
+name: Mac release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Attach the zips to this existing release (e.g. v3.10.2).  Empty = build only."
+        required: false
+        default: ""
+  push:
+    branches: [mac-build]          # for trying the build out; builds only, never publishes
+
+jobs:
+  build:
+    name: Build (${{ matrix.name }})
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: arm64, runner: macos-15,       zip_tag: arm64 }
+          - { name: intel, runner: macos-15-intel, zip_tag: intel }
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install requirements
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -c "import platform, wx; print(platform.machine(), wx.version())"
+
+      - name: Freeze (runs the test suite first and stops if any test fails)
+        run: python tools/setup.py build_exe
+
+      - name: Check the frozen programs start
+        run: |
+          for exe in pfeMAME pfemame_updater; do
+            test -x "build/exe/$exe" || { echo "build/exe/$exe was not created"; exit 1; }
+          done
+          export PFEMAME_DATA_DIR="$(mktemp -d)" PFEMAME_NO_DIALOG=1
+          ./build/exe/pfeMAME --help
+          file build/exe/pfeMAME
+
+      - name: Zip
+        id: zip
+        run: |
+          VERSION="$(python -c "import re; print(re.search(r'__version__\s*=\s*.([0-9.]+)', open('pfemame.py').read()).group(1))")"
+          ZIP="pfemame_mac_${{ matrix.zip_tag }}_v${VERSION}.zip"
+          # -y keeps symlinks, -X drops extra file attributes; executable bits are kept (the updater relies on both)
+          (cd build/exe && zip -r -y -X "$GITHUB_WORKSPACE/$ZIP" .)
+          ls -lh "$ZIP"
+          echo "zip=$ZIP" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.zip.outputs.zip }}
+          path: ${{ steps.zip.outputs.zip }}
+          retention-days: 14
+          compression-level: 0
+
+  release:
+    name: Attach to release
+    needs: build
+    if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: zips
+          merge-multiple: true
+      - name: Upload to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ inputs.release_tag }}" zips/*.zip --clobber --repo "${{ github.repository }}"
