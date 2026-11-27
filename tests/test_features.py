@@ -2,6 +2,8 @@
 import datetime
 import io
 
+import pytest
+
 import play_stats
 import rom_database
 import search
@@ -154,3 +156,76 @@ def test_version_change_produces_a_report(tmp_path, monkeypatch):
     assert not from_cache and changes.added == [('newgame', 'New Game')]
     # Next time the cache matches - no report
     assert rom_database.get_machines('mame', '0.290', str(tmp_path))[2] is None
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# The search box's cheat sheet ('?' button)
+def test_every_cheat_sheet_example_is_a_working_search_term():
+    import search
+    for heading, rows in search.CHEAT_SHEET:
+        for example, meaning in rows:
+            query = search.parse_query(example)
+            assert not query.is_empty, example
+            if heading != 'Words':
+                # A field, flag or exclusion - not read as plain words (a typo would quietly search for the text)
+                assert query.conditions or query.flags, example
+                assert not query.words, example
+
+
+def test_a_cheat_sheet_example_is_added_to_the_search():
+    import search
+    assert search.add_term('', 'cat:shooter') == 'cat:shooter'
+    assert search.add_term('pac ', 'year:198') == 'pac year:198'
+
+
+def test_the_cheat_sheet_popup_lists_every_example_and_adds_the_clicked_one(wx_app):
+    import wx
+    import search
+    import search_help
+    import functions
+    frame = wx.Frame(None)
+    chosen = []
+    try:
+        popup = search_help.SearchHelpPopup(frame, functions.get_application_colors(), chosen.append)
+        assert set(popup.examples) == {example for _heading, rows in search.CHEAT_SHEET for example, _m in rows}
+        popup.choose('is:fav')
+        wx_app.Yield()
+        assert chosen == ['is:fav']
+    finally:
+        frame.Destroy()
+# ----------------------------------------------------------------------------------------------------------------------
+# Parents / clones and working status (is:clone ..., the Hide clones / Working only tick boxes)
+def clone_row(rom, program=''):
+    return ['Game', rom, program, '1', '0', '0', '0', 'Maze', '', '', '1980', 'Namco']
+
+
+@pytest.fixture
+def machine_info():
+    import search
+    search.set_machine_info({'pacman': ('puckman', 'good'), 'broken': ('', 'preliminary'),
+                             'odd': ('', 'imperfect'), 'spec128': ('spectrum', 'good')})
+    yield search
+    search.set_machine_info({})
+
+
+@pytest.mark.parametrize('text, expected', [
+    ('is:clone', {'pacman', 'spec128'}),
+    ('is:parent', {'puckman', 'broken', 'odd', 'Visual Pinball X'}),
+    ('is:working', {'puckman', 'pacman', 'odd', 'spec128', 'Visual Pinball X'}),
+    ('is:imperfect', {'odd'}),
+    ('is:notworking', {'broken'}),
+    ('-is:clone is:working', {'puckman', 'odd', 'Visual Pinball X'}),
+])
+def test_clone_and_working_flags(machine_info, text, expected):
+    rows = [clone_row(name) for name in ('puckman', 'pacman', 'broken', 'odd', 'Visual Pinball X')]
+    rows.append(clone_row('spec128', 'game.tzx'))     # A program listed under a clone system is a clone's
+    query = machine_info.parse_query(text)
+    assert {r[1] for r in rows if machine_info.matches(r, query)} == expected
+
+
+def test_the_tick_boxes_filter(machine_info):
+    assert machine_info.keep_row(clone_row('puckman'), True, True)
+    assert not machine_info.keep_row(clone_row('pacman'), True, False)
+    assert machine_info.keep_row(clone_row('pacman'), False, True)
+    assert not machine_info.keep_row(clone_row('broken'), False, True)
+    assert machine_info.keep_row(clone_row('odd'), True, True)                 # Imperfect still counts as working

@@ -183,10 +183,8 @@ def dark_theme_colors() -> dict:
         'window_background': wx.Colour(32, 32, 32),
         'missing_game': wx.Colour(255, 153, 153),
         'control_bar': wx.Colour(104, 108, 113),
-        'selected_row': wx.Colour(255, 0, 0),
-        'selected_row_background': wx.Colour(0, 255, 0),
+        **gd.selection_colors(wx.Colour(32, 32, 32)),    # The system's selection colours (highlight on the dark)
         'ribbon_bar': wx.Colour(32, 32, 32),
-        'ribbon_item_highlight': wx.Colour(0, 255, 0),
         'scrollbar_thumb': wx.Colour(100, 100, 100),
         'scrollbar_track': wx.Colour(40, 40, 40),
         'button_background': wx.Colour(30, 30, 30),

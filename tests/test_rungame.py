@@ -453,3 +453,23 @@ def test_alternate_emulator_command_uses_the_bundle_program(tmp_path):
     cmd, cwd = rungame.CommandBuilder(config, settings, engine_info).build_alt_command()
     assert cmd == [str(app / 'Contents' / 'MacOS' / 'RetroArch'), '-L', 'core.dylib', 'pacman']
     assert cwd == tmp_path                                             # The folder the .app is in, as before
+
+
+# ------------------------------------------------------------------------------------- one game at a time
+def test_a_game_counts_as_running_until_it_ends(mame, monkeypatch, published):
+    monkeypatch.setattr(rungame, '_running_games', 0)
+    game = make_game(mame)
+    monkeypatch.setattr(game, '_run_mame_engine', lambda: None)
+    rungame._count_running_game(+1)                 # What RunGame.__init__ does as it starts the thread
+    assert rungame.game_running()
+    game.run()
+    assert not rungame.game_running()
+
+
+def test_the_running_count_never_goes_below_zero(mame, monkeypatch, published):
+    monkeypatch.setattr(rungame, '_running_games', 0)
+    game = make_game(mame)
+    monkeypatch.setattr(game, '_run_mame_engine', lambda: 1 / 0)
+    game.run()                                      # Run without being counted (e.g. called directly)
+    rungame._count_running_game(+1)
+    assert rungame.game_running()

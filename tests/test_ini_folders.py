@@ -75,7 +75,8 @@ def test_reset_removes_the_rom_ini_mame_uses(mame, wx_app, monkeypatch):
         folder_ini=DEFAULT_INIPATH, path_mame_exe=mame.exe, path_to_mame_ini_file=mame.ini,
         get_virtual_list_row_info=lambda: types.SimpleNamespace(rom_file_name='pacman', rom_name='Pac-Man',
                                                                 system_file_name=''),
-        messages_append=lambda msg, *_a: messages.append(msg))
+        messages_append=lambda msg, *_a: messages.append(msg),
+        not_for_own_folder_engine=lambda: False)          # pacman is a MAME machine
 
     pfemame.MainFrame.on_ini_file_reset(window, None)
 
@@ -91,7 +92,8 @@ def test_reset_with_no_ini_folder_says_so(tmp_path, wx_app, monkeypatch):
         folder_ini='missing', path_mame_exe='', path_to_mame_ini_file='',
         get_virtual_list_row_info=lambda: types.SimpleNamespace(rom_file_name='pacman', rom_name='Pac-Man',
                                                                 system_file_name=''),
-        messages_append=lambda msg, *_a: messages.append(msg))
+        messages_append=lambda msg, *_a: messages.append(msg),
+        not_for_own_folder_engine=lambda: False)          # pacman is a MAME machine
 
     pfemame.MainFrame.on_ini_file_reset(window, None)
 

@@ -19,6 +19,7 @@ program_cleanup.clean_before_imports()
 # Import wxpython & python modules
 import os
 import urllib.parse
+import tarfile
 import zipfile
 import py7zr
 import wx
@@ -95,6 +96,28 @@ def format_seconds(seconds: float) -> str:
     seconds = int(max(seconds, 0))
     return f'{seconds // 60}m {seconds % 60:02d}s' if seconds >= 60 else f'{seconds}s'
 
+
+# Python 3.10.12, 3.11.4 and newer can check a tar member's path and link for us
+TAR_DATA_FILTER = hasattr(tarfile, 'data_filter')
+
+
+def extract_tar_member(archive: tarfile.TarFile, member: tarfile.TarInfo, extract_dir: str) -> None:
+    """
+    Extract one .tar.gz member, refusing any path or link that would end up outside extract_dir.  Symlinks inside the
+    folder and the owner's execute permission are kept.  (Python's 'data' filter does the checks where there is one -
+    3.10.12, 3.11.4 and newer - and also refuses links that point outside the folder.)
+    """
+    if TAR_DATA_FILTER:
+        archive.extract(member, extract_dir, filter='data')
+        return
+    for path in (member.name, member.linkname if member.issym() or member.islnk() else ''):
+        parts = path.replace('\\', '/').split('/')
+        if path.startswith(('/', '\\')) or os.path.isabs(path) or '..' in parts:
+            raise ValueError(f'Unsafe path in the update archive: {member.name} -> {path}')
+    archive.extract(member, extract_dir)
+
+
+# ----------------------------------------------------------------------------------------------------------------------
 
 class UpdaterFrame(wx.Frame):
     def __init__(self, download_url, install_dir, restart_after, checksum='', allow_delta=True):
@@ -558,7 +581,8 @@ exit 0
 
     def extract_archive(self, archive_path):
         """Extract archive and return the directory containing files"""
-        archive_base = os.path.splitext(os.path.basename(archive_path))[0]
+        archive_name = os.path.basename(archive_path)
+        archive_base = archive_name[:-len('.tar.gz')] if archive_name.endswith('.tar.gz') else             os.path.splitext(archive_name)[0]
         extract_dir = os.path.join(self.temp_dir, archive_base)
         os.makedirs(extract_dir, exist_ok=True)
 
@@ -597,6 +621,16 @@ exit 0
                             unix_mode = member.external_attr >> 16
                             if unix_mode:
                                 os.chmod(extracted_path, unix_mode)
+
+        elif archive_path.endswith(".tar.gz"):
+            # Linux releases for installing by hand.  tar keeps symlinks and permissions itself.
+            with tarfile.open(archive_path, 'r:gz') as archive:
+                members = archive.getmembers()
+                for count, member in enumerate(members):
+                    extract_tar_member(archive, member, extract_dir)
+                    if count % 200 == 0:
+                        wx.CallAfter(self._show_progress, count * 100 // max(len(members), 1),
+                                     f'Extracting {count:,} of {len(members):,} files')
 
         elif archive_path.endswith(".7z"):
             with py7zr.SevenZipFile(archive_path, mode='r') as archive:

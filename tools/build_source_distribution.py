@@ -107,6 +107,7 @@ class SourceDistributor(wx.Frame):
            ['views.py', 'cwd', 'file'],
            ['updater_client.py', 'cwd', 'file'],
            ['search.py', 'cwd', 'file'],
+           ['search_help.py', 'cwd', 'file'],
            ['play_stats.py', 'cwd', 'file'],
            ['slot_presets.py', 'cwd', 'file'],
            ['software_lists.py', 'cwd', 'file'],

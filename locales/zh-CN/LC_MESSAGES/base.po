@@ -857,7 +857,7 @@ msgstr "清除所有文件路径"
 
 #: filepaths.py:333
 msgid "APPLY"
-msgstr "申请"
+msgstr "应用"
 
 #: filepaths.py:333
 msgid "Apply the file path changes"
@@ -2504,37 +2504,21 @@ msgstr "pfeMAME 已自动重新启动"
 
 #: pfemame.py:2943
 msgid ""
+"pfeMAME doesn't know where MAME and your ROMs are yet.  This is normal the first time you run pfeMAME.\n"
 "\n"
-"It Looks like this is the first time you have run pfeMAME\n"
-"as the INI file data is missing.  Your first step is to \n"
-"set up the necessary file paths to MAME files and supporting\n"
-"folders.\n"
+"When you click OK, the File Paths tab opens.  Set the MAME executable and the ROMs folder as a minimum.  The easiest way is to click AUTO FIND and choose your MAME folder.  You can also double-click any row to browse for a file or folder.\n"
 "\n"
-"Please open EDIT > File Paths and set the MAME \n"
-"executable file path and ROMS folder as a minimum.  \n"
-"NOTE:  You can use the Auto Find option in the file paths \n"
-"window to make this a lot easier in most cases.\n"
+"When the paths look right, click APPLY and let pfeMAME restart.  It then builds the ROMs database by itself.\n"
 "\n"
-"After this you need to select some ROM categories (the right of the screen).\n"
-"Then restart the application and refresh the ROMs database using\n"
-"VIEW > Refresh ROMs Database.\n"
-"        "
+"Later, after adding ROMs or updating MAME, press F5 or click Refresh on the File tab to refresh the ROMs database."
 msgstr ""
+"pfeMAME 还不知道 MAME 和您的 ROM 在哪里。第一次运行 pfeMAME 时这是正常的。\n"
 "\n"
-"”看来这是您第一次运行 pfeMAME\n"
-"”因为 INI 文件数据丢失。您的第一步是 \n"
-"”设置 MAME 文件和支持的必要文件路径\n"
-"”文件夹。\n"
-"”\n"
-"”请打开编辑 > 文件路径并设置 MAME \n"
-"”至少有可执行文件路径和 ROMS 文件夹。\n"
-"”注意：您可以在文件路径中使用自动查找选项\n"
-"”在大多数情况下使这变得更容易的窗口。\n"
-"”\n"
-"”此后您需要选择一些 ROM 类别（屏幕右侧）。\n"
-"”然后重新启动应用程序并使用刷新 ROM 数据库\n"
-"”查看 > 刷新 ROM 数据库。\n"
-"”        "
+"点击“确定”后会打开“文件路径”选项卡。请至少设置 MAME 可执行文件和 ROM 文件夹。最简单的方法是点击“自动查找”并选择您的 MAME 文件夹。您也可以双击任意一行来浏览文件或文件夹。\n"
+"\n"
+"路径设置正确后，点击“应用”并让 pfeMAME 重新启动。随后 pfeMAME 会自动建立 ROM 数据库。\n"
+"\n"
+"以后添加 ROM 或更新 MAME 后，请按 F5 或点击“File”选项卡上的“Refresh”来刷新 ROM 数据库。"
 
 #: pfemame.py:2959
 msgid "MAME file path or ROMS folder not found"
@@ -5086,3 +5070,193 @@ msgstr "关注列表 ROM"
 #: tileview.py:815
 msgid "View: {}"
 msgstr "视图：{}"
+
+#: pfemame.py
+msgid "No saved ROMs database was found, so a new one will be built"
+msgstr "未找到已保存的 ROM 数据库，将新建一个"
+
+#: pfemame.py
+msgid "The saved ROMs database could not be read, so a new one will be built"
+msgstr "无法读取已保存的 ROM 数据库，将新建一个"
+
+#: pfemame.py
+msgid ""
+"{emulator} games are run by {emulator}, not MAME, so this option is not "
+"available for them"
+msgstr "{emulator} 游戏由 {emulator} 运行，而不是 MAME，因此此选项不适用于它们"
+
+#: pfemame.py
+msgid "A game is already running - close it before starting another one"
+msgstr "已有游戏正在运行 - 请先关闭它再启动另一个"
+
+#: pfemame.py
+msgid "Click to show or hide the messages"
+msgstr "单击以显示或隐藏消息"
+
+#: pfemame.py
+msgid "Click to show the messages"
+msgstr "单击以显示消息"
+
+#: search.py
+msgid "Search (try cat:shooter year:1985)"
+msgstr "搜索（试试 cat:shooter year:1985）"
+
+#: search.py
+msgid "Search help: every kind of search term, with examples"
+msgstr "搜索帮助：所有搜索词类型及示例"
+
+#: search.py
+msgid "Search terms"
+msgstr "搜索词"
+
+#: search.py
+msgid "Click to add this to the search"
+msgstr "单击以添加到搜索中"
+
+#: search.py
+msgid "Click an example to add it to the search.  Terms can be combined."
+msgstr "单击示例即可将其添加到搜索中。搜索词可以组合使用。"
+
+#: search.py
+msgid "Words"
+msgstr "单词"
+
+#: search.py
+msgid "Fields"
+msgstr "字段"
+
+#: search.py
+msgid "Flags"
+msgstr "标记"
+
+#: search.py
+msgid "Leaving things out"
+msgstr "排除"
+
+#: search.py
+msgid "every word is in the name, ROM, category, year or manufacturer"
+msgstr "每个单词都出现在名称、ROM、类别、年份或制造商中"
+
+#: search.py
+msgid "the name contains pac"
+msgstr "名称包含 pac"
+
+#: search.py
+msgid "the ROM (set) name contains pacm"
+msgstr "ROM（套装）名称包含 pacm"
+
+#: search.py
+msgid "a system program file name contains .tzx"
+msgstr "系统程序文件名包含 .tzx"
+
+#: search.py
+msgid "the category contains shooter"
+msgstr "类别包含 shooter"
+
+#: search.py
+msgid "the manufacturer contains namco"
+msgstr "制造商包含 namco"
+
+#: search.py
+msgid "made in 1984"
+msgstr "1984 年出品"
+
+#: search.py
+msgid "made in the 1980s"
+msgstr "1980 年代出品"
+
+#: search.py
+msgid "made from 1980 to 1985"
+msgstr "1980 至 1985 年出品"
+
+#: search.py
+msgid "made after 1990  (also <, >= and <=)"
+msgstr "1990 年以后出品（也可用 <、>= 和 <=）"
+
+#: search.py
+msgid "rated 4 stars or more"
+msgstr "评分 4 星及以上"
+
+#: search.py
+msgid "played more than 10 times"
+msgstr "玩过超过 10 次"
+
+#: search.py
+msgid "favorites"
+msgstr "收藏"
+
+#: search.py
+msgid "on the watchlist"
+msgstr "在关注列表中"
+
+#: search.py
+msgid "ROMs you don't have"
+msgstr "您没有的 ROM"
+
+#: search.py
+msgid "ROMs you have"
+msgstr "您拥有的 ROM"
+
+#: search.py
+msgid "system program files"
+msgstr "系统程序文件"
+
+#: search.py
+msgid "systems (computers and consoles)"
+msgstr "系统（电脑和游戏机）"
+
+#: search.py
+msgid "put - in front of any term to leave those ROMs out"
+msgstr "在任意搜索词前加 - 可排除这些 ROM"
+
+#: search.py
+msgid "use quotes round a value with spaces"
+msgstr "含空格的值请用引号括起来"
+
+#: search.py
+msgid "Hide clones"
+msgstr "隐藏克隆版"
+
+#: search.py
+msgid "Working only"
+msgstr "仅可运行"
+
+#: search.py
+msgid "Leave out clones (other versions of a game - regional versions, bootlegs...) and show only the parent sets"
+msgstr "不显示克隆版（游戏的其他版本，如地区版、盗版等），只显示母版"
+
+#: search.py
+msgid "Leave out the machines MAME marks as not working (those that work with some problems are still shown)"
+msgstr "不显示 MAME 标记为无法运行的机器（能运行但有些问题的仍会显示）"
+
+#: search.py
+msgid "parent sets (not clones)"
+msgstr "母版（非克隆版）"
+
+#: search.py
+msgid "clones (other versions of a game)"
+msgstr "克隆版（游戏的其他版本）"
+
+#: search.py
+msgid "working in MAME (including imperfect)"
+msgstr "可在 MAME 中运行（包括不完美的）"
+
+#: search.py
+msgid "working, with some problems"
+msgstr "可运行，但有一些问题"
+
+#: search.py
+msgid "not working in MAME"
+msgstr "无法在 MAME 中运行"
+
+#: pfemame.py
+msgid "Go to: {}"
+msgstr "转到：{}"
+
+#: pfemame.py
+msgid "No ROM name starts with \"{}\""
+msgstr "没有以“{}”开头的 ROM 名称"
+
+#: pfemame.py
+msgid "SourceForge did not give a checksum for this download, so pfeMAME cannot check that it arrives complete and unchanged before installing it.  If you would rather not install it unchecked, choose No and download it yourself from the pfeMAME SourceForge page."
+msgstr "SourceForge 没有为此下载提供校验和，因此 pfeMAME 无法在安装前检查它是否完整且未被更改。如果您不想在未经检查的情况下安装，请选择“否”，然后自行从 SourceForge 上的 pfeMAME 页面下载。"

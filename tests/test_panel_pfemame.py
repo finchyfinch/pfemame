@@ -170,7 +170,10 @@ def test_the_dark_theme_sets_every_colour_after_asking(wx_app, make_panel):
     FakeDialog.answer = wx.ID_YES
     panel.on_dark_theme(None)
     highlight = panel.color_panel.buttons['ribbon_item_highlight']
-    assert highlight.GetBackgroundColour() == wx.Colour(0, 255, 0) and highlight.GetLabel() == '#00FF00'
+    import global_defaults as gd
+    expected = gd.selection_colors(wx.Colour(32, 32, 32))['ribbon_item_highlight']        # The system's, not green
+    assert highlight.GetBackgroundColour() == expected
+    assert highlight.GetLabel() == expected.GetAsString(wx.C2S_HTML_SYNTAX).upper()
     assert panel.color_panel.buttons['text_background'].GetForegroundColour() == wx.Colour(wx.WHITE)
     assert ('restart_required',) in changes(wx_app, panel)
 

@@ -1388,3 +1388,28 @@ def test_placeholder_with_quoted_arguments_and_spaces():
     rom = str(Path(my_tables) / 'attack')
     assert alt_command('"-title=Big Game" -play {rom}', rom_folder=my_tables) == \
         [EMULATOR, '-title=Big Game', '-play', rom]
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Games of an emulator with its own ROM folder (Additional mode) aren't MAME machines
+def test_own_folder_engines_are_those_with_a_rom_folder_of_their_own():
+    from emulator_config import own_folder_engine_names
+    rows = [['Visual Pinball X', 'vpx.exe', 'tables', 'Pinball'],
+            ['Visual Pinball X', 'vpx.exe', 'tables', 'Pinball'],
+            ['Jaguar', 'big.exe', 'jaguar roms', 'Game Console'],
+            ['M2emulator', 'm2.exe', 'Default', 'Arcade']]
+    assert own_folder_engine_names(rows) == {'Visual Pinball X', 'Jaguar'}
+    assert own_folder_engine_names([]) == set() and own_folder_engine_names(None) == set()
+
+
+def test_picture_names_keep_table_names_with_dots_whole():
+    from emulator_config import program_image_name
+    engines = {'Visual Pinball X'}
+    # A table name is already without its extension: '4.1' is part of the name, not an extension
+    assert program_image_name('Visual Pinball X', 'Attack from Mars (Bally 1995) 4.1', engines) == \
+        'Attack from Mars (Bally 1995) 4.1'
+    assert program_image_name('Visual Pinball X', 'Deadpool 1.1  color rush', engines) == 'Deadpool 1.1  color rush'
+    assert program_image_name('visualpinball', 'Addams Family 6.7') == 'Addams Family 6.7'     # Old folder name
+    # MAME system programs still lose their file extension
+    assert program_image_name('nes', 'Tetris (USA).zip', engines) == 'Tetris (USA)'
+    assert program_image_name('nes', 'Tetris (USA).zip') == 'Tetris (USA)'

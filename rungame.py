@@ -649,6 +649,23 @@ class ProcessExecutor:
 
 # ----------------------------- RunGame (public) ------------------------------
 
+# How many games are running now.  Starting a second game while one runs would swap the same system INI /
+# default.cfg files under the first one, so the windows check game_running() before starting another.
+_running_games = 0
+_running_games_lock = threading.Lock()
+
+
+def game_running() -> bool:
+    """True while a game started through RunGame is still running."""
+    with _running_games_lock:
+        return _running_games > 0
+
+
+def _count_running_game(change: int) -> None:
+    global _running_games
+    with _running_games_lock:
+        _running_games = max(0, _running_games + change)
+
 
 class RunGame(threading.Thread):
     """
@@ -705,7 +722,12 @@ class RunGame(threading.Thread):
         # Start the thread
         threading.Thread.__init__(self)
         self.daemon = True
-        self.start()
+        _count_running_game(+1)
+        try:
+            self.start()
+        except RuntimeError:            # The thread couldn't be started - it isn't running
+            _count_running_game(-1)
+            raise
 
     # ----------------------------- Internals ---------------------------------
 
@@ -749,7 +771,10 @@ class RunGame(threading.Thread):
             MessagePublisher.error(_('ERROR:  Unable to run ROM {0}: {1}').format(self.config.rom_file_name, e))
         finally:
             self.play_seconds = time.monotonic() - started
-            self._cleanup()
+            try:
+                self._cleanup()
+            finally:
+                _count_running_game(-1)
 
     # -------- Alternate engine path --------
 

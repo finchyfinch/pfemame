@@ -2723,37 +2723,21 @@ msgstr "pfeMAME был автоматически перезапущен"
 
 #: pfemame.py:2943
 msgid ""
+"pfeMAME doesn't know where MAME and your ROMs are yet.  This is normal the first time you run pfeMAME.\n"
 "\n"
-"It Looks like this is the first time you have run pfeMAME\n"
-"as the INI file data is missing.  Your first step is to \n"
-"set up the necessary file paths to MAME files and supporting\n"
-"folders.\n"
+"When you click OK, the File Paths tab opens.  Set the MAME executable and the ROMs folder as a minimum.  The easiest way is to click AUTO FIND and choose your MAME folder.  You can also double-click any row to browse for a file or folder.\n"
 "\n"
-"Please open EDIT > File Paths and set the MAME \n"
-"executable file path and ROMS folder as a minimum.  \n"
-"NOTE:  You can use the Auto Find option in the file paths \n"
-"window to make this a lot easier in most cases.\n"
+"When the paths look right, click APPLY and let pfeMAME restart.  It then builds the ROMs database by itself.\n"
 "\n"
-"After this you need to select some ROM categories (the right of the screen).\n"
-"Then restart the application and refresh the ROMs database using\n"
-"VIEW > Refresh ROMs Database.\n"
-"        "
+"Later, after adding ROMs or updating MAME, press F5 or click Refresh on the File tab to refresh the ROMs database."
 msgstr ""
+"pfeMAME пока не знает, где находятся MAME и ваши ROM.  При первом запуске pfeMAME это нормально.\n"
 "\n"
-"Похоже, вы впервые запускаете pfeMAME.\n"
-"поскольку данные файла INI отсутствуют.  Ваш первый шаг –\n"
-"настроить необходимые пути к файлам MAME и поддержать\n"
-"папки.\n"
+"Когда вы нажмёте OK, откроется вкладка «Пути к файлам».  Укажите как минимум исполняемый файл MAME и папку ROM.  Проще всего нажать «АВТОПОИСК» и выбрать папку MAME.  Также можно дважды щёлкнуть любую строку, чтобы выбрать файл или папку.\n"
 "\n"
-"Откройте EDIT > Пути к файлам и установите MAME.\n"
-"как минимум путь к исполняемому файлу и папка ROMS.\n"
-"ПРИМЕЧАНИЕ. Вы можете использовать опцию автоматического поиска в путях к файлам.\n"
-"window, чтобы сделать это намного проще в большинстве случаев.\n"
+"Когда пути указаны правильно, нажмите «ПРИМЕНИТЬ» и дайте pfeMAME перезапуститься.  После этого pfeMAME сам создаст базу данных ROM.\n"
 "\n"
-"После этого вам нужно выбрать несколько категорий ПЗУ (справа экрана).\n"
-"Затем перезапустите приложение и обновите базу данных ПЗУ, используя\n"
-"ПРОСМОТР > Обновить базу данных ПЗУ.\n"
-"        "
+"Позже, добавив ROM или обновив MAME, нажмите F5 или кнопку «Refresh» на вкладке «File», чтобы обновить базу данных ROM."
 
 #: pfemame.py:2959
 msgid "MAME file path or ROMS folder not found"
@@ -5429,3 +5413,197 @@ msgstr "ROM из списка наблюдения"
 #: tileview.py:815
 msgid "View: {}"
 msgstr "Вид: {}"
+
+#: pfemame.py
+msgid "No saved ROMs database was found, so a new one will be built"
+msgstr "Сохранённая база данных ROM не найдена, поэтому будет создана новая"
+
+#: pfemame.py
+msgid "The saved ROMs database could not be read, so a new one will be built"
+msgstr ""
+"Не удалось прочитать сохранённую базу данных ROM, поэтому будет создана "
+"новая"
+
+#: pfemame.py
+msgid ""
+"{emulator} games are run by {emulator}, not MAME, so this option is not "
+"available for them"
+msgstr ""
+"Игры {emulator} запускаются в {emulator}, а не в MAME, поэтому этот параметр"
+" для них недоступен"
+
+#: pfemame.py
+msgid "A game is already running - close it before starting another one"
+msgstr "Игра уже запущена - закройте её, прежде чем запускать другую"
+
+#: pfemame.py
+msgid "Click to show or hide the messages"
+msgstr "Нажмите, чтобы показать или скрыть сообщения"
+
+#: pfemame.py
+msgid "Click to show the messages"
+msgstr "Нажмите, чтобы показать сообщения"
+
+#: search.py
+msgid "Search (try cat:shooter year:1985)"
+msgstr "Поиск (например, cat:shooter year:1985)"
+
+#: search.py
+msgid "Search help: every kind of search term, with examples"
+msgstr "Справка по поиску: все виды условий поиска с примерами"
+
+#: search.py
+msgid "Search terms"
+msgstr "Условия поиска"
+
+#: search.py
+msgid "Click to add this to the search"
+msgstr "Нажмите, чтобы добавить в поиск"
+
+#: search.py
+msgid "Click an example to add it to the search.  Terms can be combined."
+msgstr "Нажмите на пример, чтобы добавить его в поиск.  Условия можно сочетать."
+
+#: search.py
+msgid "Words"
+msgstr "Слова"
+
+#: search.py
+msgid "Fields"
+msgstr "Поля"
+
+#: search.py
+msgid "Flags"
+msgstr "Отметки"
+
+#: search.py
+msgid "Leaving things out"
+msgstr "Исключение"
+
+#: search.py
+msgid "every word is in the name, ROM, category, year or manufacturer"
+msgstr "каждое слово есть в названии, ROM, категории, годе или производителе"
+
+#: search.py
+msgid "the name contains pac"
+msgstr "название содержит pac"
+
+#: search.py
+msgid "the ROM (set) name contains pacm"
+msgstr "имя ROM (набора) содержит pacm"
+
+#: search.py
+msgid "a system program file name contains .tzx"
+msgstr "имя файла программы системы содержит .tzx"
+
+#: search.py
+msgid "the category contains shooter"
+msgstr "категория содержит shooter"
+
+#: search.py
+msgid "the manufacturer contains namco"
+msgstr "производитель содержит namco"
+
+#: search.py
+msgid "made in 1984"
+msgstr "выпущено в 1984 году"
+
+#: search.py
+msgid "made in the 1980s"
+msgstr "выпущено в 1980-х"
+
+#: search.py
+msgid "made from 1980 to 1985"
+msgstr "выпущено с 1980 по 1985 год"
+
+#: search.py
+msgid "made after 1990  (also <, >= and <=)"
+msgstr "выпущено после 1990 года  (также <, >= и <=)"
+
+#: search.py
+msgid "rated 4 stars or more"
+msgstr "оценка 4 звезды и выше"
+
+#: search.py
+msgid "played more than 10 times"
+msgstr "запускалось более 10 раз"
+
+#: search.py
+msgid "favorites"
+msgstr "избранное"
+
+#: search.py
+msgid "on the watchlist"
+msgstr "в списке наблюдения"
+
+#: search.py
+msgid "ROMs you don't have"
+msgstr "ROM, которых у вас нет"
+
+#: search.py
+msgid "ROMs you have"
+msgstr "ROM, которые у вас есть"
+
+#: search.py
+msgid "system program files"
+msgstr "файлы программ систем"
+
+#: search.py
+msgid "systems (computers and consoles)"
+msgstr "системы (компьютеры и консоли)"
+
+#: search.py
+msgid "put - in front of any term to leave those ROMs out"
+msgstr "поставьте - перед условием, чтобы исключить эти ROM"
+
+#: search.py
+msgid "use quotes round a value with spaces"
+msgstr "значение с пробелами заключайте в кавычки"
+
+#: search.py
+msgid "Hide clones"
+msgstr "Скрыть клоны"
+
+#: search.py
+msgid "Working only"
+msgstr "Только рабочие"
+
+#: search.py
+msgid "Leave out clones (other versions of a game - regional versions, bootlegs...) and show only the parent sets"
+msgstr "Не показывать клоны (другие версии игры - региональные, бутлеги...), только родительские наборы"
+
+#: search.py
+msgid "Leave out the machines MAME marks as not working (those that work with some problems are still shown)"
+msgstr "Не показывать машины, которые MAME отмечает как нерабочие (работающие с некоторыми проблемами остаются)"
+
+#: search.py
+msgid "parent sets (not clones)"
+msgstr "родительские наборы (не клоны)"
+
+#: search.py
+msgid "clones (other versions of a game)"
+msgstr "клоны (другие версии игры)"
+
+#: search.py
+msgid "working in MAME (including imperfect)"
+msgstr "работает в MAME (включая неидеальные)"
+
+#: search.py
+msgid "working, with some problems"
+msgstr "работает, но с некоторыми проблемами"
+
+#: search.py
+msgid "not working in MAME"
+msgstr "не работает в MAME"
+
+#: pfemame.py
+msgid "Go to: {}"
+msgstr "Перейти: {}"
+
+#: pfemame.py
+msgid "No ROM name starts with \"{}\""
+msgstr "Нет имени ROM, начинающегося с «{}»"
+
+#: pfemame.py
+msgid "SourceForge did not give a checksum for this download, so pfeMAME cannot check that it arrives complete and unchanged before installing it.  If you would rather not install it unchecked, choose No and download it yourself from the pfeMAME SourceForge page."
+msgstr "SourceForge не предоставил контрольную сумму для этой загрузки, поэтому pfeMAME не может проверить перед установкой, что файл получен полностью и без изменений.  Если вы не хотите устанавливать его без проверки, выберите «Нет» и скачайте его сами со страницы pfeMAME на SourceForge."

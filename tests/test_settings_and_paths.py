@@ -271,8 +271,8 @@ def test_old_video_tab_artwork_setting_is_moved(data_dir, wx_app, artworkdisable
     before = (data_dir / 'pfemame.ini').read_bytes()
     iniFile.convert_old_settings()
     assert iniFile.read_ini_file('preferences', 'disableartwork') == expected
-    assert iniFile.read_ini_file('preferences', 'artworkdisable') != 'True'
-    if artworkdisable != 'True':
+    assert 'artworkdisable' not in (data_dir / 'pfemame.ini').read_text(encoding='utf-8')     # Retired - removed
+    if artworkdisable is None:
         assert (data_dir / 'pfemame.ini').read_bytes() == before        # Nothing to move - the file isn't written
     iniFile.convert_old_settings()                                      # Running again changes nothing
     assert iniFile.read_ini_file('preferences', 'disableartwork') == expected
@@ -631,3 +631,80 @@ def test_startup_recovery_only_touches_our_files(ini_folder):
     assert rungame.recover_stranded_system_inis(str(ini_folder)) == ['spectrum']
     assert (ini_folder / 'spectrum.ini').read_text() == 'real\n'
     assert (ini_folder / 'pacman.ini').read_text() == 'current\n'
+
+
+# ------------------------------------------------------------------------------------------------ selection colours
+OLD_COLOURS = ('selected_row_color = (255, 0, 0, 255)\n'
+               'selected_row_background_color = (0, 255, 0, 255)\n'
+               'ribbon_item_highlight = (0, 255, 0, 255)\n')
+
+
+def test_old_red_on_green_selection_moves_to_the_system_colours(data_dir, wx_app):
+    import wx
+    import iniFile
+    import functions
+    iniFile._invalidate_cache()
+    (data_dir / 'pfemame.ini').write_text(f'[preferences]\n# my comment\n{OLD_COLOURS}text_color = (1, 2, 3, 255)\n',
+                                          encoding='utf-8')
+    iniFile.convert_old_settings()
+    text = (data_dir / 'pfemame.ini').read_text(encoding='utf-8')
+    assert 'selected_row' not in text and 'ribbon_item_highlight' not in text
+    assert '# my comment' in text and 'text_color = (1, 2, 3, 255)' in text        # Everything else kept
+    colours = functions.get_application_colors()
+    assert colours['selected_row_background'] == wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHT)
+    assert colours['selected_row'] == wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHTTEXT)
+    before = (data_dir / 'pfemame.ini').read_bytes()
+    iniFile.convert_old_settings()                                      # Running again changes nothing
+    assert (data_dir / 'pfemame.ini').read_bytes() == before
+
+
+def test_selection_colours_the_user_chose_are_kept(data_dir, wx_app):
+    import iniFile
+    iniFile._invalidate_cache()
+    chosen = ('selected_row_color = (255, 0, 0, 255)\n'                 # Red kept with their own background
+              'selected_row_background_color = (0, 0, 128, 255)\n'
+              'ribbon_item_highlight = (200, 200, 0, 255)\n')
+    (data_dir / 'pfemame.ini').write_text(f'[preferences]\n{chosen}', encoding='utf-8')
+    before = (data_dir / 'pfemame.ini').read_bytes()
+    iniFile.convert_old_settings()
+    assert (data_dir / 'pfemame.ini').read_bytes() == before
+
+
+def test_a_new_ini_file_leaves_the_selection_colours_to_the_system(data_dir, wx_app):
+    import iniFile
+    iniFile._invalidate_cache()
+    iniFile.create_ini_file()
+    text = (data_dir / 'pfemame.ini').read_text(encoding='utf-8')
+    assert 'selected_row' not in text and 'ribbon_item_highlight' not in text
+
+
+def test_the_highlight_tint_sits_between_the_highlight_and_the_background(wx_app):
+    import wx
+    import global_defaults as gd
+    tint = gd.selection_colors(wx.Colour(0, 0, 0))['ribbon_item_highlight']
+    highlight = wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHT)
+    assert tint == wx.Colour(*(round(c * 0.35) for c in (highlight.Red(), highlight.Green(), highlight.Blue())))
+
+
+def test_retired_settings_are_removed_and_the_rest_kept(data_dir, wx_app):
+    import iniFile
+    iniFile._invalidate_cache()
+    (data_dir / 'pfemame.ini').write_text('[preferences]\n# keep me\nusemultiprocessor = False\ntilesize = Large\n'
+                                          'checkforwayland = True\nartworkdisable = False\n', encoding='utf-8')
+    iniFile.convert_old_settings()
+    text = (data_dir / 'pfemame.ini').read_text(encoding='utf-8')
+    for name in iniFile.RETIRED_SETTINGS:
+        assert name not in text
+    assert '# keep me' in text and 'tilesize = Large' in text
+
+
+@pytest.mark.parametrize('checksum, warned', [('sha256:ab12', False), ('', True)])
+def test_an_update_without_a_checksum_is_flagged(wx_app, monkeypatch, checksum, warned):
+    import wx
+    import pfemame
+    monkeypatch.setattr(pfemame, '_', lambda text: text, raising=False)
+    text, style = pfemame.update_prompt('3.11.1', '3.12.0', checksum)
+    assert '3.11.1' in text and '3.12.0' in text
+    assert ('checksum' in text) == warned
+    assert bool(style & wx.NO_DEFAULT) == warned and bool(style & wx.ICON_WARNING) == warned
+

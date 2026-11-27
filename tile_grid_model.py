@@ -17,6 +17,8 @@ import os
 from collections import Counter, OrderedDict
 
 import play_stats
+from emulator_config import program_image_name
+from search import keep_row
 
 # Indexes into a mylist row
 index_rom_name = 0
@@ -37,6 +39,20 @@ def favorite_key(row: list) -> str:
     if row[index_system_program_file_name]:
         return f'{row[index_rom_file_name]}-->{row[index_rom_name]}-->{row[index_system_program_file_name]}'
     return row[index_rom_file_name]
+
+
+# What the user sees for a system program: 'batman.tzx (ZX Spectrum)' - the program first, so it still reads well
+# when a narrow label cuts the end off.  The internal 'system-->name-->file' keys are never shown.
+def program_label(system_name: str, program_file_name: str) -> str:
+    return f'{program_file_name} ({system_name})' if program_file_name else system_name
+
+
+def entry_display_name(entry: str) -> str:
+    """A favorites.dat / watchlist.dat entry as the user should see it ('system-->name-->file' -> 'file (name)')."""
+    parts = entry.split('-->')
+    if len(parts) == 3:
+        return program_label(parts[1], parts[2])
+    return entry
 
 PAGE_UP, PAGE_DOWN, HOME, END = 'page_up', 'page_down', 'home', 'end'
 
@@ -65,7 +81,8 @@ MOVES = (UP, DOWN, LEFT, RIGHT, PAGE_UP, PAGE_DOWN, HOME, END)
 # Find a ROM's preview video (any file extension), or None.  Arcade ROMs use <video folder>\<rom>.*.  Software list
 # programs look in <video folder>\<system>\ - by short name, then by program file name, the same as the
 # snapshots - and then use the system's own video, <video folder>\<system>.*
-def find_video(video_folder: str, row: list) -> str | None:
+def find_video(video_folder: str, row: list, own_folder_engines: set[str] | frozenset = frozenset()) -> str | None:
+    """own_folder_engines: emulator_config.own_folder_engine_names() - their games' names are kept whole."""
     rom_file_name = row[index_rom_file_name]
     program = row[index_system_program_file_name]
 
@@ -75,7 +92,7 @@ def find_video(video_folder: str, row: list) -> str | None:
         if os.path.isdir(system_folder):
             if row[index_system_short_name]:
                 candidates.append((system_folder, row[index_system_short_name]))
-            candidates.append((system_folder, os.path.splitext(program)[0]))
+            candidates.append((system_folder, program_image_name(rom_file_name, program, own_folder_engines)))
     candidates.append((video_folder, rom_file_name))
 
     for folder, name in candidates:
@@ -167,13 +184,16 @@ class LruCache:
 # ----------------------------------------------------------------------------------------------------------------------
 class TileGridModel:
 
-    def __init__(self, roms: list, columns: int, rows: int, categories: list, ignore_categories: bool):
+    def __init__(self, roms: list, columns: int, rows: int, categories: list, ignore_categories: bool,
+                 hide_clones: bool = False, working_only: bool = False):
         self.columns = max(1, columns)
         self.rows = max(1, rows)
         self.page_size = self.columns * self.rows
         self.roms = roms                                # Only ROMs that exist
         self.categories = list(categories) + ['']       # ROMs with no category are always allowed
         self.ignore_categories = ignore_categories
+        self.hide_clones = hide_clones                  # The main window's Hide clones / Working only tick boxes
+        self.working_only = working_only
 
         self.filtered: list = []
         self.view = VIEW_EXISTS
@@ -229,9 +249,11 @@ class TileGridModel:
         search_lower = search.strip().lower()
         category = self.category if category is None else category
         flag = {VIEW_FAVORITES: '1', VIEW_WATCHLIST: '2'}.get(view)
+        clone_filters = self.hide_clones or self.working_only
 
         def rom_matches(line: list) -> bool:
             return ((flag is None or line[index_favorite] == flag)
+                    and (not clone_filters or keep_row(line, self.hide_clones, self.working_only))
                     and (self.ignore_categories or line[index_category] in self.categories)
                     and (not category or line[index_category] == category)
                     and (not search_lower or search_lower in line[index_rom_name].lower()))

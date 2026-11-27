@@ -2425,21 +2425,13 @@ msgstr ""
 
 #: pfemame.py:2943
 msgid ""
+"pfeMAME doesn't know where MAME and your ROMs are yet.  This is normal the first time you run pfeMAME.\n"
 "\n"
-"It Looks like this is the first time you have run pfeMAME\n"
-"as the INI file data is missing.  Your first step is to \n"
-"set up the necessary file paths to MAME files and supporting\n"
-"folders.\n"
+"When you click OK, the File Paths tab opens.  Set the MAME executable and the ROMs folder as a minimum.  The easiest way is to click AUTO FIND and choose your MAME folder.  You can also double-click any row to browse for a file or folder.\n"
 "\n"
-"Please open EDIT > File Paths and set the MAME \n"
-"executable file path and ROMS folder as a minimum.  \n"
-"NOTE:  You can use the Auto Find option in the file paths \n"
-"window to make this a lot easier in most cases.\n"
+"When the paths look right, click APPLY and let pfeMAME restart.  It then builds the ROMs database by itself.\n"
 "\n"
-"After this you need to select some ROM categories (the right of the screen).\n"
-"Then restart the application and refresh the ROMs database using\n"
-"VIEW > Refresh ROMs Database.\n"
-"        "
+"Later, after adding ROMs or updating MAME, press F5 or click Refresh on the File tab to refresh the ROMs database."
 msgstr ""
 
 #: pfemame.py:2959
@@ -4892,4 +4884,194 @@ msgstr ""
 
 #: tileview.py:815
 msgid "View: {}"
+msgstr ""
+
+#: pfemame.py
+msgid "No saved ROMs database was found, so a new one will be built"
+msgstr ""
+
+#: pfemame.py
+msgid "The saved ROMs database could not be read, so a new one will be built"
+msgstr ""
+
+#: pfemame.py
+msgid ""
+"{emulator} games are run by {emulator}, not MAME, so this option is not "
+"available for them"
+msgstr ""
+
+#: pfemame.py
+msgid "A game is already running - close it before starting another one"
+msgstr ""
+
+#: pfemame.py
+msgid "Click to show or hide the messages"
+msgstr ""
+
+#: pfemame.py
+msgid "Click to show the messages"
+msgstr ""
+
+#: search.py
+msgid "Search (try cat:shooter year:1985)"
+msgstr ""
+
+#: search.py
+msgid "Search help: every kind of search term, with examples"
+msgstr ""
+
+#: search.py
+msgid "Search terms"
+msgstr ""
+
+#: search.py
+msgid "Click to add this to the search"
+msgstr ""
+
+#: search.py
+msgid "Click an example to add it to the search.  Terms can be combined."
+msgstr ""
+
+#: search.py
+msgid "Words"
+msgstr ""
+
+#: search.py
+msgid "Fields"
+msgstr ""
+
+#: search.py
+msgid "Flags"
+msgstr ""
+
+#: search.py
+msgid "Leaving things out"
+msgstr ""
+
+#: search.py
+msgid "every word is in the name, ROM, category, year or manufacturer"
+msgstr ""
+
+#: search.py
+msgid "the name contains pac"
+msgstr ""
+
+#: search.py
+msgid "the ROM (set) name contains pacm"
+msgstr ""
+
+#: search.py
+msgid "a system program file name contains .tzx"
+msgstr ""
+
+#: search.py
+msgid "the category contains shooter"
+msgstr ""
+
+#: search.py
+msgid "the manufacturer contains namco"
+msgstr ""
+
+#: search.py
+msgid "made in 1984"
+msgstr ""
+
+#: search.py
+msgid "made in the 1980s"
+msgstr ""
+
+#: search.py
+msgid "made from 1980 to 1985"
+msgstr ""
+
+#: search.py
+msgid "made after 1990  (also <, >= and <=)"
+msgstr ""
+
+#: search.py
+msgid "rated 4 stars or more"
+msgstr ""
+
+#: search.py
+msgid "played more than 10 times"
+msgstr ""
+
+#: search.py
+msgid "favorites"
+msgstr ""
+
+#: search.py
+msgid "on the watchlist"
+msgstr ""
+
+#: search.py
+msgid "ROMs you don't have"
+msgstr ""
+
+#: search.py
+msgid "ROMs you have"
+msgstr ""
+
+#: search.py
+msgid "system program files"
+msgstr ""
+
+#: search.py
+msgid "systems (computers and consoles)"
+msgstr ""
+
+#: search.py
+msgid "put - in front of any term to leave those ROMs out"
+msgstr ""
+
+#: search.py
+msgid "use quotes round a value with spaces"
+msgstr ""
+
+#: search.py
+msgid "Hide clones"
+msgstr ""
+
+#: search.py
+msgid "Working only"
+msgstr ""
+
+#: search.py
+msgid "Leave out clones (other versions of a game - regional versions, bootlegs...) and show only the parent sets"
+msgstr ""
+
+#: search.py
+msgid "Leave out the machines MAME marks as not working (those that work with some problems are still shown)"
+msgstr ""
+
+#: search.py
+msgid "parent sets (not clones)"
+msgstr ""
+
+#: search.py
+msgid "clones (other versions of a game)"
+msgstr ""
+
+#: search.py
+msgid "working in MAME (including imperfect)"
+msgstr ""
+
+#: search.py
+msgid "working, with some problems"
+msgstr ""
+
+#: search.py
+msgid "not working in MAME"
+msgstr ""
+
+#: pfemame.py
+msgid "Go to: {}"
+msgstr ""
+
+#: pfemame.py
+msgid "No ROM name starts with \"{}\""
+msgstr ""
+
+#: pfemame.py
+msgid "SourceForge did not give a checksum for this download, so pfeMAME cannot check that it arrives complete and unchanged before installing it.  If you would rather not install it unchecked, choose No and download it yourself from the pfeMAME SourceForge page."
 msgstr ""

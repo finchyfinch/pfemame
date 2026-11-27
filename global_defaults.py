@@ -20,11 +20,36 @@ def get_fixed_color_defaults():
         "row_alt_1": wx.Colour(255, 255, 255, 255),
         "row_alt_2": wx.Colour(173, 216, 230, 255),
         "missing_game": wx.Colour(255, 153, 153, 255),
-        "selected_row": wx.Colour(255, 0, 0, 255),  # RED
-        "selected_row_background": wx.Colour(0, 255, 0, 255),  # GREEN
-        "ribbon_item_highlight": wx.Colour(0, 255, 0, 255),  # GREEN
         "scrollbar_track": wx.Colour(240, 240, 240, 255),
         "scrollbar_thumb": wx.Colour(200, 200, 200, 255),
+    }
+
+
+# The selection and highlight colours used before 3.11.1 (red text on bright green).  Hard to read, so pfemame.ini
+# files still holding them are moved to the system's own colours (iniFile.convert_old_settings).
+OLD_SELECTED_ROW = (255, 0, 0, 255)
+OLD_SELECTED_ROW_BACKGROUND = (0, 255, 0, 255)
+OLD_RIBBON_ITEM_HIGHLIGHT = (0, 255, 0, 255)
+
+
+def mix_colors(first: wx.Colour, second: wx.Colour, amount: float) -> wx.Colour:
+    """first blended into second: amount 1 is all first, 0 all second."""
+    return wx.Colour(*(round(a * amount + b * (1 - amount)) for a, b in
+                       zip((first.Red(), first.Green(), first.Blue()), (second.Red(), second.Green(), second.Blue()))))
+
+
+def selection_colors(background: wx.Colour | None = None) -> dict:
+    """
+    The selected ROM's colours - the system's own selection colours (e.g. white on the Windows highlight blue) - and
+    the highlight of a pointed-at item (e.g. a language in the language picker): a soft tint of the same colour on
+    the given background (the window colour if none is given).  Call after wx.App is initialised.
+    """
+    highlight = wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHT)
+    background = background or wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW)
+    return {
+        "selected_row": wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHTTEXT),
+        "selected_row_background": highlight,
+        "ribbon_item_highlight": mix_colors(highlight, background, 0.35),
     }
 
 
@@ -34,6 +59,7 @@ def get_color_defaults():
     # when the theme does, e.g. to dark mode)
     return {
         **get_fixed_color_defaults(),
+        **selection_colors(),
         "text": wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOWTEXT),
         "text_background": wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW),
         "window_background": wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW),

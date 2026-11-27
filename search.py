@@ -56,7 +56,9 @@ FIELDS = {'name': INDEX_ROM_NAME, 'title': INDEX_ROM_NAME, 'desc': INDEX_ROM_NAM
           'year': INDEX_YEAR, 'rating': INDEX_RATING, 'runs': INDEX_NUMBER_RUNS}
 NUMERIC = {INDEX_YEAR, INDEX_RATING, INDEX_NUMBER_RUNS}
 FLAGS = {'fav': 'fav', 'favorite': 'fav', 'favourite': 'fav', 'watch': 'watch', 'watchlist': 'watch',
-         'missing': 'missing', 'exists': 'exists', 'have': 'exists', 'program': 'program', 'system': 'system'}
+         'missing': 'missing', 'exists': 'exists', 'have': 'exists', 'program': 'program', 'system': 'system',
+         'parent': 'parent', 'clone': 'clone', 'working': 'working', 'imperfect': 'imperfect',
+         'notworking': 'notworking', 'broken': 'notworking'}
 WORD_COLUMNS = (INDEX_ROM_NAME, INDEX_ROM_FILE_NAME, INDEX_SYSTEM_PROGRAM_FILE_NAME, INDEX_CATEGORY, INDEX_YEAR,
                 INDEX_MANUFACTURER)
 
@@ -64,6 +66,53 @@ HELP_TEXT = N_('Search:  words match the name, ROM, category, year or manufactur
              'Fields:  name:  rom:  file:  cat:  mfr:  year:1984  year:1980-1985  year:>1990  rating:>=4  runs:>10\n'
              'Flags:   is:fav  is:watch  is:missing  is:exists  is:program  is:system\n'
              'Put - in front of a term to exclude it, and "quotes" around values with spaces.')
+
+# The search box's hint, and the cheat sheet its '?' button shows (search_help.py): (heading, [(example, meaning)]).
+# Clicking an example adds it to the search, so every example must be a working search term - tests check that.
+HINT_TEXT = N_('Search (try cat:shooter year:1985)')
+
+CHEAT_SHEET = (
+    (N_('Words'), (
+        ('pac man', N_('every word is in the name, ROM, category, year or manufacturer')),
+    )),
+    (N_('Fields'), (
+        ('name:pac', N_('the name contains pac')),
+        ('rom:pacm', N_('the ROM (set) name contains pacm')),
+        ('file:.tzx', N_('a system program file name contains .tzx')),
+        ('cat:shooter', N_('the category contains shooter')),
+        ('mfr:namco', N_('the manufacturer contains namco')),
+        ('year:1984', N_('made in 1984')),
+        ('year:198', N_('made in the 1980s')),
+        ('year:1980-1985', N_('made from 1980 to 1985')),
+        ('year:>1990', N_('made after 1990  (also <, >= and <=)')),
+        ('rating:>=4', N_('rated 4 stars or more')),
+        ('runs:>10', N_('played more than 10 times')),
+    )),
+    (N_('Flags'), (
+        ('is:fav', N_('favorites')),
+        ('is:watch', N_('on the watchlist')),
+        ('is:missing', N_('ROMs you don\'t have')),
+        ('is:exists', N_('ROMs you have')),
+        ('is:program', N_('system program files')),
+        ('is:system', N_('systems (computers and consoles)')),
+        ('is:parent', N_('parent sets (not clones)')),
+        ('is:clone', N_('clones (other versions of a game)')),
+        ('is:working', N_('working in MAME (including imperfect)')),
+        ('is:imperfect', N_('working, with some problems')),
+        ('is:notworking', N_('not working in MAME')),
+    )),
+    (N_('Leaving things out'), (
+        ('-cat:mahjong', N_('put - in front of any term to leave those ROMs out')),
+        ('mfr:"data east"', N_('use quotes round a value with spaces')),
+    )),
+)
+
+
+def add_term(text: str, term: str) -> str:
+    """The search text with term added to the end (a space between them), for the cheat sheet's examples."""
+    text = text.rstrip()
+    return f'{text} {term}' if text else term
+
 
 _COMPARISON = re.compile(r'^(>=|<=|>|<|=)?\s*(-?\d+(?:\.\d+)?)$')
 _RANGE = re.compile(r'^(\d+)\s*-\s*(\d+)$')
@@ -143,10 +192,45 @@ def _flag_true(row: list, flag: str) -> bool:
         return bool(row[INDEX_SYSTEM_PROGRAM_FILE_NAME])
     if flag == 'system':
         return not row[INDEX_SYSTEM_PROGRAM_FILE_NAME] and row[INDEX_ROM_FILE_NAME] in _SYSTEMS
+    if flag in ('parent', 'clone'):
+        return is_clone(row) == (flag == 'clone')
+    if flag == 'working':
+        return is_working(row)
+    if flag == 'imperfect':
+        return _status(row) == 'imperfect'
+    if flag == 'notworking':
+        return not is_working(row)
     return False
 
 
 _SYSTEMS: set = set()
+_MACHINE_INFO: dict = {}
+
+
+def set_machine_info(info: dict) -> None:
+    """{machine name: (parent, driver status)} from rom_database.machine_info - pfemame.py passes it."""
+    global _MACHINE_INFO
+    _MACHINE_INFO = dict(info)
+
+
+# A system program row belongs to its system (a program listed under a clone system is a clone's), and a game of
+# another emulator isn't a MAME machine at all, so it counts as a parent that works.
+def is_clone(row: list) -> bool:
+    return bool(_MACHINE_INFO.get(row[INDEX_ROM_FILE_NAME], ('', ''))[0])
+
+
+def _status(row: list) -> str:
+    return _MACHINE_INFO.get(row[INDEX_ROM_FILE_NAME], ('', ''))[1]
+
+
+def is_working(row: list) -> bool:
+    """MAME's driver status is good or imperfect (runs with some problems) - not preliminary."""
+    return _status(row) != 'preliminary'
+
+
+def keep_row(row: list, hide_clones: bool, working_only: bool) -> bool:
+    """The main window's Hide clones / Working only tick boxes."""
+    return not (hide_clones and is_clone(row)) and not (working_only and not is_working(row))
 
 
 def set_system_names(names: set) -> None:

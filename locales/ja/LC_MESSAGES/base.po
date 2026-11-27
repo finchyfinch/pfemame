@@ -2540,37 +2540,21 @@ msgstr "pfeMAME は自動的に再起動されました"
 
 #: pfemame.py:2943
 msgid ""
+"pfeMAME doesn't know where MAME and your ROMs are yet.  This is normal the first time you run pfeMAME.\n"
 "\n"
-"It Looks like this is the first time you have run pfeMAME\n"
-"as the INI file data is missing.  Your first step is to \n"
-"set up the necessary file paths to MAME files and supporting\n"
-"folders.\n"
+"When you click OK, the File Paths tab opens.  Set the MAME executable and the ROMs folder as a minimum.  The easiest way is to click AUTO FIND and choose your MAME folder.  You can also double-click any row to browse for a file or folder.\n"
 "\n"
-"Please open EDIT > File Paths and set the MAME \n"
-"executable file path and ROMS folder as a minimum.  \n"
-"NOTE:  You can use the Auto Find option in the file paths \n"
-"window to make this a lot easier in most cases.\n"
+"When the paths look right, click APPLY and let pfeMAME restart.  It then builds the ROMs database by itself.\n"
 "\n"
-"After this you need to select some ROM categories (the right of the screen).\n"
-"Then restart the application and refresh the ROMs database using\n"
-"VIEW > Refresh ROMs Database.\n"
-"        "
+"Later, after adding ROMs or updating MAME, press F5 or click Refresh on the File tab to refresh the ROMs database."
 msgstr ""
-"「\n"
-"」pfeMAME を実行するのは今回が初めてのようです\n"
-"INI ファイルのデータが欠落しているためです。最初のステップは \n"
-"MAME ファイルとサポートへの必要なファイル パスを設定します\n"
-"フォルダ。\n"
-"「\n"
-"」編集 > ファイル パスを開いて MAME を設定してください \n"
-"少なくとも実行可能ファイルのパスと ROMS フォルダ。\n"
-"注: ファイル パスで自動検索オプションを使用できます\n"
-"ウィンドウを使用すると、ほとんどの場合、これがはるかに簡単になります。\n"
-"「\n"
-"」この後、いくつかの ROM カテゴリ (画面の右側) を選択する必要があります。\n"
-"その後、アプリケーションを再起動し、次を使用して ROM データベースを更新します\n"
-"「表示 > ROM データベースを更新します。\n"
-"」        "
+"pfeMAME は MAME と ROM の場所をまだ認識していません。pfeMAME を初めて起動したときは、これが正常です。\n"
+"\n"
+"OK をクリックすると「ファイルパス」タブが開きます。少なくとも MAME の実行ファイルと ROM フォルダーを設定してください。いちばん簡単なのは「自動検索」をクリックして MAME フォルダーを選ぶ方法です。行をダブルクリックしてファイルやフォルダーを選ぶこともできます。\n"
+"\n"
+"パスが正しければ「適用する」をクリックし、pfeMAME を再起動してください。その後、pfeMAME が ROM データベースを自動的に作成します。\n"
+"\n"
+"あとで ROM を追加したり MAME を更新したりしたときは、F5 キーを押すか、「File」タブの「Refresh」をクリックして ROM データベースを更新してください。"
 
 #: pfemame.py:2959
 msgid "MAME file path or ROMS folder not found"
@@ -5142,3 +5126,193 @@ msgstr "ウォッチリストのROM"
 #: tileview.py:815
 msgid "View: {}"
 msgstr "表示: {}"
+
+#: pfemame.py
+msgid "No saved ROMs database was found, so a new one will be built"
+msgstr "保存された ROM データベースが見つからないため、新しく作成します"
+
+#: pfemame.py
+msgid "The saved ROMs database could not be read, so a new one will be built"
+msgstr "保存された ROM データベースを読み込めなかったため、新しく作成します"
+
+#: pfemame.py
+msgid ""
+"{emulator} games are run by {emulator}, not MAME, so this option is not "
+"available for them"
+msgstr "{emulator} のゲームは MAME ではなく {emulator} で実行されるため、このオプションは使用できません"
+
+#: pfemame.py
+msgid "A game is already running - close it before starting another one"
+msgstr "すでにゲームが実行中です。別のゲームを開始する前に終了してください"
+
+#: pfemame.py
+msgid "Click to show or hide the messages"
+msgstr "クリックしてメッセージを表示または非表示にします"
+
+#: pfemame.py
+msgid "Click to show the messages"
+msgstr "クリックしてメッセージを表示します"
+
+#: search.py
+msgid "Search (try cat:shooter year:1985)"
+msgstr "検索 (例: cat:shooter year:1985)"
+
+#: search.py
+msgid "Search help: every kind of search term, with examples"
+msgstr "検索のヘルプ: すべての検索語の種類と例"
+
+#: search.py
+msgid "Search terms"
+msgstr "検索語"
+
+#: search.py
+msgid "Click to add this to the search"
+msgstr "クリックして検索に追加します"
+
+#: search.py
+msgid "Click an example to add it to the search.  Terms can be combined."
+msgstr "例をクリックすると検索に追加されます。検索語は組み合わせられます。"
+
+#: search.py
+msgid "Words"
+msgstr "単語"
+
+#: search.py
+msgid "Fields"
+msgstr "フィールド"
+
+#: search.py
+msgid "Flags"
+msgstr "フラグ"
+
+#: search.py
+msgid "Leaving things out"
+msgstr "除外する"
+
+#: search.py
+msgid "every word is in the name, ROM, category, year or manufacturer"
+msgstr "すべての単語が名前、ROM、カテゴリ、年、メーカーのいずれかに含まれる"
+
+#: search.py
+msgid "the name contains pac"
+msgstr "名前に pac を含む"
+
+#: search.py
+msgid "the ROM (set) name contains pacm"
+msgstr "ROM (セット) 名に pacm を含む"
+
+#: search.py
+msgid "a system program file name contains .tzx"
+msgstr "システムのプログラムファイル名に .tzx を含む"
+
+#: search.py
+msgid "the category contains shooter"
+msgstr "カテゴリに shooter を含む"
+
+#: search.py
+msgid "the manufacturer contains namco"
+msgstr "メーカーに namco を含む"
+
+#: search.py
+msgid "made in 1984"
+msgstr "1984 年の作品"
+
+#: search.py
+msgid "made in the 1980s"
+msgstr "1980 年代の作品"
+
+#: search.py
+msgid "made from 1980 to 1985"
+msgstr "1980 年から 1985 年の作品"
+
+#: search.py
+msgid "made after 1990  (also <, >= and <=)"
+msgstr "1990 年より後の作品  (<、>=、<= も使えます)"
+
+#: search.py
+msgid "rated 4 stars or more"
+msgstr "評価が星 4 つ以上"
+
+#: search.py
+msgid "played more than 10 times"
+msgstr "10 回より多くプレイした"
+
+#: search.py
+msgid "favorites"
+msgstr "お気に入り"
+
+#: search.py
+msgid "on the watchlist"
+msgstr "ウォッチリストにある"
+
+#: search.py
+msgid "ROMs you don't have"
+msgstr "持っていない ROM"
+
+#: search.py
+msgid "ROMs you have"
+msgstr "持っている ROM"
+
+#: search.py
+msgid "system program files"
+msgstr "システムのプログラムファイル"
+
+#: search.py
+msgid "systems (computers and consoles)"
+msgstr "システム (コンピューターとゲーム機)"
+
+#: search.py
+msgid "put - in front of any term to leave those ROMs out"
+msgstr "検索語の前に - を付けると、その ROM を除外します"
+
+#: search.py
+msgid "use quotes round a value with spaces"
+msgstr "空白を含む値は引用符で囲みます"
+
+#: search.py
+msgid "Hide clones"
+msgstr "クローンを隠す"
+
+#: search.py
+msgid "Working only"
+msgstr "動作するもののみ"
+
+#: search.py
+msgid "Leave out clones (other versions of a game - regional versions, bootlegs...) and show only the parent sets"
+msgstr "クローン (地域版や海賊版など、ゲームの別バージョン) を除外し、親セットだけを表示します"
+
+#: search.py
+msgid "Leave out the machines MAME marks as not working (those that work with some problems are still shown)"
+msgstr "MAME が動作しないとしているマシンを除外します (多少の問題はあっても動作するものは表示されます)"
+
+#: search.py
+msgid "parent sets (not clones)"
+msgstr "親セット (クローン以外)"
+
+#: search.py
+msgid "clones (other versions of a game)"
+msgstr "クローン (ゲームの別バージョン)"
+
+#: search.py
+msgid "working in MAME (including imperfect)"
+msgstr "MAME で動作する (不完全なものを含む)"
+
+#: search.py
+msgid "working, with some problems"
+msgstr "動作するが、一部に問題がある"
+
+#: search.py
+msgid "not working in MAME"
+msgstr "MAME で動作しない"
+
+#: pfemame.py
+msgid "Go to: {}"
+msgstr "移動: {}"
+
+#: pfemame.py
+msgid "No ROM name starts with \"{}\""
+msgstr "「{}」で始まる ROM 名はありません"
+
+#: pfemame.py
+msgid "SourceForge did not give a checksum for this download, so pfeMAME cannot check that it arrives complete and unchanged before installing it.  If you would rather not install it unchecked, choose No and download it yourself from the pfeMAME SourceForge page."
+msgstr "SourceForge がこのダウンロードのチェックサムを提供していないため、pfeMAME はインストール前に完全で改変されていないことを確認できません。確認なしでインストールしたくない場合は「いいえ」を選び、SourceForge の pfeMAME ページからご自分でダウンロードしてください。"

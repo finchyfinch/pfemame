@@ -376,3 +376,37 @@ def test_find_video_for_arcade_roms_and_software_list_programs(tmp_path):
     assert find_video(folder, row('nes', 'Zelda.zip', 'zelda')) == str(video / 'nes.mp4')                         # System video
     assert find_video(folder, row('spectrum', 'Jetpac.tzx')) == str(video / 'spectrum.m4v')                       # No sub-folder
     assert find_video(folder, row('amiga', 'Barbarian.adf')) is None
+
+
+def test_find_video_keeps_own_folder_emulator_names_whole(tmp_path):
+    from tile_grid_model import find_video
+    video = tmp_path / 'video'
+    (video / 'Visual Pinball X').mkdir(parents=True)
+    (video / 'Visual Pinball X' / 'Diner VPX 1.2.mp4').write_text('x')
+    (video / 'Visual Pinball X' / 'Diner VPX 1.mp4').write_text('x')          # What the old lookup wanted
+    r = make_row('Visual Pinball X', program='Diner VPX 1.2')
+    assert find_video(str(video), r, {'Visual Pinball X'}) == str(video / 'Visual Pinball X' / 'Diner VPX 1.2.mp4')
+
+
+def test_program_labels_show_the_program_then_the_system():
+    from tile_grid_model import program_label, entry_display_name
+    assert program_label('ZX Spectrum', 'batman.tzx') == 'batman.tzx (ZX Spectrum)'
+    assert program_label('Pac-Man', '') == 'Pac-Man'
+    assert entry_display_name('spectrum-->ZX Spectrum-->batman.tzx') == 'batman.tzx (ZX Spectrum)'
+    assert entry_display_name('pacman') == 'pacman'
+
+
+def test_tile_view_follows_hide_clones_and_working_only(monkeypatch):
+    import search
+    monkeypatch.setattr(search, '_MACHINE_INFO', {'pacman': ('puckman', 'good'), 'broken': ('', 'preliminary')})
+    roms = [make_row(name, favorite='1') for name in ('puckman', 'pacman', 'broken')]
+
+    def names(**ticks):
+        model = TileGridModel(roms, columns=4, rows=2, categories=[], ignore_categories=True, **ticks)
+        model.apply_filter('Favorites')
+        return sorted(row[index_rom_file_name] for row in model.filtered)
+
+    assert names() == ['broken', 'pacman', 'puckman']
+    assert names(hide_clones=True) == ['broken', 'puckman']
+    assert names(working_only=True) == ['pacman', 'puckman']
+    assert names(hide_clones=True, working_only=True) == ['puckman']

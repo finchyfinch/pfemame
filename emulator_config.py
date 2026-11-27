@@ -53,6 +53,34 @@ class EmulatorFields:
 # The entry put in an emulator's ROM list when it is created (it must always have at least one)
 PLACEHOLDER_ROM_ENTRY = ('rom_name', 'rom_file_name')
 
+# The old name Visual Pinball tables were listed under, kept for anyone whose image folders still use it
+LEGACY_VISUAL_PINBALL = 'visualpinball'
+
+
+def own_folder_engine_names(engines: list | None) -> set[str]:
+    """
+    Names of the alternate emulators that have a ROM folder of their own (Additional mode), from the rows
+    load_emulators() returns.  Their games are files in that folder, not MAME machines: the ROMs list shows them with
+    the emulator's name as the ROM name and the file name (without its extension) as the system program.
+    Emulators whose ROM folder is 'Default' (Supplemental mode) run MAME's own games, so they aren't included.
+    """
+    return {line[EmulatorFields.NAME] for line in engines or []
+            if len(line) > EmulatorFields.ROM_FOLDER and line[EmulatorFields.ROM_FOLDER] != 'Default'}
+
+
+def program_image_name(rom_file_name: str, program: str, own_folder_engines: set[str] | frozenset = frozenset()) -> str:
+    """
+    The name (without .png etc.) that pictures and videos use for a system program in <image folder>/<rom_file_name>.
+
+    MAME system programs are file names, so their extension is removed ('Super Mario Bros (USA).nes' ->
+    'Super Mario Bros (USA)').  A game of an own-folder emulator already has its extension removed, and a name such as
+    'Attack from Mars (Bally 1995) 4.1' must be kept whole - removing a "extension" there would give '... 4', so tables
+    such as '... 1.1' and '... 1.2' would share one picture.
+    """
+    if rom_file_name == LEGACY_VISUAL_PINBALL or rom_file_name in own_folder_engines:
+        return program
+    return os.path.splitext(program)[0]
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # non_mame_emulators.xml

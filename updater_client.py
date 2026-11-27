@@ -20,17 +20,27 @@ import fast_download
 FILES_PAGE = 'https://sourceforge.net/projects/pfemame/files/'
 
 
+# Release archive types the updater can install, best first.  The zip is preferred: only it allows a delta update
+# (see delta_update.py).  Linux releases also come as a .tar.gz for people installing by hand.
+ARCHIVE_TYPES = ('zip', '7z', 'tar.gz')
+
+
 def parse_versions(page: str, system: str) -> tuple[str | None, str | None]:
     """
-    Newest pfemame_<system>_v<version>.zip/.7z mentioned in a SourceForge files page: (version, download URL),
-    or (None, None).  The highest version wins, not the first one listed.
+    Newest pfemame_<system>_v<version>.zip/.7z/.tar.gz mentioned in a SourceForge files page: (version, download
+    URL), or (None, None).  The highest version wins, not the first one listed; for that version the zip is chosen if
+    there is one.
     """
-    versions = set(re.findall(rf'pfemame_{system}_v([0-9]+(?:\.[0-9]+)*)\.(?:7z|zip)', page))
+    extensions = '|'.join(re.escape(extension) for extension in ARCHIVE_TYPES)
+    versions = set(re.findall(rf'pfemame_{system}_v([0-9]+(?:\.[0-9]+)*)\.(?:{extensions})', page))
     if not versions:
         return None, None
     best = max(versions, key=lambda v: [int(x) for x in v.split('.')])
-    match = re.search(rf'pfemame_{system}_v{re.escape(best)}\.(?:7z|zip)', page)
-    return best, f'https://sourceforge.net/projects/pfemame/files/{match.group(0)}/download'
+    for extension in ARCHIVE_TYPES:
+        name = f'pfemame_{system}_v{best}.{extension}'
+        if name in page:
+            return best, f'https://sourceforge.net/projects/pfemame/files/{name}/download'
+    return None, None
 
 
 def scrape_latest_version(system: str) -> tuple[str | None, str | None]:

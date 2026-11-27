@@ -24,9 +24,11 @@ import rungame
 import functions
 import fullscreenplay
 import play_stats
+from emulator_config import own_folder_engine_names, program_image_name
 from video_class import Video
 from preferences_model import PFEMAME_DEFAULTS
 from tile_grid_model import (TileGridModel, LruCache, HoldRepeater, shift_page, favorite_key, find_video,
+                             program_label,
                              UP, DOWN, LEFT, RIGHT, PAGE_UP, PAGE_DOWN, HOME, END, MOVES,
                              SORT_NAME, SORT_MOST_RUNS, SORT_ORDERS, tile_view_key,
                              VIEW_EXISTS, VIEW_FAVORITES, VIEW_WATCHLIST, VIEW_RECENT, VIEW_MOST_PLAYED,
@@ -38,7 +40,10 @@ image_size_x = 224
 image_size_y = 256
 # Used if the saved setting isn't a number (e.g. after a hand edit)
 default_brightness = float(PFEMAME_DEFAULTS['preferences']['brightness'])
-info_panel_width = 300
+info_panel_width = 300          # The side panel's narrowest width - it widens to fit its text (side_panel_width)
+SIDE_PANEL_POINT_SIZE = 11      # The side panel's text, big enough to read from across the room
+SIDE_LABEL_COLOUR = (200, 200, 200)     # Light grey headings and key list
+SIDE_VALUE_COLOUR = (124, 252, 154)     # Soft bright green values
 GLOW_COLOR = (0, 200, 255)   # Cyan — works well on dark arcade backgrounds.
                               # Change to (255, 180, 0) for amber, (180, 0, 255) for purple, etc.
 GLOW_LAYERS = [
@@ -148,6 +153,10 @@ class TileView(wx.Frame):
         # --------------------------------------------------------------------------------------------------------------
         # Get the absolute path to this application.
         self.path_to_me = functions.path_to_me()  # Get the absolute path to me
+
+        # Alternate emulators with a ROM folder of their own: their games' pictures and videos are named after the
+        # whole file name (see emulator_config.program_image_name)
+        self.own_folder_engines = own_folder_engine_names(functions.load_other_emulators_detail(self.path_to_me)[0])
 
         # --------------------------------------------------------------------------------------------------------------
         # Load the categories file
@@ -268,7 +277,9 @@ class TileView(wx.Frame):
         # Take the info panel and spacers away from available size and define how many horizontal and vertical
         # images we can have.  Always show at least one tile, even on a very small display.
         resolution_horizontal, resolution_vertical = self.GetSize()
-        space_horizontal = resolution_horizontal - info_panel_width
+        self.side_font = side_panel_font(self.global_font_normal)
+        self.side_width = side_panel_width(self.side_font, resolution_horizontal)
+        space_horizontal = resolution_horizontal - self.side_width
         self.numHorizontal = max(1, int(space_horizontal // (self.imageScale_X + 14)))
         self.numVertical = max(1, int(resolution_vertical // ((self.imageScale_Y + 4) + 18)))
 
@@ -279,7 +290,10 @@ class TileView(wx.Frame):
                                    columns=self.numHorizontal,
                                    rows=self.numVertical,
                                    categories=self.categories,
-                                   ignore_categories=self.ignore_categories)
+                                   ignore_categories=self.ignore_categories,
+                                   # The main window's Hide clones / Working only tick boxes apply here too
+                                   hide_clones=iniFile.read_ini_file('system', 'hideclones') == 'True',
+                                   working_only=iniFile.read_ini_file('system', 'workingonly') == 'True')
         self.model.play_stats = getattr(self.parent, 'play_stats', None) or \
             play_stats.PlayStats(os.path.join(functions.data_dir(), play_stats.FILE_NAME))
         if self.remember_position:
@@ -348,14 +362,17 @@ class TileView(wx.Frame):
                                     self.path_to_me,
                                     self.my_cursor,
                                     copy_right,
-                                    self.global_font_normal)
+                                    self.global_font_normal,
+                                    width=self.side_width)
 
         self.panel_info = InfoPanel(top_panel,
-                                self.my_cursor,
-                                self.global_font_normal_8)
+                                    self.my_cursor,
+                                    self.side_font,
+                                    width=self.side_width)
 
         self.panel_rom_info = RomInfoPanel(top_panel,
-                                   self.global_font_normal_8)
+                                           self.global_font_normal_8,
+                                           width=self.side_width)
 
         # Create the virtual keyboard, hidden until F is pressed
         self.virtual_keyboard = VirtualKeyboard(
@@ -673,6 +690,10 @@ class TileView(wx.Frame):
             fav_text += f' · {self.model.category}'
         if self.model.sort_applies and self.model.sort == SORT_MOST_RUNS:
             fav_text += f' · {_("Most runs")}'
+        if self.model.hide_clones:
+            fav_text += f' · {_("Hide clones")}'
+        if self.model.working_only:
+            fav_text += f' · {_("Working only")}'
 
         row = self.model.focused_row
         if row is not None:
@@ -685,10 +706,8 @@ class TileView(wx.Frame):
             rom_runs = rom_name = rom_file_name = system_file_name = short_name = ''
 
         # Set up the ROM stats panel data
-        label = rom_name
-        if system_file_name != '':
-            label += f'-->{system_file_name}'
-        self.panel_info.selected_rom.SetLabel(label)
+        # SetLabelText: shown as it is (SetLabel reads '&' in a name such as 'Tom & Jerry' as a shortcut marker)
+        self.panel_info.selected_rom.SetLabelText(program_label(rom_name, system_file_name))
 
         self.panel_info.rom_runs.SetLabel(rom_runs)
         if row is None:
@@ -696,7 +715,7 @@ class TileView(wx.Frame):
         else:
             self.panel_info.favorite.SetLabel(_('Yes') if row[index_favorite] == '1' else _('No'))
         self.panel_info.index_rom.SetLabel(f'{self.model.size} ROMs')
-        self.panel_info.view_mode.SetLabel(fav_text)
+        self.panel_info.view_mode.SetLabelText(fav_text)
 
         # Set up the ROM information panel data
         output = self.get_rom_info(rom_file_name, system_file_name, short_name)
@@ -1129,8 +1148,8 @@ class TileView(wx.Frame):
                 self._tile_labels[slot], self._tile_bitmaps[slot] = self.get_rom_image(slot)  # Draw the game image
             self.show_tile(slot)
             text = self.controlsText[slot]
-            if text.GetLabel() != self._tile_labels[slot]:
-                text.SetLabel(self._tile_labels[slot])
+            if text.GetLabelText() != self._tile_labels[slot]:
+                text.SetLabelText(self._tile_labels[slot])          # As it is - '&' isn't a shortcut marker
         self.Thaw()
 
         self.schedule_preload()
@@ -1169,6 +1188,12 @@ class TileView(wx.Frame):
         row = self.model.focused_row
         if row is None:
             return  # Blank tile
+
+        # One game at a time: a second one would swap the same INI / input mapping files under the first
+        if rungame.game_running():
+            self.my_logger.info('A game is already running - not starting another one')
+            wx.Bell()
+            return
 
         if self.media_player_available:
             self.media_player_stop()
@@ -1319,11 +1344,8 @@ class TileView(wx.Frame):
                 self._blank_bitmap = wx.Bitmap(wx.Image(self.imageScale_X, self.imageScale_Y))  # blank (black) image
             return '', self._blank_bitmap
 
-        # If it's a system file then the label also shows the program file name
-        if row[index_system_program_file_name]:
-            label = f'{row[index_rom_file_name]}-->{row[index_system_program_file_name]}'
-        else:
-            label = row[index_rom_name]
+        # If it's a system program then the label shows the program file name, then the system
+        label = program_label(row[index_rom_name], row[index_system_program_file_name])
 
         return label, self._get_tile_bitmap(row)
 
@@ -1357,7 +1379,7 @@ class TileView(wx.Frame):
             file_name = os.path.join(self.foldersSnap, rom_file_name, program_name)
             if not os.path.exists(file_name):
                 # Strip off the . and file name suffix (e.g. .rom), and add the '.png' image suffix
-                program_name = f'{os.path.splitext(system_file_name)[0]}.png'
+                program_name = f'{program_image_name(rom_file_name, system_file_name, self.own_folder_engines)}.png'
                 # Build the file name for the snapshot image using the full path
                 file_name = os.path.join(self.foldersSnap, rom_file_name, program_name)
 
@@ -1493,7 +1515,7 @@ class TileView(wx.Frame):
 
         self.media_player_stop()
 
-        file_match = find_video(self.foldersVideo, row)
+        file_match = find_video(self.foldersVideo, row, self.own_folder_engines)
         if file_match is None:
             return
 
@@ -1664,8 +1686,8 @@ class ListPopup(wx.PopupWindow):
         for row_number, text in enumerate(self._rows):
             index = self.top + row_number
             label = f'  {self.items[index][1]}' if index < len(self.items) else ''
-            if text.GetLabel() != label:
-                text.SetLabel(label)
+            if text.GetLabelText() != label:
+                text.SetLabelText(label)                            # As it is - '&' isn't a shortcut marker
             highlighted = index == self.focused
             text.SetBackgroundColour(self.HIGHLIGHT if highlighted else self.BACKGROUND)
             text.SetForegroundColour(wx.BLACK if highlighted else wx.WHITE)
@@ -1814,7 +1836,7 @@ class VirtualKeyboard(wx.PopupWindow):
 
     # ------------------------------------------------------------------------------------------------------------------
     def _update_display(self):
-        self.text_display.SetLabel(self.search_text if self.search_text else '...')
+        self.text_display.SetLabelText(self.search_text if self.search_text else '...')
 
     # ------------------------------------------------------------------------------------------------------------------
     def handle_navigation(self, key_code) -> bool:
@@ -1847,7 +1869,7 @@ class VirtualKeyboard(wx.PopupWindow):
     # ------------------------------------------------------------------------------------------------------------------
     # Show a message in place of the search text until the next key is pressed
     def show_message(self, message: str) -> None:
-        self.text_display.SetLabel(message)
+        self.text_display.SetLabelText(message)
 
     # ------------------------------------------------------------------------------------------------------------------
     def reset(self, search_text: str = ''):
@@ -1856,6 +1878,47 @@ class VirtualKeyboard(wx.PopupWindow):
         self.focused_col = 0
         self._update_display()
         self._highlight_focused()
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Tile View's side panel: its key list, font and width
+def instructions_text() -> str:
+    return _('NAVIGATION:\n'
+             '  LEFT = Move left\n'
+             '  RIGHT = Move right\n'
+             '  UP = Move up\n'
+             '  DOWN = Move down\n'
+             '  PGUP / PGDN = Move a page\n'
+             '  HOME / END = First / last ROM\n'
+             'ACTIONS:\n'
+             '  L-CTRL(Joy-2) = Change view mode\n'
+             '  ALT-1 (Joy-4) = Menu\n'
+             '  1 / ENTER (Joy-1) = Start the selected ROM\n'
+             '  2 / ESC = Exit Tile View\n'
+             '  3 (Joy-3) = Add / remove favorite\n'
+             '  4 (Joy-5) = Change the sort order\n'
+             '  7 (Joy-6) = Choose a category\n'
+             '  5 = Adjust tile brightness\n'
+             '  6 = Bring up the Finder')
+
+
+def side_panel_font(base: wx.Font) -> wx.Font:
+    """The user's normal font (Preferences) at SIDE_PANEL_POINT_SIZE."""
+    font = wx.Font(base)
+    font.SetPointSize(SIDE_PANEL_POINT_SIZE)
+    return font
+
+
+def side_panel_width(font: wx.Font, screen_width: int) -> int:
+    """
+    Wide enough for the longest line of the key list and the headings in this font (translations are often longer
+    than the English), but never narrower than info_panel_width or wider than a third of the screen.
+    """
+    dc = wx.ScreenDC()
+    dc.SetFont(font)
+    lines = instructions_text().splitlines() + [_('Available in this view:'), _('Number of runs:')]
+    widest = max(dc.GetTextExtent(line)[0] for line in lines)
+    return max(info_panel_width, min(widest + 24, screen_width // 3))
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # This is the class for the logo panel
@@ -1867,7 +1930,8 @@ class LogoPanel(wx.Panel):
                  path_to_me_local: str,
                  my_cursor,
                  copyright_local: str,
-                 global_font_normal: wx.Font):
+                 global_font_normal: wx.Font,
+                 width: int = info_panel_width):
         wx.Panel.__init__(self, parent)
 
         # Get the MAME logo image
@@ -1880,7 +1944,7 @@ class LogoPanel(wx.Panel):
                                   f'pfeMAME {version}\n'
                                   f'{copyright_local}\n'
                                   f'MAME Version: {mame_version}',
-                                  size=wx.Size(info_panel_width, 60),
+                                  size=wx.Size(width, -1),
                                   style=wx.ALIGN_LEFT | wx.EXPAND
                                   )
         text_logo.SetFont(global_font_normal)
@@ -1898,43 +1962,35 @@ class LogoPanel(wx.Panel):
 # ----------------------------------------------------------------------------------------------------------------------
 # This is the class for the information panel
 class InfoPanel(wx.Panel):
-    def __init__(self, parent: wx.Panel, my_cursor, global_font_normal_8: wx.Font):
+    def __init__(self, parent: wx.Panel, my_cursor, font: wx.Font, width: int = info_panel_width):
+        """
+        The key list and the selected game's details, in Tile View's side panel.
+
+        :param font: the side panel's font (side_panel_font)
+        :param width: the panel's width (side_panel_width)
+        """
         super().__init__(parent)
 
-        def set_attributes(text_description, text_value):
-            for ctrl, color in [(text_description, 'white'), (text_value, 'green')]:
-                if ctrl:
-                    ctrl.SetFont(global_font_normal_8)
-                    ctrl.SetForegroundColour(color)
-                    ctrl.SetCursor(my_cursor)
+        def styled(control: wx.StaticText, colour: tuple) -> wx.StaticText:
+            control.SetFont(font)
+            control.SetForegroundColour(wx.Colour(*colour))
+            control.SetCursor(my_cursor)
+            return control
+
+        dc = wx.ScreenDC()
+        dc.SetFont(font)
+        line_height = dc.GetTextExtent('Ag')[1]
 
         def create_label_value_pair(label_text: str) -> tuple[wx.StaticText, wx.StaticText]:
-            label = wx.StaticText(self, label=label_text, size=wx.Size(info_panel_width, 15), style=wx.ALIGN_LEFT)
-            value = wx.StaticText(self, label='', size=wx.Size(info_panel_width, 15), style=wx.ALIGN_LEFT)
-            set_attributes(label, value)
+            label = styled(wx.StaticText(self, label=label_text, style=wx.ALIGN_LEFT), SIDE_LABEL_COLOUR)
+            # The value keeps one line and a fixed width, so a long ROM name ends in '...' rather than widening the panel
+            value = styled(wx.StaticText(self, label='', size=wx.Size(width, line_height + 2),
+                                         style=wx.ALIGN_LEFT | wx.ST_NO_AUTORESIZE | wx.ST_ELLIPSIZE_END),
+                           SIDE_VALUE_COLOUR)
             return label, value
 
-        # Instruction block
-        instructions = (_('NAVIGATION:\n'
-                          '  LEFT = Move left\n'
-                          '  RIGHT = Move right\n'
-                          '  UP = Move up\n'
-                          '  DOWN = Move down\n'
-                          '  PGUP / PGDN = Move a page\n'
-                          '  HOME / END = First / last ROM\n'
-                          'ACTIONS:\n'
-                          '  L-CTRL(Joy-2) = Change view mode\n'
-                          '  ALT-1 (Joy-4) = Menu\n'
-                          '  1 / ENTER (Joy-1) = Start the selected ROM\n'
-                          '  2 / ESC = Exit Tile View\n'
-                          '  3 (Joy-3) = Add / remove favorite\n'
-                          '  4 (Joy-5) = Change the sort order\n'
-                          '  7 (Joy-6) = Choose a category\n'
-                          '  5 = Adjust tile brightness\n'
-                          '  6 = Bring up the Finder'))
-
-        text_instructions = wx.StaticText(self, label=instructions, size=wx.Size(info_panel_width, -1), style=wx.ALIGN_LEFT | wx.EXPAND)
-        set_attributes(None, text_instructions)
+        text_instructions = styled(wx.StaticText(self, label=instructions_text(), style=wx.ALIGN_LEFT),
+                                   SIDE_LABEL_COLOUR)
 
         # Info fields
         selected_rom_lbl, self.selected_rom = create_label_value_pair(_('Selected ROM:'))
@@ -1947,7 +2003,7 @@ class InfoPanel(wx.Panel):
         sizer = wx.BoxSizer(wx.VERTICAL)
         sizer.AddSpacer(10)
         sizer.Add(text_instructions, flag=wx.EXPAND)
-        sizer.AddSpacer(30)
+        sizer.AddSpacer(line_height * 2)
 
         for label, value in [(selected_rom_lbl, self.selected_rom),
                              (rom_runs_lbl, self.rom_runs),
@@ -1956,22 +2012,22 @@ class InfoPanel(wx.Panel):
                              (view_mode_lbl, self.view_mode)]:
             sizer.Add(label)
             sizer.Add(value, flag=wx.EXPAND)
-            sizer.AddSpacer(5)
+            sizer.AddSpacer(line_height // 2)
 
-        sizer.AddSpacer(30)
+        sizer.AddSpacer(line_height * 2)
         self.SetSizer(sizer)
 
 
 # ----------------------------------------------------------------------------------------------------------------------
 # This is the class for the ROM information panel
 class RomInfoPanel(wx.lib.scrolledpanel.ScrolledPanel):
-    def __init__(self, parent: wx.Panel, global_font_normal_8: wx.Font):
-        super().__init__(parent, size=wx.Size(info_panel_width, -1))
+    def __init__(self, parent: wx.Panel, global_font_normal_8: wx.Font, width: int = info_panel_width):
+        super().__init__(parent, size=wx.Size(width, -1))
 
         ctrl = wx.richtext.RichTextCtrl(
                                   self,
                                         value=_('ROM Information not available'),
-                                        size=wx.Size(info_panel_width, 10000),
+                                        size=wx.Size(width, 10000),
                                         style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_AUTO_URL | wx.TE_RICH | wx.NO_BORDER | wx.EXPAND
                                     )
         ctrl.SetFont(global_font_normal_8)

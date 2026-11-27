@@ -220,35 +220,6 @@ def on_key_up(event, parent) -> None:
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-def get_column_clicked(clicked_object) -> int:
-    """
-    Determine which column in a multi-column object has been clicked in.  Works with listctrl and ultimatelistctrl
-    and possibly others.
-    Credit to Dev Player for parts of this code.
-
-    :param clicked_object: The object to detect the click within
-
-    :return: An integer containing the column that was clicked
-    """
-    spt = wx.GetMousePosition()
-    fpt = clicked_object.ScreenToClient(spt)
-    x, y = fpt
-    last_col = 0
-    col_selected = None
-    for col in range(clicked_object.GetColumnCount()):
-        col_width = clicked_object.GetColumnWidth(col)
-        left_pxl_col = last_col
-        right_pxl_col = last_col + col_width - 1
-        if left_pxl_col <= x <= right_pxl_col:
-            # Mouse was clicked in the current column "col"; done
-            col_selected = col
-            break
-        # prep for next calculation of next column
-        last_col += col_width
-    return col_selected
-
-
-# ----------------------------------------------------------------------------------------------------------------------
 
 def set_tab_order(controls: list) -> None:
     """

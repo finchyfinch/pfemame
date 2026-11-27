@@ -93,3 +93,40 @@ def test_database_round_trip_and_old_format_rejected(tmp_path):
         db['mylist'] = [row('Pac-Man', 'pacman')]
     with pytest.raises(ValueError):
         rom_database.load_database(old)
+
+
+def test_database_exists(tmp_path):
+    # Start-up checks this before loading, so a deleted / moved database is rebuilt with a plain message instead of
+    # dbm's "db file doesn't exist; use 'c' or 'n' flag to create a new db"
+    path = str(tmp_path / 'mylist.db')
+    assert not rom_database.database_exists(path)
+    rom_database.save_database(path, [row('Pac-Man', 'pacman')], set())
+    assert rom_database.database_exists(path)
+# ------------------------------------------------------------------------------------------------ parents / clones
+def machine(name, cloneof='', status='good'):
+    return rom_database.Machine(name=name, description=name, year='1980', manufacturer='Namco', cloneof=cloneof,
+                                softwarelists=(), has_media=False, roms=(), status=status)
+
+
+def test_machine_info_keeps_only_clones_and_machines_that_dont_work_perfectly():
+    info = rom_database.machine_info([machine('puckman'), machine('pacman', 'puckman'),
+                                      machine('broken', status='preliminary'), machine('odd', status='imperfect'),
+                                      machine('unknown', status='')])
+    assert info == {'pacman': ('puckman', 'good'), 'broken': ('', 'preliminary'), 'odd': ('', 'imperfect')}
+
+
+def test_machine_info_is_saved_with_the_database(tmp_path):
+    path = str(tmp_path / 'mylist.db')
+    rom_database.save_database(path, [row('Pac-Man', 'pacman')], set(), {'pacman': ('puckman', 'good')})
+    assert rom_database.load_machine_info(path, str(tmp_path)) == {'pacman': ('puckman', 'good')}
+
+
+def test_an_older_database_gets_machine_info_from_machines_cache(tmp_path):
+    path = str(tmp_path / 'mylist.db')
+    with shelve.open(path, flag='n') as db:            # What pfeMAME 3.11.1 wrote - no machine_info
+        db['format'] = rom_database.DATABASE_FORMAT
+        db['mylist'] = [row('Pac-Man', 'pacman')]
+    assert rom_database.load_machine_info(path, str(tmp_path)) == {}           # No machines.cache either
+    rom_database.save_machine_cache(str(tmp_path / rom_database.MACHINE_CACHE_NAME), '0.289',
+                                    [machine('puckman'), machine('pacman', 'puckman')])
+    assert rom_database.load_machine_info(path, str(tmp_path)) == {'pacman': ('puckman', 'good')}

@@ -45,7 +45,7 @@ rm -rf build
 and whatever an older build left in `build/exe.*/lib` then gets listed in `lib/pfemame_files.txt` as if pfeMAME
 shipped it, so `program_cleanup` won't remove it either.
 
-## 3. Build, test and zip
+## 3. Build, test and package
 
 ```bash
 chmod +x tools/build_linux_release.sh tools/build_appimage.sh
@@ -63,10 +63,23 @@ This:
    - adds the `lib/` folder to each library's search path (RPATH),
 3. checks `pfeMAME --help` and `pfemame_updater --help` run - a broken build stops here and is not zipped,
 4. writes `dist/pfemame_linux_v<version>.zip` - files at the top level, symlinks kept (`zip -y`) and executable bits
-   preserved, like the published releases.
+   preserved, like the published releases,
+5. writes `dist/pfemame_linux_v<version>.tar.gz` - the same files in a `pfemame_v<version>` folder, with the symlinks
+   and executable bits, owned by root (0) in the archive so it doesn't carry the build machine's user name.
 
-Upload the zip to SourceForge and set it as the default download for Linux so the updater's `best_release.json`
-check finds it.
+Upload both to SourceForge.  **Set the zip as the default download for Linux**: the updater's `best_release.json`
+check downloads the default file, only a zip allows its delta update (just the changed files), and pfeMAME 3.11.1 and
+older only recognise `.zip` / `.7z`.  Newer updaters also install a `.tar.gz` (a full download), so a wrong default
+isn't fatal for them.
+
+The tar.gz is for people installing by hand.  The zip holds the `lib/*.so.N` links as symlinks too, but many archive
+managers and unzip tools don't restore symlinks from a zip - they become small text files and pfeMAME then fails to
+start with a missing-library error.  tar always restores them.  Point manual installs at it:
+
+```bash
+tar -xzf pfemame_linux_v<version>.tar.gz
+./pfemame_v<version>/pfeMAME
+```
 
 ## 4. Check before uploading
 

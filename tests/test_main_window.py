@@ -486,3 +486,307 @@ def test_a_catver_ini_that_cannot_be_read_is_reported(pfemame, monkeypatch, tmp_
         pfemame.MainFrame.build_categories(frame)
     frame._window_is_shown()
     assert shown[0].startswith('Unable to read the catver.ini file')
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Games an alternate emulator brings from its own ROM folder (e.g. Visual Pinball tables) aren't MAME machines
+ENGINES = [['Visual Pinball X', 'vpx.exe', 'tables', 'Pinball', 'True', 'True', 'True', '-play', 'vpx', '___', 't'],
+           ['M2emulator', 'm2.exe', 'Default', 'Arcade', 'True', 'False', 'False', '', 'zip', 'Daytona', 'daytona']]
+
+
+def rom_info(rom_file_name, system_file_name='', rom_name=None):
+    return types.SimpleNamespace(rom_file_name=rom_file_name, rom_name=rom_name or rom_file_name,
+                                 system_file_name=system_file_name, short_name='', favorites_flag=0,
+                                 system_folder_name='')
+
+
+class FakeStatus:
+    def __init__(self):
+        self.text = 'Ready'
+
+    def set_status(self, text):
+        self.text = text
+
+    def get_status_text(self):
+        return self.text
+
+
+def alt_window(pfemame, results, **attributes):
+    ns = window(pfemame, alternate_emulation_engines=ENGINES, statusbar_panel=FakeStatus(),
+                get_virtual_list_row_info=lambda: results, **attributes)
+    for name in ('is_own_folder_engine_row', 'not_for_own_folder_engine'):
+        setattr(ns, name, types.MethodType(getattr(pfemame.MainFrame, name), ns))
+    return ns
+
+
+def test_only_own_folder_emulator_games_are_not_mame_machines(pfemame):
+    frame = alt_window(pfemame, None)
+    assert frame.is_own_folder_engine_row(rom_info('Visual Pinball X', 'Attack from Mars 4.1'))
+    assert not frame.is_own_folder_engine_row(rom_info('daytona'))                  # Supplemental: a MAME game
+    assert not frame.is_own_folder_engine_row(rom_info('nes', 'Tetris (USA).zip'))  # A MAME system program
+    assert not frame.is_own_folder_engine_row(rom_info('Visual Pinball X'))         # No program: not a table row
+
+
+@pytest.mark.parametrize('handler', ['preferences_rom_specific', 'on_verify_roms', 'on_ini_file_reset',
+                                     'on_view_media_types', 'on_xml_info', 'on_controller_mapping', 'on_rom_info',
+                                     'on_force_play_mame', 'on_search_rom_online'])
+def test_mame_only_actions_do_nothing_for_a_visual_pinball_table(pfemame, handler):
+    # Reached from the ribbon and keyboard as well as the right-click menu.  The stand-in has nothing else the
+    # actions use, so going any further than the check would fail.
+    frame = alt_window(pfemame, rom_info('Visual Pinball X', 'Attack from Mars 4.1'))
+    getattr(pfemame.MainFrame, handler)(frame, None)
+    assert frame.statusbar_panel.text == ('Visual Pinball X games are run by Visual Pinball X, not MAME, so this '
+                                          'option is not available for them')
+
+
+def test_table_pictures_keep_their_whole_name(pfemame, tmp_path):
+    snap = tmp_path / 'snap'
+    (snap / 'Visual Pinball X').mkdir(parents=True)
+    (snap / 'nes').mkdir()
+    table = row('Visual Pinball X', 'Visual Pinball X', program='Attack from Mars 4.1')
+    tetris = row('Nintendo', 'nes', program='Tetris (USA).zip')
+    frame = alt_window(pfemame, None, image_options=[(str(snap), 'Snapshots')], image_options_index=0,
+                       mylist=[table, tetris])
+    frame._find_system_row = types.MethodType(pfemame.MainFrame._find_system_row, frame)
+    path = pfemame.MainFrame._compute_image_path(frame, rom_info('Visual Pinball X', 'Attack from Mars 4.1'))
+    assert path == str(snap / 'Visual Pinball X' / 'Attack from Mars 4.1.png')       # Was 'Attack from Mars 4.png'
+    path = pfemame.MainFrame._compute_image_path(frame, rom_info('nes', 'Tetris (USA).zip'))
+    assert path == str(snap / 'nes' / 'Tetris (USA).png')
+
+
+def test_right_click_menu_greys_out_mame_only_options_for_a_table(pfemame):
+    def menu_for(results):
+        parent = alt_window(pfemame, results, system_rom_names=set(),
+                            list=types.SimpleNamespace(Select=lambda item: None))
+        for name in ('on_double_click', 'on_force_play_mame', 'on_suppress_short_version', 'on_rom_info',
+                     'on_view_media_types', 'on_software_browser', 'on_xml_info', 'on_add_favorite',
+                     'delete_favorite', 'on_add_watchlist', 'delete_watchlist', 'on_set_rating',
+                     'preferences_rom_specific', 'on_controller_mapping', 'on_ini_file_reset', 'on_verify_roms',
+                     'on_search_rom_online'):
+            setattr(parent, name, lambda *args: None)
+        return pfemame.MyPopupMenu(parent, 0, ENGINES)
+
+    mame_only = ('on_force_play_mame_id', 'on_rom_info_id', 'on_view_media_types_id', 'on_xml_info_id',
+                 'on_preferences_rom_id', 'on_copy_controller_mappping_id', 'on_ini_file_reset_id',
+                 'on_verify_roms_id', 'on_search_rom_online_id')
+    menu = menu_for(rom_info('Visual Pinball X', 'Attack from Mars 4.1'))
+    assert [name for name in mame_only if menu.IsEnabled(getattr(menu, name))] == []
+    assert menu.IsEnabled(menu.on_double_click_id) and menu.IsEnabled(menu.on_add_favorite_id)
+    assert menu.IsEnabled(menu.on_set_rating_id)
+    menu.Destroy()
+
+    menu = menu_for(rom_info('daytona'))                    # A MAME game run by a Supplemental emulator
+    assert all(menu.IsEnabled(getattr(menu, name)) for name in mame_only)
+    menu.Destroy()
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Starting a game (on_double_click)
+def play_window(pfemame, monkeypatch, game_running=False):
+    import rungame
+    calls = []
+    monkeypatch.setattr(rungame, 'game_running', lambda: game_running)
+    monkeypatch.setattr(rungame, 'RunGame', lambda *args, **kwargs: calls.append('run'))
+    statuses = []
+    frame = window(pfemame, mylist=[row('Pac-Man', 'pacman', favorite='0')], start_up_complete=True,
+                   prefClickFavRating='True', pref_short_name_global_suppress='False',
+                   inactivity_timer=types.SimpleNamespace(Stop=lambda: None),
+                   statusbar_panel=types.SimpleNamespace(set_status=statuses.append),
+                   path_to_mame_ini_file='', path_mame_exe='', folder_mapping='')
+    frame.video_stop = lambda: None
+    frame.messages_append = lambda *args, **kwargs: None
+    frame.get_virtual_list_row_info = lambda: pfemame.RomInfo(
+        rom_name='Pac-Man', rom_file_name='pacman', rom_type='Arcade', system_file_name='', game_rating=0,
+        favorites_flag=0, short_name='')
+    frame._find_system_row = lambda *args: None
+    frame.on_add_favorite = lambda *args: calls.append('favorite')
+    frame.delete_favorite = lambda *args: calls.append('unfavorite')
+    frame.on_set_rating = lambda *args: calls.append('rating')
+    return frame, calls, statuses
+
+
+def grid_double_click(col):
+    import wx.grid
+    return wx.grid.GridEvent(wx.ID_ANY, wx.grid.wxEVT_GRID_CELL_LEFT_DCLICK, None, 0, col)
+
+
+def test_double_click_in_the_favorite_column_uses_the_clicked_column(pfemame, monkeypatch):
+    frame, calls, _statuses = play_window(pfemame, monkeypatch)
+    pfemame.MainFrame.on_double_click(frame, grid_double_click(pfemame.index_favorite))
+    pfemame.MainFrame.on_double_click(frame, grid_double_click(pfemame.index_rating))
+    pfemame.MainFrame.on_double_click(frame, grid_double_click(pfemame.index_rom_name))
+    assert calls == ['favorite', 'rating', 'run']
+
+
+def test_a_start_without_a_clicked_column_always_runs_the_game(pfemame, monkeypatch):
+    frame, calls, _statuses = play_window(pfemame, monkeypatch)
+    pfemame.MainFrame.on_double_click(frame, None)          # Joystick, menu, Random... (no column was clicked)
+    assert calls == ['run']
+
+
+def test_a_second_game_is_not_started_while_one_runs(pfemame, monkeypatch):
+    frame, calls, statuses = play_window(pfemame, monkeypatch, game_running=True)
+    pfemame.MainFrame.on_double_click(frame, None)
+    assert calls == [] and 'already running' in statuses[-1]
+
+
+def test_video_stops_only_when_a_resize_moves_the_video_panel(pfemame):
+    import wx
+    stopped = []
+    panel_rect = [wx.Rect(10, 10, 100, 100)]
+    frame = types.SimpleNamespace(_app_closing=False, video_stop=lambda: stopped.append(True),
+                                  video_player=types.SimpleNamespace(video_panel=types.SimpleNamespace(
+                                      GetRect=lambda: panel_rect[0])))
+    check = types.MethodType(pfemame.MainFrame._stop_video_if_panel_moved, frame)
+    check()
+    check()                                     # e.g. a taller window - the panel stayed where it was
+    assert not stopped
+    panel_rect[0] = wx.Rect(60, 10, 100, 100)   # A wider window moved the panel
+    check()
+    assert stopped == [True]
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# The Messages window can be folded down to its heading
+class FakeControl:
+    def __init__(self, value=''):
+        self.value, self.shown, self.label = value, True, ''
+
+    def Show(self, shown=True):
+        self.shown = shown
+
+    def SetLabel(self, label):
+        self.label = label
+
+    SetLabelText = SetLabel
+
+    def GetValue(self):
+        return self.value
+
+    def AppendText(self, text):
+        self.value += text
+
+    def ShowEnd(self):
+        pass
+
+
+def messages_window(pfemame, monkeypatch, value=''):
+    import iniFile
+    saved = []
+    monkeypatch.setattr(iniFile, 'set_ini_file_variables', lambda data: saved.extend(data) or True)
+    frame = types.SimpleNamespace(messages_shown=True, controlMessages=FakeControl(value),
+                                  messages_toggle=FakeControl(), messages_latest=FakeControl(),
+                                  panel=types.SimpleNamespace(Layout=lambda: None),
+                                  pref_flash_messages_if_error='False')
+    for name in ('show_messages', '_latest_message', 'on_toggle_messages', 'messages_append', 'enable_alert_timer'):
+        setattr(frame, name, types.MethodType(getattr(pfemame.MainFrame, name), frame))
+    return frame, saved
+
+
+def test_hiding_the_messages_shows_the_latest_one_in_the_heading(pfemame, monkeypatch):
+    frame, saved = messages_window(pfemame, monkeypatch, 'first\nsecond\n' + pfemame.MESSAGE_DELIMITER)
+    frame.on_toggle_messages()
+    assert not frame.controlMessages.shown and frame.messages_latest.shown
+    assert frame.messages_latest.label == 'second'                      # Not the dividing line
+    assert frame.messages_toggle.label == pfemame.MESSAGES_HIDDEN_ARROW
+    assert saved == [('system', 'messagescollapsed', 'True')]           # Remembered for the next start
+
+    frame.messages_append('third\n', include_datetime=False)
+    assert frame.messages_latest.label == 'third'                       # Kept up to date while hidden
+
+    frame.on_toggle_messages()
+    assert frame.controlMessages.shown and not frame.messages_latest.shown
+    assert saved[-1] == ('system', 'messagescollapsed', 'False')
+
+
+def test_an_error_alert_opens_hidden_messages_without_changing_the_saved_choice(pfemame, monkeypatch):
+    frame, saved = messages_window(pfemame, monkeypatch)
+    frame.show_messages(False)
+    saved.clear()
+    frame.enable_alert_timer()
+    assert frame.messages_shown and frame.controlMessages.shown
+    assert saved == []                                                  # Still hidden at the next start
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# '&' in a name is shown as it is (wx reads a single '&' in a label as a keyboard shortcut marker)
+def test_a_category_with_an_ampersand_keeps_it(pfemame):
+    import wx
+    from custom_scrolled_panel import CustomScrolledPanel
+    frame = wx.Frame(None)
+    try:
+        stand_in = types.SimpleNamespace(
+            panel_categories=CustomScrolledPanel(frame), categories=['Ball & Paddle'], development=False,
+            debug_start_time=0, development_startup_info=[], application_colors={'text': wx.BLACK},
+            global_font_normal_8=wx.NORMAL_FONT, create_rom_categories_ui=lambda: None,
+            load_categories=lambda: ['Ball & Paddle'], on_update_categories=lambda event: None,
+            build_categories=lambda: ({'arkanoid': 'Ball & Paddle', 'pacman': 'Maze'}, '0.289'),
+            Freeze=lambda: None, Thaw=lambda: None)
+        pfemame.MainFrame.add_rom_categories(stand_in)
+        boxes = {box.GetName(): box for box in stand_in.panel_categories.content.GetChildren()}
+        assert boxes['Ball & Paddle'].GetLabelText() == 'Ball & Paddle'          # Not 'Ball Paddle' / 'Ball _Paddle'
+        assert boxes['Ball & Paddle'].GetValue() and not boxes['Maze'].GetValue()
+    finally:
+        frame.Destroy()
+# ----------------------------------------------------------------------------------------------------------------------
+# Hide clones / Working only apply on top of the view
+def test_hide_clones_and_working_only_apply_to_the_view(pfemame, monkeypatch):
+    import search
+    monkeypatch.setattr(search, '_MACHINE_INFO', {'pacman': ('puckman', 'good'), 'broken': ('', 'preliminary')})
+    ticks = {'hide': False, 'working': False}
+    shown = []
+    frame = window(pfemame, mylist=[row('Puck Man', 'puckman'), row('Pac-Man', 'pacman'), row('Broken', 'broken')],
+                   categories=['Arcade'], filter_cache={}, filtercolumn_cache=0, filtervalue_cache='',
+                   list=types.SimpleNamespace(set_data=shown.append),
+                   check_hide_clones=types.SimpleNamespace(GetValue=lambda: ticks['hide']),
+                   check_working_only=types.SimpleNamespace(GetValue=lambda: ticks['working']))
+    frame._clone_filters = types.MethodType(pfemame.MainFrame._clone_filters, frame)
+
+    def names():
+        pfemame.MainFrame.populate_list(frame, -1, '', read_from_cache=False)
+        return [r[1] for r in shown[-1]]
+
+    assert names() == ['puckman', 'pacman', 'broken']
+    ticks['hide'] = True
+    assert names() == ['puckman', 'broken']
+    ticks['working'] = True
+    assert names() == ['puckman']
+    ticks['hide'] = False
+    assert names() == ['puckman', 'pacman']              # Not an out-of-date cached list
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Jump as you type in the ROMs list
+NAMES = ['Asteroids', 'Galaga', 'Galaxian', 'Pac-Man', 'Space Invaders', 'Star Wars', 'Street Fighter II', 'Tempest']
+
+
+@pytest.mark.parametrize('typed, current, expected', [
+    ('s', 0, 4),            # The next name starting with s
+    ('s', 4, 5),            # Typing it again steps on
+    ('s', 6, 4),            # ... round to the top
+    ('st', 4, 5),           # More letters narrow it, from the current row
+    ('str', 5, 6),
+    ('ss', 4, 5),           # No name starts with 'ss' - steps on like 's'
+    ('gala', 0, 1),
+    ('GALAX', 0, 2),        # Not case-sensitive
+    ('z', 0, None),
+])
+def test_jump_row(pfemame, typed, current, expected):
+    assert pfemame.jump_row(NAMES, typed, current) == expected
+
+
+def test_typing_jumps_and_starts_again_after_a_pause(pfemame):
+    statuses, selected = [], [0]
+    frame = window(pfemame, mylist_filtered=[row(name, name.lower()) for name in NAMES],
+                   statusbar_panel=types.SimpleNamespace(set_status=statuses.append),
+                   list=types.SimpleNamespace(GetFirstSelected=lambda: selected[0]))
+    frame.scroll_list_to = lambda target: selected.__setitem__(0, target)
+    jump = types.MethodType(pfemame.MainFrame.jump_as_you_type, frame)
+    jump('s', now=10.0)
+    jump('t', now=10.3)
+    jump('r', now=10.6)
+    assert selected[0] == 6 and statuses[-1].endswith('str')
+    jump('p', now=12.0)                                  # After a pause: a new start
+    assert selected[0] == 3
+    jump('z', now=12.2)                                  # 'pz' matches nothing - stays put and says so
+    assert selected[0] == 3 and 'pz' in statuses[-1]

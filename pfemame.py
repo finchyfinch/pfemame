@@ -11,7 +11,7 @@ Author Gareth Finch
 This is a front-end for MAME written in Python and using the wx graphical toolkit.  It is cross-platform and has
 been tested in Windows (8, 10, 11), Ubuntu Linux, WSL2-Ubuntu, and macOS.
 Minimum requirements are;
- python 3.14 or later (64 bit)
+ python 3.10 or later (64 bit) - tested with 3.10 to 3.14; the Windows build uses 3.14
  wxPython 4.2.2 or later
  pypubsub
  python-docx
@@ -152,10 +152,13 @@ import rungame
 import functions
 import scrolledwindow
 import rom_database
+from emulator_config import own_folder_engine_names, program_image_name
+from tile_grid_model import entry_display_name, program_label
 import views
 import backup
 import updater_client
 import search
+import search_help
 import play_stats
 import software_browser
 import xmlinfo
@@ -178,7 +181,7 @@ from custom_scrolled_panel import CustomScrolledPanel
 from custom_drop_down import ModernDropdown, EVT_DROPDOWN_SELECTION
 
 # Define Constants here
-__version__ = '3.10.2'
+__version__ = '3.11.1'
 __author__ = 'Gareth Finch'
 __copyright__ = u'(c)Gareth Finch 2014 - 2026'
 __credits__ = ['']
@@ -212,6 +215,7 @@ class RomInfo:
     system_folder_name: str = ''
 
 MESSAGE_DELIMITER = '-' * 100 + '\n'
+MESSAGES_SHOWN_ARROW, MESSAGES_HIDDEN_ARROW = '\u25bc', '\u25b6'        # The Messages heading's show / hide arrow
 
 # ROM list views: language-neutral keys and their filters (see views.py)
 VIEW_KEYS = views.VIEW_KEYS
@@ -327,12 +331,21 @@ class MainFrame(wx.Frame):
     # ------------------------------------------------------------------------------------------------------------------
     # Process any cleanup actions needed when the window is resized
     def on_resize(self, event):
-        new_size = event.GetSize()
-        old_size = getattr(self, '_last_frame_size', None)
-        self._last_frame_size = new_size
-        if old_size is not None and new_size != old_size:
-            self.video_stop()
+        # The video is stopped only if the resize moved or resized the video panel (a playing video panel left
+        # behind in its old place showed floating remnants).  Most resizes - a taller window, a restore from
+        # minimised - don't move it.  The check waits for the sizers to lay the window out again.
         event.Skip()
+        wx.CallAfter(self._stop_video_if_panel_moved)
+
+    def _stop_video_if_panel_moved(self) -> None:
+        video_player = getattr(self, 'video_player', None)
+        if self._app_closing or video_player is None or not self:
+            return
+        rect = video_player.video_panel.GetRect()   # Relative to the main panel: moving the window isn't a change
+        old_rect = getattr(self, '_last_video_panel_rect', None)
+        self._last_video_panel_rect = rect
+        if old_rect is not None and rect != old_rect:
+            self.video_stop()
 
     # --------------------------------------------------------------------------------------------------------------
     def initialize_member_variables(self):
@@ -405,6 +418,9 @@ class MainFrame(wx.Frame):
         # Set of MAME machine (ROM) names that are 'systems' - i.e. they expose one or more software lists (or
         # loadable media) in the -listxml output.  Populated during the ROMs database build.
         self.system_rom_names = set()
+        # {machine name: (parent, driver status)} for clones and machines that don't work perfectly (see
+        # rom_database.machine_info) - for the Hide clones / Working only tick boxes and is:clone / is:working
+        self.machine_info = {}
 
     # ------------------------------------------------------------------------------------------------------------------
     def setup_platform(self):
@@ -458,6 +474,27 @@ class MainFrame(wx.Frame):
     def load_alternate_emulator_engines(self):
         (self.alternate_emulation_engines,
          self.alternate_emulation_engines_error) = functions.load_other_emulators_detail(self.path_to_me)
+
+    # --------------------------------------------------------------------------------------------------------------
+    # Games that an alternate emulator brings from a ROM folder of its own (Additional mode, e.g. Visual Pinball
+    # tables) aren't MAME machines, so MAME-only actions (ROM preferences, Verify ROM, ...) don't apply to them
+    def is_own_folder_engine_row(self, results) -> bool:
+        """True if the RomInfo results are for a game of an alternate emulator with its own ROM folder."""
+        return bool(results.system_file_name) and \
+            results.rom_file_name in own_folder_engine_names(self.alternate_emulation_engines)
+
+    def not_for_own_folder_engine(self, results=None) -> bool:
+        """
+        For MAME-only actions: if the selected game belongs to an alternate emulator with its own ROM folder, say why
+        the action isn't available and return True (the action then does nothing).
+        """
+        results = results or self.get_virtual_list_row_info()
+        if not self.is_own_folder_engine_row(results):
+            return False
+        self.statusbar_panel.set_status(
+            _('{emulator} games are run by {emulator}, not MAME, so this option is not available for them').format(
+                emulator=results.rom_file_name))
+        return True
 
     # --------------------------------------------------------------------------------------------------------------
     # Log various versions information
@@ -697,9 +734,10 @@ class MainFrame(wx.Frame):
         self.controlSearch = wx.SearchCtrl(
                                      self.panel,
                                            style=wx.TE_PROCESS_ENTER,
-                                           size=self.FromDIP(wx.Size(200, -1))
+                                           size=self.FromDIP(wx.Size(280, -1))
                                           )
         self.controlSearch.ShowCancelButton(True)
+        self.controlSearch.SetDescriptiveText(_(search.HINT_TEXT))   # Shown while the box is empty
         self.controlSearch.SetToolTip(_(search.HELP_TEXT))
         self.controlSearch.SetBackgroundColour(self.application_colors['window_background'])
         self.controlSearch.SetForegroundColour(self.application_colors['text'])
@@ -708,6 +746,48 @@ class MainFrame(wx.Frame):
                                       flag=wx.ALL | wx.ALIGN_CENTER_VERTICAL,
                                       border=self.FromDIP(1))
         self.controlSearch.Bind(wx.EVT_TEXT, self.on_search_dynamic)
+
+        # '?' - the cheat sheet of search terms (search_help.py)
+        height = self.controlSearch.GetBestSize().height
+        self.search_help_button = functions.build_one_button(
+            self.panel, '?', self.on_search_help, tooltip=_('Search help: every kind of search term, with examples'),
+            vertical_size=height, horizontal_size=max(height, self.FromDIP(24)))
+        self.search_help_button.SetFont(self.global_font_bold)
+        self.sizer_horizontal_top.Add(self.search_help_button, proportion=0,
+                                      flag=wx.ALL | wx.ALIGN_CENTER_VERTICAL, border=self.FromDIP(1))
+
+        # Hide clones / Working only - on top of any view or search, remembered for the next start
+        self.sizer_horizontal_top.AddSpacer(self.FromDIP(12))
+        self.check_hide_clones = wx.CheckBox(self.panel, label=_('Hide clones'))
+        self.check_hide_clones.SetToolTip(_('Leave out clones (other versions of a game - regional versions, '
+                                            'bootlegs...) and show only the parent sets'))
+        self.check_working_only = wx.CheckBox(self.panel, label=_('Working only'))
+        self.check_working_only.SetToolTip(_('Leave out the machines MAME marks as not working (those that work '
+                                             'with some problems are still shown)'))
+        for check, key in ((self.check_hide_clones, 'hideclones'), (self.check_working_only, 'workingonly')):
+            check.SetValue(iniFile.read_ini_file('system', key) == 'True')
+            check.SetForegroundColour(self.application_colors['text'])
+            check.SetBackgroundColour(self.application_colors['window_background'])
+            check.Bind(wx.EVT_CHECKBOX, self.on_clone_filter_changed)
+            self.sizer_horizontal_top.Add(check, proportion=0, flag=wx.ALL | wx.ALIGN_CENTER_VERTICAL,
+                                          border=self.FromDIP(4))
+
+    def on_clone_filter_changed(self, _event=None) -> None:
+        """A Hide clones / Working only tick box changed: save it and show the list again (keeping any search)."""
+        iniFile.set_ini_file_variables([('system', 'hideclones', str(self.check_hide_clones.GetValue())),
+                                        ('system', 'workingonly', str(self.check_working_only.GetValue()))])
+        self.on_filter_rom_list(preserve_search=True)
+
+    def on_search_help(self, _event=None) -> None:
+        """Show the search terms cheat sheet under the search box."""
+        popup = search_help.SearchHelpPopup(self, self.application_colors, self.add_search_term)
+        popup.show_below(self.controlSearch)
+
+    def add_search_term(self, term: str) -> None:
+        """Add a cheat sheet example to the search (which then runs, as for typing)."""
+        self.controlSearch.SetValue(search.add_term(self.controlSearch.GetValue(), term))
+        self.controlSearch.SetFocus()
+        self.controlSearch.SetInsertionPointEnd()
 
     # ------------------------------------------------------------------------------------------------------------------
     # Create the versions text fields
@@ -850,10 +930,24 @@ class MainFrame(wx.Frame):
     # --------------------------------------------------------------------------------------------------------------
     # Add the messages box
     def _setup_messages_window(self):
+        # The heading: a show / hide arrow, 'Messages:' and - while the window is hidden - the latest message
+        self.messages_toggle = wx.StaticText(self.panel, -1, MESSAGES_SHOWN_ARROW)
         label_messages = wx.StaticText(self.panel, -1, _('Messages:'))
+        self.messages_latest = wx.StaticText(self.panel, -1, '', style=wx.ST_ELLIPSIZE_END | wx.ST_NO_AUTORESIZE)
+        self.messages_latest.SetMinSize(wx.Size(1, -1))     # A long message is cut short ('...'), never widens it
+        for control in (self.messages_toggle, label_messages, self.messages_latest):
+            control.SetForegroundColour(self.application_colors['text'])
+            control.SetBackgroundColour(self.application_colors['text_background'])
+        self.messages_toggle.SetFont(self.global_font_bold)
         label_messages.SetFont(self.global_font_bold)
-        label_messages.SetForegroundColour(self.application_colors['text'])
-        label_messages.SetBackgroundColour(self.application_colors['text_background'])
+        self.messages_latest.SetFont(self.global_font_normal_8)
+        for control in (self.messages_toggle, label_messages):
+            control.SetCursor(wx.Cursor(wx.CURSOR_HAND))
+            control.SetToolTip(_('Click to show or hide the messages'))
+            control.Bind(wx.EVT_LEFT_DOWN, self.on_toggle_messages)
+        self.messages_latest.Bind(wx.EVT_LEFT_DOWN, self.on_toggle_messages)
+        self.messages_latest.SetToolTip(_('Click to show the messages'))
+        self.messages_latest.SetCursor(wx.Cursor(wx.CURSOR_HAND))
 
         self.controlMessages = CustomTextCtrl(self.panel, style=wx.TE_MULTILINE | wx.TE_READONLY | wx.NO_BORDER)
         self.controlMessages.SetFont(self.global_font_normal_8)
@@ -866,9 +960,11 @@ class MainFrame(wx.Frame):
         self.controlMessages.SetMinSize(self.FromDIP(wx.Size(400, 120)))
         self.controlMessages.SetMaxLines(MESSAGES_MAX_LINES)     # The oldest messages are dropped after this
 
-        self.sizer_messages.Add(label_messages, proportion=0,
-                                flag=wx.ALL | wx.ALIGN_LEFT,
-                                border=self.FromDIP(2))
+        heading = wx.BoxSizer(wx.HORIZONTAL)
+        heading.Add(self.messages_toggle, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, self.FromDIP(4))
+        heading.Add(label_messages, 0, wx.ALIGN_CENTER_VERTICAL)
+        heading.Add(self.messages_latest, 1, wx.ALIGN_CENTER_VERTICAL | wx.LEFT, self.FromDIP(8))
+        self.sizer_messages.Add(heading, proportion=0, flag=wx.ALL | wx.EXPAND, border=self.FromDIP(2))
 
         self.sizer_messages.Add(self.controlMessages,
                                 proportion=1,
@@ -886,6 +982,41 @@ class MainFrame(wx.Frame):
                                        flag=wx.EXPAND | wx.ALL,
                                        border=self.FromDIP(4)
                                        )
+
+        # Hidden last time pfeMAME closed?
+        self.messages_shown = True
+        if iniFile.read_ini_file('system', 'messagescollapsed') == 'True':
+            self.show_messages(False, remember=False)
+
+    # ------------------------------------------------------------------------------------------------------------------
+    # The Messages window can be folded down to its heading line, giving the ROMs list the room.  It opens by itself
+    # when an error alert is raised (see enable_alert_timer), so errors are never hidden.
+    def on_toggle_messages(self, _event=None) -> None:
+        self.show_messages(not self.messages_shown)
+
+    def show_messages(self, shown: bool, remember: bool = True) -> None:
+        """
+        Show or hide the Messages window.  remember: save the choice in pfemame.ini for the next start (not for an
+        error opening it).
+        """
+        self.messages_shown = shown
+        self.controlMessages.Show(shown)
+        self.messages_toggle.SetLabel(MESSAGES_SHOWN_ARROW if shown else MESSAGES_HIDDEN_ARROW)
+        self.messages_latest.SetLabelText('' if shown else self._latest_message())
+        self.messages_latest.Show(not shown)
+        if remember:
+            iniFile.set_ini_file_variables([('system', 'messagescollapsed', str(not shown))])
+        self.panel.Layout()
+
+    def _latest_message(self, text: str | None = None) -> str:
+        """The last line of the given text (all of the messages if none), leaving out the dividing lines."""
+        if text is None:
+            text = self.controlMessages.GetValue()
+        for line in reversed(text.splitlines()):
+            line = line.strip()
+            if line and line.strip('-'):
+                return line
+        return ''
 
     # ------------------------------------------------------------------------------------------------------------------
     # Build the ROM categories, create the categories box and setup
@@ -1141,7 +1272,8 @@ class MainFrame(wx.Frame):
 
         checkboxes = []
         for category in sorted(set(category_dict.values())):
-            cb = wx.CheckBox(self.panel_categories.content, label=category, name=category)
+            # '&&': a single & would be read as a keyboard shortcut marker ('Ball & Paddle' showed as 'Ball _Paddle')
+            cb = wx.CheckBox(self.panel_categories.content, label=category.replace('&', '&&'), name=category)
             cb.Bind(wx.EVT_CHECKBOX, self.on_update_categories)
             cb.SetValue(category in self.categories)
             checkboxes.append(cb)
@@ -1897,6 +2029,8 @@ class MainFrame(wx.Frame):
         Enable the alert color strobing timer
         :return:
         """
+        if not getattr(self, 'messages_shown', True):
+            self.show_messages(True, remember=False)     # An error is never left hidden
         if self.pref_flash_messages_if_error == 'True':
             self.alert_timer.Start(50)
             msg = _('IMPORTANT NOTIFICATION:  '
@@ -2090,7 +2224,7 @@ class MainFrame(wx.Frame):
         """
 
         def prompt_for_update(parent: wx.Window, current_version: str, new_version: str, download_url: str,
-                              launch_callback) -> None:
+                              launch_callback, checksum: str = '') -> None:
             """
             Prompt the user to confirm downloading and installing an update.
 
@@ -2099,14 +2233,10 @@ class MainFrame(wx.Frame):
             :param new_version: Latest available version string
             :param download_url: URL to the update file
             :param launch_callback: Function to call with download_url if user agrees
+            :param checksum: The download's checksum ('' if SourceForge didn't give one - the user is told)
             """
-            dlg = wx.RichMessageDialog(
-                parent,
-                _('A newer version of pfeMAME is available.\n\nYou have version {0}, and version {1} is available.\n\n'
-                  'Would you like to download and install it now?').format(current_version, new_version),
-                _('New Version Available'),
-                wx.YES_NO | wx.ICON_INFORMATION
-            )
+            text, style = update_prompt(current_version, new_version, checksum)
+            dlg = wx.RichMessageDialog(parent, text, _('New Version Available'), style)
             dlg.ShowCheckBox(_("Don't check for updates on startup"))
 
             result = dlg.ShowModal()
@@ -2134,7 +2264,7 @@ class MainFrame(wx.Frame):
                 dlg = wx.MessageDialog(parent, text, caption, style)
             else:
                 dlg = wx.RichMessageDialog(parent, text, caption, style)
-                dlg.ShowCheckBox(_("Don't check software on startup"))
+                dlg.ShowCheckBox(_("Don't check for updates on startup"))
 
             dlg.ShowModal()
 
@@ -2189,7 +2319,8 @@ class MainFrame(wx.Frame):
                                                                __version__,
                                                                online_version,
                                                                download_url,
-                                                               lambda url: self.launch_updater(url, checksum)))
+                                                               lambda url: self.launch_updater(url, checksum),
+                                                               checksum))
                     else:
                         msg = _('You already have the latest version')
                         self.my_logger.info(msg)
@@ -2441,6 +2572,8 @@ class MainFrame(wx.Frame):
         :return:
         """
         self.controlMessages.Clear()
+        if not self.messages_shown:
+            self.messages_latest.SetLabel('')
 
     # ------------------------------------------------------------------------------------------------------------------
     def on_copy_messages(self, _event) -> None:
@@ -2565,6 +2698,8 @@ class MainFrame(wx.Frame):
     # If it already exists, then delete it and recreate.  This is done so that the tab changes with changed
     # ROMs.
     def preferences_rom_specific(self, _event=None) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         if not preferences.mame_executable_found(self.path_mame_exe):
             functions.show_error_dialog(self, _('Unable to find the MAME executable path.  Check the file path settings.'),
                                         _('ERROR'))
@@ -2852,7 +2987,7 @@ class MainFrame(wx.Frame):
             self.my_logger.info(msg)
             self.messages_append(f'{msg}\n', True)
             # Go back to the ROMs database saved by the last complete build (if there is one)
-            if not self.try_load_cached_database():
+            if not self.try_load_cached_database(quiet=True):
                 self.mylist = []
             finish()
             self.statusbar_panel.set_status(msg)
@@ -2871,6 +3006,8 @@ class MainFrame(wx.Frame):
         self.availableRoms = result.available_roms
         self.system_rom_names = result.system_rom_names
         search.set_system_names(self.system_rom_names)
+        self.machine_info = result.machine_info
+        search.set_machine_info(self.machine_info)
         self.my_logger.info(f'ROMs database build: {len(self.mylist):,} rows, {result.available_roms:,} exist, '
                             f'{result.clones_added} merged-set clones, machine list from '
                             f'{"cache" if result.machines_from_cache else "MAME"}, timings {result.timings}')
@@ -2917,20 +3054,41 @@ class MainFrame(wx.Frame):
     def show_mame_path_error(self) -> None:
         functions.show_error_dialog(self, _('Unable to find the MAME executable.'), _('ERROR'))
 
-    def try_load_cached_database(self) -> bool:
+    def try_load_cached_database(self, quiet: bool = False) -> bool:
+        """
+        Load the ROMs database saved by the last build.  False if there isn't a usable one (the caller rebuilds).
+        quiet: don't add anything to the messages window (used after a cancelled rebuild).
+        """
+        path = os.path.join(self.data_dir, rom_database.DATABASE_NAME)
+        if not rom_database.database_exists(path):
+            # Normal after the data files were deleted or moved (the INI file still has a cache date).  This used to
+            # show dbm's own "db file doesn't exist; use 'c' or 'n' flag to create a new db" in the messages window.
+            self.my_logger.info(f'No saved ROMs database at {path}')
+            if not quiet:
+                self.messages_append(_('No saved ROMs database was found, so a new one will be built') + '\n', True)
+            return False
+
         self.my_logger.info(_('Started reading the temporary ROMs database file'))
         try:
-            self.mylist, self.system_rom_names = rom_database.load_database(
-                os.path.join(self.data_dir, rom_database.DATABASE_NAME))
+            self.mylist, self.system_rom_names = rom_database.load_database(path)
             if not self.mylist:
                 raise ValueError(_('The ROMs database is empty. Forcing full rebuild.'))
             self.availableRoms = sum(1 for row in self.mylist if row[index_exists] == '1')
             search.set_system_names(self.system_rom_names)
+            self.machine_info = rom_database.load_machine_info(path, self.data_dir)
+            search.set_machine_info(self.machine_info)
             self.my_logger.info(_('Completed reading the temporary ROMs database file'))
             return True
-        except Exception as e:
+        except ValueError as e:         # Our own (readable) reasons: empty, older version, column count
             self.my_logger.error(str(e))
-            self.messages_append(f'{str(e)}\n', True)
+            if not quiet:
+                self.messages_append(f'{str(e)}\n', True)
+            return False
+        except Exception as e:          # Damaged file etc. - the details are for the log, not the user
+            self.my_logger.error(f'Unable to read the ROMs database {path}: {e}')
+            if not quiet:
+                self.messages_append(_('The saved ROMs database could not be read, so a new one will be built')
+                                     + '\n', True)
             return False
 
     def refresh_ui_post_database(self) -> None:
@@ -2969,22 +3127,17 @@ class MainFrame(wx.Frame):
                 languagepicker.show_restart_note(self, dlg.chosen)
             dlg.Destroy()
 
-        msg = _("""
-It Looks like this is the first time you have run pfeMAME
-as the INI file data is missing.  Your first step is to 
-set up the necessary file paths to MAME files and supporting
-folders.
-
-Please open EDIT > File Paths and set the MAME 
-executable file path and ROMS folder as a minimum.  
-NOTE:  You can use the Auto Find option in the file paths 
-window to make this a lot easier in most cases.
-
-After this you need to select some ROM categories (the right of the screen).
-Then restart the application and refresh the ROMs database using
-VIEW > Refresh ROMs Database.
-        """
-                )
+        # (The File Paths tab is opened once this box is closed - see _initial_setup_after_database.  All the ROM
+        # categories are ticked below, so the user doesn't have to choose any.)
+        msg = _('pfeMAME doesn\'t know where MAME and your ROMs are yet.  This is normal the first time you run '
+                'pfeMAME.\n\n'
+                'When you click OK, the File Paths tab opens.  Set the MAME executable and the ROMs folder as a '
+                'minimum.  The easiest way is to click AUTO FIND and choose your MAME folder.  You can also '
+                'double-click any row to browse for a file or folder.\n\n'
+                'When the paths look right, click APPLY and let pfeMAME restart.  It then builds the ROMs database '
+                'by itself.\n\n'
+                'Later, after adding ROMs or updating MAME, press F5 or click Refresh on the File tab to refresh '
+                'the ROMs database.')
         title = _('MAME file path or ROMS folder not found')
         functions.show_information_dialog(self, msg, title)
 
@@ -2999,7 +3152,7 @@ VIEW > Refresh ROMs Database.
         self.my_logger.info(_('Writing the temporary ROMs database file'))  # Write to the log file
         try:
             rom_database.save_database(os.path.join(self.data_dir, rom_database.DATABASE_NAME), self.mylist,
-                                       self.system_rom_names)
+                                       self.system_rom_names, self.machine_info)
         except (IOError, OSError):
             self.my_logger.error(_('Unable to write the temporary ROMs database file'))  # Write to the log file
 
@@ -3139,6 +3292,36 @@ VIEW > Refresh ROMs Database.
             self.on_close()
         elif key_code == wx.WXK_F10 and shift_down:
             self.show_rom_menu(self.list.GetFirstSelected())     # SHIFT-F10 opens the right-click menu
+        elif not control_down and not event.AltDown():
+            character = event.GetUnicodeKey()
+            if character != wx.WXK_NONE and chr(character).isprintable():
+                self.jump_as_you_type(chr(character))
+
+    # ------------------------------------------------------------------------------------------------------------------
+    # Jump as you type: letters typed in the ROMs list go to the first ROM whose name starts with them, as in a file
+    # manager.  Nothing is filtered out.  The typed text starts again after a pause; pressing the same letter again
+    # moves on to the next ROM starting with it.
+    def jump_as_you_type(self, character: str, now: float | None = None) -> None:
+        now = time.monotonic() if now is None else now
+        typed = getattr(self, '_jump_typed', '')
+        if now - getattr(self, '_jump_last_key', 0.0) > JUMP_TYPING_PAUSE:
+            typed = ''
+        self._jump_last_key = now
+        typed += character.lower()
+        self._jump_typed = typed
+
+        row = jump_row([line[index_rom_name] for line in self.mylist_filtered], typed,
+                       max(0, self.list.GetFirstSelected()))
+        if row is None:
+            self.statusbar_panel.set_status(_('No ROM name starts with "{}"').format(typed))
+            wx.Bell()
+            return
+        message = _('Go to: {}').format(typed)
+        self.statusbar_panel.set_status(message)
+        if row != self.list.GetFirstSelected():
+            self.scroll_list_to(row)
+            # Selecting the ROM shows its details in the status bar - put the typed text back after that
+            wx.CallAfter(self.statusbar_panel.set_status, message)
 
     # ------------------------------------------------------------------------------------------------------------------
     def scroll_list_by_page(self, modifier: int) -> None:
@@ -3200,7 +3383,8 @@ VIEW > Refresh ROMs Database.
         if system_file_name:
             rom_file_name = f'{rom_file_name}-->{rom_name}-->{system_file_name}'
 
-        confirm_msg = _('Are you sure you want to remove {} from favorites?').format(rom_file_name)
+        confirm_msg = _('Are you sure you want to remove {} from favorites?').format(
+            entry_display_name(rom_file_name))
         confirm_title = _('Confirm Remove From Favorites')
 
         dlg = wx.MessageDialog(None, confirm_msg, confirm_title, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION)
@@ -3229,7 +3413,7 @@ VIEW > Refresh ROMs Database.
         # self.load_all_dat_files()
         self.on_filter_rom_list(preserve_selection=True, preserve_search=True)
 
-        msg = _('Romset {} removed from favorites').format(rom_file_name)
+        msg = _('Romset {} removed from favorites').format(entry_display_name(rom_file_name))
         self.statusbar_panel.set_status(msg)
         self.Refresh()
         self.my_logger.info(msg)
@@ -3254,7 +3438,7 @@ VIEW > Refresh ROMs Database.
             rom_file_name = results.rom_file_name
             rom_name = results.rom_name
             system_file_name = results.system_file_name
-            display_name = f'{rom_file_name}-->{rom_name}-->{system_file_name}' if system_file_name else rom_file_name
+            display_name = program_label(rom_name, system_file_name) if system_file_name else rom_file_name
 
             confirm_msg = _('Are you sure you want to remove {} from watchlist?').format(display_name)
             confirm_title = _('Confirm Remove From Watchlist')
@@ -3289,7 +3473,7 @@ VIEW > Refresh ROMs Database.
         # self.load_all_dat_files()
         self.on_filter_rom_list(preserve_selection=True, preserve_search=True)
 
-        msg = _('Romset {} removed from watchlist').format(rom_file_name)
+        msg = _('Romset {} removed from watchlist').format(entry_display_name(rom_file_name))
         self.statusbar_panel.set_status(msg)
         self.Refresh()
         self.my_logger.info(msg)
@@ -3444,11 +3628,13 @@ VIEW > Refresh ROMs Database.
             # system_file_name not found → fallback to default 0000.png
             return os.path.join(image_path, f"{rom_file_name}", "0000.png")
 
+        own_folder_engines = own_folder_engine_names(self.alternate_emulation_engines)
+
         def get_file_name(program_name):
             if not program_name:
                 return ''
-            if rom_file_name != "visualpinball":
-                program_name = os.path.splitext(program_name)[0]
+            # Keeps a table name such as '... 4.1' whole (only MAME program file names lose their extension)
+            program_name = program_image_name(rom_file_name, program_name, own_folder_engines)
             return os.path.join(image_path, rom_file_name, f"{program_name}.png")
 
         short_name_file = get_file_name(short_name_source)
@@ -3501,8 +3687,9 @@ VIEW > Refresh ROMs Database.
             )
             # Best names available without shelling out to MAME.  The worker below upgrades them to the software
             # list description ('Super Mario Bros.') when MAME can resolve one.
-            short_name = results.short_name or os.path.splitext(results.system_file_name)[0]
-            full_name = os.path.splitext(results.system_file_name)[0]
+            full_name = program_image_name(results.rom_file_name, results.system_file_name,
+                                           own_folder_engine_names(self.alternate_emulation_engines))
+            short_name = results.short_name or full_name
             display_name = f'{full_name} ({results.rom_name})'
         else:
             system = None
@@ -3631,6 +3818,8 @@ VIEW > Refresh ROMs Database.
         searches online for the selected ROM's ZIP, validates the top candidates against the running MAME version,
         and presents them in a picker.  The chosen ZIP is saved to the MAME rompath folder.
         """
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         download_folder = self._rom_download_folder()
         if not download_folder:
             self.statusbar_panel.set_status(_('No ROM folder (rompath) is configured'))
@@ -4061,9 +4250,12 @@ VIEW > Refresh ROMs Database.
         selected_row = self.get_virtual_list_row_info()
 
         # Allow a double click in the favorites column or the ROM rating column to make a change to those settings
-        # but not actually run the ROM
-        if self.start_up_complete and not ignore_columns and self.prefClickFavRating == 'True':
-            column_selected = functions.get_column_clicked(self.list)  # Get the column that was clicked in
+        # but not actually run the ROM.  Only a real double click in the list counts: the grid event says which
+        # column was clicked (the mouse position doesn't allow for the list being scrolled sideways, and a menu,
+        # joystick or keyboard start has no clicked column at all).
+        if (self.start_up_complete and not ignore_columns and self.prefClickFavRating == 'True'
+                and isinstance(_event, wx.grid.GridEvent)):
+            column_selected = _event.GetCol()
 
             if column_selected == index_favorite:
                 # If the ROM is not currently flagged as a favorite, then make it one, otherwise remove it from
@@ -4077,6 +4269,14 @@ VIEW > Refresh ROMs Database.
             if column_selected == index_rating:
                 self.on_set_rating(_event)
                 return
+
+        # One game at a time: a second one would swap the same INI / input mapping files under the first
+        if rungame.game_running():
+            msg = _('A game is already running - close it before starting another one')
+            self.statusbar_panel.set_status(msg)
+            self.messages_append(f'{msg}\n')
+            wx.Bell()
+            return
 
         # If the names were not passed into the function call, then get them from the curerntly selected row
         if not rom_file_name:
@@ -4470,7 +4670,7 @@ VIEW > Refresh ROMs Database.
 
         self.on_filter_rom_list(preserve_selection=True, preserve_search=True)  # Force an update of the ROM list to show the ROM now selected as a favorite
 
-        msg = _('ROM set {} added to favorites').format(rom_file_name)
+        msg = _('ROM set {} added to favorites').format(entry_display_name(rom_file_name))
         self.statusbar_panel.set_status(msg)
         self.Refresh()
         self.my_logger.info(msg)
@@ -4497,7 +4697,7 @@ VIEW > Refresh ROMs Database.
                           _('ERROR - Already Favourite'))
             return
 
-        self.my_logger.info(_('Adding ROM {} to watchlist').format(rom_file_name))  # Write to the log file
+        self.my_logger.info(_('Adding ROM {} to watchlist').format(entry_display_name(rom_file_name)))  # Write to the log file
 
         # (rom_file_name/index were looked up above - a second lookup with the already-suffixed system-program
         # name found no row and raised StopIteration)
@@ -4522,7 +4722,7 @@ VIEW > Refresh ROMs Database.
 
         self.on_filter_rom_list(preserve_selection=True, preserve_search=True)  # Force an update of the ROM list to show the ROM now selected as a watchlist
 
-        msg = _('ROM set {} added to watchlist').format(rom_file_name)
+        msg = _('ROM set {} added to watchlist').format(entry_display_name(rom_file_name))
         self.statusbar_panel.set_status(msg)
         self.Refresh()
         self.my_logger.info(msg)
@@ -4726,7 +4926,8 @@ VIEW > Refresh ROMs Database.
         self.filtervalue_cache = filtervalue
 
         # Include categories in cache key to ensure correctness when categories change
-        key = (filtercolumn, filtervalue.lower(), tuple(sorted(self.categories)))
+        hide_clones, working_only = self._clone_filters()
+        key = (filtercolumn, filtervalue.lower(), tuple(sorted(self.categories)), hide_clones, working_only)
         if read_from_cache and key in self.filter_cache:
             mylist_filtered = self.filter_cache[key]
         else:
@@ -4745,6 +4946,8 @@ VIEW > Refresh ROMs Database.
             for line in self.mylist:
                 category = line[index_category]
                 if category not in categories_local:
+                    continue
+                if (hide_clones or working_only) and not search.keep_row(line, hide_clones, working_only):
                     continue
 
                 if filtercolumn == 1:
@@ -4775,6 +4978,12 @@ VIEW > Refresh ROMs Database.
         self.mylist_filtered = mylist_filtered
         self.list.set_data(mylist_filtered)
         return len(mylist_filtered)
+
+    def _clone_filters(self) -> tuple[bool, bool]:
+        """(Hide clones, Working only) as ticked - both off before the tick boxes exist (e.g. a command line count)."""
+        hide = getattr(self, 'check_hide_clones', None)
+        working = getattr(self, 'check_working_only', None)
+        return bool(hide and hide.GetValue()), bool(working and working.GetValue())
 
     # ------------------------------------------------------------------------------------------------------------------
     # This function processes the ROM filter combo box selection event
@@ -4971,6 +5180,8 @@ VIEW > Refresh ROMs Database.
     # Execute the mame command '-verifyroms' and pass the output to the message box.  Then do the same using
     # -verifysamples but only pass the output if there are supposed to be samples.
     def on_verify_roms(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         results = self.get_virtual_list_row_info()
         rom_file_name = results.rom_file_name
 
@@ -5007,6 +5218,8 @@ VIEW > Refresh ROMs Database.
     # It is intended to be used with systems (e.g. ZX Spectrum) where the system is capable of running a number
     # of types of program with different media extensions (e.g. .tap, .bin)
     def on_view_media_types(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         rom_file_name = self.get_virtual_list_row_info().rom_file_name
 
         if rom_file_name:
@@ -5021,6 +5234,8 @@ VIEW > Refresh ROMs Database.
     # ------------------------------------------------------------------------------------------------------------------
     # Get MAME rom information
     def on_rom_info(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         results = self.get_virtual_list_row_info()
         rom_file_name = results.rom_file_name
         rom_name = results.rom_name
@@ -5409,6 +5624,10 @@ VIEW > Refresh ROMs Database.
         lines = s.splitlines()
         if lines:
             self.controlMessages.AppendText('\n'.join(lines) + '\n')
+            if not getattr(self, 'messages_shown', True):
+                latest = self._latest_message(s)
+                if latest:
+                    self.messages_latest.SetLabelText(latest)
 
     # ------------------------------------------------------------------------------------------------------------------
     # Reset the ROMs list column spacing back to default
@@ -5451,6 +5670,8 @@ VIEW > Refresh ROMs Database.
     # This function looks up the short name information for the selected system program in the XML file data.
     # It looks for file size and hash info and compares against the file found.  The comparison is shown as a pop-up.
     def on_xml_info(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         results = self.get_virtual_list_row_info()
         rom_file_name = results.rom_file_name
         rom_name = results.rom_name
@@ -5472,6 +5693,8 @@ VIEW > Refresh ROMs Database.
     # will check to see if the rom.map file exists, and if it does the default.cfg file will be overwritten with it
     # before the ROM is run.  This then allows for per-rom input mapping.
     def on_controller_mapping(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         rom_file_name = self.get_virtual_list_row_info().rom_file_name
 
         if self.folder_mapping == '':
@@ -5517,6 +5740,8 @@ VIEW > Refresh ROMs Database.
     # This function resets any information in a MAME INI file listed against the currently selected program.
     # No data in mame.ini is affected, just the ROM specific INI file
     def on_ini_file_reset(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         results = self.get_virtual_list_row_info()
         rom_file_name = results.rom_file_name
         rom_name = results.rom_name
@@ -5619,6 +5844,8 @@ VIEW > Refresh ROMs Database.
     # ------------------------------------------------------------------------------------------------------------------
     # Force pfeMAME to run the selected ROM using MAME rather than the alternate emulator engine assigned
     def on_force_play_mame(self, _event) -> None:
+        if self.not_for_own_folder_engine():   # e.g. a Visual Pinball table: not a MAME machine
+            return
         self.on_double_click(force_mame=True)
 
     # ------------------------------------------------------------------------------------------------------------------
@@ -5686,6 +5913,46 @@ VIEW > Refresh ROMs Database.
 
 
 # ------------------------------------------------------------------------------------------------------------------
+def update_prompt(current_version: str, new_version: str, checksum: str) -> tuple[str, int]:
+    """
+    The new-version question and its dialog style.  Without a checksum (SourceForge's file list was used because its
+    release information couldn't be read) the download can't be checked before it is installed, so the question says
+    so and No is the default answer.
+    """
+    text = _('A newer version of pfeMAME is available.\n\nYou have version {0}, and version {1} is available.\n\n'
+             'Would you like to download and install it now?').format(current_version, new_version)
+    if checksum:
+        return text, wx.YES_NO | wx.ICON_INFORMATION
+    text += '\n\n' + _('SourceForge did not give a checksum for this download, so pfeMAME cannot check that it '
+                       'arrives complete and unchanged before installing it.  If you would rather not install it '
+                       'unchecked, choose No and download it yourself from the pfeMAME SourceForge page.')
+    return text, wx.YES_NO | wx.NO_DEFAULT | wx.ICON_WARNING
+
+
+JUMP_TYPING_PAUSE = 1.0     # Seconds without a key before jump-as-you-type starts again
+
+
+def jump_row(names: list[str], typed: str, current: int) -> int | None:
+    """
+    The row jump-as-you-type goes to: the first name starting with typed (ignoring case), searching on from the
+    current row and round to the top.  A single letter - or the same letter typed again ('ss') when no name starts
+    with that - moves on to the next match after the current row, so it steps through them.  None if nothing matches.
+    """
+    if not names:
+        return None
+    typed = typed.lower()
+    count = len(names)
+    step_on = len(typed) == 1
+    if len(typed) > 1 and len(set(typed)) == 1 and not any(name.lower().startswith(typed) for name in names):
+        typed, step_on = typed[0], True
+    start = (current + 1) if step_on else current
+    for offset in range(count):
+        row = (start + offset) % count
+        if names[row].lower().startswith(typed):
+            return row
+    return None
+
+
 def favorite_export_items(mylist: list, rom_folders: list[str]) -> list[tuple[str, str]]:
     """
     What Export Favorites copies: (source path, name to give it) for each favorite ROM set found in the ROM folders -
@@ -5862,6 +6129,15 @@ class MyPopupMenu(wx.Menu):
 
             if results.rom_file_name not in parent.system_rom_names:
                 self.Enable(id=self.on_software_browser_id, enable=False)
+
+            # A game an alternate emulator brings from its own ROM folder (e.g. a Visual Pinball table) isn't a MAME
+            # machine: only playing it, favorites / watchlist and rating apply
+            if parent.is_own_folder_engine_row(results):
+                for control_id in (self.on_force_play_mame_id, self.on_rom_info_id, self.on_view_media_types_id,
+                                   self.on_xml_info_id, self.on_preferences_rom_id,
+                                   self.on_copy_controller_mappping_id, self.on_ini_file_reset_id,
+                                   self.on_verify_roms_id, self.on_search_rom_online_id):
+                    self.Enable(id=control_id, enable=False)
 
             parent.statusbar_panel.set_status(temp)
 

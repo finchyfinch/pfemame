@@ -322,14 +322,60 @@ def _ini_text(ini_data: dict[str, dict[str, str | None]]) -> str:
 
 
 # ----------------------------------------------------------------------------------------------------------------------
+# pfemame.ini settings that are no longer used: 'usemultiprocessor' (the database build always runs in the background
+# now), 'checkforwayland' and 'artworkdisable' (moved to 'disableartwork' by convert_old_settings) - all three removed
+# in v3.10.2
+RETIRED_SETTINGS = ('usemultiprocessor', 'checkforwayland', 'artworkdisable')
+
+
 def convert_old_settings() -> None:
     """
     Move settings from older versions of pfemame.ini to the ones now used.  Called at startup; does nothing once done.
       * 'artworkdisable' (the Video tab's 'Disable the display of artwork', removed in v3.10.2) did the same as
         'disableartwork' ('Disable Artwork for all ROMs' on the pfeMAME tab), which now does it alone.
+      * The old red-on-green selected row and green highlight defaults (before v3.11.1) are removed, so the system's
+        selection colours are used.  Only when they are still exactly the old defaults - colours the user chose stay.
+      * Settings no version uses any more (RETIRED_SETTINGS) are removed, so they don't sit in the file looking as if
+        they did something.
     """
     if read_ini_file('preferences', 'artworkdisable') == 'True':
-        set_ini_file_variables([('preferences', 'disableartwork', 'True'), ('preferences', 'artworkdisable', 'False')])
+        set_ini_file_variables([('preferences', 'disableartwork', 'True')])
+    remove_ini_file_variables([('preferences', key) for key in RETIRED_SETTINGS])
+
+    def is_old(key: str, old: tuple) -> bool:
+        return functions.convert_sting_to_color(read_ini_file('preferences', key)) == old
+
+    old_defaults = []
+    if is_old('selected_row_color', gd.OLD_SELECTED_ROW) and \
+            is_old('selected_row_background_color', gd.OLD_SELECTED_ROW_BACKGROUND):
+        old_defaults += ['selected_row_color', 'selected_row_background_color']
+    if is_old('ribbon_item_highlight', gd.OLD_RIBBON_ITEM_HIGHLIGHT):
+        old_defaults.append('ribbon_item_highlight')
+    if old_defaults:
+        remove_ini_file_variables([('preferences', key) for key in old_defaults])
+
+
+def remove_ini_file_variables(data: list[tuple[str, str]]) -> bool:
+    """
+    Remove [section, name] settings from pfemame.ini, so their defaults are used again.  Like set_ini_file_variables
+    this never raises: False (and a log entry) if the file couldn't be saved.
+    """
+    ini_path = _pfemame_ini_path()
+    try:
+        with _write_lock:
+            if not os.path.exists(ini_path):
+                return True
+            ini_data = _parse_keeping_comments(_read_pfemame_ini_text(ini_path))
+            if not any(key.lower() in ini_data.get(section, {}) for section, key in data):
+                return True
+            for section, key in data:
+                ini_data.get(section, {}).pop(key.lower(), None)
+            atomic_write_text(ini_path, _ini_text(ini_data))
+            _invalidate_cache()
+            return True
+    except (OSError, UnicodeDecodeError) as e:
+        logging.getLogger('>').error(f'Unable to remove {data} from {ini_path} ({e})')
+        return False
 
 
 # ----------------------------------------------------------------------------------------------------------------------

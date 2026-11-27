@@ -33,6 +33,8 @@ _ = set_up_language()  # Set up the application language
 KEY_TIME_DELAY = 1000  # milliseconds for the keypress timer
 _slot_model_cache: dict[tuple[str, str], slot_model.SlotModel] = {}  # Module-level cache: (exe, rom) → model
 GRID_COLUMNS = 5        # cb1, cb2, tc (hidden), tc2 (hidden), clear button - preferences.py relies on this layout
+SLOT_LIST_MIN_HEIGHT = 90      # Slot list: the heading and about two rows, however small the window
+MANUAL_CONFIG_MIN_HEIGHT = 50  # Manual Configuration box: about two lines
 SUBSLOT_MARKER = '└─ '  # Drawn in front of sub-slot names (only for show - SlotRow.slot_name holds the real name)
 
 
@@ -161,7 +163,7 @@ class PanelSlots(wx.Panel):
         sizer_bios.Add(5, 1)
         sizer_bios.Add(wx.StaticText(self, -1, 'Bios', style=wx.ALIGN_LEFT), 0, wx.ALIGN_CENTRE_VERTICAL, 2)
 
-        sizer_game_preferences.Add(sizer_bios)
+        sizer_game_preferences.Add(sizer_bios, 0, wx.EXPAND)
         sizer_game_preferences.Add(wx.Size(1, 10))
 
         # Don't show the following section if this ROM has no slot options
@@ -169,7 +171,9 @@ class PanelSlots(wx.Panel):
         self.slots_data_length = self.create_slot_controls(slots_exist)  # Create the slot controls
 
         if slots_exist:
-            # Create the slot control buttons
+            # Create the slot control buttons.  They sit on the BIOS row, above the slot list, so the list keeps as
+            # much height as possible when the window is small (it used to be one row high at 1280x720).
+            sizer_slots_buttons.AddStretchSpacer()
             button = build_one_button(self,
                                     _('Clear All Selections'),
                                     self.on_reset_slots_to_empty,
@@ -177,8 +181,10 @@ class PanelSlots(wx.Panel):
                                       'default for any slot that is left empty here.')
                                     )
 
-            sizer_slots_buttons.Add(button, 0, wx.ALL | wx.ALIGN_LEFT, 2)
+            sizer_slots_buttons.Add(button, 0, wx.ALL | wx.ALIGN_CENTRE_VERTICAL, 2)
             sizer_slots_buttons.Add(wx.Size(10, 1))
+            button.MoveAfterInTabOrder(self.cbBios)  # Created after the slot rows, but shown before them
+            previous_button = button
 
             button = build_one_button(self,
                                     _('Load MAME Defaults'),
@@ -186,7 +192,9 @@ class PanelSlots(wx.Panel):
                                     _('This sets the slot controls, including the sub-slots of each default '
                                       'device, to their MAME DEFAULT values found in the systems XML data.'),
                                     )
-            sizer_slots_buttons.Add(button, 0, wx.ALL | wx.ALIGN_LEFT, 2)
+            sizer_slots_buttons.Add(button, 0, wx.ALL | wx.ALIGN_CENTRE_VERTICAL, 2)
+            button.MoveAfterInTabOrder(previous_button)
+            sizer_bios.Add(sizer_slots_buttons, 1, wx.EXPAND)
 
             # Named slot setups for this system, and the MAME command line for the current one
             sizer_preset_buttons = wx.BoxSizer(wx.HORIZONTAL)
@@ -200,8 +208,8 @@ class PanelSlots(wx.Panel):
                 sizer_preset_buttons.Add(build_one_button(self, label, handler, tip), 0, wx.ALL | wx.ALIGN_LEFT, 2)
                 sizer_preset_buttons.Add(wx.Size(10, 1))
 
-            sizer_game_preferences.Add(self.slots_scrolled, 1, wx.ALL | wx.EXPAND, 2)
-            sizer_game_preferences.Add(sizer_slots_buttons, 0, wx.ALL | wx.ALIGN_LEFT, 2)
+            # The slot list gets most of any spare height (Manual Configuration gets the rest)
+            sizer_game_preferences.Add(self.slots_scrolled, 3, wx.ALL | wx.EXPAND, 2)
             sizer_game_preferences.Add(sizer_preset_buttons, 0, wx.ALL | wx.ALIGN_LEFT, 2)
 
         sizer_game_preferences.Add(wx.Size(1, 10))
@@ -213,12 +221,13 @@ class PanelSlots(wx.Panel):
         # by pfeMAME.  There is no error checking, so you can easily cause MAME program issues.
         text = wx.StaticText(self, -1, _('Manual Configuration:'), style=wx.ALIGN_LEFT)
         text.SetFont(self.global_font_bold)
-        self.manual_config_control = CustomTextCtrl(self, value='', size=wx.Size(-1, 100), style=wx.TE_MULTILINE)
+        self.manual_config_control = CustomTextCtrl(self, value='', size=wx.Size(-1, MANUAL_CONFIG_MIN_HEIGHT),
+                                                    style=wx.TE_MULTILINE)
         self.manual_config_control.SetScrollbarThumbColor(self.application_colors['scrollbar_thumb'])
         self.manual_config_control.SetScrollbarTrackColor(self.application_colors['scrollbar_track'])
         self.manual_config_control.Bind(wx.EVT_TEXT, self.manual_config_timer)
         sizer_game_preferences.Add(text, 0, wx.ALL | wx.ALIGN_LEFT, 2)
-        sizer_game_preferences.Add(self.manual_config_control, 0, wx.ALL | wx.EXPAND, 2)
+        sizer_game_preferences.Add(self.manual_config_control, 1 if slots_exist else 0, wx.ALL | wx.EXPAND, 2)
         self.manual_config_control.SetValue(self.set_manual_data())  # Set the manual data control
 
         self.sizer.Add(sizer_game_preferences, 1, wx.EXPAND)
@@ -274,13 +283,12 @@ class PanelSlots(wx.Panel):
         if not hasattr(self, 'slots_scrolled'):
             self.slots_scrolled = wx.ScrolledWindow(self, style=wx.VSCROLL)
             self.slots_scrolled.SetScrollRate(0, 10)
-            wx.CallAfter(self.get_scrolled_panel_size)
+            # A fixed minimum (the heading and a couple of rows) rather than the first size: the list then grows
+            # with the window, and scrolls when sub-slots are added (it used to stay at its first size)
+            self.slots_scrolled.SetMinSize(wx.Size(-1, SLOT_LIST_MIN_HEIGHT))
         self.sizer_grid_slots = wx.FlexGridSizer(rows=0, cols=GRID_COLUMNS, hgap=0, vgap=0)
         self.slots_scrolled.SetSizer(self.sizer_grid_slots)
         self.display_heading()
-
-    def get_scrolled_panel_size(self):
-        self.slots_scrolled.SetMinSize(wx.Size(self.slots_scrolled.GetSize()))
 
     # ------------------------------------------------------------------------------------------------------------------
     # Create the slot controls assuming that data exists for them

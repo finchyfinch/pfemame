@@ -2,15 +2,20 @@
 #
 # build_linux_release.sh
 #
-# Builds the Linux release zip (pfemame_linux_v<version>.zip) the same way as the published ones:
-# the cx_Freeze build/ folder zipped with everything at the top level, symlinks kept (lib/*.so.N) and the
-# executable bits preserved - the updater relies on both.
+# Builds the two Linux release archives from the cx_Freeze build/ folder:
+#   pfemame_linux_v<version>.zip     everything at the top level, symlinks kept (lib/*.so.N) and the executable bits
+#                                    preserved.  This is the one the updater downloads - set it as SourceForge's
+#                                    default Linux download (only a zip allows the updater's quick delta updates, and
+#                                    pfeMAME 3.11.1 and older only know .zip / .7z).
+#   pfemame_linux_v<version>.tar.gz  the same files in a pfemame_v<version> folder, for installing by hand.  Not every
+#                                    unzip tool restores the symlinks in a zip (archive managers often turn them into
+#                                    small text files and the program then fails to start); tar always keeps them.
 #
-# Run from anywhere:   ./tools/build_linux_release.sh            (build + test + zip)
+# Run from anywhere:   ./tools/build_linux_release.sh            (build + test + zip + tar.gz)
 #                      ./tools/build_linux_release.sh --appimage (also build the optional AppImage)
 #
 # Needs: python3 with requirements.txt installed, patchelf (RPATH fixing in setup.py), strip (binutils - shrinks the
-# shared libraries in setup.py), zip.
+# shared libraries in setup.py), zip, tar.
 
 set -euo pipefail
 
@@ -20,13 +25,14 @@ cd "$PROJECT_DIR"
 
 VERSION="$(python3 -c "import re; print(re.search(r'__version__\s*=\s*.([0-9.]+)', open('pfemame.py').read()).group(1))")"
 ZIP_NAME="pfemame_linux_v${VERSION}.zip"
+TAR_NAME="pfemame_linux_v${VERSION}.tar.gz"
 OUT_DIR="$PROJECT_DIR/dist"
 
 echo "============================================================"
 echo " pfeMAME ${VERSION} - Linux release build"
 echo "============================================================"
 
-for tool in python3 patchelf strip zip; do
+for tool in python3 patchelf strip zip tar; do
     command -v "$tool" > /dev/null || { echo "ERROR: '$tool' is not installed" >&2; exit 1; }
 done
 
@@ -71,6 +77,16 @@ rm -f "$OUT_DIR/$ZIP_NAME"
 sha256sum "$OUT_DIR/$ZIP_NAME"
 echo "Symlinks in the zip: $(zipinfo "$OUT_DIR/$ZIP_NAME" | grep -c '^l')"
 
+echo "--- Making $TAR_NAME ---"
+rm -f "$OUT_DIR/$TAR_NAME"
+# The files go in a pfemame_v<version> folder (a tar.gz that spills its files into the current folder is unwelcome).
+# Owner and group are written as root (0), so the archive doesn't carry the build machine's user name.  'S' leaves the
+# symlink targets (lib/*.so.N -> the real library) untouched by the rename.
+tar -C "$PROJECT_DIR" -czf "$OUT_DIR/$TAR_NAME" --sort=name --owner=0 --group=0 --numeric-owner \
+    --transform "s,^build,pfemame_v${VERSION},S" build
+sha256sum "$OUT_DIR/$TAR_NAME"
+echo "Symlinks in the tar.gz: $(tar -tvzf "$OUT_DIR/$TAR_NAME" | grep -c '^l')"
+
 if [ "${1:-}" = "--appimage" ]; then
     echo "--- Building the AppImage ---"
     "$SCRIPT_DIR/build_appimage.sh"
@@ -78,4 +94,5 @@ fi
 
 echo "============================================================"
 echo " Done: $OUT_DIR/$ZIP_NAME"
+echo "       $OUT_DIR/$TAR_NAME"
 echo "============================================================"

@@ -124,7 +124,7 @@ def get_latest_release(platform: str, project: str = PROJECT, timeout: int = 10)
         return None
 
     filename = release.get('filename', '').lstrip('/')
-    match = re.search(rf'{project}_{platform}_v([0-9.]+?)\.(?:7z|zip)$', filename)
+    match = re.search(rf'{project}_{platform}_v([0-9.]+?)\.(?:7z|zip|tar\.gz)$', filename)
     if not match:
         return None
 

@@ -292,6 +292,16 @@ class BuildResult:
     machines_from_cache: bool = False
     timings: dict = field(default_factory=dict)
     mame_changes: MameChanges | None = None           # Set when MAME was upgraded since the last build
+    machine_info: dict = field(default_factory=dict)  # See machine_info()
+
+
+def machine_info(machines: list[Machine]) -> dict:
+    """
+    {machine name: (parent, driver status)} for the machines that are clones or don't work perfectly - what the
+    Hide clones / Working only filters and is:clone / is:working need.  Every other machine is a parent that works,
+    so leaving them out keeps this small.
+    """
+    return {m.name: (m.cloneof, m.status) for m in machines if m.cloneof or m.status not in ('good', '')}
 
 
 def _scan_system_folders(systems_folders: list[str]) -> dict[str, list[str]]:
@@ -535,18 +545,44 @@ def build(settings: BuildSettings, progress=None, cancel=None) -> BuildResult:
     available = sum(1 for row in mylist if row[INDEX_EXISTS] == '1')
     return BuildResult(mylist=mylist, available_roms=available, system_rom_names=system_rom_names, errors=errors,
                        messages=messages, clones_added=len(clones), machines_from_cache=from_cache, timings=timings,
-                       mame_changes=mame_changes)
+                       mame_changes=mame_changes, machine_info=machine_info(machines))
 
 
 # ----------------------------------------------------------------------------------------------------------------------
 # The saved database (mylist.db)
 
-def save_database(path: str, mylist: list, system_rom_names: set) -> None:
+def save_database(path: str, mylist: list, system_rom_names: set, machine_info_dict: dict | None = None) -> None:
     import shelve
     with shelve.open(path, flag='n') as db:
         db['format'] = DATABASE_FORMAT
         db['mylist'] = mylist
         db['system_rom_names'] = sorted(system_rom_names)
+        db['machine_info'] = machine_info_dict or {}
+
+
+def load_machine_info(path: str, data_dir: str) -> dict:
+    """
+    The machine_info() saved with mylist.db.  A database saved before it was kept there (pfeMAME 3.11.1 and older)
+    gets it from machines.cache instead, so no rebuild is needed.  {} if neither has it.
+    """
+    import shelve
+    try:
+        with shelve.open(path, flag='r') as db:
+            if 'machine_info' in db:
+                return db['machine_info']
+    except Exception:           # dbm raises its own error types for a missing or damaged file
+        pass
+    cached = load_any_machine_cache(os.path.join(data_dir, MACHINE_CACHE_NAME))
+    return machine_info(cached[1]) if cached else {}
+
+
+def database_exists(path: str) -> bool:
+    """
+    True if a saved ROMs database is at `path`.  shelve / dbm may store it as one file or several (mylist.db,
+    mylist.db.dat + .dir ...) depending on the platform, so ask dbm rather than checking a file name.
+    """
+    import dbm
+    return dbm.whichdb(path) is not None
 
 
 def load_database(path: str) -> tuple[list, set]:
