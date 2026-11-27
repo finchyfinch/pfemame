@@ -42,6 +42,27 @@ jobs:
       - name: Freeze (runs the test suite first and stops if any test fails)
         run: python tools/setup.py build_exe
 
+      # cx_Freeze rewrites the library paths inside the binaries it copies, which can break their signatures.  On
+      # Apple silicon macOS kills any Mach-O whose signature is missing or invalid, so check every one, re-sign the
+      # broken ones ad-hoc and fail the build if any is still invalid.  (The release is a plain folder, not a .app
+      # bundle, so there is no bundle seal to make - each binary carries its own signature.)
+      - name: Check code signatures (re-sign ad-hoc where needed)
+        run: |
+          total=0; fixed=0; bad=0
+          while IFS= read -r -d '' f; do
+            file -b "$f" | grep -q 'Mach-O' || continue
+            total=$((total+1))
+            if ! codesign --verify --strict "$f" 2>/dev/null; then
+              echo "re-signing: $f"
+              codesign --force --sign - "$f"
+              fixed=$((fixed+1))
+              codesign --verify --strict "$f" || { echo "STILL INVALID: $f"; bad=$((bad+1)); }
+            fi
+          done < <(find build/exe -type f -print0)
+          echo "$total Mach-O files checked, $fixed re-signed, $bad still invalid"
+          codesign -dv build/exe/pfeMAME 2>&1 | grep -E 'Signature|Identifier|flags'
+          test "$total" -gt 0 && test "$bad" -eq 0
+
       - name: Check the frozen programs start
         run: |
           for exe in pfeMAME pfemame_updater; do
